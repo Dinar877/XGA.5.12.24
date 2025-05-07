@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Gbox_shoot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Gbox_shoot",
+  "parent":{
+    "name":"box",
+    "path":"folders/Scripts/Bosses/box.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

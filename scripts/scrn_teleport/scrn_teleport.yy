@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrn_teleport",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrn_teleport",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

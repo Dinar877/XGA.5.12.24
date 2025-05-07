@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bugspider_eyeshine",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bugspider_eyeshine",
+  "parent":{
+    "name":"bugspider",
+    "path":"folders/Scripts/Bosses/bugspider.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

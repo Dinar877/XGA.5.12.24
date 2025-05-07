@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_old_sector3",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":134.0546,
+  "name":"ost_old_sector3",
+  "parent":{
+    "name":"old",
+    "path":"folders/Music+SFX/music!!/old.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_old_sector3",
+  "type":0,
+  "volume":0.4,
+}

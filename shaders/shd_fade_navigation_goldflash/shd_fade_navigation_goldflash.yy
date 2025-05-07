@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_fade_navigation_goldflash",
+  "name":"shd_fade_navigation_goldflash",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_xga_whip",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.574694,
+  "name":"snd_xga_whip",
+  "parent":{
+    "name":"xga",
+    "path":"folders/Music+SFX/SFX/xga.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_xga_whip.mp3",
+  "type":0,
+  "volume":1.0,
+}

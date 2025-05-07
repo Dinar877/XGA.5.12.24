@@ -1,0 +1,12 @@
+//if game is not paused
+if (global.pause_map = 0)
+&& (global.pause = 0)
+&& (global.pause_player = 0)
+{
+	draw_set_alpha(image_alpha)
+	draw_self()
+	draw_set_alpha(1)
+	x = 14;
+	y = 3;
+}
+

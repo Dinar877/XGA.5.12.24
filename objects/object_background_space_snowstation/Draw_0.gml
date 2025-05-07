@@ -1,0 +1,2 @@
+draw_background_tiled(spr_bg_space1, __view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ));
+draw_background_tiled(tiles_bg_snowstation11, __view_get( e__VW.XView, 0 )/1.7, (__view_get( e__VW.YView, 0 ))/1.7);

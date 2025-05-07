@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Moving_wind_right",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Moving_wind_right",
+  "parent":{
+    "name":"turtle",
+    "path":"folders/Scripts/Bosses/turtle.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

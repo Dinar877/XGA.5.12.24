@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Tile_fill_object",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Tile_fill_object",
+  "parent":{
+    "name":"Automatic_tiles",
+    "path":"folders/Scripts/Automatic_tiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

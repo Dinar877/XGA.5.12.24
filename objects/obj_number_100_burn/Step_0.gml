@@ -1,0 +1,1 @@
+image_index = global.beam_burn_ammo div 100

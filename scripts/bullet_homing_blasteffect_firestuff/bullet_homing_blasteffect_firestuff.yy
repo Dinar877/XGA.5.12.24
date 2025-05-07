@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bullet_homing_blasteffect_firestuff",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bullet_homing_blasteffect_firestuff",
+  "parent":{
+    "name":"bullets_homing",
+    "path":"folders/Scripts/bullets/bullets_homing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

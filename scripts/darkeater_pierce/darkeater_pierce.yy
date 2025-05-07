@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"darkeater_pierce",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"darkeater_pierce",
+  "parent":{
+    "name":"Xga",
+    "path":"folders/Scripts/Xga.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

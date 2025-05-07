@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_ciri_ice_dungeon",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":93.17587,
+  "name":"ost_ciri_ice_dungeon",
+  "parent":{
+    "name":"old",
+    "path":"folders/Music+SFX/music!!/old.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_ciri_ice_dungeon",
+  "type":0,
+  "volume":1.0,
+}

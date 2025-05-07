@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Gamepad_getname_keyboard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Gamepad_getname_keyboard",
+  "parent":{
+    "name":"getname",
+    "path":"folders/Scripts/Gamepad/getname.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"TileHazard_ID",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TileHazard_ID",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

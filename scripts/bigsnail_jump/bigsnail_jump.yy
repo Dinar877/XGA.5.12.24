@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bigsnail_jump",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bigsnail_jump",
+  "parent":{
+    "name":"bigsnail",
+    "path":"folders/Scripts/Bosses/bigsnail.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

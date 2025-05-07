@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"NanoShield",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"NanoShield",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

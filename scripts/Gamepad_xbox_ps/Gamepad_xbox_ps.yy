@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Gamepad_xbox_ps",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Gamepad_xbox_ps",
+  "parent":{
+    "name":"getname",
+    "path":"folders/Scripts/Gamepad/getname.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

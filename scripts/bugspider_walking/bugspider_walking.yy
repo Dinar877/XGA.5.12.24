@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bugspider_walking",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bugspider_walking",
+  "parent":{
+    "name":"bugspider",
+    "path":"folders/Scripts/Bosses/bugspider.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

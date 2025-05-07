@@ -1,0 +1,17 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+
+			
+//normal or corrupted music
+if (global.corrupted <= 0)
+{
+	Music_loop(sndID, 148.216, 294.373);
+}
+else if (global.corrupted > 0)
+{
+	Music_loop(sndID, 0, 0);
+}
+			
+sndID = -1
+instance_destroy()

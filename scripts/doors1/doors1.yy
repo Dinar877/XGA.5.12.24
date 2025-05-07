@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"doors1",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"doors1",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

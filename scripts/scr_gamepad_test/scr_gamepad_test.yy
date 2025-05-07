@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_gamepad_test",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_gamepad_test",
+  "parent":{
+    "name":"Gamepad",
+    "path":"folders/Scripts/Gamepad.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_robotstep2",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.456,
+  "name":"snd_robotstep2",
+  "parent":{
+    "name":"player",
+    "path":"folders/Music+SFX/SFX/player.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_robotstep2.mp3",
+  "type":0,
+  "volume":1.0,
+}

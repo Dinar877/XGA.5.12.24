@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Climb_up_ledge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Climb_up_ledge",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"object_set_depth",
+  "isCompatibility":true,
+  "isDnD":false,
+  "name":"object_set_depth",
+  "parent":{
+    "name":"object",
+    "path":"folders/Scripts/compatibility/object.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

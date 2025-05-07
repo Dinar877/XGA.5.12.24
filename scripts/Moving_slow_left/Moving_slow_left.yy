@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Moving_slow_left",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Moving_slow_left",
+  "parent":{
+    "name":"Movement_collision",
+    "path":"folders/Scripts/Movement_collision.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

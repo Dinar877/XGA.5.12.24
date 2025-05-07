@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Sword_jump",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Sword_jump",
+  "parent":{
+    "name":"Sword",
+    "path":"folders/Scripts/Sword.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

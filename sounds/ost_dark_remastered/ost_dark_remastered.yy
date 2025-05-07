@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_dark_remastered",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":93.25714,
+  "name":"ost_dark_remastered",
+  "parent":{
+    "name":"Ciri_remastered_soundtrack",
+    "path":"folders/Music+SFX/music!!/Ciri_remastered_soundtrack.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_dark_remastered.mp3",
+  "type":0,
+  "volume":1.0,
+}

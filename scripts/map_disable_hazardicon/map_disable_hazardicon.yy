@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"map_disable_hazardicon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"map_disable_hazardicon",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Scripts/Map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"darkeater_whip",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"darkeater_whip",
+  "parent":{
+    "name":"Xga",
+    "path":"folders/Scripts/Xga.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

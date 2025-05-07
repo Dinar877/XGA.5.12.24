@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"legs_jumping_backingaway_left",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"legs_jumping_backingaway_left",
+  "parent":{
+    "name":"botspider",
+    "path":"folders/Scripts/Bosses/botspider.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

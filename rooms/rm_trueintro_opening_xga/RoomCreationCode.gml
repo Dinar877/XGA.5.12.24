@@ -1,0 +1,8 @@
+instance_deactivate_all(false);
+instance_activate_object(obj_scrnDark_random_slower_intro)
+instance_activate_object(obj_trueintro_opneing_bubblespawner)
+instance_activate_object(obj_text_spawning_trueintro_opening)
+instance_activate_object(obj_bubble)
+instance_activate_object(obj_trueintro_xga_bg)
+instance_activate_object(obj_trueintro_xga_bg_colour)
+instance_activate_object(obj_camera_intro)

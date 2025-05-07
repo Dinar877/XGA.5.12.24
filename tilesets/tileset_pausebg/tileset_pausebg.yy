@@ -1,0 +1,42 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tileset_pausebg",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tileset_pausebg",
+  "out_columns":5,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"bgs",
+    "path":"folders/Tile Sets/bgs.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"BG_pause_menu",
+    "path":"sprites/BG_pause_menu/BG_pause_menu.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"anim_pausebg","frames":[
+        1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,
+      ],"name":"anim_pausebg","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":176,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":320,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":36,
+}

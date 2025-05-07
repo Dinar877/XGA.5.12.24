@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"turtle_jumping_backoffright",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"turtle_jumping_backoffright",
+  "parent":{
+    "name":"turtle",
+    "path":"folders/Scripts/Bosses/turtle.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrn_pause_exit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrn_pause_exit",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

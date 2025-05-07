@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sword_hurtenemycode_noeffect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sword_hurtenemycode_noeffect",
+  "parent":{
+    "name":"Sword",
+    "path":"folders/Scripts/Sword.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_beam2_noeffect",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.182857,
+  "name":"snd_beam2_noeffect",
+  "parent":{
+    "name":"beam",
+    "path":"folders/Music+SFX/SFX/player/beam.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_beam2_noeffect.mp3",
+  "type":0,
+  "volume":0.25,
+}

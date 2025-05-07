@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player2_0_sprites_standing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player2_0_sprites_standing",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

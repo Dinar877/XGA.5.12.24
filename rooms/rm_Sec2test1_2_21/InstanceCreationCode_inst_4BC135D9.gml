@@ -1,0 +1,1 @@
+blockerPurpleLeft = 1;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bullet_insideblock",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bullet_insideblock",
+  "parent":{
+    "name":"bullets",
+    "path":"folders/Scripts/bullets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

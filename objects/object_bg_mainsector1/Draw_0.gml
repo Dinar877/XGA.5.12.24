@@ -1,0 +1,1 @@
+draw_background_tiled(bg_mainsector1, __view_get( e__VW.XView, 0 )/2, __view_get( e__VW.YView, 0 )/2);

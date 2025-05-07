@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrn_death1",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrn_death1",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bullet_hurtenemycode_xga",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bullet_hurtenemycode_xga",
+  "parent":{
+    "name":"Xga",
+    "path":"folders/Scripts/Xga.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

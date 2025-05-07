@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Gamepad_init_variables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Gamepad_init_variables",
+  "parent":{
+    "name":"Gamepad",
+    "path":"folders/Scripts/Gamepad.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

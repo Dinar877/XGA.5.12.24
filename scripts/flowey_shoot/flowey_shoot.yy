@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"flowey_shoot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"flowey_shoot",
+  "parent":{
+    "name":"flowey",
+    "path":"folders/Scripts/Bosses/flowey.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+draw_background_tiled(bg_restrictedarea1, __view_get( e__VW.XView, 0 )/3, __view_get( e__VW.YView, 0 )/3);

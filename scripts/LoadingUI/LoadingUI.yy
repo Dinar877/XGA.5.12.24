@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"LoadingUI",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LoadingUI",
+  "parent":{
+    "name":"Saving&Loading",
+    "path":"folders/Scripts/Saving&Loading.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,86 @@
+/// @description Insert description here
+// You can write your code in this editor
+spawn = 0
+killall = 0
+
+goy = -1
+goyother = -1
+goyid = -1
+delay = 0
+moveamount = 0
+
+counter = 0
+counter_scroll = 0
+counter_tex = 0
+screenscroll = 0
+n = 0
+
+for (var i = 0; i < 50; i++)
+	{
+		global.tex[i] = false
+	}
+
+
+tex_orange1 = -1
+tex_orange2 = -1
+tex_orange3 = -1
+tex_orange4 = -1
+
+tex1 = -1
+tex2 = -1
+
+
+
+menu_x = x
+menu_y = y
+
+menu_heading[0] = " BEAM UPGRADES";
+menu_item[0] = " CHARGE";
+menu_item[1] = " SPREAD";
+menu_item[2] = " BURN";
+menu_item[3] = " REFLECT";
+menu_item[4] = " SHIELD";
+
+menu_heading_length = array_length(menu_heading)
+menu_item_length = array_length(menu_item)
+
+menu_index_heading = 0
+menu_index_offpath = 0
+menu_index_item = 0
+menu_last_selected = 0
+
+
+//gamepad variable stuff
+gamepad_counter = 0;
+gamepad_counter2 = 0;
+gamepad4_wait = 0
+correct_slot = 0;
+
+right_key = 0
+right_key_pressed = 0
+
+left_key = 0
+left_key_pressed = 0
+
+up_key = 0
+up_key_pressed = 0
+
+down_key = 0
+down_key_pressed = 0
+
+
+jump = 0
+dash = 0
+shoot = 0
+shoot_pressed = 0
+
+Select = 0;
+
+AimDown = 0
+AimtrueUp = 0
+AimUp = 0
+
+FadeNow = 0
+
+scr_gamepad_test()
+Gamepad_variables()

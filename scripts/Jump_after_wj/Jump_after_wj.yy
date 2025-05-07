@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Jump_after_wj",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Jump_after_wj",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

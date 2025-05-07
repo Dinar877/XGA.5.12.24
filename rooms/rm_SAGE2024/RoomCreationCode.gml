@@ -1,0 +1,5 @@
+instance_deactivate_all(false);
+instance_activate_object(obj_scrnDark_random_loadroom_intro);
+instance_activate_object(OBJ_SAGE2024_MUSIC);
+instance_activate_object(OBJ_SAGE2024_TITLE);
+instance_activate_object(OBJ_SAGE2024_WARNING);

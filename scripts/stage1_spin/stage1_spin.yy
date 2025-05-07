@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"stage1_spin",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"stage1_spin",
+  "parent":{
+    "name":"darkeater_stage1",
+    "path":"folders/Scripts/Bosses/darkeater_stage1.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

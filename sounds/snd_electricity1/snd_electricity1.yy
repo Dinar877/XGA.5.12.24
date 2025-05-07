@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_electricity1",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":3.284989,
+  "name":"snd_electricity1",
+  "parent":{
+    "name":"environment",
+    "path":"folders/Music+SFX/SFX/environment.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_electricity1.wav",
+  "type":0,
+  "volume":1.0,
+}

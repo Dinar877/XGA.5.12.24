@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"flowey_idle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"flowey_idle",
+  "parent":{
+    "name":"flowey",
+    "path":"folders/Scripts/Bosses/flowey.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

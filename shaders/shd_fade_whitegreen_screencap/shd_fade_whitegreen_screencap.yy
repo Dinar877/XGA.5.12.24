@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_fade_whitegreen_screencap",
+  "name":"shd_fade_whitegreen_screencap",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

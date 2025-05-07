@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_preboss",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":28.73601,
+  "name":"snd_preboss",
+  "parent":{
+    "name":"boss_music",
+    "path":"folders/Music+SFX/music!!/Ciri_remastered_soundtrack/boss_music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_preboss",
+  "type":0,
+  "volume":1.0,
+}

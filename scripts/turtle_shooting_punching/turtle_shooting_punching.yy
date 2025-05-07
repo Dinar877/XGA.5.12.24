@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"turtle_shooting_punching",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"turtle_shooting_punching",
+  "parent":{
+    "name":"turtle",
+    "path":"folders/Scripts/Bosses/turtle.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

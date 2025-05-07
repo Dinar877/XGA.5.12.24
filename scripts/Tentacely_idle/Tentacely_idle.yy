@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Tentacely_idle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Tentacely_idle",
+  "parent":{
+    "name":"Tentacely",
+    "path":"folders/Scripts/Enemy_stuff/mothership/Tentacely.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

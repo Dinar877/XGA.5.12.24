@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"darkeater_undetected_idlewalk",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"darkeater_undetected_idlewalk",
+  "parent":{
+    "name":"Xga",
+    "path":"folders/Scripts/Xga.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

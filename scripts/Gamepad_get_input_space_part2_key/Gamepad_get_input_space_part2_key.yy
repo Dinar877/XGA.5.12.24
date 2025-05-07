@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Gamepad_get_input_space_part2_key",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Gamepad_get_input_space_part2_key",
+  "parent":{
+    "name":"Gamepad",
+    "path":"folders/Scripts/Gamepad.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

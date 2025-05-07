@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Jump_after_Dashing2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Jump_after_Dashing2",
+  "parent":{
+    "name":"Dashing",
+    "path":"folders/Scripts/Dashing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

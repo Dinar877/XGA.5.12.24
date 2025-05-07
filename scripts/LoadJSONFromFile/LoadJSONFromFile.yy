@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"LoadJSONFromFile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LoadJSONFromFile",
+  "parent":{
+    "name":"Saving&Loading",
+    "path":"folders/Scripts/Saving&Loading.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"darklord_idle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"darklord_idle",
+  "parent":{
+    "name":"darklord",
+    "path":"folders/Scripts/Bosses/darklord.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

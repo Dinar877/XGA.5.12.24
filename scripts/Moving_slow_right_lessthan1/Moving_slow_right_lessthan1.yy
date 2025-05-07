@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Moving_slow_right_lessthan1",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Moving_slow_right_lessthan1",
+  "parent":{
+    "name":"lessthan1",
+    "path":"folders/Scripts/Movement_collision/lessthan1.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

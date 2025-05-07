@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wind",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":17.12907,
+  "name":"snd_wind",
+  "parent":{
+    "name":"enemy",
+    "path":"folders/Music+SFX/SFX/enemy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wind.ogg",
+  "type":0,
+  "volume":0.5,
+}

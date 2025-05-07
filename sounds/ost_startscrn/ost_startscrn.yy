@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_startscrn",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":173.33116,
+  "name":"ost_startscrn",
+  "parent":{
+    "name":"music!!",
+    "path":"folders/Music+SFX/music!!.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_startscrn",
+  "type":0,
+  "volume":0.6,
+}

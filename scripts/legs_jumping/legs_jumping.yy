@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"legs_jumping",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"legs_jumping",
+  "parent":{
+    "name":"botspider",
+    "path":"folders/Scripts/Bosses/botspider.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

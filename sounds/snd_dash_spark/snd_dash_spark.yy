@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_dash_spark",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":11.349932,
+  "name":"snd_dash_spark",
+  "parent":{
+    "name":"player",
+    "path":"folders/Music+SFX/SFX/player.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_dash_spark.wav",
+  "type":0,
+  "volume":0.5,
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enemy_hurt_player_code",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enemy_hurt_player_code",
+  "parent":{
+    "name":"Enemy_stuff",
+    "path":"folders/Scripts/Enemy_stuff.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

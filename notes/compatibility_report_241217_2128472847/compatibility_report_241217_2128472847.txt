@@ -1,0 +1,333 @@
+Converting GML script: ${project_dir}\scripts\pal_swap_draw_palette\pal_swap_draw_palette.gml
+Converted description /// @description pal_swap_draw_palette(palette_sprite,pal_index,x,y);/// @function pal_swap_draw_palette
+/// @param palette_sprite
+/// @param pal_index
+/// @param x
+/// @param y
+
+Converting GML script: ${project_dir}\scripts\pal_swap_enable_override\pal_swap_enable_override.gml
+Converted description /// @description pal_swap_enable_override(pal sprite)/// @function pal_swap_enable_override
+/// @param pal sprite
+
+Converting GML script: ${project_dir}\scripts\pal_swap_get_color_count\pal_swap_get_color_count.gml
+Converted description /// @description pal_swap_get_color_count(palette sprite)/// @function pal_swap_get_color_count
+/// @param palette sprite
+
+Converting GML script: ${project_dir}\scripts\pal_swap_get_pal_color\pal_swap_get_pal_color.gml
+Converted description /// @description pal_swap_get_pal_color(palette sprite,pal index, color index)/// @function pal_swap_get_pal_color
+/// @param palette sprite
+/// @param pal index
+/// @param  color index
+
+Converting GML script: ${project_dir}\scripts\pal_swap_get_pal_count\pal_swap_get_pal_count.gml
+Converted description /// @description pal_swap_get_pal_count(palette sprite)/// @function pal_swap_get_pal_count
+/// @param palette sprite
+
+Converting GML script: ${project_dir}\scripts\pal_swap_index_palette\pal_swap_index_palette.gml
+Converted description /// @description pal_swap_index_palette(palette sprite index)/// @function pal_swap_index_palette
+/// @param palette sprite index
+
+Converting GML script: ${project_dir}\scripts\pal_swap_init_system\pal_swap_init_system.gml
+Converted description /// @description pal_swap_init_system(shader,enable indexing <optional>)/// @function pal_swap_init_system
+/// @param shader
+/// @param enable indexing <optional>
+Converted string - line 13: 'texel_size' -> "texel_size"
+Converted string - line 14: 'palette_UVs' -> "palette_UVs"
+Converted string - line 15: 'palette_index' -> "palette_index"
+Converted string - line 16: 'palette_texture' -> "palette_texture"
+
+Converting GML script: ${project_dir}\scripts\pal_swap_reset\pal_swap_reset.gml
+Converted description /// @description pal_swap_reset();/// @function pal_swap_reset
+
+Converting GML script: ${project_dir}\scripts\pal_swap_set\pal_swap_set.gml
+Converted description /// @description pal_swap_set(palette_sprite_index, palette_index,palette is surface);/// @function pal_swap_set
+/// @param palette_sprite_index
+/// @param  palette_index
+/// @param palette is surface
+
+Converting GML script: ${project_dir}\scripts\pal_swap_set_tiles\pal_swap_set_tiles.gml
+Converted description /// @description pal_swap_set_tiles(palette sprite or surface, pal index, start layer, end layer, pal is surface);/// @function pal_swap_set_tiles
+/// @param palette sprite or surface
+/// @param  pal index
+/// @param  start layer
+/// @param  end layer
+/// @param  pal is surface
+
+Converting GML script: ${project_dir}\scripts\wrap\wrap.gml
+Converted description /// @description wrap(value,min,max)/// @function wrap
+/// @param value
+/// @param min
+/// @param max
+
+Converting GML script: ${project_dir}\scripts\Fall_shoot\Fall_shoot.gml
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 60: malformed variable reference got (
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 61: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 66: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 70: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 75: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 88: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 96: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 114: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 131: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 148: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 154: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 179: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 196: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 207: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 248: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 289: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 294: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 300: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Fall_shoot\Fall_shoot.gml - 310: unexpected syntax error
+Too many errors - GML not processed : ${project_dir}\scripts\Fall_shoot\Fall_shoot.gml
+
+Converting GML script: ${project_dir}\scripts\Falling\Falling.gml
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 97: malformed variable reference got (
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 98: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 103: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 107: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 112: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 126: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 134: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 160: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 180: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 200: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 206: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 230: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 247: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 258: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 299: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 340: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 345: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 350: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Falling\Falling.gml - 361: unexpected syntax error
+Too many errors - GML not processed : ${project_dir}\scripts\Falling\Falling.gml
+
+Converting GML script: ${project_dir}\scripts\Climb_up_ledge\Climb_up_ledge.gml
+Converted builtin - line 117: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 125: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 134: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 142: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 119: view_xview = 0 -> __view_set( e__VW.XView, 0, 0 )
+Converted builtin - line 127: view_xview = 0 -> __view_set( e__VW.XView, 0, 0 )
+Converted builtin - line 136: view_xview = room_width - view_wview -> __view_set( e__VW.XView, 0, room_width - view_wview )
+Converted builtin - line 144: view_xview = room_width - view_wview -> __view_set( e__VW.XView, 0, room_width - view_wview )
+Converted builtin - line 167: view_xview += ((17*global.facingDir)/29) -> __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (((17*global.facingDir)/29)) )
+Converted builtin - line 150: view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 155: view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 163: view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 152: view_yview =0 -> __view_set( e__VW.YView, 0, 0 )
+Converted builtin - line 157: view_yview = room_height - view_hview -> __view_set( e__VW.YView, 0, room_height - view_hview )
+Converted builtin - line 173: view_yview -= (31/29) -> __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - ((31/29)) )
+Converted builtin - line 177: view_yview -= (37/29) -> __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - ((37/29)) )
+Converted builtin - line 134: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 142: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 155: view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 63: view_object[0] = -1 -> __view_set( e__VW.Object, 0, -1 )
+Converted builtin - line 110: view_object[0] = -1 -> __view_set( e__VW.Object, 0, -1 )
+Converted builtin - line 204: view_object = obj_camera -> __view_set( e__VW.Object, 0, obj_camera )
+Converted builtin - line 228: view_object = obj_camera -> __view_set( e__VW.Object, 0, obj_camera )
+Converted builtin - line 136: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 144: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 157: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\scripts\Hurt\Hurt.gml
+Converted builtin - line 28: view_object = obj_camera -> __view_set( e__VW.Object, 0, obj_camera )
+
+Converting GML script: ${project_dir}\scripts\Dead\Dead.gml
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Dead\Dead.gml - 48: malformed variable reference got (
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Dead\Dead.gml - 49: unexpected syntax error
+ERROR: C:\Users\Toby\Documents\GameMakerStudio2\ProjectTecno6-backup2\scripts\Dead\Dead.gml - 162: unexpected syntax error
+Too many errors - GML not processed : ${project_dir}\scripts\Dead\Dead.gml
+
+Converting GML script: ${project_dir}\scripts\State_machine_create\State_machine_create.gml
+Converted description /// @description state_machine_create()/// @function state_machine_create
+
+Converting GML script: ${project_dir}\scripts\State_machine_switch_state\State_machine_switch_state.gml
+Converted description /// @description state_machine_switch__state(state)/// @function state_machine_switch__state
+/// @param state
+
+Converting GML script: ${project_dir}\scripts\State_machine_execute\State_machine_execute.gml
+Converted description /// @description state_machine_execute()/// @function state_machine_execute
+
+Converting GML script: ${project_dir}\scripts\scr_afterimage\scr_afterimage.gml
+Converted description /// @description scr_afterimage(droprate,drain)/// @function scr_afterimage
+/// @param droprate
+/// @param drain
+
+Converting GML script: ${project_dir}\scripts\scr_afterimage_screwjump\scr_afterimage_screwjump.gml
+Converted description /// @description scr_afterimage(droprate,drain)/// @function scr_afterimage
+/// @param droprate
+/// @param drain
+
+Converting GML script: ${project_dir}\scripts\scr_afterimage_dash\scr_afterimage_dash.gml
+Converted description /// @description scr_afterimage(droprate,drain)/// @function scr_afterimage
+/// @param droprate
+/// @param drain
+
+Converting GML script: ${project_dir}\scripts\scr_afterimage_bullets\scr_afterimage_bullets.gml
+Converted description /// @description scr_afterimage for bullets
+
+Converting GML script: ${project_dir}\scripts\scr_afterimage_bullets2\scr_afterimage_bullets2.gml
+Converted description /// @description scr_afterimage for bullets
+
+Converting GML script: ${project_dir}\scripts\Gamepad_variables\Gamepad_variables.gml
+Converted string - line 17: 'Z' -> "Z"
+Converted string - line 18: 'Z' -> "Z"
+Converted string - line 21: 'X' -> "X"
+Converted string - line 22: 'X' -> "X"
+
+Converting GML script: ${project_dir}\objects\obj_basic_example\Create_0.gml
+Converted description /// @description Object Properties
+
+Converting GML script: ${project_dir}\objects\obj_basic_example\Step_0.gml
+Converted description /// @description Change palette with up/down (Basic)/// @function Change palette with up/down 
+/// @param Basic
+
+Converting GML script: ${project_dir}\objects\obj_basic_example\Draw_0.gml
+Converted description /// @description Instructions
+
+Converting GML script: ${project_dir}\objects\obj_desaturate_example\Create_0.gml
+Converted description /// @description Object Properties
+
+Converting GML script: ${project_dir}\objects\obj_desaturate_example\Step_0.gml
+Converted description /// @description Change palette with up/down (Basic)/// @function Change palette with up/down 
+/// @param Basic
+
+Converting GML script: ${project_dir}\objects\obj_desaturate_example\Draw_0.gml
+Converted description /// @description Draw Instructions
+
+Converting GML script: ${project_dir}\objects\obj_dummy\Create_0.gml
+Converted description /// @description Object Properties
+
+Converting GML script: ${project_dir}\objects\obj_dummy\Draw_0.gml
+Converted description /// @description Draw With Unlimited Palette Swap     
+
+Converting GML script: ${project_dir}\objects\obj_full_fade_example\Create_0.gml
+Converted description /// @description Object Properties
+
+Converting GML script: ${project_dir}\objects\obj_full_fade_example\Step_0.gml
+Converted description /// @description Change palette with up/down (Basic)/// @function Change palette with up/down 
+/// @param Basic
+
+Converting GML script: ${project_dir}\objects\obj_full_fade_example\Draw_0.gml
+Converted description /// @description Instructions
+
+Converting GML script: ${project_dir}\objects\obj_gradual_example\Create_0.gml
+Converted description /// @description Object Properties
+
+Converting GML script: ${project_dir}\objects\obj_gradual_example\Step_0.gml
+Converted description /// @description Change palette with up/down (Gradual)/// @function Change palette with up/down 
+/// @param Gradual
+
+Converting GML script: ${project_dir}\objects\obj_gradual_example\Draw_0.gml
+Converted description /// @description Instructions
+
+Converting GML script: ${project_dir}\objects\obj_palette_manager\Create_0.gml
+Converted description /// @description Initilize System and add palettes
+
+Converting GML script: ${project_dir}\objects\obj_palette_manager\Step_0.gml
+Converted string - line 1: 'FPS: ' -> "FPS: "
+
+Converting GML script: ${project_dir}\objects\obj_palette_manager\KeyPress_13.gml
+Converted description /// @description Go to next room.
+
+Converting GML script: ${project_dir}\objects\obj_single_replace_example\Create_0.gml
+Converted description /// @description Object Properties
+
+Converting GML script: ${project_dir}\objects\obj_single_replace_example\Step_0.gml
+Converted description /// @description Change palette with up/down (Basic)/// @function Change palette with up/down 
+/// @param Basic
+
+Converting GML script: ${project_dir}\objects\obj_single_replace_example\Draw_0.gml
+Converted description /// @description instructions
+
+Converting GML script: ${project_dir}\objects\obj_tile_example\Create_0.gml
+Converted description /// @description Object Properties
+
+Converting GML script: ${project_dir}\objects\obj_tile_example\Step_0.gml
+Converted description /// @description Change palette with up/down (Gradual)/// @function Change palette with up/down 
+/// @param Gradual
+
+Converting GML script: ${project_dir}\objects\obj_tile_example\Draw_0.gml
+Converted description /// @description Draw Instructions
+
+Converting GML script: ${project_dir}\objects\obj_tile_swapper_end\Create_0.gml
+Converted description /// @description I AM NECESSARY FOR TILE PALETTE SWAPPING
+
+Converting GML script: ${project_dir}\objects\obj_tile_swapper_end\Step_2.gml
+Converted description /// @description Clean up
+
+Converting GML script: ${project_dir}\objects\obj_tile_swapper_end\Draw_0.gml
+Converted description /// @description End Palette Swapping
+
+Converting GML script: ${project_dir}\objects\obj_tile_swapper_start\Create_0.gml
+Converted description /// @description I AM NECESSARY FOR TILE PALETTE SWAPPING
+
+Converting GML script: ${project_dir}\objects\obj_tile_swapper_start\Step_2.gml
+Converted description /// @description Clean up
+
+Converting GML script: ${project_dir}\objects\obj_tile_swapper_start\Draw_0.gml
+Converted description /// @description Enable Palette Swapping
+
+Converting GML script: ${project_dir}\objects\object_backgroundone_parallaxshit\Draw_0.gml
+Converted builtin - line 2: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 2: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted description /// @description  Draw the background
+
+Converting GML script: ${project_dir}\objects\object_backgroundSnow_parallaxshit\Draw_0.gml
+Converted builtin - line 2: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 2: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted description /// @description  Draw the background
+
+Converting GML script: ${project_dir}\objects\object_backgroundSewer_parallaxshit\Draw_0.gml
+Converted builtin - line 2: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 2: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted description /// @description  Draw the background
+
+Converting GML script: ${project_dir}\objects\obj_player\Create_0.gml
+Converted builtin - line 1: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 1: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\obj_player\Step_0.gml
+Converted description /// @description controls and physics
+
+Converting GML script: ${project_dir}\objects\obj_door_normal_left\Step_0.gml
+Converted builtin - line 71: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 32: view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 71: view_yview -> __view_get( e__VW.YView, 0 )
+Converted description /// @description before room transition moving
+
+Converting GML script: ${project_dir}\objects\obj_door_normal_right\Step_0.gml
+Converted builtin - line 71: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 32: view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 71: view_yview -> __view_get( e__VW.YView, 0 )
+Converted description /// @description before room transition moving
+
+Converting GML script: ${project_dir}\objects\obj_scrn_roomtransition\Step_0.gml
+Converted builtin - line 145: view_object = obj_camera -> __view_set( e__VW.Object, 0, obj_camera )
+Converted builtin - line 270: view_object = obj_camera -> __view_set( e__VW.Object, 0, obj_camera )
+Converted builtin - line 274: view_object = obj_camera_16_9 -> __view_set( e__VW.Object, 0, obj_camera_16_9 )
+Converted description /// @description player dies
+
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+Imported layer depths for room(s) 'rm_snow1_2, rm_snowy12, rm_wan_bigger_, number_wan_240x160, room25, we_are_number_wan_240x160Bigger, rm_wan2, rm_snow12, number_wan_480x270, room3test2, room311, room_snow1_1200x800, room_snow1, room31, room3test, room_sector1example' were not adequately spaced. Unless updated this will have undefined results in game.
+Game speed set to 60
+Added compatibility script 'action/action_kill_object.gml'
+Added compatibility script 'background/background_get_height.gml'
+Added compatibility script 'background/background_get_width.gml'
+Added compatibility script 'background/draw_background_tiled.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'object/object_set_depth.gml'
+Added compatibility script 'texture/texture_set_interpolation.gml'
+Added compatibility script 'texture/texture_set_interpolation_ext.gml'
+Added compatibility script 'tile/tile_add.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__view_set.gml'
+Added compatibility script 'view/__view_set_internal.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script 'background/__init_background.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'

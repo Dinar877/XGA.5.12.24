@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_facingahugereaction",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":194.16527,
+  "name":"ost_facingahugereaction",
+  "parent":{
+    "name":"old",
+    "path":"folders/Music+SFX/music!!/old.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_facingahugereaction",
+  "type":0,
+  "volume":0.5,
+}

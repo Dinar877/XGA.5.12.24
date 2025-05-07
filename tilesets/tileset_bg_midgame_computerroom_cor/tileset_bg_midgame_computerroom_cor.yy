@@ -1,0 +1,40 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tileset_bg_midgame_computerroom_cor",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tileset_bg_midgame_computerroom_cor",
+  "out_columns":3,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"bgs",
+    "path":"folders/Tile Sets/bgs.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"bg_midgame_computerroom_cor_tiles",
+    "path":"sprites/bg_midgame_computerroom_cor_tiles/bg_midgame_computerroom_cor_tiles.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"animation_1","frames":[1,2,3,4,5,6,7,8,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":10.0,
+  "tileHeight":119,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":192,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":14,
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Ledge_grab",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Ledge_grab",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

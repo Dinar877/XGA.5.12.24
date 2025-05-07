@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrn_saving",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrn_saving",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

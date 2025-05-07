@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gorilla_rollback",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gorilla_rollback",
+  "parent":{
+    "name":"gorilla",
+    "path":"folders/Scripts/Bosses/gorilla.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

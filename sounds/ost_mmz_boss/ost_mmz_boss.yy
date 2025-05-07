@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_mmz_boss",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":138.86113,
+  "name":"ost_mmz_boss",
+  "parent":{
+    "name":"old",
+    "path":"folders/Music+SFX/music!!/old.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_mmz_boss",
+  "type":0,
+  "volume":0.6,
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_charging",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.0,
+  "name":"snd_charging",
+  "parent":{
+    "name":"enemy",
+    "path":"folders/Music+SFX/SFX/enemy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_charging.mp3",
+  "type":0,
+  "volume":1.0,
+}

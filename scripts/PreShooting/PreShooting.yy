@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"PreShooting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PreShooting",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

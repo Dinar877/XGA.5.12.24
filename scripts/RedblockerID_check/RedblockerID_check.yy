@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"RedblockerID_check",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"RedblockerID_check",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

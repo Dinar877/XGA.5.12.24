@@ -1,0 +1,183 @@
+function __global_object_depths() {
+	// Initialise the global array that allows the lookup of the depth of a given object
+	// GM2.0 does not have a depth on objects so on import from 1.x a global array is created
+	// NOTE: MacroExpansion is used to insert the array initialisation at import time
+	gml_pragma( "global", "__global_object_depths()");
+
+	// insert the generated arrays here
+	global.__objectDepths[0] = -1; // obj_basic_example
+	global.__objectDepths[1] = 0; // obj_desaturate_example
+	global.__objectDepths[2] = 0; // obj_dummy
+	global.__objectDepths[3] = 0; // obj_full_fade_example
+	global.__objectDepths[4] = 0; // obj_gradual_example
+	global.__objectDepths[5] = -3; // obj_palette_manager
+	global.__objectDepths[6] = 0; // obj_single_replace_example
+	global.__objectDepths[7] = 0; // obj_tile_example
+	global.__objectDepths[8] = 0; // obj_tile_swapper_end
+	global.__objectDepths[9] = 0; // obj_tile_swapper_start
+	global.__objectDepths[10] = -1; // obj_link_room_transition
+	global.__objectDepths[11] = -1; // obj_link_healthUI
+	global.__objectDepths[12] = -14; // obj_par_pause
+	global.__objectDepths[13] = -5; // obj_block
+	global.__objectDepths[14] = 0; // object_cameratest
+	global.__objectDepths[15] = -5; // obj_block2
+	global.__objectDepths[16] = 4; // object_backgroundone_parallaxshit
+	global.__objectDepths[17] = 4; // object_backgroundSnow_parallaxshit
+	global.__objectDepths[18] = 4; // object_backgroundSewer_parallaxshit
+	global.__objectDepths[19] = -3; // obj_slope1_left
+	global.__objectDepths[20] = -3; // obj_slope1_right
+	global.__objectDepths[21] = -11; // obj_player
+	global.__objectDepths[22] = -2; // object_player2_0_sprites
+	global.__objectDepths[23] = 0; // obj_spawner
+	global.__objectDepths[24] = -1; // obj_player_respawner
+	global.__objectDepths[25] = -3; // obj_walljumpeffect
+	global.__objectDepths[26] = -3; // obj_blast_effect
+	global.__objectDepths[27] = -3; // obj_walljumpeffectleft
+	global.__objectDepths[28] = -2; // obj_screwjump_sparks
+	global.__objectDepths[29] = 0; // obj_bullet_creator
+	global.__objectDepths[30] = -3; // obj_bullet
+	global.__objectDepths[31] = -3; // obj_player_dashfire
+	global.__objectDepths[32] = -1; // obj_particle_chargetrail
+	global.__objectDepths[33] = -1; // obj_afterimage
+	global.__objectDepths[34] = -3; // object_player_sprites
+	global.__objectDepths[35] = -1; // obj_camera
+	global.__objectDepths[36] = -1; // obj_camera_16_9
+	global.__objectDepths[37] = -3; // obj_camera_stopperL
+	global.__objectDepths[38] = -3; // obj_camera_stopperR
+	global.__objectDepths[39] = -12; // obj_ui_health1
+	global.__objectDepths[40] = -12; // obj_Health_NewUI_text1
+	global.__objectDepths[41] = -11; // obj_Health_NewUI_underside1
+	global.__objectDepths[42] = -12; // obj_Health_newui_symbol1
+	global.__objectDepths[43] = -13; // obj_healthnumberten
+	global.__objectDepths[44] = -13; // obj_healthnumberone
+	global.__objectDepths[45] = -14; // obj_healthbar
+	global.__objectDepths[46] = -11; // obj_healthblockstart
+	global.__objectDepths[47] = -11; // obj_healthblock1
+	global.__objectDepths[48] = -5; // obj_enemy_wormysprites
+	global.__objectDepths[49] = -1; // obj_enemy_wormy
+	global.__objectDepths[50] = -1; // obj_item_RestorationSphere
+	global.__objectDepths[51] = -1; // obj_item_chargebeam
+	global.__objectDepths[52] = -1; // obj_item_surgestrike
+	global.__objectDepths[53] = -1; // obj_item_explosiveammo
+	global.__objectDepths[54] = -1; // obj_screwjump_item1
+	global.__objectDepths[55] = -2; // obj_item_surgestrikeshine
+	global.__objectDepths[56] = -2; // obj_pickup_health1
+	global.__objectDepths[57] = -2; // obj_pickup_health2
+	global.__objectDepths[58] = -1; // obj_hitbox_grounder
+	global.__objectDepths[59] = -2; // obj_sprites_grounder
+	global.__objectDepths[60] = -4; // obj_explosion2
+	global.__objectDepths[61] = -4; // obj_explosion_random
+	global.__objectDepths[62] = -4; // obj_explosion_playerdeath
+	global.__objectDepths[63] = -5; // obj_explosion_normalhit
+	global.__objectDepths[64] = -7; // obj_explosion_normalhit_chunk
+	global.__objectDepths[65] = -1; // obj_hitbox_toad
+	global.__objectDepths[66] = -5; // obj_sprites_toad
+	global.__objectDepths[67] = -11; // obj_door_normal_left
+	global.__objectDepths[68] = -11; // obj_door_normal_right
+	global.__objectDepths[69] = -1; // obj_block_door
+	global.__objectDepths[70] = -10; // obj_scrn_roomtransition
+	global.__objectDepths[71] = -8; // obj_door_test1
+	global.__objectDepths[72] = -11; // obj_room_transition_l2r1
+	global.__objectDepths[73] = -11; // obj_room_transition_r2l1
+	global.__objectDepths[74] = 0; // obj_room_transition_l2r2
+	global.__objectDepths[75] = 0; // obj_room_transition_r2l2
+	global.__objectDepths[76] = -4; // obj_enemy_mushroom_sprites
+	global.__objectDepths[77] = -4; // obj_enemy_mushroom_sprites2
+	global.__objectDepths[78] = -3; // obj_enemy_mushroom_hitbox
+	global.__objectDepths[79] = -3; // obj_enemy_mushroom_hitbox2
+
+
+	global.__objectNames[0] = "obj_basic_example";
+	global.__objectNames[1] = "obj_desaturate_example";
+	global.__objectNames[2] = "obj_dummy";
+	global.__objectNames[3] = "obj_full_fade_example";
+	global.__objectNames[4] = "obj_gradual_example";
+	global.__objectNames[5] = "obj_palette_manager";
+	global.__objectNames[6] = "obj_single_replace_example";
+	global.__objectNames[7] = "obj_tile_example";
+	global.__objectNames[8] = "obj_tile_swapper_end";
+	global.__objectNames[9] = "obj_tile_swapper_start";
+	global.__objectNames[10] = "obj_link_room_transition";
+	global.__objectNames[11] = "obj_link_healthUI";
+	global.__objectNames[12] = "obj_par_pause";
+	global.__objectNames[13] = "obj_block";
+	global.__objectNames[14] = "object_cameratest";
+	global.__objectNames[15] = "obj_block2";
+	global.__objectNames[16] = "object_backgroundone_parallaxshit";
+	global.__objectNames[17] = "object_backgroundSnow_parallaxshit";
+	global.__objectNames[18] = "object_backgroundSewer_parallaxshit";
+	global.__objectNames[19] = "obj_slope1_left";
+	global.__objectNames[20] = "obj_slope1_right";
+	global.__objectNames[21] = "obj_player";
+	global.__objectNames[22] = "object_player2_0_sprites";
+	global.__objectNames[23] = "obj_spawner";
+	global.__objectNames[24] = "obj_player_respawner";
+	global.__objectNames[25] = "obj_walljumpeffect";
+	global.__objectNames[26] = "obj_blast_effect";
+	global.__objectNames[27] = "obj_walljumpeffectleft";
+	global.__objectNames[28] = "obj_screwjump_sparks";
+	global.__objectNames[29] = "obj_bullet_creator";
+	global.__objectNames[30] = "obj_bullet";
+	global.__objectNames[31] = "obj_player_dashfire";
+	global.__objectNames[32] = "obj_particle_chargetrail";
+	global.__objectNames[33] = "obj_afterimage";
+	global.__objectNames[34] = "object_player_sprites";
+	global.__objectNames[35] = "obj_camera";
+	global.__objectNames[36] = "obj_camera_16_9";
+	global.__objectNames[37] = "obj_camera_stopperL";
+	global.__objectNames[38] = "obj_camera_stopperR";
+	global.__objectNames[39] = "obj_ui_health1";
+	global.__objectNames[40] = "obj_Health_NewUI_text1";
+	global.__objectNames[41] = "obj_Health_NewUI_underside1";
+	global.__objectNames[42] = "obj_Health_newui_symbol1";
+	global.__objectNames[43] = "obj_healthnumberten";
+	global.__objectNames[44] = "obj_healthnumberone";
+	global.__objectNames[45] = "obj_healthbar";
+	global.__objectNames[46] = "obj_healthblockstart";
+	global.__objectNames[47] = "obj_healthblock1";
+	global.__objectNames[48] = "obj_enemy_wormysprites";
+	global.__objectNames[49] = "obj_enemy_wormy";
+	global.__objectNames[50] = "obj_item_RestorationSphere";
+	global.__objectNames[51] = "obj_item_chargebeam";
+	global.__objectNames[52] = "obj_item_surgestrike";
+	global.__objectNames[53] = "obj_item_explosiveammo";
+	global.__objectNames[54] = "obj_screwjump_item1";
+	global.__objectNames[55] = "obj_item_surgestrikeshine";
+	global.__objectNames[56] = "obj_pickup_health1";
+	global.__objectNames[57] = "obj_pickup_health2";
+	global.__objectNames[58] = "obj_hitbox_grounder";
+	global.__objectNames[59] = "obj_sprites_grounder";
+	global.__objectNames[60] = "obj_explosion2";
+	global.__objectNames[61] = "obj_explosion_random";
+	global.__objectNames[62] = "obj_explosion_playerdeath";
+	global.__objectNames[63] = "obj_explosion_normalhit";
+	global.__objectNames[64] = "obj_explosion_normalhit_chunk";
+	global.__objectNames[65] = "obj_hitbox_toad";
+	global.__objectNames[66] = "obj_sprites_toad";
+	global.__objectNames[67] = "obj_door_normal_left";
+	global.__objectNames[68] = "obj_door_normal_right";
+	global.__objectNames[69] = "obj_block_door";
+	global.__objectNames[70] = "obj_scrn_roomtransition";
+	global.__objectNames[71] = "obj_door_test1";
+	global.__objectNames[72] = "obj_room_transition_l2r1";
+	global.__objectNames[73] = "obj_room_transition_r2l1";
+	global.__objectNames[74] = "obj_room_transition_l2r2";
+	global.__objectNames[75] = "obj_room_transition_r2l2";
+	global.__objectNames[76] = "obj_enemy_mushroom_sprites";
+	global.__objectNames[77] = "obj_enemy_mushroom_sprites2";
+	global.__objectNames[78] = "obj_enemy_mushroom_hitbox";
+	global.__objectNames[79] = "obj_enemy_mushroom_hitbox2";
+
+
+	// create another array that has the correct entries
+	var len = array_length_1d(global.__objectDepths);
+	global.__objectID2Depth = [];
+	for( var i=0; i<len; ++i ) {
+		var objID = asset_get_index( global.__objectNames[i] );
+		if (objID >= 0) {
+			global.__objectID2Depth[ objID ] = global.__objectDepths[i];
+		} // end if
+	} // end for
+
+
+}

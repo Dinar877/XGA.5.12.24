@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"darklord_shoot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"darklord_shoot",
+  "parent":{
+    "name":"darklord",
+    "path":"folders/Scripts/Bosses/darklord.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+inst_elevator = obj_elevator_sector1

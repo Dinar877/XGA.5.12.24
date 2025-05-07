@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_watery1",
+  "name":"shd_watery1",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

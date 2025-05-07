@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Obox_rumble",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Obox_rumble",
+  "parent":{
+    "name":"box",
+    "path":"folders/Scripts/Bosses/box.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

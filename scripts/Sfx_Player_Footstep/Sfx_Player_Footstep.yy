@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Sfx_Player_Footstep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Sfx_Player_Footstep",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

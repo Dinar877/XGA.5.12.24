@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Obox_rise",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Obox_rise",
+  "parent":{
+    "name":"box",
+    "path":"folders/Scripts/Bosses/box.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

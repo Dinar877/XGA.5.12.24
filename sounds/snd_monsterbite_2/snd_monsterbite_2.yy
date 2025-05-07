@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_monsterbite_2",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.679184,
+  "name":"snd_monsterbite_2",
+  "parent":{
+    "name":"enemy",
+    "path":"folders/Music+SFX/SFX/enemy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_monsterbite_2.mp3",
+  "type":0,
+  "volume":0.5,
+}

@@ -1,0 +1,1 @@
+textspawnerID = obj_text_spawning_0_2

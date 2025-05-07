@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Gbox_charge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Gbox_charge",
+  "parent":{
+    "name":"box",
+    "path":"folders/Scripts/Bosses/box.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

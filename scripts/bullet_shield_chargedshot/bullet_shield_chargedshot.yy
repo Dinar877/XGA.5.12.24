@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bullet_shield_chargedshot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bullet_shield_chargedshot",
+  "parent":{
+    "name":"bullets_shield",
+    "path":"folders/Scripts/bullets/bullets_shield.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

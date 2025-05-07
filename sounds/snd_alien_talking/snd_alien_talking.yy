@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_alien_talking",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":1.933061,
+  "name":"snd_alien_talking",
+  "parent":{
+    "name":"trueintro",
+    "path":"folders/Music+SFX/SFX/trueintro.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_alien_talking.mp3",
+  "type":0,
+  "volume":1.0,
+}

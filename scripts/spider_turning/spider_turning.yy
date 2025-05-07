@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spider_turning",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spider_turning",
+  "parent":{
+    "name":"botspider",
+    "path":"folders/Scripts/Bosses/botspider.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

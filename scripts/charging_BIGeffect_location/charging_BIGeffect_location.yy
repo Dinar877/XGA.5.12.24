@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"charging_BIGeffect_location",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"charging_BIGeffect_location",
+  "parent":{
+    "name":"bullets",
+    "path":"folders/Scripts/bullets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

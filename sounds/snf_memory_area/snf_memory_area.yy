@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snf_memory_area",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":61.805714,
+  "name":"snf_memory_area",
+  "parent":{
+    "name":"navigation",
+    "path":"folders/Music+SFX/music!!/navigation.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snf_memory_area.mp3",
+  "type":0,
+  "volume":1.0,
+}

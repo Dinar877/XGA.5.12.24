@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enemy_metal_hurt_sfx",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enemy_metal_hurt_sfx",
+  "parent":{
+    "name":"Enemy_stuff",
+    "path":"folders/Scripts/Enemy_stuff.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Moving_Dashing2_right",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Moving_Dashing2_right",
+  "parent":{
+    "name":"Dashing",
+    "path":"folders/Scripts/Dashing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

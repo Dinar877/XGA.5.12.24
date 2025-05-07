@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_ice2",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":120.0,
+  "name":"snd_ice2",
+  "parent":{
+    "name":"navigation",
+    "path":"folders/Music+SFX/music!!/navigation.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_ice2",
+  "type":0,
+  "volume":1.0,
+}

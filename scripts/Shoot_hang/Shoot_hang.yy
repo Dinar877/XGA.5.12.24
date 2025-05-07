@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Shoot_hang",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Shoot_hang",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

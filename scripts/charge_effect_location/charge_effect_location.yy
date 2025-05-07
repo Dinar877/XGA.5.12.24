@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"charge_effect_location",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"charge_effect_location",
+  "parent":{
+    "name":"bullets",
+    "path":"folders/Scripts/bullets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

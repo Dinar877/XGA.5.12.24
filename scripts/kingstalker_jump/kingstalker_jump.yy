@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"kingstalker_jump",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"kingstalker_jump",
+  "parent":{
+    "name":"kingstalker",
+    "path":"folders/Scripts/Bosses/kingstalker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

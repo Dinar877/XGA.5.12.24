@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"DetermineMoveScript",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DetermineMoveScript",
+  "parent":{
+    "name":"Movement_collision",
+    "path":"folders/Scripts/Movement_collision.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

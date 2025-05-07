@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spider_charging",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spider_charging",
+  "parent":{
+    "name":"botspider",
+    "path":"folders/Scripts/Bosses/botspider.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

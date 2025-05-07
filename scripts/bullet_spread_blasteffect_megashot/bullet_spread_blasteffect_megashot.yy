@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bullet_spread_blasteffect_megashot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bullet_spread_blasteffect_megashot",
+  "parent":{
+    "name":"bullets_spread",
+    "path":"folders/Scripts/bullets/bullets_spread.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

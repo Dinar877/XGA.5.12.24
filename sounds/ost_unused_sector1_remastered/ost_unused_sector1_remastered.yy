@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_unused_sector1_remastered",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":157.93633,
+  "name":"ost_unused_sector1_remastered",
+  "parent":{
+    "name":"unused",
+    "path":"folders/Music+SFX/music!!/Ciri_remastered_soundtrack/unused.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_unused_sector1_remastered.mp3",
+  "type":0,
+  "volume":1.0,
+}

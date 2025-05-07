@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bullet_homing_chargeblast",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bullet_homing_chargeblast",
+  "parent":{
+    "name":"bullets_homing",
+    "path":"folders/Scripts/bullets/bullets_homing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

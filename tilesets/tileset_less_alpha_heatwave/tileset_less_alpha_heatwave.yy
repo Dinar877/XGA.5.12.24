@@ -1,0 +1,40 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tileset_less_alpha_heatwave",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tileset_less_alpha_heatwave",
+  "out_columns":5,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_lava_less_alpha_heatwave_tiles",
+    "path":"sprites/spr_lava_less_alpha_heatwave_tiles/spr_lava_less_alpha_heatwave_tiles.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"anim_heatwave","frames":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,],"name":"anim_heatwave","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":27,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":33,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":24,
+}

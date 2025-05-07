@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Fall_shoot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Fall_shoot",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gorilla_idle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gorilla_idle",
+  "parent":{
+    "name":"gorilla",
+    "path":"folders/Scripts/Bosses/gorilla.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

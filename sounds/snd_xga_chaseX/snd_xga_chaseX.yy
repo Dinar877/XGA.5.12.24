@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_xga_chaseX",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":4.205563,
+  "name":"snd_xga_chaseX",
+  "parent":{
+    "name":"unused",
+    "path":"folders/Music+SFX/music!!/Ciri_remastered_soundtrack/unused.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_xga_chaseX.wav",
+  "type":0,
+  "volume":1.0,
+}

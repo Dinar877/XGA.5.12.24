@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Check_if_ledge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Check_if_ledge",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

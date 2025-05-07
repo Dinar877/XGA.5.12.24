@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"eyebot_shoot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"eyebot_shoot",
+  "parent":{
+    "name":"eyebot",
+    "path":"folders/Scripts/Enemy_stuff/eyebot.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

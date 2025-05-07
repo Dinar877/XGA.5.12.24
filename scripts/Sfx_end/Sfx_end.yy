@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Sfx_end",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Sfx_end",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Scripts/Music.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

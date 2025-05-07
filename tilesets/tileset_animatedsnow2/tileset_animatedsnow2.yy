@@ -1,0 +1,43 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tileset_animatedsnow2",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tileset_animatedsnow2",
+  "out_columns":6,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tiles_animatedsnow2",
+    "path":"sprites/tiles_animatedsnow2/tiles_animatedsnow2.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"snowtiles_animated2","frames":[8,9,10,11,12,13,14,15,],"name":"snowtiles_animated2","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"snowtiles_animation3","frames":[32,33,34,35,36,37,38,39,],"name":"snowtiles_animation3","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"snowtiles_animation_fullalpha","frames":[24,25,26,27,28,29,30,31,],"name":"snowtiles_animation_fullalpha","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"snowtiles_better","frames":[31,30,29,28,27,26,25,24,],"name":"snowtiles_better","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":23,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":51,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":64,
+}

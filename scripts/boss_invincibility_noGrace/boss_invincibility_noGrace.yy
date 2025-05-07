@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"boss_invincibility_noGrace",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"boss_invincibility_noGrace",
+  "parent":{
+    "name":"Bosses",
+    "path":"folders/Scripts/Bosses.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,40 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tileset_foreground_nagivationroom2",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":1,
+    "SerialiseWidth":1,
+    "TileSerialiseData":[1,],
+  },
+  "name":"tileset_foreground_nagivationroom2",
+  "out_columns":3,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tiles_foregroundBG_2",
+    "path":"sprites/tiles_foregroundBG_2/tiles_foregroundBG_2.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"anim_nagivation_foreground","frames":[1,2,3,4,5,6,7,8,1,1,1,1,1,1,1,1,],"name":"anim_nagivation_foreground","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":180,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":320,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":10,
+}

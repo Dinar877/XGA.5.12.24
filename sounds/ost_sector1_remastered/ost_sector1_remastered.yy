@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"ost_sector1_remastered",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":300.1992,
+  "name":"ost_sector1_remastered",
+  "parent":{
+    "name":"sector1",
+    "path":"folders/Music+SFX/music!!/Ciri_remastered_soundtrack/sector1.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ost_sector1_remastered.mp3",
+  "type":0,
+  "volume":1.0,
+}

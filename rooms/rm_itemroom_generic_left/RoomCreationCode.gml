@@ -1,0 +1,1 @@
+global.mapgrid_xZeroMove = 1

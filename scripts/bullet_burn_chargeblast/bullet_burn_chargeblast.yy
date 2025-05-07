@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bullet_burn_chargeblast",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bullet_burn_chargeblast",
+  "parent":{
+    "name":"bullets_burn",
+    "path":"folders/Scripts/bullets/bullets_burn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

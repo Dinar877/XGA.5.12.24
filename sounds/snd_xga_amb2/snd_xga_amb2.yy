@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_xga_amb2",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":6.730227,
+  "name":"snd_xga_amb2",
+  "parent":{
+    "name":"xga",
+    "path":"folders/Music+SFX/SFX/xga.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_xga_amb2.wav",
+  "type":0,
+  "volume":0.55,
+}

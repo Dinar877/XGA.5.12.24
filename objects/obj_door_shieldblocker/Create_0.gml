@@ -1,0 +1,97 @@
+/// @description Insert description here
+// You can write your code in this editor
+doorleft = (instance_place(x,y,obj_door_normal_left))
+doorleftalt = (instance_place(x,y,obj_door_normal_leftAlt))
+doorright = (instance_place(x,y,obj_door_normal_right))
+doorrightalt = (instance_place(x,y,obj_door_normal_rightAlt))
+doorrightmore = instance_place(x,y,obj_door_normal_right_more)
+doorleftmore = instance_place(x,y,obj_door_normal_left_more)
+activated = 0;
+hp = 10;
+
+blockdoorID = 0
+redblockerID = 0
+
+enemy_hurt = 0;
+image_alpha = 0;
+
+if (doorleft)
+{
+	depth = doorleft.depth-1;
+}
+else if (doorleftalt)
+{
+	depth = doorleftalt.depth-1;
+}
+else if (doorright)
+{
+	depth = doorright.depth-1;
+}
+else if (doorrightalt)
+{
+	depth = doorrightalt.depth-1;
+}
+else if (doorleftmore)
+{
+	depth = doorleftmore.depth-1;
+}
+else if (doorrightmore)
+{
+	depth = doorrightmore.depth-1;
+}
+
+door_surface = -1
+door_type = 0
+
+//enenmy shit
+go = 0;
+facing = -1;
+turning = 0;
+
+random_pickup1 = irandom_range(0,5);
+random_pickup2 = irandom_range(0,5);
+random_pickup3 = irandom_range(0,5);
+
+prep_now = 0;
+knockback_now = 0;
+run_now = 0;
+inst1 = 0;
+inst2 = 0;
+inst4 = 0;
+inst2 = 0
+inst_self = self;
+inst_player = -1;
+
+set_direction = 0;
+set_dir2 = 0;
+
+FadeNow = 0;
+started1 = 0;
+started2 = 0;
+
+started_idle = 0;
+idleY = 0;
+idleY2 = 0;
+idleswitch1 = 1;
+idleswitch2 = 0;
+timer = 0;
+timer2shoot = 1;
+inst1created = 0;
+
+fade_color = shader_get_uniform(shd_flash_fade_white, "fade_color");
+NewColor = shader_get_uniform(shd_flash_fade_white, "NewColor");
+
+//for getting hurt by player
+stop1 = 0;
+enemy_hurt = 0;
+enemy_almost_hurt = 0;
+stay = 0;
+
+sword_deadswitch = 0
+
+knockback = 0;
+
+
+
+
+

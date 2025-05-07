@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"blast_effect_location_noshoot_xvision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"blast_effect_location_noshoot_xvision",
+  "parent":{
+    "name":"bullets",
+    "path":"folders/Scripts/bullets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
