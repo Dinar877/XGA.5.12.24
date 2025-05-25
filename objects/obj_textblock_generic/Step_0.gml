@@ -605,6 +605,39 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 			global.mapgrid_tilegivenX[9999] = 0;
 			global.mapgrid_tilegivenY[9999] = 0;
 			global.mapgrid_tilegivenN = 0;
+			
+			//remove all markers
+			#region
+			for ( var n = 0; n < global.marker_N + 1; n += 1)
+			{
+				global.marker_no[n] = 0;
+				global.marker_coordsX[n] = 0;
+				global.marker_coordsY[n] = 0;
+				global.marker_coordsX2[n] = 0;
+				global.marker_coordsY2[n] = 0;
+				global.marker_sectortile[n] = 0;
+			}
+			
+			global.marker_N = 0;
+			
+			for ( var n = 0; n < 5; n += 1)
+			{
+				global.marker_inst[n] = 0;
+			}
+			
+			if (instance_exists(obj_maptile_marker))
+			{
+				with(obj_maptile_marker)
+				{
+					instance_destroy();	
+				}
+			}
+			#endregion
+			
+			
+			
+			
+			
 										
 			for (var i = 0; i < 999; i++)
 			{

@@ -3,6 +3,7 @@
 
 //when the object first spawns
 if (switch2 == 0) && (global.loading_startgame != 1)
+&& (obj_NEWsav_standbyeffect.stopnow == 0)
 {
 	switch2 = 1;
 
@@ -100,18 +101,22 @@ else if (timer1 >= 100)
 	}
 }
 
+//???
 if (timer1 >= 100) && (!instance_exists(obj_scrnDark))
 {
-	global.loading = 0;
-	global.loading_startgame = 0;
+	
 	global.saving = 0;
 	global.dead_ending = 0;
 	
 	audio_stop_sound(snd_saveroom_laser)
 }
 
+//for getting out of saving and loading
 if (instance_exists(obj_player)) && (global.loading = 0)
 {
+	global.loading = 0;
+	global.loading_startgame = 0;
+	
 	instance_activate_all()
 	with(obj_NEWsav_standbyeffect)
 	{

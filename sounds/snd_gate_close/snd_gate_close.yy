@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.576,
+  "duration":0.5760091,
   "name":"snd_gate_close",
   "parent":{
     "name":"environment",

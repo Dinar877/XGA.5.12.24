@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":5.067755,
+  "duration":5.024875,
   "name":"snd_xga_roar",
   "parent":{
     "name":"xga",

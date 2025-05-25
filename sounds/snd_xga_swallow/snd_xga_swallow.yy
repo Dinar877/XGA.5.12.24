@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_xga_swallow",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":1.2712698,
+  "name":"snd_xga_swallow",
+  "parent":{
+    "name":"xga",
+    "path":"folders/Music+SFX/SFX/xga.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_xga_swallow.mp3",
+  "type":0,
+  "volume":1.0,
+}

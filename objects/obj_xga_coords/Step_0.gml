@@ -265,8 +265,8 @@ else if (timer_xga < 1) && (spawn_xga_at_door = 0)
 
 
 //always spawn xga
-difference_y = 0;
-timer_xga = 1;
+//difference_y = 0;
+//timer_xga = 1;
 
 
 //leading up to player // creating xga instance

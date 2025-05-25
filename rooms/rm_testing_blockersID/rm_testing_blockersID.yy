@@ -65,10 +65,10 @@
     {"name":"inst_5DCE87C","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
     {"name":"inst_5CD9A610","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
     {"name":"inst_4BF37129","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
-    {"name":"inst_478AED59","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
     {"name":"inst_C95D108","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
     {"name":"inst_6BD7C40C","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
     {"name":"inst_47020915","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
+    {"name":"inst_478AED59","path":"rooms/rm_testing_blockersID/rm_testing_blockersID.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -80,8 +80,8 @@
         {"$GMRInstance":"v2","%Name":"inst_4BF37129","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4BF37129","objectId":{"name":"obj_door_normal_right","path":"objects/obj_door_normal_right/obj_door_normal_right.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":333.0,"y":253.0,},
         {"$GMRInstance":"v2","%Name":"inst_478AED59","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_478AED59","objectId":{"name":"obj_player_spawnhere","path":"objects/obj_player_spawnhere/obj_player_spawnhere.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":552.0,"y":280.0,},
         {"$GMRInstance":"v2","%Name":"inst_C95D108","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_C95D108","objectId":{"name":"obj_door_border_left","path":"objects/obj_door_border_left/obj_door_border_left.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":639.0,"y":224.0,},
-        {"$GMRInstance":"v2","%Name":"inst_6BD7C40C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6BD7C40C","objectId":{"name":"obj_autohack_lock","path":"objects/obj_autohack_lock/obj_autohack_lock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":392.0,"y":232.0,},
-        {"$GMRInstance":"v2","%Name":"inst_47020915","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_47020915","objectId":{"name":"obj_superautohack_lock","path":"objects/obj_superautohack_lock/obj_superautohack_lock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":480.0,"y":280.0,},
+        {"$GMRInstance":"v2","%Name":"inst_6BD7C40C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6BD7C40C","objectId":{"name":"obj_autohack_lock","path":"objects/obj_autohack_lock/obj_autohack_lock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":440.0,"y":192.0,},
+        {"$GMRInstance":"v2","%Name":"inst_47020915","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_47020915","objectId":{"name":"obj_superautohack_lock","path":"objects/obj_superautohack_lock/obj_superautohack_lock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":504.0,"y":232.0,},
       ],"layers":[],"name":"Inst_doors","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":199,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":125,"SerialiseWidth":125,"TileCompressedData":[
           -1397,48,16,66,93,94,93,94,93,94,93,94,93,94,93,94,93,94,61,-109,48,1,12,-14,-2147483648,1,11,-107,48,
@@ -159,8 +159,8 @@
   ],
   "name":"rm_testing_blockersID",
   "parent":{
-    "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "name":"map marker testing",
+    "path":"folders/Rooms/testing/map marker testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

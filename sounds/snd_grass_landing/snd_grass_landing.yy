@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.39462584,
   "name":"snd_grass_landing",
   "parent":{
     "name":"enemy",

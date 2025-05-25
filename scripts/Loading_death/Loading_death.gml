@@ -364,6 +364,7 @@ function Loading_death() {
 				}
 	
 				global.marker_N = ds_map_find_value(listvalue,"Marker.N");
+				
 		
 				for ( n_instmarker = 0; n_instmarker < 5; n_instmarker += 1)
 				{

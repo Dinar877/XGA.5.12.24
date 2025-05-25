@@ -56,6 +56,7 @@ global.marker_coordsY[9999] = 0;
 global.marker_coordsX2[9999] = 0;
 global.marker_coordsY2[9999] = 0;
 global.marker_sectortile[9999] = 0;
+global.marker_imageindex = 0;
 
 //upgrade
 global.upgradecollected[999] = 0;

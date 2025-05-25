@@ -56,12 +56,17 @@ if (image_alpha > 0) && (switch1 < 1)
 		}
 		
 		instance_create_layer(1056,293,layer_get_id("Instances_3"),obj_midgame_xga_wallburst_hole);
+		instance_create_layer(1055,285,layer_get_id("Inst_level_0"),obj_midgame_cutscene1);
 		
 		instance_create_layer(1008,329,layer_get_id("Instances_2"),obj_midgame_wallburst_debris1);
 		instance_create_layer(1054,331,layer_get_id("Instances_2"),obj_midgame_wallburst_debris2);
 		instance_create_layer(1113,332,layer_get_id("Instances_2"),obj_midgame_wallburst_debris3);
 		instance_create_layer(996,337,layer_get_id("Instances_2"),obj_midgame_wallburst_debris4);
 		instance_create_layer(1063,333,layer_get_id("Instances_2"),obj_midgame_wallburst_debris4);
+		
+		instance_destroy(obj_midgame_npc_scientist);
+		instance_destroy(object_player2_0_sprites);
+		instance_destroy(obj_player);
 		
 		instance_create(x,y,obj_tileswapper_frozen)
 	}
@@ -76,23 +81,4 @@ if (image_alpha > 0) && (switch1 >= 1) && (!instance_exists(obj_explosion_random
 else if (image_alpha <= 0) && (switch1 >= 1) && (!instance_exists(obj_explosion_random_big))
 {
 	instance_destroy();
-	
-	if (instance_exists(obj_midgame_npc_scientist))
-	{
-		with(obj_midgame_npc_scientist)
-		{
-			sprite_index = spr_xga_midgame_eat_scientist
-			image_speed = 1
-		}
-	}
-	
-	if (instance_exists(object_player2_0_sprites))
-	{
-		with(object_player2_0_sprites)
-		{
-			image_speed = 1	
-		}
-	}
-	
-	exit;
 }

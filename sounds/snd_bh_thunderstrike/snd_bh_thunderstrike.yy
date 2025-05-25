@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bh_thunderstrike",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":9.774512,
+  "name":"snd_bh_thunderstrike",
+  "parent":{
+    "name":"environment",
+    "path":"folders/Music+SFX/SFX/environment.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bh_thunderstrike.mp3",
+  "type":0,
+  "volume":1.0,
+}

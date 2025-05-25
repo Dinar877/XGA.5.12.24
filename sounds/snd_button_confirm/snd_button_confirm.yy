@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.573356,
+  "duration":0.57335603,
   "name":"snd_button_confirm",
   "parent":{
     "name":"player",

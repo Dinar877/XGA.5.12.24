@@ -275,6 +275,13 @@ if (enter_pressed) && (global.pause_transition = 0) && (global.room_transition =
 	exit;
 }
 
+
+//custom map markers global image index
+global.marker_imageindex += 2/60;
+
+
+
+
 ////////////////ABILITIES
 
 	

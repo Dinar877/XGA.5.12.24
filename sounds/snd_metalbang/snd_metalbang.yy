@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":2.004739,
+  "duration":2.0047393,
   "name":"snd_metalbang",
   "parent":{
     "name":"environment",

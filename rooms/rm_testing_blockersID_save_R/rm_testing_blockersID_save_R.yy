@@ -170,8 +170,8 @@
   ],
   "name":"rm_testing_blockersID_save_R",
   "parent":{
-    "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "name":"map marker testing",
+    "path":"folders/Rooms/testing/map marker testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

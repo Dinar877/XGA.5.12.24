@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":3.284989,
+  "duration":3.2849886,
   "name":"snd_electricity1",
   "parent":{
     "name":"environment",

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":8.097959,
+  "duration":8.072903,
   "name":"snd_swordswoosh",
   "parent":{
     "name":"player",

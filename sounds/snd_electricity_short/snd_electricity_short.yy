@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.612521,
+  "duration":0.6125397,
   "name":"snd_electricity_short",
   "parent":{
     "name":"player",

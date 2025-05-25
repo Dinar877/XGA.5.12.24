@@ -3,6 +3,7 @@
 tileposx = 0
 tileposy = 0
 sprite_index = spr_marker_red
+frame = 0;
 locationnow1 = 0;
 
 n_instmarker = 0

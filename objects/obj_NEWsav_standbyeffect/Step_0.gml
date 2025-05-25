@@ -9,7 +9,8 @@ if (instance_exists(obj_NEWsav_top))
 
 
 
-if (global.saving == 0) && (stopnow <= 0)
+if (global.saving == 0) 
+&& (stopnow <= 0)
 {
 	if (place_meeting(x,y,obj_player)) && (image_alpha < 0.8)
 	{
@@ -39,6 +40,7 @@ if (global.saving == 0) && (stopnow <= 0)
 
 
 if (!place_meeting(x,y,obj_player)) && (stopnow > 0)
+&& (global.loading_startgame = 0)
 {
 	stopnow = 0
 }

@@ -7,8 +7,8 @@ if (sectortile != global.sector_active)
 
 if (sectortile == global.sector_active) 
 && ((global.pause_map = 1) or (global.navigation = 1) or ((global.pause_exit > 0) && (global.pause_map > 0) && (global.stopper_2ndscrnshot <= 0)))
-{
+{	
 	draw_set_alpha(image_alpha)
-	draw_self()
+	draw_sprite(sprite_index, global.marker_imageindex, x, y);
 	draw_set_alpha(1)
 }

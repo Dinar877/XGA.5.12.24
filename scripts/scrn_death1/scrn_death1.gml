@@ -222,6 +222,34 @@ function scrn_death1() {
 													instance_destroy()	
 												}
 											}
+											
+											//remove all markers
+											#region
+											for ( var n = 0; n < global.marker_N + 1; n += 1)
+											{
+												global.marker_no[n] = 0;
+												global.marker_coordsX[n] = 0;
+												global.marker_coordsY[n] = 0;
+												global.marker_coordsX2[n] = 0;
+												global.marker_coordsY2[n] = 0;
+												global.marker_sectortile[n] = 0;
+											}
+			
+											global.marker_N = 0;
+			
+											for ( var n = 0; n < 5; n += 1)
+											{
+												global.marker_inst[n] = 0;
+											}
+			
+											if (instance_exists(obj_maptile_marker))
+											{
+												with(obj_maptile_marker)
+												{
+													instance_destroy();	
+												}
+											}
+											#endregion
 									   
 											global.jumping = 0;
 											global.jumpingdm = 0;
@@ -383,6 +411,34 @@ function scrn_death1() {
 									
 										global.ability_limit = 0
 										global.stopper_2ndscrnshot = 1;
+										
+										//remove all markers
+										#region
+										for ( var n = 0; n < global.marker_N + 1; n += 1)
+										{
+											global.marker_no[n] = 0;
+											global.marker_coordsX[n] = 0;
+											global.marker_coordsY[n] = 0;
+											global.marker_coordsX2[n] = 0;
+											global.marker_coordsY2[n] = 0;
+											global.marker_sectortile[n] = 0;
+										}
+			
+										global.marker_N = 0;
+			
+										for ( var n = 0; n < 5; n += 1)
+										{
+											global.marker_inst[n] = 0;
+										}
+			
+										if (instance_exists(obj_maptile_marker))
+										{
+											with(obj_maptile_marker)
+											{
+												instance_destroy();	
+											}
+										}
+										#endregion
 										
 										
 										Loading_death()

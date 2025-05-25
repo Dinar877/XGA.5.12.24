@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.167396,
+  "duration":1.167415,
   "name":"snd_xga_jump",
   "parent":{
     "name":"xga",

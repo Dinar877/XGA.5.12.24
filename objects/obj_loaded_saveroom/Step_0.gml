@@ -30,6 +30,15 @@ if (global.loading_startgame = 1) && (switch1 == 0)
 		image_speed = 0;
 		image_index = image_number-1
 	}
+	with(obj_NEWsav_bottom)
+	{
+		ready = 0
+	}
+	with(obj_NEWsav_standbyeffect)
+	{
+		stopnow = 1;	
+	}
+	
 	//instance_deactivate_object(obj_link_healthUI);
 	//instance_deactivate_object(obj_link_map);
 	instance_deactivate_object(obj_player);

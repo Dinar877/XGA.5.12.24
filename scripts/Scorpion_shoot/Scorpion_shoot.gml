@@ -7,7 +7,7 @@ function Scorpion_shoot(){
 		if (sprite_index == spr_scorpion_shoot_right)
 		{
 			audio_stop_sound(snd_xga_armbust_fire2)
-			audio_play_sound(snd_xga_armbust_fire2,1000,false,global.sfx_volume)
+			audio_play_sound(snd_xga_armbust_fire2,1000,false,global.sfx_volume*0.5)
 			emitter_vol = 1;
 			
 			var inst1 = instance_create_depth(x+5,y-20,id.depth-1,obj_enemy_scorpion_bullet)
@@ -59,7 +59,7 @@ function Scorpion_shoot(){
 		else if (sprite_index == spr_scorpion_shoot_left)
 		{
 			audio_stop_sound(snd_xga_armbust_fire2)
-			audio_play_sound(snd_xga_armbust_fire2,1000,false,global.sfx_volume)
+			audio_play_sound(snd_xga_armbust_fire2,1000,false,global.sfx_volume*0.5)
 			emitter_vol = 1;
 			
 			var inst1 = instance_create_depth(x-5,y-20,id.depth-1,obj_enemy_scorpion_bullet)

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":15.145635,
+  "duration":15.145646,
   "name":"snd_xga_amb1",
   "parent":{
     "name":"xga",

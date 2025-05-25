@@ -11,6 +11,10 @@ function scrn_pausing() {
 	    started1 = 0;
 	    image_alpha = 1;
 	    sprite_index = scrn;
+		
+		//sfz
+		audio_stop_sound(snd_pause);
+		audio_play_sound(snd_pause,1000,false,global.sfx_volume);
 	}
 
 	//make sure player is in correct position

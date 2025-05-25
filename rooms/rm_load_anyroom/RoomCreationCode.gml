@@ -42,33 +42,33 @@ global.upgrade_charge = 1;
 global.upgradecollected[950] = 1;
 global.beam_spread_available = 1;
 global.upgradecollected[951] = 1;
-global.beam_burn_available = 0;
+global.beam_burn_available = 1;
 global.upgradecollected[952] = 1;
-global.beam_homing_available = 0;
+global.beam_homing_available = 1;
 global.upgradecollected[953] = 1;
-global.beam_shield_available = 0;
+global.beam_shield_available = 1;
 global.upgradecollected[954] = 1;
 
 
 
 
 //suit palette testing
-global.suit_pure = 1
-global.upgradecollected[955] = 1
+global.suit_pure = 1;
+global.upgradecollected[955] = 1;
 
-global.suit_shock = 0
-global.upgradecollected[966] = 1
-global.speedboots = 0;
+global.suit_shock = 1;
+global.upgradecollected[966] = 1;
+global.speedboots = 1;
 
 
 //upgrades-abilities
 global.ability_select = 0;
 
-global.nanoshield_available = 1
-global.nanoshield_limit = 50
-global.nanoshield_ammo = 50
+global.nanoshield_available = 1;
+global.nanoshield_limit = 50;
+global.nanoshield_ammo = 50;
 global.nanoshield_state = 1;
-global.upgradecollected[962] = 1
+global.upgradecollected[962] = 1;
 if (!instance_exists(obj_ability_nanoshield))
 {
 	global.ability_limit += 1;
@@ -79,11 +79,11 @@ if (!instance_exists(obj_ability_nanoshield))
 	}
 }
 
-global.invisibility_available = 1
-global.invisibility_limit = 9999999999999999
-global.invisibility_ammo = 9999999999999999
+global.invisibility_available = 1;
+global.invisibility_limit = 9999999999999999;
+global.invisibility_ammo = 9999999999999999;
 global.invisibility_state = 1;
-global.upgradecollected[963] = 1
+global.upgradecollected[963] = 1;
 if (!instance_exists(obj_ability_invisibility))
 {
 	global.ability_limit += 1;
@@ -94,11 +94,11 @@ if (!instance_exists(obj_ability_invisibility))
 	}
 }
 
-global.nuclearblast_available = 1
-global.nuclearblast_limit = 30
-global.nuclearblast_ammo = 30
+global.nuclearblast_available = 1;
+global.nuclearblast_limit = 30;
+global.nuclearblast_ammo = 30;
 global.nuclearblast_state = 1;
-global.upgradecollected[965] = 1
+global.upgradecollected[965] = 1;
 if (!instance_exists(obj_ability_nuclearblast))
 {
 	global.ability_limit += 1;
@@ -109,11 +109,11 @@ if (!instance_exists(obj_ability_nuclearblast))
 	}
 }
 
-global.shockwave_available = 1
-global.shockwave_limit = 50
-global.shockwave_ammo = 50
+global.shockwave_available = 1;
+global.shockwave_limit = 50;
+global.shockwave_ammo = 50;
 global.shockwave_state = 1;
-global.upgradecollected[964] = 1
+global.upgradecollected[964] = 1;
 if (!instance_exists(obj_ability_shockwave))
 {
 	global.ability_limit += 1;
@@ -131,13 +131,13 @@ global.suit_count = 1;
 
 //MISC.UPGRADES
 global.xvision = 1;
-global.upgradecollected[957] = 1
+global.upgradecollected[957] = 1;
 global.kelvin = 1;
-global.upgradecollected[958] = 1
+global.upgradecollected[958] = 1;
 global.spacejump = 1;
-global.upgradecollected[968] = 1
+global.upgradecollected[968] = 1;
 global.hydrodash = 1;
-global.upgradecollected[959] = 1
+global.upgradecollected[959] = 1;
 
 
 global.airdash = 1;
@@ -148,9 +148,9 @@ global.airdash = 1;
 
 
 //corrupted
-global.corrupted = 1;
-global.midgame = 1;
-global.sector_active = 2;
+global.corrupted = 0;
+global.midgame = 0;
+global.sector_active = 0;
 
 
 //testing
@@ -204,4 +204,4 @@ texture_set_interpolation(false);
 
 
 //goto desired room
-room_goto(rm_BS_cave_boss)
+room_goto(rm_11_7_6)

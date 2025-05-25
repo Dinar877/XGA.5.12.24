@@ -23,7 +23,7 @@ if (place_meeting(x,y,obj_mapborder_underside)) && (sectortile == global.sector_
 		draw_clear_alpha(c_white,0);
 		draw_set_alpha(image_alpha)
 	
-		draw_sprite(sprite_index, image_index, 10+((origionalX*10)-(global.mapgrid_playerx*10)-originX), 10+((origionalY*10)-(global.mapgrid_playery*10)-originY));
+		draw_sprite(sprite_index, global.marker_imageindex, 10+((origionalX*10)-(global.mapgrid_playerx*10)-originX), 10+((origionalY*10)-(global.mapgrid_playery*10)-originY));
 		
 		surface_reset_target();
 		

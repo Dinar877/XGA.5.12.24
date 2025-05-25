@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":2.8116326,
   "name":"snd_boss_warning",
   "parent":{
     "name":"environment",

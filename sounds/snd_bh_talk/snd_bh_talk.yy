@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":10.13551,
   "name":"snd_bh_talk",
   "parent":{
     "name":"environment",

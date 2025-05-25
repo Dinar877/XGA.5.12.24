@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":91.29796,
+  "duration":91.254425,
   "name":"snd_hydromachine",
   "parent":{
     "name":"environment",

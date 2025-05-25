@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.854694,
+  "duration":1.8111565,
   "name":"snd_rockimpact2",
   "parent":{
     "name":"enemy",

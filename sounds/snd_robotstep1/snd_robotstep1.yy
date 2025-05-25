@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.504,
+  "duration":0.46451247,
   "name":"snd_robotstep1",
   "parent":{
     "name":"player",

@@ -2,6 +2,9 @@
 // You can write your code in this editor
 script_execute(Gamepad_variables);
 
+//custom map markers global image index
+global.marker_imageindex += 2/60;
+
 //moves map around
 if (gamepad_is_connected(correct_slot))
 {
