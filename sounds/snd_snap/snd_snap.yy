@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.6373243,
   "name":"snd_snap",
   "parent":{
     "name":"enemy",

@@ -15,6 +15,9 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_yellow_right
 						blockerID2 = other.blockerID2
 					}
+					
+					//increase maptile hazard count by +1
+					//global.tileHazardDataN++;
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original) && (inst_blocky.door_type = 0)
 				{
@@ -24,6 +27,8 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_yellow_left
 						blockerID2 = other.blockerID2
 					}
+					
+					
 				}
 				//blue
 				else if (inst_blocky.sprite_index = spr_doorstopper_left_original) && (inst_blocky.door_type = 1)
@@ -34,6 +39,8 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_blueright
 						blockerID2 = other.blockerID2
 					}
+					
+					
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original) && (inst_blocky.door_type = 1)
 				{
@@ -53,6 +60,9 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_greyleft
 						blockerID2 = other.blockerID2
 					}
+					
+					//increase maptile hazard count by +1
+					global.tileHazardDataN++;
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original) && (inst_blocky.door_type = 2)
 				{
@@ -62,6 +72,8 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_greyright
 						blockerID2 = other.blockerID2
 					}
+					
+					
 				}
 			
 				//green
@@ -73,6 +85,7 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_green_right
 						blockerID2 = other.blockerID2
 					}
+					
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original) && (inst_blocky.door_type = 3)
 				{
@@ -82,6 +95,7 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_green_left
 						blockerID2 = other.blockerID2
 					}
+					
 				}
 			
 				//grey
@@ -93,6 +107,7 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_redleft
 						blockerID2 = other.blockerID2
 					}
+					
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original) && (inst_blocky.door_type = 4)
 				{
@@ -102,6 +117,7 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_redright
 						blockerID2 = other.blockerID2
 					}
+					
 				}
 			
 			
@@ -120,6 +136,8 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_purpleright
 						blockerID2 = other.blockerID2
 					}
+					
+					
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original_s)
 				{
@@ -129,6 +147,8 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_purpleleft
 						blockerID2 = other.blockerID2
 					}
+					
+					
 				}
 				
 			 }
@@ -146,6 +166,8 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_greyleft
 						blockerID2 = other.blockerID2
 					}
+					
+					
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original_shield)
 				{
@@ -155,6 +177,8 @@ function map_sprites() {
 						blockerID = MapTiles_groupDoor_greyright
 						blockerID2 = other.blockerID2
 					}
+					
+					
 				}
 				
 			 }
@@ -201,6 +225,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_nanoshield
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -218,6 +245,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_invisibility_door
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -235,6 +265,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_superautohack
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -252,6 +285,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_supernuclearblast
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -276,6 +312,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_nuclearblast
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -293,6 +332,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_corelock_door
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -310,6 +352,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_autohack
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -327,6 +372,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_superautohack
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -344,6 +392,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_plug
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -361,6 +412,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_plug
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -378,6 +432,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_vine
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}
@@ -395,6 +452,9 @@ function map_sprites() {
 							hazardID = inst_mapchecker1.hazardID
 							hazardID2 = MapTiles_vine
 							hazardID_redblockerID = other.redblockerID
+							
+							//increase maptile hazard count by +1
+							global.tileHazardDataN++;
 						}
 					}
 				}

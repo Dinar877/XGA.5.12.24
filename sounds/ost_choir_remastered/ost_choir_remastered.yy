@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":163.65715,
+  "duration":163.63103,
   "name":"ost_choir_remastered",
   "parent":{
     "name":"unused",

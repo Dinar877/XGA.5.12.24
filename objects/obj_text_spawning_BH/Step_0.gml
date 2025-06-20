@@ -26,7 +26,7 @@ if (instance_exists(obj_texty_generic_shorter))
 if (new1 == 0)
 {
 	new1 = 1;
-	tex = instance_create_depth(x+15,y-5,id.depth-1,obj_texty_generic_shorter);
+	tex = instance_create_depth(x+10,y-5,id.depth-1,obj_texty_generic_shorter);
 
 	with(tex)
 	{
@@ -38,7 +38,7 @@ if (new1 == 0)
 		}
 		else if (newTextAvailable == 4)
 		{
-			text = " ER1OR! 5ERROR! 1SYSTEM DAM>7GE! 99% OF EN1RGY USED F/R ANTI-XGA LIGHTING S5IELD! NO ENERGY REMA1101INING F7*R USER ANTI-XGA DETECTION FIEL100110D. R()TURN T0O EACH SEC11OR AND DE1TR0Y THE R1MA1NING BI0WEAP1NS! CAUT01!ION ADVI1ED!!!!!";	//texty object not working here. "(floor(time)+message_pos+time2 < text_length)" is equal to 93 and new line not triggered as a result.. 
+			text = " ER1OR! 5ERROR! 1SYSTEM DAM>7GE! 99% OF EN1RGY USED F/R ANTI-XGA LIGHTNING S5IELD! N0 ENERGY REMA1101INING F7*R USER ANTI-XGA DETECTION FIEL100110D. R()TURN T0O EACH SEC11OR AND DE1TR0Y THE R1MA1NING BI0WEAP1NS! CAUT01!ION ADVI1ED!!!!!";	//texty object not working here. "(floor(time)+message_pos+time2 < text_length)" is equal to 93 and new line not triggered as a result.. 
 		}
 		else if (newTextAvailable == 6)
 		{

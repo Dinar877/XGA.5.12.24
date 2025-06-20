@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":93.204895,
+  "duration":93.17587,
   "name":"ost_ice_sfx_remastered",
   "parent":{
     "name":"sector1",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"ost_ice_sfx_remastered.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.6,
 }

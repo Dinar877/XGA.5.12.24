@@ -60,6 +60,10 @@ if (is_audio = 1) //AUDIO
 
 if (selected > 0) && (delay >= 1) && (jump_pressed)
 {
+	//sfx
+	audio_stop_sound(snd_button_confirm)
+	audio_play_sound(snd_button_confirm,1000,false,global.sfx_volume)
+	
 	//UPGRADES
 	if (is_upgrade = 1)
 	{
@@ -518,6 +522,8 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 			instate = 0;
 			spawn = 0;
 		}
+		
+
 	}
 	else if (lead2exitmenu = 1)
 	{

@@ -12,8 +12,8 @@
   "duration":13.323424,
   "name":"snd_midgame_suitrepairing",
   "parent":{
-    "name":"player",
-    "path":"folders/Music+SFX/SFX/player.yy",
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

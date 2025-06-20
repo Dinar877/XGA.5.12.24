@@ -140,6 +140,7 @@ if (global.pause_player > 0)
 	}
 	
 	/////cutscene-getting corrupted-flashing
+	/*
 	if ((sprite_index = spr_midgame_player_flash_left) or (sprite_index = spr_midgame_player_flash_right))
 	&& (image_index >= image_number-1)
 	&& (image_speed != 0)
@@ -208,6 +209,8 @@ if (global.pause_player > 0)
 		
 		image_alpha = 0
 	}
+	
+	*/
 	
 	
 	
@@ -475,6 +478,17 @@ if (global.frozen > 0) && (FadeNow4 > 0) && ((global.pickup_health = 0) && (glob
 	if (global.frozen > 0) && (global.hurt = 0) && (global.hurt2 = 0)
 	{
 		FadeNow4 -= (1/room_speed);
+		
+		//freezing effect
+		if (effectstimer < 1)
+		{
+			effectstimer += (1/room_speed);	
+		}
+		else if (effectstimer >= 1)
+		{
+			effectstimer = 0;
+			instance_create_depth(x,y,depth-1,obj_iceeffect);
+		}
 	}
 }
 else if (global.frozen > 0) && (FadeNow4 <= 0) && ((global.pickup_health = 0) && (global.pickup_health_smaller = 0) && (global.nanoshield == 0) && (global.kelvin <= 0))
@@ -496,6 +510,17 @@ if (global.superheated > 0) && (FadeNow4 > 0) && (global.pickup_health = 0) && (
 	if (global.superheated > 0) && (global.hurt = 0) && (global.hurt2 = 0)
 	{
 		FadeNow4 -= (1/room_speed);
+		
+		//burning effect
+		if (effectstimer < 1)
+		{
+			effectstimer += (1/room_speed)*6;	
+		}
+		else if (effectstimer >= 1)
+		{
+			effectstimer = 0;
+			instance_create_depth(x,y,depth-1,obj_burneffect);
+		}
 	}
 }
 else if (global.superheated > 0) && (FadeNow4 <= 0) && ((global.pickup_health = 0) && (global.pickup_health_smaller = 0) && (global.kelvin <= 0))

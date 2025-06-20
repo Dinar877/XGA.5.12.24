@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":3.239184,
+  "duration":3.199501,
   "name":"snd_downloading",
   "parent":{
     "name":"player",

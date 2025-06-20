@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":59.350204,
+  "duration":59.303764,
   "name":"snd_heartbeat",
   "parent":{
     "name":"music!!",

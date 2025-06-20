@@ -13,14 +13,14 @@ function enemy_metal_hurt_sfx(){
 			{
 				snd = audio_play_sound(snd_metalbang,1000,false,global.sfx_volume)
 				audio_sound_gain(snd,0,1500)
-				audio_sound_pitch(snd, random_range(0.995,1.005))
+				audio_sound_pitch(snd, random_range(0.95,1.05))
 			}
 			else if (audio_is_playing(snd_metalbang))
 			{
 				audio_stop_sound(snd_metalbang)
 				snd = audio_play_sound(snd_metalbang,1000,false,global.sfx_volume)
 				audio_sound_gain(snd,0,1500)
-				audio_sound_pitch(snd, random_range(0.995,1.005))
+				audio_sound_pitch(snd, random_range(0.95,1.05))
 			}
 		}
 	}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_iceeffect",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":3.6515646,
+  "name":"snd_iceeffect",
+  "parent":{
+    "name":"environment",
+    "path":"folders/Music+SFX/SFX/environment.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_iceeffect.wav",
+  "type":0,
+  "volume":1.0,
+}

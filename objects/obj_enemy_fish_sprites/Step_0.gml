@@ -23,7 +23,7 @@ else
 //play sfx properly
 if (!audio_is_playing(emitter_player))
 {
-	emitter_player = audio_play_sound_at(snd_underwater_moving, inst2.x, inst2.y, 0, 10, 40, 1, true, 1000)
+	emitter_player = audio_play_sound_at(snd_underwater_moving, inst2.x, inst2.y, 0, 10, 50, 1, true, 1000)
 }
 
 //audio

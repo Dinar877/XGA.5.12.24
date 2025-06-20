@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":4.205563,
+  "duration":4.2055783,
   "name":"snd_xga_chaseX",
   "parent":{
     "name":"unused",

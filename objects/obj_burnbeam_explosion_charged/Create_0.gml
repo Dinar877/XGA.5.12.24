@@ -44,6 +44,61 @@ else if (n = 5)
 		audio_stop_sound(snd_beamexplosion2)
 		audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)
 	}
+	
+	
+//reflect beam	
+if (global.beam_homing_available = 1)
+{
+	if (n = 3)
+	{
+		sprite_index = spr_explosion5_green
+		
+		audio_stop_sound(snd_beamexplosion1)
+		audio_play_sound(snd_beamexplosion1,1000,false,global.sfx_volume)
+	}
+	else if (n = 4)
+	{
+		sprite_index = spr_explosion6_green
+		
+		audio_stop_sound(snd_beamexplosion2)
+		audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)
+	}
+	else if (n = 5)
+	{
+		sprite_index = spr_explosion7_green
+		
+		audio_stop_sound(snd_beamexplosion2)
+		audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)
+	}
+}
+
+//shield beam	
+if (global.beam_shield_available = 1)
+{
+	if (n = 3)
+	{
+		sprite_index = spr_explosion5_grey
+		
+		audio_stop_sound(snd_beamexplosion1)
+		audio_play_sound(snd_beamexplosion1,1000,false,global.sfx_volume)
+	}
+	else if (n = 4)
+	{
+		sprite_index = spr_explosion6_grey
+		
+		audio_stop_sound(snd_beamexplosion2)
+		audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)
+	}
+	else if (n = 5)
+	{
+		sprite_index = spr_explosion7_grey
+		
+		audio_stop_sound(snd_beamexplosion2)
+		audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)
+	}
+}
+	
+	
 
 image_angle = round(random_range(0,360));
 

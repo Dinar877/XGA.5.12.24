@@ -11,16 +11,13 @@ or (global.upgrade_process = 1)
 //play sfx properly
 if (!audio_is_playing(emitter_player))
 {
-	emitter_player = audio_play_sound_at(snd_underwater_moving,id.x,id.y,0,30,200,1,true,1000,global.sfx_volume)
+	emitter_player = audio_play_sound_at(snd_underwater_moving,id.x,id.y,0,10,50,1,true,1000,global.sfx_volume)
 }
-else if (audio_is_playing(emitter_player))
-{
-	audio_stop_sound(emitter_player)
-}
+
 
 //audio
 dist = point_distance(id.x,id.y,obj_player.x,obj_player.y)
-audio_sound_gain(emitter_player,(30/dist) * global.sfx_volume,0)
+audio_sound_gain(emitter_player,(10/dist) * global.sfx_volume,0)
 
 
 

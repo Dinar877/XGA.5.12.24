@@ -39,5 +39,5 @@
     "path":"sprites/spr_slime/spr_slime.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

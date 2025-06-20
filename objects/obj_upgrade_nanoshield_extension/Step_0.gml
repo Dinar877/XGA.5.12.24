@@ -57,6 +57,7 @@ if (place_meeting(x,y,obj_player)) && (global.upgrade_process = 0)
 	
 	//nanoshield available
 	global.nanoshield_available = 1;
+	global.upgradecollected[962] = 1;
 	
 	
 	global.nanoshield_ammo = global.nanoshield_limit;

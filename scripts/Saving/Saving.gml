@@ -90,6 +90,9 @@ function Saving(argument0) {
 
 	//maptile limit
 	ds_map_add(_map,"Tile.Data.N", global.tiledataN);
+	
+	//maptile hazard limit
+	ds_map_add(_map,"Tile.Data.Hazard.N", global.tileHazardDataN);
 
 	//getting every discovered tile
 	for ( n2 = 0; n2 < global.tiledataN + 1; n2 += 1)

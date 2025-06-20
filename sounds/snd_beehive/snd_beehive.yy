@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":69.74694,
+  "duration":69.70631,
   "name":"snd_beehive",
   "parent":{
     "name":"enemy",

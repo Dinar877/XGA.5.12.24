@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":102.8372,
+  "duration":68.262314,
   "name":"ost_am2r_sewer",
   "parent":{
     "name":"music!!",

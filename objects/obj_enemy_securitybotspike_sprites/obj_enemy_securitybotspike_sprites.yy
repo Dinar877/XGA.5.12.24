@@ -10,8 +10,8 @@
   "name":"obj_enemy_securitybotspike_sprites",
   "overriddenProperties":[],
   "parent":{
-    "name":"robots",
-    "path":"folders/Objects/enemies/robots.yy",
+    "name":"old",
+    "path":"folders/Objects/enemies/old.yy",
   },
   "parentObjectId":{
     "name":"obj_link_enemies",

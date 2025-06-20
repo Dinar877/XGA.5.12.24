@@ -12,8 +12,8 @@
   "duration":13.323424,
   "name":"snd_bh_repairsuit",
   "parent":{
-    "name":"environment",
-    "path":"folders/Music+SFX/SFX/environment.yy",
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

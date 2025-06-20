@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":2.440083,
+  "duration":2.4400907,
   "name":"snd_newbeam_chargeing1",
   "parent":{
     "name":"beam",

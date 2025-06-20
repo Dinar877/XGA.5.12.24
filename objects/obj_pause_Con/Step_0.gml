@@ -5,6 +5,11 @@ script_execute(Gamepad_variables);
 //custom map markers global image index
 global.marker_imageindex += 2/60;
 
+if (!instance_exists(obj_pausescrn1))
+{
+	exit;	
+}
+
 //moves map around
 if (gamepad_is_connected(correct_slot))
 {
@@ -83,6 +88,7 @@ if (gamepad_is_connected(correct_slot))
 				{
 					if (gamepad_button_check_pressed(correct_slot,gp_start)) && (global.pause_exit == 0) && ((!instance_exists(obj_pause_logbook)) && (global.pause_logbook == 0))
 					&& (!instance_exists(obj_scrn_roomtransition))
+					&& (obj_pausescrn1.instate == 0)
 					{
 						global.pause_map = 0;
 						global.pause_logbook = 0;
@@ -104,6 +110,7 @@ if (gamepad_is_connected(correct_slot))
 	{
 		if (gamepad_button_check_pressed(correct_slot,gp_start)) && (global.pause_exit == 0) && ((!instance_exists(obj_pause_logbook)) && (global.pause_logbook == 0))
 		&& (!instance_exists(obj_scrn_roomtransition))
+		&& (obj_pausescrn1.instate == 0)
 		{
 			global.pause_map = 0;
 			global.pause_logbook = 0;
@@ -197,6 +204,7 @@ else if (!gamepad_is_connected(correct_slot))
 				{
 					if (keyboard_check_pressed(vk_enter)) && (global.pause_exit == 0) && ((!instance_exists(obj_pause_logbook)) && (global.pause_logbook == 0))
 					&& (!instance_exists(obj_scrn_roomtransition))
+					&& (obj_pausescrn1.instate == 0)
 					{
 						global.pause_map = 0;
 						global.pause_logbook = 0;
@@ -218,6 +226,7 @@ else if (!gamepad_is_connected(correct_slot))
 	{
 		if (keyboard_check_pressed(vk_enter)) && (global.pause_exit == 0) && ((!instance_exists(obj_pause_logbook)) && (global.pause_logbook == 0))
 		&& (!instance_exists(obj_scrn_roomtransition))
+		&& (obj_pausescrn1.instate == 0)
 		{
 			global.pause_map = 0;
 			global.pause_logbook = 0;

@@ -13,6 +13,10 @@ if (global.bossblockers[BossblockerID] > 0)
 	exit;
 }
 
+
+//get inside's hp
+hp = obj_boss_Greybox_inside.hp;
+
 if (global.boss_warning = 0) && (deathanim < 1)
 {
 	image_speed = 1	

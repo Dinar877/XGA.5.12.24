@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":126.09306,
+  "duration":126.041885,
   "name":"ost_sector4_cor_remastered",
   "parent":{
     "name":"sector4",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"ost_sector4_cor_remastered.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.6,
 }

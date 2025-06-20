@@ -2,11 +2,11 @@
 // You can write your code in this editor
 if FadeNow > 0 
 { 
-FadeNow -= 0.01; 
+	FadeNow -= 0.01; 
 }
 else if FadeNow <= 0
 {
-FadeNow = 0.5;
+	FadeNow = 0.5;
 }
 
 if (global.pause_transition = 1)// or (global.pause_exit = 1)

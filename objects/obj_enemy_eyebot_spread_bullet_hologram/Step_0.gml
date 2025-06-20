@@ -45,7 +45,7 @@ if (image_index >= image_number-1) && (started1 = 1)
 
 if (enemy_contact != 1) && (started1 = 0) && (shootlimit = 1)
 {
-    script_execute(scr_afterimage_bullets21)
+    //script_execute(scr_afterimage_bullets21)
 	x += hspd;
     y += vspd;
 }

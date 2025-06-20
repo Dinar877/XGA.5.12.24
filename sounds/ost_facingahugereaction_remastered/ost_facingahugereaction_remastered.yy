@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":193.80244,
+  "duration":193.75127,
   "name":"ost_facingahugereaction_remastered",
   "parent":{
     "name":"unused",

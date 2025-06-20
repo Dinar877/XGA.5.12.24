@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.648,
+  "duration":0.6,
   "name":"snd_pickup2",
   "parent":{
     "name":"player",

@@ -54,5 +54,5 @@ knockback = 0;
 
 
 //audio
-emitter_player = audio_play_sound_at(snd_underwater_moving,id.x,id.y,0,30,200,1,true,1000)
+emitter_player = audio_play_sound_at(snd_underwater_moving,id.x,id.y,0,10,50,1,true,1000)
 dist = 0

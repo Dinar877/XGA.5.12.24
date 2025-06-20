@@ -7,7 +7,7 @@ doorrightalt = (instance_place(x,y,obj_door_normal_rightAlt))
 doorrightmore = instance_place(x,y,obj_door_normal_right_more)
 doorleftmore = instance_place(x,y,obj_door_normal_left_more)
 activated = 0;
-hp = 10;
+hp = 30;
 
 blockdoorID = 0
 redblockerID = 0

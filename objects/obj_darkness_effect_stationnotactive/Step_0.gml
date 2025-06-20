@@ -16,7 +16,7 @@ if (global.spacestation_active = 1)
 	image_alpha -= 0.005;
 	scale1 += 0.005
 }
-else if (global.spacestation_active = 0) && (image_alpha < 0.7)
+else if (global.spacestation_active = 0) && (image_alpha < 0.5)
 {
 	image_alpha += 0.005	
 }

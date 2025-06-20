@@ -15,35 +15,35 @@ function bullet_hurtenemycode_noeffect() {
 			{
 				if (global.explosiveammo = 0) && (started1 = 0) && (global.upgrade_charge = 0) && (global.charge_shot = 0)
 		        {
-		        sprite_index = spr_bullet_hit_noeffect;
-		        started1 = 1;
+			        sprite_index = spr_bullet_hit_noeffect;
+			        started1 = 1;
 		        }
 		        if (global.explosiveammo = 1) && (started1 = 0) && (global.upgrade_charge = 0) && (global.charge_shot = 0)
 		        {
-		        sprite_index = spr_bullet_hit_noeffect;
-		        started1 = 1;
+			        sprite_index = spr_bullet_hit_noeffect;
+			        started1 = 1;
 		        }
 		        if (global.upgrade_charge = 1) && (global.charge_shot = 0) && (started1 = 0)
 		        {
-		        sprite_index = spr_bullet_hit_noeffect;
-		        started1 = 1;
+			        sprite_index = spr_bullet_hit_noeffect;
+			        started1 = 1;
 		        }
 		        if (global.upgrade_charge = 1) && (global.charge_shot = 1) && (started1 = 0)
 		        {
-		        sprite_index = spr_bullet_hit_noeffect;
-		        started1 = 1;
+			        sprite_index = spr_bullet_hit_noeffect;
+			        started1 = 1;
 		        }
 			}
 		
 			if (global.beam_burn_available = 1) && (charge = 0) && (started1 = 0) && (enemy_nohit <= 0)
 			{
-			sprite_index = spr_bullet_hit_noeffect;
-	        started1 = 1;	
+				sprite_index = spr_bullet_hit_noeffect;
+		        started1 = 1;	
 			}
 			else if (global.beam_burn_available = 1) && (charge = 1) && (started1 = 0) && (enemy_nohit <= 0)
 			{
-			sprite_index = spr_bullet_hit_noeffect;
-	        started1 = 1;	
+				sprite_index = spr_bullet_hit_noeffect;
+		        started1 = 1;	
 			}
 		
 			if (enemy_nohit > 0)

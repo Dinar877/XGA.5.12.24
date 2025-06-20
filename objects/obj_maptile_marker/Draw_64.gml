@@ -2,7 +2,9 @@
 // You can write your code in this editor
 /// @description Insert description here
 // You can write your code in this editor
-if (!place_meeting(x,y,obj_mapborder_underside)) or (sectortile != global.sector_active)
+if (!place_meeting(x,y,obj_mapborder_underside)) 
+or (sectortile != global.sector_active)
+or (global.pause_player = 1)
 {
 	exit;	
 }

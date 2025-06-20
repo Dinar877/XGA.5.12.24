@@ -59,6 +59,7 @@ if (place_meeting(x,y,obj_player)) && (global.upgrade_process = 0)
 	}
 	
 	global.shockwave_available = 1;
+	//global.upgradecollected[965] = 1;
 	global.ability_select = 0
 	
 	if (global.mode_recommended > 0)

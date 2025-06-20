@@ -19,9 +19,9 @@ drillnow = 0;
 
 if (global.mode_casual)
 {
-	hp = 25;
+	hp = 150;
 }
-else hp = 25;
+else hp = 150;
 
 sword_deadswitch = 0
 

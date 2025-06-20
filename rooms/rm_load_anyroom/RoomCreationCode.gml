@@ -5,37 +5,14 @@
 global.wallscaler = 1;
 global.upgradecollected[1] = 1
 
-global.health_limit = 12
-global.health1 = 12
-
-//sword
-global.sword_available = 1;
-global.upgradecollected[967] = 1;
-global.sword_wave_available = 1;
-global.upgradecollected[971] = 1;
-global.sword_swing_available = 1;
-global.upgradecollected[969] = 1;
-
-
-//suits
-global.suit_pure = 1
-global.upgradecollected[955] = 1
-global.suit_shock = 1
-global.upgradecollected[966] = 1
-
-
-
-global.speedboots = 1;
-global.airdash = 1;
-
-global.kelvin = 1;
-global.upgradecollected[958] = 1
-global.hydrodash = 1;
-global.upgradecollected[959] = 1
+global.health_limit = 6
+global.health1 = 6
 
 
 #region
 //disable upgrades or not
+
+
 
 //BEAMS
 global.upgrade_charge = 1;
@@ -53,12 +30,18 @@ global.upgradecollected[954] = 1;
 
 
 //suit palette testing
+
 global.suit_pure = 1;
 global.upgradecollected[955] = 1;
 
-global.suit_shock = 1;
-global.upgradecollected[966] = 1;
-global.speedboots = 1;
+global.suit_shock = 0
+global.upgradecollected[966] = 0
+global.speedboots = 0
+global.screwjump = 0
+
+global.suit_count = 1
+
+
 
 
 //upgrades-abilities
@@ -125,10 +108,6 @@ if (!instance_exists(obj_ability_shockwave))
 }
 
 
-
-global.screwjump = 1;
-global.suit_count = 1;
-
 //MISC.UPGRADES
 global.xvision = 1;
 global.upgradecollected[957] = 1;
@@ -138,19 +117,28 @@ global.spacejump = 1;
 global.upgradecollected[968] = 1;
 global.hydrodash = 1;
 global.upgradecollected[959] = 1;
+global.shoot_instacharge_upgrade = 1;
+global.upgradecollected[970] = 1;
 
 
 global.airdash = 1;
 
 
 
+
+//SWORD UPGRADES
+global.sword_available = 1;
+global.upgradecollected[967] = 1;
+global.sword_swing_available = 1;
+global.upgradecollected[969] = 1;
+global.sword_wave_available  = 1;
+global.upgradecollected[971] = 1;
+
+
+
 #endregion
 
 
-//corrupted
-global.corrupted = 0;
-global.midgame = 0;
-global.sector_active = 0;
 
 
 //testing
@@ -201,7 +189,27 @@ surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e_
 //window_set_fullscreen(true);
 texture_set_interpolation(false);
 
+//SPECIFIC PLAYER PROGRESS
+
+
+//test cutscenes
+global.corrupted = 1
+global.midgame = 1
+global.sector_active = 0
+
+global.cutsceneID[3] = 1
+global.cutsceneID[4] = 1
+global.cutsceneID[50] = 1
+global.cutscene = 0
+global.cutscene_presuit = 0
+global.cutscene_suit = 0
+global.bossblockers[4] = 1
+global.bossblockers[20] = 1
+global.bossblockers[21] = 1
+global.bossblockers[22] = 1
+global.pause_player = 0
+
 
 
 //goto desired room
-room_goto(rm_11_7_6)
+room_goto(rm_11_7_6_xgatest)

@@ -16,6 +16,9 @@ function Music_loop(){
 		var ogSndPosition = 0;
 	}
 	
+	//testing
+	var isMusicPlaying = (audio_is_playing(argument0))
+	
 	if (!audio_is_playing(argument0)) or ((audio_sound_get_gain(argument0)) <= 0)
 	{
 		//to prevent 2 of the same song playing at once
@@ -27,8 +30,9 @@ function Music_loop(){
 		audio_sound_gain(global.sector_music, global.music_volume, 2000);
 			
 		//for testing purposes
-		//var sndIDLength = audio_sound_length(argument0);
+		var sndIDLength = audio_sound_length(argument0);
 		//audio_sound_set_track_position(sndID, sndIDLength - 10.0);
+		//var sndTrackPos = audio_sound_get_track_position(sndID);
 			
 		if (ogSectorMusic > 0)
 		{
@@ -39,6 +43,7 @@ function Music_loop(){
 				audio_sound_set_track_position(global.sector_music, ogSndPosition);	
 			}
 		}
+		
 		
 
 		//loop correctly

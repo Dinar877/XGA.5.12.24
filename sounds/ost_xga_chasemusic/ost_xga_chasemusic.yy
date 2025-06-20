@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":87.82367,
+  "duration":87.77249,
   "name":"ost_xga_chasemusic",
   "parent":{
     "name":"music!!",

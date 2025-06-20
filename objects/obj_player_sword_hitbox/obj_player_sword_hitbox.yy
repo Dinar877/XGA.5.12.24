@@ -9,8 +9,8 @@
   "name":"obj_player_sword_hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"sword",
+    "path":"folders/Objects/player/sword.yy",
   },
   "parentObjectId":{
     "name":"obj_link_harmEnemies",

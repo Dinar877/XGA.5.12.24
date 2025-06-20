@@ -43,11 +43,11 @@ if (global.doors_redblocker[redblockerID] > 0) or (destroynow = 1)
 
 if FadeNow > 0 
 { 
-FadeNow -= 0.0025; 
+	FadeNow -= 0.005; 
 }
 else if FadeNow <= 0
 {
-FadeNow = 0.3;
+	FadeNow = 0.5;
 }
 
 if (instance_place(x,y,obj_bullet))

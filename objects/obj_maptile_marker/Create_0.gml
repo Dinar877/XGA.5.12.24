@@ -15,6 +15,7 @@ NewY = 0;
 originX = global.mapgrid_startroomx
 originY = global.mapgrid_startroomy
 markerN = 0;
+marker_N = 0;
 
 sectortile = -1
 

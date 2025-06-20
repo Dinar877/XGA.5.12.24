@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Gamepad_get_input_space_name_key",
   "parent":{
-    "name":"getname",
-    "path":"folders/Scripts/Gamepad/getname.yy",
+    "name":"Controls remapping only",
+    "path":"folders/Scripts/Gamepad/getname/Controls remapping only.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

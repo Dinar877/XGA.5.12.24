@@ -15,12 +15,12 @@ else
 //play sfx properly
 if (!audio_is_playing(emitter_player))
 {
-	emitter_player = audio_play_sound_at(snd_electricity,id.x,id.y,0,100,20,1,true,1000,global.sfx_volume)
+	emitter_player = audio_play_sound_at(snd_electricity,id.x,id.y,0,50,200,1,true,1000,global.sfx_volume)
 }
 
 //audio
 dist = point_distance(id.x,id.y,obj_player.x,obj_player.y)
-audio_sound_gain(emitter_player,(20/dist) * global.sfx_volume,0)
+audio_sound_gain(emitter_player,(50/dist) * global.sfx_volume,0)
 
 
 

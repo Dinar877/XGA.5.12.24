@@ -35,7 +35,7 @@ if (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2+1 < t
 else time2 = 0;
 
 if ((string_char_at(text,floor(time)+message_pos-1) == ".") or (string_char_at(text,floor(time)+message_pos-1) == ","))
- && (time+message_pos+time2+1 < text_length) && (midpause <= 0)
+&& (time+message_pos+time2+1 < text_length) && (midpause <= 0)
 {
 	midpause = 1;
 }

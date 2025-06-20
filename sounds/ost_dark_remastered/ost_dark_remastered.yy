@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":93.25714,
+  "duration":93.20596,
   "name":"ost_dark_remastered",
   "parent":{
     "name":"Ciri_remastered_soundtrack",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"ost_dark_remastered.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.6,
 }

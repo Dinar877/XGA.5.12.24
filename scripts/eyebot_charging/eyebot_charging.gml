@@ -20,6 +20,10 @@ function eyebot_charging() {
 		{
 			sprite_index = spr_chargeshot
 		}
+		
+		snd = audio_play_sound(snd_newbeam_chargeing1,1000,true)
+		audio_sound_pitch(snd,1.2)
+		audio_sound_gain(snd,0,2500)
 	}
 	else if (inst1 > 0)
 	{
@@ -37,6 +41,15 @@ function eyebot_charging() {
 					{
 						inst1 = 0;
 						timer2shoot = 1
+						
+						//sfx
+						audio_stop_sound(snd)
+						audio_stop_sound(snd_beam2uncharged)
+						var sndy = audio_play_sound(snd_beam2uncharged,1000,false,global.sfx_volume)
+						audio_sound_pitch(sndy,2)
+						audio_sound_gain(sndy,0,500)
+		
+						
 						State_machine_switch_state(eyebot_shoot)	
 					}
 					instance_destroy();	

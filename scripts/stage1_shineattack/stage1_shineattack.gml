@@ -32,9 +32,9 @@ function stage1_shineattack() {
 	
 	
 	//sfx
-	if (floor(image_index) == 9)
+	if (floor(image_index) == 20)
 	{
-		audio_play_sound(snd_player_spinjump_shorter,1000,false,global.sfx_volume)	
+		audio_play_sound(snd_player_spinjump_shorter,1000,false,global.sfx_volume*2)	
 	}
 
 

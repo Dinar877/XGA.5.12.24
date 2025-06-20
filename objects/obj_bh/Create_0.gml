@@ -40,24 +40,42 @@ disappear = 0;
 //for talking
 newTextAvailable = 0;
 
+//for shock suit cutscene
+shocksuitcutsceneswitch = 0;
+move1switch = 0;
+move1X = 640;
+move1Y = 480;
+move2switch = 0;
+
+//delete object if already have shock suit
+if (global.upgradecollected[966] == 1)
+{
+	instance_destroy();
+	exit;
+}
+
+
 if (global.bossblockers[22] > 0)
 && (global.bossblockers[4] > 0)
 && (global.bossblockers[21] > 0)
 && (global.bossblockers[20] > 0) && (global.midgame > 0)
 {
-	sprite_index = spr_bh_verysmall;
+	sprite_index = spr_bh_verysmall_bw;
 	x = 648;
-	y = 540;
+	y = 546;
+
+	shocksuitcutsceneswitch = 1;
 }
 else if (global.corrupted > 0)
 {
 	sprite_index = spr_bh_small;
 	x = 648;
-	y = 520;
+	y = 536;
 	
+	//after midgame
 	if (global.cutsceneID[4] <= 0)
 	{
-		newTextAvailable = 4;	
+		newTextAvailable = 4; //initial
 	}
 	else if (global.cutsceneID[4] == 1)
 	{
@@ -65,13 +83,17 @@ else if (global.corrupted > 0)
 	}
 }
 
-if (global.cutsceneID[3] <= 0)
+//before midgame
+if (global.midgame == 0)
 {
-	newTextAvailable = 3;	
-}
-else if (global.cutsceneID[3] == 1) && (global.cutsceneID[4] == 0)
-{
-	newTextAvailable = 6; //talk anytime	
+	if (global.cutsceneID[3] <= 0)
+	{
+		newTextAvailable = 3; //initial
+	}
+	else if (global.cutsceneID[3] == 1) && (global.cutsceneID[4] == 0)
+	{
+		newTextAvailable = 6; //talk anytime	
+	}
 }
 
 

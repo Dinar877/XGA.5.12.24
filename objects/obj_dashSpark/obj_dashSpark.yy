@@ -9,8 +9,8 @@
   "name":"obj_dashSpark",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"dashing",
+    "path":"folders/Objects/player/dashing.yy",
   },
   "parentObjectId":{
     "name":"obj_link_harmEnemies",

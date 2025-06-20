@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":108.643265,
+  "duration":108.59973,
   "name":"ost_alternative_sector1_remastered",
   "parent":{
     "name":"unused",

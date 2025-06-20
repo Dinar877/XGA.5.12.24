@@ -35,5 +35,5 @@
     "path":"sprites/spr_slime_hitbox/spr_slime_hitbox.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

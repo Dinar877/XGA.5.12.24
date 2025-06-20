@@ -29,6 +29,8 @@ if (bossID > -1)
 			{
 				audio_stop_sound(global.sector_music)
 				
+				global.sector_music = -1;
+				
 				if (global.sector_active = 0)
 				{
 					instance_create_depth(x,y,id.depth, obj_sndmaker_mainhub);
@@ -41,7 +43,7 @@ if (bossID > -1)
 					}
 					else instance_create_depth(x,y,id.depth, obj_sndmaker_sector1_caves);
 				}
-				else if (global.sector_active = 2)
+				else if (global.sector_active = 2) && (global.corrupted == 1)
 				{
 					instance_create_depth(x,y,id.depth, obj_sndmaker_sector2);	
 				}

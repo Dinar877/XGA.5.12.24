@@ -14,7 +14,11 @@ or (global.stopper_2ndscrnshot = 1)
 or (global.cutscene = 1) or (global.cutscene_suit = 1) or (global.loading_startgame = 1)
 or (global.room_transition_prep == 1) or (global.room_y == 1)
 {
-	exit	
+	//disables code so we can use this object for the shock suit cutscene
+	if (shocksuitcutsceneswitch == 0)
+	{
+		exit;
+	}
 }
 
 //gamepad
@@ -22,7 +26,7 @@ scr_gamepad_test()
 Gamepad_variables()
 
 //manages "pressjump" object
-if (sprite_index = spr_bh_big) or (sprite_index = spr_bh_small)
+if (sprite_index = spr_bh_big) or (sprite_index = spr_bh_small) or (sprite_index = spr_bh_verysmall_bw)
 {
 	Npc_pressjump_step();
 }
@@ -54,6 +58,12 @@ if (sprite_index = spr_bh_verysmall)
 	disappear = round(random_range(0,1))
 }
 
+//midgame big to small animation
+if (sprite_index = spr_midgame_cutscene2_bh_bigtosmall) && (image_index >= image_number-1)
+{
+	sprite_index = spr_bh_small;
+}
+
 if ((newTextAvailable == 3) && (global.cutsceneID[3] == 1))
 or ((newTextAvailable == 4) && (global.cutsceneID[4] == 1))
 {
@@ -68,10 +78,11 @@ or ((newTextAvailable == 4) && (global.cutsceneID[4] == 1))
 /////////////////////
 if (instance_exists(obj_player))
 {
-	if ((newTextAvailable == 3) && (global.cutsceneID[3] == 0))
+	if (((newTextAvailable == 3) && (global.cutsceneID[3] == 0))
 	or ((newTextAvailable == 6) && (global.cutsceneID[3] == 1) && (global.cutsceneID[4] == 0))
 	or ((newTextAvailable == 4) && (global.cutsceneID[4] == 0))
-	or ((newTextAvailable == 7) && (global.cutsceneID[4] == 1))
+	or ((newTextAvailable == 7) && (global.cutsceneID[4] == 1)))
+	&& (shocksuitcutsceneswitch == 0)
 	{
 		//talk
 		if (place_meeting(x,y,obj_player)) 
@@ -152,6 +163,136 @@ if (instance_exists(obj_player))
 			}
 		
 			global.upgrade_process_data = 1;
+		}
+	}
+	else if (shocksuitcutsceneswitch == 1)
+	{
+		//talk
+		if (place_meeting(x,y,obj_player)) 
+		&& (jump_pressed)
+		&& (!instance_exists(obj_scrnDark_navigational))
+		&& ((obj_player.state == (Idle)) or (obj_player.state == (Idle_landing)) or (obj_player.state == (Move))  or (obj_player.state == (Jumping)))
+		{
+			with(obj_player)
+			{	
+				
+				//get unstuck out of blocks
+				if (place_meeting(x,y,obj_block))
+				{
+					while (place_meeting(x,y,obj_block))
+					{
+						y = floor(y) - 1;	
+					}
+				}
+				
+				hspd = 0;
+				vspd = 0;
+				
+				
+				
+				State_machine_switch_state(Idle);
+				
+				if (instance_exists(obj_player_dashspark))
+				{
+					instance_destroy(obj_player_dashspark);
+				}
+				
+				if (instance_exists(obj_player_sword_hitbox))
+				{
+					instance_destroy(obj_player_sword_hitbox);
+				}
+			}
+			
+			
+			//destroy pressjump text
+			if (instance_exists(obj_npc_pressjump))	
+			{
+				instance_destroy(obj_npc_pressjump)
+				pressjumpID = -1
+			}
+			
+			
+			global.charging = 0
+			global.charge_ready = 0
+			global.nanoshield = 0
+			global.invisibility = 0
+			global.nuclearblast = 0
+			global.shockwave = 0
+		
+			global.dash2 = 0
+			global.dash2_spark = 0
+			global.dashbegin2 = 0
+		
+			global.pause_player = 1
+			
+			if (global.facingDir > 0)
+			{
+				with(object_player2_0_sprites)
+				{
+					sprite_index = spr_stand_right_2	
+				}
+			}
+			else if (global.facingDir < 0)
+			{
+				with(object_player2_0_sprites)
+				{
+					sprite_index = spr_stand_left_2	
+				}
+			}
+		
+			global.upgrade_process_data = 1;
+			global.cutscene = 1;
+			global.cutscene_presuit = 1;
+			global.cutscene_suit = 0;
+			
+			id.depth = layer_get_depth(layer_get_id("Inst_doors"))
+			
+			//sfx
+			audio_play_sound(snd_player_spinjump_shorter,1000,false,global.sfx_volume)
+			audio_play_sound(snd_bh_talk,1000,false,global.sfx_volume)
+		}
+	}
+	
+	
+	
+	
+	
+	//shocksuit cutscene
+	if (shocksuitcutsceneswitch == 1)
+	&& (global.cutscene = 1)
+	{
+		if (move1switch == 0)
+		{
+			//fly up
+			if (round(x) != move1X) && (round(y) != move1Y)
+			{
+				x = lerp(x,move1X,0.05);
+				y = lerp(y,move1Y,0.05);
+			}
+			else 
+			{	
+				move1switch = 1;
+				
+				//sfx
+				audio_play_sound(snd_player_spinjump_shorter,1000,false,global.sfx_volume)
+			}
+		}
+		else if (move1switch == 1) && (move2switch == 0)
+		{
+			//fly in to player
+			if (round(x) != obj_player.x) && (round(y) != obj_player.y)
+			{
+				x = lerp(x,obj_player.x,0.25);
+				y = lerp(y,obj_player.y,0.25);
+			}
+			else 
+			{
+				move2switch = 1;
+				
+				instance_create_depth(x,y,id.depth,obj_item_shocksuit);
+				
+				instance_destroy();
+			}
 		}
 	}
 }

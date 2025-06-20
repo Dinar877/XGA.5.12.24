@@ -8,8 +8,8 @@
   "name":"obj_enemy_securitybotspike_hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"robots",
-    "path":"folders/Objects/enemies/robots.yy",
+    "name":"old",
+    "path":"folders/Objects/enemies/old.yy",
   },
   "parentObjectId":null,
   "persistent":true,

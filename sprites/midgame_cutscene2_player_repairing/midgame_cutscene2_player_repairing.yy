@@ -12,15 +12,6 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"1fa3a022-6f01-4ba7-be32-18014288c8a8","name":"1fa3a022-6f01-4ba7-be32-18014288c8a8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fc11f90f-dd28-4146-ac13-6a5ccc124641","name":"fc11f90f-dd28-4146-ac13-6a5ccc124641","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ffda5d6e-6093-4fce-8cc5-6214682827eb","name":"ffda5d6e-6093-4fce-8cc5-6214682827eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"288aaf0c-dfe3-4e68-9636-40c677ee6fb6","name":"288aaf0c-dfe3-4e68-9636-40c677ee6fb6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bcf47aed-395d-4cc0-bd1f-d277425a7158","name":"bcf47aed-395d-4cc0-bd1f-d277425a7158","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"145179df-8e48-41d9-87c2-7f88b653ba60","name":"145179df-8e48-41d9-87c2-7f88b653ba60","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f1b9c9ee-3dbe-4a53-88b7-aefc99481bdb","name":"f1b9c9ee-3dbe-4a53-88b7-aefc99481bdb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8eabffa5-8e17-46a0-bbcb-5194357b0fba","name":"8eabffa5-8e17-46a0-bbcb-5194357b0fba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"66f45908-5caf-4e4c-acbb-ea4442593d11","name":"66f45908-5caf-4e4c-acbb-ea4442593d11","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"a7d17eb5-73a2-4e13-813b-6293ed8831eb","name":"a7d17eb5-73a2-4e13-813b-6293ed8831eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"f9c622ba-9b2f-454a-bff1-d2924bf2e43a","name":"f9c622ba-9b2f-454a-bff1-d2924bf2e43a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"3b3c4593-9a3c-448d-9757-51bd399ee6b4","name":"3b3c4593-9a3c-448d-9757-51bd399ee6b4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -63,7 +54,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":15.0,
+    "length":6.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -85,50 +76,23 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1fa3a022-6f01-4ba7-be32-18014288c8a8","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5c899911-e2ec-46f7-b771-67fa875b5df3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fc11f90f-dd28-4146-ac13-6a5ccc124641","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"415b3b59-8829-4d72-aa94-be723ff0aa40","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ffda5d6e-6093-4fce-8cc5-6214682827eb","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"72abfeab-0c82-4a48-b175-7e47f75b63f6","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"288aaf0c-dfe3-4e68-9636-40c677ee6fb6","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"87705eef-324d-4109-bf7e-692fcf577ebd","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bcf47aed-395d-4cc0-bd1f-d277425a7158","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8aebafda-c5fb-4d30-85bc-d806b5af8464","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"145179df-8e48-41d9-87c2-7f88b653ba60","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"43929897-00a2-42b9-8e89-452645cc5c0f","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f1b9c9ee-3dbe-4a53-88b7-aefc99481bdb","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0d4903e6-dd3f-493b-9ac1-2329d1dd1d7d","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8eabffa5-8e17-46a0-bbcb-5194357b0fba","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"054a144f-6a5a-47b2-819d-e2eb8a10d901","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66f45908-5caf-4e4c-acbb-ea4442593d11","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"55b59640-3882-4234-9b50-350a3e6d0b6e","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a7d17eb5-73a2-4e13-813b-6293ed8831eb","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b7219d10-6f64-4f99-9ee0-e13ce4b43076","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"b7219d10-6f64-4f99-9ee0-e13ce4b43076","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f9c622ba-9b2f-454a-bff1-d2924bf2e43a","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7b782fe6-362c-44bb-b055-ffdbe717d929","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"7b782fe6-362c-44bb-b055-ffdbe717d929","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b3c4593-9a3c-448d-9757-51bd399ee6b4","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d3867e56-c921-4de0-b3eb-a6b7de8aff17","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"d3867e56-c921-4de0-b3eb-a6b7de8aff17","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"394eb69a-3b01-4fe1-8762-6c3da3efd4c5","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e097386b-c786-4025-8047-a5c9c73cbfd3","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"e097386b-c786-4025-8047-a5c9c73cbfd3","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fa1ecd8f-7cfd-41f1-a316-58f2a7d0485e","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"50b9d9c1-144c-447c-8fa1-f91173393cdb","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"50b9d9c1-144c-447c-8fa1-f91173393cdb","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cb55f7cb-ee39-4846-b104-602634f7eb6f","path":"sprites/midgame_cutscene2_player_repairing/midgame_cutscene2_player_repairing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7306839a-a2b8-4314-9cd3-9e65fc0eac13","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"7306839a-a2b8-4314-9cd3-9e65fc0eac13","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

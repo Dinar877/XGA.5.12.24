@@ -56,6 +56,26 @@ if (room = rm_redtemple_finalboss)
 	exit;
 }
 
+//do not spawn xga in any boss room unless already being chased
+if (room = rm_sector1_bigsnail) or (room = rm_15_11_3) or (room = rm_sector1_cave_boss)
+or (room = rm_S3_15_28) or (room = rm_sector2_boss_gorilla)
+or (room = rm_S4_BOX_bossroom) or (room = rm_kingstalker_test1)
+or (room = rm_sector4_robospider) or (room = rm_sector4_turtle)
+&& (global.darkeater_active == 0)
+{
+	if (audio_is_playing(ost_xga_chasemusic))
+	{
+		audio_stop_sound(ost_xga_chasemusic);
+	}
+	
+	audio_stop_sound(snd_xga_heartbeat)
+	
+	global.darkeater_active = 0;
+	
+	instance_destroy();
+	exit;
+}
+
 //XGA is afraid of electricity. That's his one weakness.
 if (instance_exists(obj_harmful_electricity_emitter_L)) or (instance_exists(obj_harmful_electricity_emitter_u))
 {
@@ -423,6 +443,7 @@ if ((abs(difference_y) == 0) or (global.darkeater_active = 1) or (footstep_total
 		//use darkeater hitbox's sprite to check collisions
 		while (!instance_exists(obj_darkeater_hitbox))
 		&& (instance_exists(object_player2_0_sprites)) // make sure player is already spawned in
+		&& (xgaStopSpawning < 1000) //fail safe switch to break while loop if xga spawn is always impossible (stops while loop after 1000 attempts fail)
 		{
 			//reset preSpawn x and y everytime
 			preSpawnX = floor(random_range(roomStartX,roomHowBigX));
@@ -430,6 +451,9 @@ if ((abs(difference_y) == 0) or (global.darkeater_active = 1) or (footstep_total
 			
 			x = preSpawnX;
 			y = preSpawnY;
+			
+			//increase fail safe counter with each attempt
+			xgaStopSpawning++;
 			
 
 			sprite_index = spr_darkeater_hitbox_smaller;

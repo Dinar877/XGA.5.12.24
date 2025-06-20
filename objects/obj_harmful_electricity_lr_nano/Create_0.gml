@@ -20,7 +20,7 @@ stopsnd = 0;
 snd = -1
 
 //new audio
-emitter_player = audio_play_sound_at(snd_electricity,id.x,id.y,0,20,100,1,true,1000,global.sfx_volume);
+emitter_player = audio_play_sound_at(snd_electricity,id.x,id.y,0,50,200,1,true,1000,global.sfx_volume);
 
 //glow effect
 xscaleglow = random_range(0.9,1.1);

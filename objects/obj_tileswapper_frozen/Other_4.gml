@@ -52,7 +52,7 @@ if (global.corrupted > 0)
 		&& (global.bossblockers[21] > 0)
 		&& (global.bossblockers[20] > 0) && (global.midgame > 0)
 		{
-			global.corrupted = 0
+			//global.corrupted = 0
 		}
 	}
 	else if (global.sector_active = 1) && (global.corrupted > 0)
@@ -89,7 +89,7 @@ if (global.corrupted > 0)
 		{
 		
 			global.frozen = 0;
-			global.superheated = 0;
+			//global.superheated = 0;
 		
 			layer_destroy("Instances_region")
 			layer_destroy("Instances_water")
@@ -124,6 +124,13 @@ if (global.corrupted > 0)
 			if (instance_exists(obj_enemy_fly_sprites))
 			{
 				with(obj_enemy_fly_sprites)
+				{
+					instance_destroy()	
+				}
+			}
+			if (instance_exists(obj_enemy_hive_sprites))
+			{
+				with(obj_enemy_hive_sprites)
 				{
 					instance_destroy()	
 				}
@@ -269,11 +276,7 @@ if (global.corrupted > 0)
 		
 		}
 	}
-	else if (global.sector_active = 4) && (global.corrupted > 0)
-	{
-		//corruption switch
-		
-	}
+
 	
 	if (instance_exists(obj_water_proper1_bg))
 	{
@@ -657,14 +660,6 @@ else if (global.corrupted <= 0)
 			instance_destroy(obj_environmentsfx_magma)
 		}
 	}
-	else if (global.sector_active = 3)
-	{
-		//destroy lava sfx
-		if (instance_exists(obj_environmentsfx_magma))
-		{
-			instance_destroy(obj_environmentsfx_magma)
-		}	
-	}
 	
 	//don't need water objects anymore since we have tiles and a water region object
 	if (instance_exists(obj_water_proper1))
@@ -688,10 +683,12 @@ else if (global.corrupted <= 0)
 	}
 	
 	
-	
-	if (instance_exists(obj_darkness_effect))
+	if (global.sector_active = 1)
 	{
-		instance_destroy(obj_darkness_effect)
+		if (instance_exists(obj_darkness_effect))
+		{
+			instance_destroy(obj_darkness_effect)
+		}
 	}
 	
 	

@@ -24,11 +24,19 @@ function scr_gamepad_test() {
 			//for changing controls objects
 			if (variable_instance_exists(self,"xbox_or_ps"))
 			{
-				if (gamepad_counter <= 3)
+				//get sony or xbox string if possible
+				var desc = gamepad_get_description(correct_slot);
+				if (string_pos("Sony", desc) != 0) 
+				or (string_pos("PLAYSTATION", desc) != 0) or (string_pos("Playstation", desc) != 0)
 				{
-					xbox_or_ps = 1	
+				    xbox_or_ps = -1;
 				}
-				else xbox_or_ps = -1
+				else if (string_pos("Xbox", desc) != 0) or (string_pos("XBOX", desc) != 0)
+				or (string_pos("XInput", desc) != 0)
+				{
+				    xbox_or_ps = 1;
+				}
+				else xbox_or_ps = 1; //default if cannot detect any
 			}
 		}
 	}

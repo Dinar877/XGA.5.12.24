@@ -21,7 +21,7 @@ function Jump_after_wj() {
 	}
 	else if (water_effect = 1)
 	{
-		vspd = 1;	
+		vspd = -3;	
 	}
 	else if (enemy_slowdownswitch = 1)
 	{

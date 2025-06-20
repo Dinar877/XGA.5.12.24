@@ -60,7 +60,7 @@ function kingstalker_idle() {
 	}
 
 
-	if (obj_player.x < self.x) && (sprite_index = spr_kingstalker_idle_left) && (place_meeting(x+(facing*40),y,obj_player))
+	if (obj_player.x < self.x) && (sprite_index = spr_kingstalker_idle_left) && (place_meeting(x+(facing*45),y,obj_player))
 	{
 		image_index = 0
 		spintimer = 0
@@ -70,7 +70,7 @@ function kingstalker_idle() {
 		State_machine_switch_state(kingstalker_bite)
 		exit
 	}
-	else if (obj_player.x > self.x) && (sprite_index = spr_kingstalker_idle_right) && (place_meeting(x+(facing*60),y,obj_player))
+	else if (obj_player.x > self.x) && (sprite_index = spr_kingstalker_idle_right) && (place_meeting(x+(facing*45),y,obj_player))
 	{
 		image_index = 0
 		spintimer = 0

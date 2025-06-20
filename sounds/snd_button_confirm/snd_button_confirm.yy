@@ -12,8 +12,8 @@
   "duration":0.57335603,
   "name":"snd_button_confirm",
   "parent":{
-    "name":"player",
-    "path":"folders/Music+SFX/SFX/player.yy",
+    "name":"menu",
+    "path":"folders/Music+SFX/SFX/menu.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

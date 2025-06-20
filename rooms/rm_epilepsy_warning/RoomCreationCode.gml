@@ -1,0 +1,3 @@
+instance_deactivate_all(false);
+instance_activate_object(obj_texty_TRUEgeneric_nonmarker);
+instance_activate_object(obj_epilepsy_warning);

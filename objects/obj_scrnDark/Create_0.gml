@@ -6,6 +6,7 @@ endload2 = 0;
 endload3 = 0;
 saving = 0;
 endsaving = 0;
+changerooms = 0;
 xga_killpierce = 0;
 room1 = 1;
 goToRoom = 0;

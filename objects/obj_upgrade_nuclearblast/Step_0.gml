@@ -58,6 +58,7 @@ audio_stop_sound(snd_player_screwattack)
 	}
 	
 	global.nuclearblast_available = 1;
+	//global.upgradecollected[964] = 1;
 	global.ability_select = 0
 	
 	if (global.mode_recommended > 0)

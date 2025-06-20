@@ -49,6 +49,7 @@ enter_pressed = 0
 new_input_name = ""
 gp_input_old = 0
 //text
+Gamepad_init_variables()
 Gamepad_variables()
 Gamepad_getname()
 

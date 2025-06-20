@@ -34,7 +34,7 @@ if (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2 < tex
 	while (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2 < text_length)
 	{
 		time2++;
-		stringy2 = string_char_at(text,floor(time)+message_pos+time2+1)
+		stringy2 = string_char_at(text,floor(time)+message_pos+time2+1) //update stringy2 to whatever time2's new increase is.
 	}
 }
 else time2 = 0;
@@ -51,7 +51,7 @@ text_amount = (floor(time)+time2+message_pos);
 
 //pause text at certain points (-1 because we want the text to pause on the "."s, ","s and "!"s, not the empty string space afterwards)
 if ((string_char_at(text,floor(time)+message_pos-1) == ".") or (string_char_at(text,floor(time)+message_pos-1) == ",") or (string_char_at(text,floor(time)+message_pos-1) == "!"))
- && (floor(time)+message_pos+time2 < text_length) && (midpause <= 0)
+&& (floor(time)+message_pos+time2 < text_length) && (midpause <= 0)
 {
 	midpause = 1;
 }
@@ -59,41 +59,52 @@ else midpause -= 0.1;
 
 //execute linebreak
 if (stringy == "\n") && (switch1 = 0)
- && (floor(time)+message_pos+time2+1 < text_length)
+&& (floor(time)+message_pos+time2+1 < text_length)
 {
 	string_positionY += 1;
 }
 
 
+//ERROR- IF 'TIME + TIME2 = 46' AND THE 46TH LETTER IN THE TEXT PORTION IS NOT A BLANK SPACE, THE CODE WILL NOT WORK. currently it only works if 'time + time2 > 46'
+
 //execute new line (I took out the "+1"s)
 if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) //fullword needs next line
 or ((stringy == ".") && (floor(time)+time2 > 46))
 or ((stringy == "!") && (floor(time)+time2 > 46))
-or (stringy == "\n")) //newline function inside text
+or (stringy == "\n") //newline function inside text
+or ((stringy != " ") && (stringy != ".") && (stringy != ",") && (stringy != "\n") && (floor(time) == 46) && (time2 == 0))) //NEW (27/5/25) - finishing on a letter with 'time + time2 = 46'
 && (switch1 = 0) && (floor(time)+message_pos+time2 <= text_length) //BH issue. When text amount is equal to full message, line break fails.
 {
-		strn = string_copy(text,time+message_pos,time2)
+		//if landed on 46th character and we need the next line to go one character forward into an empty space
+		if (stringy != " ") && (stringy != ".") && (stringy != ",") && (stringy != "\n") && (floor(time) == 46) && (time2 == 0)
+		&& (stringy2 = " ")
+		{
+			time++;
+		}
+		
+		strn = string_copy(text,time+message_pos,time2);
 		strn_length = string_length(strn);
 		switch1 = 1
 	
 		tex = instance_create_depth(id.x,id.y+12,id.depth-5,obj_texty_generic_shorter);
 
 		with(tex)
-				{
-					alpha = 1;
-					text = other.text;
-					spd = other.spd
-					message_pos += other.time + other.message_pos;
-					spawnerID = other.spawnerID
-					pauser = 0;
-					string_positionY = 0;
-					time = 0;
-					text_length = string_length(text)
+		{
+			alpha = 1;
+			text = other.text;
+			spd = other.spd
+			message_pos += other.time + other.message_pos;
+			spawnerID = other.spawnerID
+			pauser = 0;
+			string_positionY = 0;
+			time = 0;
+			text_length = string_length(text)
 					
-					//for BH text
-					newTextAvailable = other.newTextAvailable;
-					BH = other.BH;
-				}
+			//for BH text
+			newTextAvailable = other.newTextAvailable;
+			BH = other.BH;
+		}
+		
 		spd = 0;
 }
 

@@ -12,13 +12,20 @@ if (global.bossblockers[BossblockerID] > 0)
 	instance_destroy();
 	
 	if (!instance_exists(obj_upgrade_shockwave)) && (global.upgradecollected[965] <= 0)
+	{
+		var inst1 = instance_create_layer(606,265,layer_get_id("Inst_level_0"),obj_upgrade_shockwave)
+		with(inst1)
 		{
-			var inst1 = instance_create_layer(606,265,layer_get_id("Inst_level_0"),obj_upgrade_shockwave)
-			with(inst1)
-			{
-				upgradeID = 965	
-			}	
-		}
+			upgradeID = 965	
+		}	
+	}
+	else if (!instance_exists(obj_upgrade_shockwave)) && (global.upgradecollected[965] = 1)
+	&& (!instance_exists(obj_ability_shockwave))
+	{
+		var inst1 = instance_create_layer(606,265,layer_get_id("Inst_level_0"),obj_upgrade_shockwave_extension)
+	}
+	
+	
 	global.doors_redblocker[50] = 1
 	
 	exit;

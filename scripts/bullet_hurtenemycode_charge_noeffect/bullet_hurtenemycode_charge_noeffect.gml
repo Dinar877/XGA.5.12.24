@@ -77,9 +77,9 @@ function bullet_hurtenemycode_charge_noeffect(argument0) {
 	        var ymax1 = ymin1 + (sprite_get_height(spr_fly)/2);
 	        if (image_index = 0) && (sprite_index != -1)
 	        {
-	        instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_explosion_normalhit);
-	        instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_explosion_normalhit_chunk);
-	        instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_explosion_normalhit_chunk);
+		        instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_explosion_normalhit);
+		        instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_explosion_normalhit_chunk);
+		        instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_explosion_normalhit_chunk);
 	        }
 		
 		
@@ -87,35 +87,35 @@ function bullet_hurtenemycode_charge_noeffect(argument0) {
 			{
 				if (global.explosiveammo = 0) && (started1 = 0) && (global.upgrade_charge = 0) && (global.charge_shot = 0)
 		        {
-		        sprite_index = spr_bullet_hit;
-		        started1 = 1;
+			        sprite_index = spr_bullet_hit;
+			        started1 = 1;
 		        }
 		        if (global.explosiveammo = 1) && (started1 = 0) && (global.upgrade_charge = 0) && (global.charge_shot = 0)
 		        {
-		        sprite_index = spr_explosion1;
-		        started1 = 1;
+			        sprite_index = spr_explosion1;
+			        started1 = 1;
 		        }
 		        if (global.upgrade_charge = 1) && (global.charge_shot = 0) && (started1 = 0)
 		        {
-		        sprite_index = spr_charge1_bullet_hit;
-		        started1 = 1;
+			        sprite_index = spr_charge1_bullet_hit;
+			        started1 = 1;
 		        }
 		        if (global.upgrade_charge = 1) && (global.charge_shot = 1) && (started1 = 0)
 		        {
-		        sprite_index = spr_charge2_bullet_hit;
-		        started1 = 1;
+			        sprite_index = spr_charge2_bullet_hit;
+			        started1 = 1;
 		        }
 			}
 		
 			if (global.beam_burn_available = 1) && (charge = 0) && (started1 = 0) && (enemy_nohit <= 0)
 			{
-			sprite_index = spr_explosion5;
-	        started1 = 1;	
+				sprite_index = spr_explosion5;
+		        started1 = 1;	
 			}
 			else if (global.beam_burn_available = 1) && (charge = 1) && (started1 = 0) && (enemy_nohit <= 0)
 			{
-			sprite_index = spr_explosion6;
-	        started1 = 1;	
+				sprite_index = spr_explosion6;
+		        started1 = 1;	
 			}
 		
 			if (enemy_nohit > 0)

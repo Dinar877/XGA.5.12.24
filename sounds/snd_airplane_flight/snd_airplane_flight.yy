@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":61.910206,
+  "duration":61.85796,
   "name":"snd_airplane_flight",
   "parent":{
     "name":"environment",

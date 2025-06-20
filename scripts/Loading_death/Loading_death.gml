@@ -1,41 +1,6 @@
 function Loading_death() {
-	
 	//for making collected upgrades not respawn
-	#region
-	global.upgradecollected[999] = 0;
-	global.upgradecollected_main[999] = 0;
-	global.upgradetrue[999] = 0;
-	global.upgradeID_room[999] = 0
 	global.upgradeID_N = 0;
-	
-	global.tilex[9999] = 0;
-	global.tiley[9999] = 0;
-	global.tiledata[9999] = 0;
-	global.tilesprite[9999] = 0;
-	global.tilesector[9999] = 0;
-	global.tileroom[9999] = 0;
-			
-	global.tileblocker[9999] = 0;
-	global.tileblocker2[9999] = 0;
-	global.tileitem[9999] = 0;
-	global.tile_hazard[9999] = 0;
-	global.tile_hazard_sprite[9999] = 0;
-	global.tile_hazard_redblockerID[9999] = 0;
-			
-	global.tiledataN = 0;
-		
-	global.sector_active = 0;
-	global.midgame = 0
-	
-	global.mapgrid_tilegivenX[9999] = 0;
-	global.mapgrid_tilegivenY[9999] = 0;
-	global.mapgrid_tilegivenN = 0;
-		
-	global.doors_redblocker[999] = 0;
-	global.doors_true[999] = 0;
-	global.bossblockers[999] = 0
-	
-	
 	//upgrades
 	global.walljump = 0;
 	global.airdash = 0;
@@ -47,7 +12,9 @@ function Loading_death() {
 	global.ability_limit = 0;
 
 	//sword
-	global.sword_swing_available = 0
+	global.sword_available = 0;
+	global.sword_swing_available = 0;
+	global.sword_wave_available = 0;
 
 
 	//abilities-invisibility
@@ -104,8 +71,6 @@ function Loading_death() {
 	global.nuclearblast = 0
 	global.xvision = 0
 	global.kelvin = 0
-	
-	global.sword_available = 0
 
 	global.autohack = 0
 	global.superautohack = 0
@@ -130,7 +95,52 @@ function Loading_death() {
 	global.suit_pure = 0;
 	global.suit_shell = 0
 	global.suit_shock = 0
-	#endregion
+	
+	
+	
+	//global.vars that are not arrays
+	global.ability_limit = 0
+	global.ability_select = 0
+	global.tiledataN = 0;
+	global.tileHazardDataN = 0;
+	global.mapgrid_tilegivenN = 0;
+	global.sector_active = 0;
+	global.midgame = 0;
+	global.corrupted = 0;
+	
+	
+	
+	//reset all values for tile IDs, tile blocker IDs and tile hazard IDs
+	for (var ll = 0; ll < 9999; ll++)
+	{
+		global.tilex[ll] = 0;
+		global.tiley[ll] = 0;
+		global.tiledata[ll] = 0;
+		global.tilesprite[ll] = 0;
+		global.tilesector[ll] = 0;
+		global.tileroom[ll] = 0;	
+		global.tileblocker[ll] = 0;
+		global.tileblocker2[ll] = 0;
+		global.tileitem[ll] = 0;
+		global.tile_hazard[ll] = 0;
+		global.tile_hazard_sprite[ll] = 0;
+		global.tile_hazard_redblockerID[ll] = 0;
+		global.mapgrid_tilegivellX[ll] = 0;
+		global.mapgrid_tilegivellY[ll] = 0;
+	}
+	
+	//reset all values for upgrade IDs, Redblocker IDs alld bossblockerIDs
+	for (var ll = 0; ll < 999; ll++)
+	{
+		global.upgradecollected[ll] = 0;
+		global.upgradecollected_maill[ll] = 0;
+		global.upgradetrue[ll] = 0;
+		global.upgradeID_room[ll] = 0
+		global.doors_redblocker[ll] = 0;
+		global.doors_true[ll] = 0;
+		global.bossblockers[ll] = 0
+	}
+	
 	
 
 	
@@ -150,12 +160,9 @@ function Loading_death() {
 				global.sector_active = ds_map_find_value(listvalue, "global.sectoractive");
 				global.sector_music = ds_map_find_value(listvalue, "global.sectormusic");
 				
-				if (audio_is_playing(global.sector_music) <= 0) && (global.sector_music > 0) && (audio_sound_is_playable(global.sector_music))
-				{
-					audio_play_sound(global.sector_music,2000,true)
-					audio_sound_gain(global.sector_music,0,0)
-					audio_sound_gain(global.sector_music,global.music_volume,1500)
-				}
+				RefMusicLoop()
+				
+				
 		
 				if (global.spacestation_active)
 						{
@@ -247,10 +254,12 @@ function Loading_death() {
 				
 	
 				////////////////////////MAP TILES!!!
-				//getting every discovered tile
-			
 				
+				//getting every discovered tile
 				global.tiledataN = ds_map_find_value(listvalue,"Tile.Data.N");
+				
+				//getting the maptile hazard total
+				global.tileHazardDataN = ds_map_find_value(listvalue,"Tile.Data.Hazard.N");
 	
 				for ( n2 = 0; n2 < global.tiledataN + 1; n2 += 1)
 				{
@@ -389,6 +398,9 @@ function Loading_death() {
 						inst.originY = global.marker_coordsY[nmarker];
 						inst.origionalX = global.marker_coordsX2[nmarker];
 						inst.origionalY = global.marker_coordsY2[nmarker];
+						
+						//gets the original number order this map marker was spawned as
+						inst.markerN = nmarker;
 				
 						inst.sectortile = ds_map_find_value(listvalue,"Marker.DataSector"+string(nmarker));
 						var n098 = 3

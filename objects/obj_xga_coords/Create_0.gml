@@ -49,4 +49,7 @@ while (xgaFacingChoice == 0)
 	xgaFacingChoice = round(random_range(-1,1));
 }
 
+//fail safe switch to break while loop if xga spawn is always impossible
+xgaStopSpawning = 0;
+
 testbobby = 0

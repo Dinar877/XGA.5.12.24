@@ -422,8 +422,8 @@
   ],
   "name":"rm_Sec2test1_2_21",
   "parent":{
-    "name":"liquid",
-    "path":"folders/Rooms/Sector1/path1/liquid.yy",
+    "name":"Sector1",
+    "path":"folders/Rooms/Sector1.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

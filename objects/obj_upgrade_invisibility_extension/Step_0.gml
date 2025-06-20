@@ -54,8 +54,9 @@ if (place_meeting(x,y,obj_player)) && (global.upgrade_process = 0)
 	}
 	else global.invisibility_limit += 3;
 	
-	
-	global.invisibility_available = 1
+	//invisibility available
+	global.invisibility_available = 1;
+	global.upgradecollected[963] = 1;
 
 	global.invisibility_ammo = global.invisibility_limit;
 	if (!instance_exists(obj_ability_invisibility))

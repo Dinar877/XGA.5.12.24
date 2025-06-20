@@ -12,8 +12,8 @@
   "duration":10.13551,
   "name":"snd_bh_talk",
   "parent":{
-    "name":"environment",
-    "path":"folders/Music+SFX/SFX/environment.yy",
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -3,6 +3,14 @@
 Gamepad_variables()
 //Gamepad_getname()
 
+//always stay on top of map markers
+if (instance_exists(obj_maptile_marker))
+{
+	with(obj_maptile_marker)
+	{
+		depth = other.depth+1;	
+	}
+}
 
 
 if (delay < 1)
@@ -15,6 +23,8 @@ if (delay < 1)
 if (new1 == 0) && (state == 0)
 {	
 	#region
+	
+
 	
 	//delete previous menu stuff
 		#region
@@ -341,6 +351,7 @@ if (new1 == 0) && (state == 0)
 if (new1 == 0) && (state == 1)
 {
 	#region
+
 	
 	global.pause_map = 0;
 	global.pause_logbook = 0
@@ -642,6 +653,8 @@ if (room != rm_load)
 		if (new1 == 0) && (instate == 1)
 		{
 			#region
+
+			
 			global.pause_map = 0;
 			global.pause_logbook = 0
 		
@@ -954,6 +967,7 @@ if (room != rm_load)
 		if (new1 == 0) && (instate == 2)
 		{
 			#region
+
 	
 			new1 = 1;
 			global.pause_logbook = 0
@@ -1281,6 +1295,8 @@ if (room != rm_load)
 		if (new1 == 0) && (instate == 3)
 		{
 			#region
+			
+
 	
 			new1 = 1;
 			global.pause_logbook = 0
@@ -1594,6 +1610,8 @@ if (room != rm_load)
 	{
 		if (new1 = 0) && (instate = 0)
 		{
+
+			
 			global.pause_logbook = 0
 			global.pause_map = 0
 			new1 = 1;
@@ -1910,6 +1928,7 @@ else if (room == rm_load) //title screen options menu
 		if (new1 == 0) && (instate == 1)
 		{
 			#region
+			
 			global.pause_map = 0;
 			global.pause_logbook = 0
 		
@@ -2632,7 +2651,7 @@ else if (room == rm_load) //title screen options menu
 	else if (prestate = 1) && (state = 2) //Options Menu - Outer
 	{
 		if (new1 = 0) && (instate = 0)
-		{
+		{	
 			global.pause_logbook = 0
 			global.pause_map = 0
 			new1 = 1;
@@ -2913,6 +2932,7 @@ if (instance_exists(obj_textblock_controls_generic))
 
 //controlling the pause menu and changing states
 //SHOOT PRESSED ACTIVATES BEFORE CHANGING CONTROLS!
+/*
 if (prestate = 0) && (instate > 0) && (state = 2) 
 && (shoot_pressed) 
 && (global.pause_logbook = 0)
@@ -2921,7 +2941,7 @@ if (prestate = 0) && (instate > 0) && (state = 2)
 	instate = 0
 	new1 = 0
 }
-
+*/
 
 
 
@@ -2931,6 +2951,7 @@ if (gamepad_is_connected(correct_slot))
 	//going left
 	if (sprite_index = spr_newpausescrn1_normal) && (L1) && (global.pause_logbook = 0) && (delay = 1)
 	&& (room != rm_load) //no switching when in  title screen
+	&& (instate == 0) // do not switch while in sub menus in options menu
 	{
 		image_index = 0;
 		sprite_index = spr_newpausescrn1_normal_L;
@@ -2950,6 +2971,7 @@ if (gamepad_is_connected(correct_slot))
 		{
 			if (delay = 1) && (selected = 1) && (waiting3 = 0)
 			&& (room != rm_load) //no switching when in  title screen
+			&& (other.instate == 0) // do not switch while in sub menus in options menu
 			{
 				with(other)
 				{
@@ -2975,6 +2997,7 @@ if (gamepad_is_connected(correct_slot))
 	//going right
 	if (sprite_index = spr_newpausescrn1_normal) && (R1) && (global.pause_logbook = 0) && (delay = 1)
 	&& (room != rm_load) //no switching when in  title screen
+	&& (instate == 0) // do not switch while in sub menus in options menu
 	{
 		image_index = 0;
 		sprite_index = spr_newpausescrn1_normal_R
@@ -2994,6 +3017,7 @@ if (gamepad_is_connected(correct_slot))
 		{
 			if (delay = 1) && (selected = 1) && (waiting3 = 0)
 			&& (room != rm_load) //no switching when in  title screen
+			&& (other.instate == 0) // do not switch while in sub menus in options menu
 			{
 				with(other)
 				{
@@ -3021,6 +3045,7 @@ else if (!gamepad_is_connected(correct_slot))
 	//going left
 	if (sprite_index = spr_newpausescrn1_normal) && (L1) && (global.pause_logbook = 0) && (delay = 1)
 	&& (room != rm_load) //no switching when in  title screen
+	&& (instate == 0) // do not switch while in sub menus in options menu
 	{
 		image_index = 0;
 		sprite_index = spr_newpausescrn1_normal_L;
@@ -3041,6 +3066,7 @@ else if (!gamepad_is_connected(correct_slot))
 		{
 			if (delay = 1) && (selected = 1) && (waiting3 = 0)
 			&& (room != rm_load) //no switching when in title screen
+			&& (other.instate == 0) // do not switch while in sub menus in options menu
 			{
 				with(other)
 				{
@@ -3066,6 +3092,7 @@ else if (!gamepad_is_connected(correct_slot))
 	//going right
 	if (sprite_index = spr_newpausescrn1_normal) && (R1) && (global.pause_logbook = 0) && (delay = 1)
 	&& (room != rm_load) //no switching when in title screen
+	&& (instate == 0) // do not switch while in sub menus in options menu
 	{
 		image_index = 0;
 		sprite_index = spr_newpausescrn1_normal_R
@@ -3086,6 +3113,7 @@ else if (!gamepad_is_connected(correct_slot))
 		{
 			if (delay = 1) && (selected = 1) && (waiting3 = 0)
 			&& (room != rm_load) //no switching when in title screen
+			&& (other.instate == 0) // do not switch while in sub menus in options menu
 			{
 				with(other)
 				{

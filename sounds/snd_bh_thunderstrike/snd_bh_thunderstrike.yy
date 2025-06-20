@@ -12,8 +12,8 @@
   "duration":9.774512,
   "name":"snd_bh_thunderstrike",
   "parent":{
-    "name":"environment",
-    "path":"folders/Music+SFX/SFX/environment.yy",
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

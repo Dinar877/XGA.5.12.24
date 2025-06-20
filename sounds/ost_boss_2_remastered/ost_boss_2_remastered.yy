@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":91.6898,
+  "duration":91.63862,
   "name":"ost_boss_2_remastered",
   "parent":{
     "name":"boss_music",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"ost_boss_2_remastered.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.5,
 }

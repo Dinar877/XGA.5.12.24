@@ -24,7 +24,9 @@ function RefMusicLoop(){
 	{
 		Music_loop(ost_boss_4_remastered, 0.086, 145.586)
 	}
-	else if (global.sector_music = ost_dark_remastered)
+	
+	
+	if (global.sector_music = ost_dark_remastered)
 	{
 		Music_loop(ost_dark_remastered, 0.123, 90.46);	
 	}

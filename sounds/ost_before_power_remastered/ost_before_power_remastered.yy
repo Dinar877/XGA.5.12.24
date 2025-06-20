@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":61.805714,
+  "duration":61.754536,
   "name":"ost_before_power_remastered",
   "parent":{
     "name":"Ciri_remastered_soundtrack",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"ost_before_power_remastered.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.6,
 }

@@ -20,7 +20,7 @@ function boss_draw_invincibility(){
 			draw_sprite(sprite_index, image_index, 500, 500);
 			surface_reset_target();
 			
-			draw_surface_ext(surfaceBOX,x-500,y-500,1,1,0,c_white,0.2)
+			draw_surface_ext(surfaceBOX,x-500,y-500,1,1,0,c_white,0.25)
 			surface_free(surfaceBOX)
 		}
 	}

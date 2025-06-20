@@ -8,8 +8,8 @@
   "name":"obj_airdasheffect",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"dashing",
+    "path":"folders/Objects/player/dashing.yy",
   },
   "parentObjectId":null,
   "persistent":false,

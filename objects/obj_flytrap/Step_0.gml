@@ -37,7 +37,7 @@ if (eating > 0)
 		instance_deactivate_object(inst4)	
 		instance_deactivate_object(inst5)
 		
-		enemy_hurt_player_code(3)
+		enemy_hurt_player_code(1)
 	}
 	
 	if (sprite_index = spr_flytrap_endsnap) && (image_index >= image_number-1)

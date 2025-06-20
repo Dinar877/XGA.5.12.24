@@ -58,26 +58,31 @@ else if (new1 == 1) && (!instance_exists(obj_midgame_flash))
 && (!instance_exists(obj_scrnDark_navigational))
 {
 			global.pause_player = 1;
+			global.cutscene_suit = 1;
+			global.corrupted = 1;
+			global.midgame = 1;
+			global.cutscene = 1;
 			
-			instance_create_layer(848,168,layer_get_id("Inst_healthui_mapborder"),obj_midgame_flash)
-			instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_midgame_xga_energycircle)
+			//create cutscene props
+			instance_create_layer(obj_camera.x-160,obj_camera.y-90,layer_get_id("Inst_healthui_mapborder"),obj_midgame_xga_jumpscare);
 	
-			audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)
+			//audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)
 	
 			new1 = 2
-
-	
+			
 			if (instance_exists(obj_midgame_npc_scientist))
 			{
-				with(obj_midgame_npc_scientist)
-				{
-					sprite_index = spr_xga_midgame_eat_scientist
-					image_speed = 0
-					image_index = 0
-			
-					y -= 11
-				}
+				instance_destroy(obj_midgame_npc_scientist)
 			}
+			if instance_exists(obj_player)
+			{
+				instance_destroy(obj_player)
+			}
+			if instance_exists(object_player2_0_sprites)
+			{
+				instance_destroy(object_player2_0_sprites)
+			}
+			
 	
 			instance_destroy()
 	

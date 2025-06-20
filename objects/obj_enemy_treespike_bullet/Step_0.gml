@@ -69,6 +69,6 @@ if (place_meeting(x,y,obj_player)) && (global.dashuse != 1) && ((object_player2_
 && (global.hurt = 0) && (global.hurt2 = 0) && (global.dash2_spark = 0) && (global.nanoshield <= 0)
 {
     global.hurt = 1;
-	global.healthKiller = 2;
+	global.healthKiller = 1;
 	instance_destroy()
 }

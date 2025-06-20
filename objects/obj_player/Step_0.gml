@@ -18,6 +18,39 @@ or (global.pierce_killswitch = 1)
 	hspd_enemy = 0
 	vspd_wind = 0
 	
+	//disable all abilities during cutscenes
+	if (global.cutscene = 1) or (global.cutscene_presuit = 1) or (global.cutscene_suit = 1) or (global.cutscene_trueintro_1 = 1) or (global.cutscene_trueintro_sparkexchange = 1)
+	or (global.pause_player = 1) or (global.navigation = 1) or (global.navigation_effect = 1) or (global.upgrade_process_data = 1) 
+	or (global.dead_begin = 1)
+	{
+		//nuclearblast
+		if (instance_exists(obj_nuclearblast_scrneffect))
+		{
+			instance_destroy(obj_nuclearblast_scrneffect);
+		}
+		if (instance_exists(obj_explosion_random_big))
+		{
+			instance_destroy();
+		}
+		global.nuclearblast = 0;
+		global.screen_shake = 0;
+		
+		//shockwave
+		if (instance_exists(obj_shockwave_energycircle))
+		{
+			instance_destroy(obj_shockwave_energyrange)
+			instance_destroy(obj_shockwave_energycircle)
+		}
+		audio_stop_sound(snd_electricity)
+		global.shockwave = 0;
+		
+		//nanoshield
+		global.nanoshield = 0;
+		
+		//invisibility
+		global.invisibility = 0;
+	}
+	
 	
 	exit;	
 }
@@ -265,11 +298,11 @@ if (enter_pressed) && (global.pause_transition = 0) && (global.room_transition =
 	
 	if (global.mapgrid_1x1 = 1) or ((global.mapgrid_yZeroMove = 1) && (global.mapgrid_xZeroMove = 1))
 	{
-		instance_create_layer( __view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ), layer_get_id("Inst_scrn"), obj_scrn_roomtransition);
+		instance_create_layer(obj_camera.x-160, obj_camera.y-90, layer_get_id("Inst_scrn"), obj_scrn_roomtransition);
 	}
 	else if (global.mapgrid_1x1 = 0)
 	{
-		instance_create_layer( obj_camera.x-160, obj_camera.y-90, layer_get_id("Inst_scrn"), obj_scrn_roomtransition);
+		instance_create_layer(obj_camera.x-160, obj_camera.y-90, layer_get_id("Inst_scrn"), obj_scrn_roomtransition);
 	}
 	
 	exit;
@@ -2277,7 +2310,7 @@ if (enemy_slowdownswitch = 0) && ((place_meeting(x,y,obj_waterregion)) or (place
 		}
 	}
 }
-else if ((!place_meeting(x,y,obj_corrupted_grass1)) && (!place_meeting(x,y,obj_lavaregion)) && (!place_meeting(x,y,obj_lavaregion)) && (!place_meeting(x,y,obj_waterregion)) && (!place_meeting(x,y,obj_waterregion)))
+else if ((!place_meeting(x,y,obj_corrupted_grass1)) && (!place_meeting(x,y,obj_lavaregion)) && (!place_meeting(x,y,obj_waterregion)))
 {	
 	global.inwater = 0
 	if (instance_position(x,bbox_top,obj_waterregion)) && (!instance_exists(obj_water_splash1)) && (enemy_slowdownswitch == 1)

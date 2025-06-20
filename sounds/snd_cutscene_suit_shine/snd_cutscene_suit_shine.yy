@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_cutscene_suit_shine",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":4.0524263,
+  "name":"snd_cutscene_suit_shine",
+  "parent":{
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_cutscene_suit_shine.wav",
+  "type":0,
+  "volume":0.1,
+}

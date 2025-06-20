@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":72.124084,
+  "duration":72.09796,
   "name":"ost_alien_remastered",
   "parent":{
     "name":"unused",

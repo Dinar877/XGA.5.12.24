@@ -26,7 +26,9 @@ if (state = 0) && (!instance_exists(obj_scrn_roomtransition))
 	else if (global.cutscene_suit > 0) && (yscale >= 180)
 	{
 		global.suit_shock = 1
+		global.speedboots = 1
 		global.screwjump = 1
+		global.suit_count = 2
 		state = 1
 	}
 }

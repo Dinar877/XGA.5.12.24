@@ -12,8 +12,8 @@
   "name":"obj_scrn_roomtransition",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"camera",
+    "path":"folders/Objects/player/camera.yy",
   },
   "parentObjectId":null,
   "persistent":true,

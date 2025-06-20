@@ -132,6 +132,9 @@ textspawnerID = -1
 
 sword_swing_now = 0
 
+//environment effects timer
+effectstimer = 0;
+
 //for x vision upgrade
 text1 = " X VISION";
 text2 = " BRIGHTENS DARK AREAS IN FRONT OF YOU";

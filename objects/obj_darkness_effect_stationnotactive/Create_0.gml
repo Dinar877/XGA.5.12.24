@@ -10,7 +10,7 @@ xother = 0
 yother = 0
 angleother = 0
 switch1 = 0
-image_alpha = 0.8
+image_alpha = 0.5
 
 shader_get_uniform(shd_less_color_saturation,"sat")
 

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":134.13878,
+  "duration":134.0876,
   "name":"ost_sector3_remastered",
   "parent":{
     "name":"sector3",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"ost_sector3_remastered.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.6,
 }

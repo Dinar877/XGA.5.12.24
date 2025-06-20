@@ -115,4 +115,4 @@ if (sprite_index = spr_saw_bullet)
 			image_angle += 80
 		}
 
-enemy_hurt_player_code(2)
+enemy_hurt_player_code(1)

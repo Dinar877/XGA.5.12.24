@@ -39,7 +39,7 @@ function abilities() {
 		else nuclSwitch = 0;
 	}
 	
-	abilities_available = nuclSwitch + nanoSwitch + invisSwitch + shocSwitch;
+	var abilities_available = nuclSwitch + nanoSwitch + invisSwitch + shocSwitch;
 	
 	//get the right positions for each ability icon
 	if (abilities_available > 0)

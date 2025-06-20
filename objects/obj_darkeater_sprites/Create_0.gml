@@ -77,7 +77,7 @@ if (global.mode_casual == 0)
 }
 else hp = 350;
 
-hp = 1
+//hp = 1
 
 
 

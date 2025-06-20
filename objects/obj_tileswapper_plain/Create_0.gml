@@ -279,8 +279,8 @@ if (global.corrupted > 0)
 	}
 	
 	#endregion
-	global.frozen = 0
-	global.superheated = 0
+	//global.frozen = 0
+	//global.superheated = 0
 	
 
 }

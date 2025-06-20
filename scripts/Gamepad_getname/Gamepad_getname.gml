@@ -5,11 +5,14 @@ function Gamepad_getname() {
 	//now make the gamepad inputs = those variables-for ps4
 	if (gamepad_is_connected(correct_slot))
 	{ 
+		//if object using function does not have the variable
+		if (!variable_instance_exists(self,"xbox_or_ps"))
+		{
 			//jump
-		#region
+			#region
 			if (global.gp_space = gp_face1)
 			{
-				jump = " X"
+				jump = "X"
 			}
 			else if (global.gp_space = gp_face2)
 			{
@@ -47,13 +50,13 @@ function Gamepad_getname() {
 			{
 				jump = "START"
 			}
-		#endregion
+			#endregion
 		
 			//ability
-		#region
+			#region
 			if (global.gp_ability = gp_face1)
 			{
-				ability = " X"
+				ability = "X"
 			}
 			else if (global.gp_ability = gp_face2)
 			{
@@ -91,13 +94,13 @@ function Gamepad_getname() {
 			{
 				ability = "START"
 			}
-		#endregion
+			#endregion
 		
 			//dash
-		#region
+			#region
 			if (global.gp_G = gp_face1)
 			{
-				dash = " X"
+				dash = "X"
 			}
 			else if (global.gp_G = gp_face2)
 			{
@@ -135,13 +138,13 @@ function Gamepad_getname() {
 			{
 				dash = "START"
 			}
-		#endregion
+			#endregion
 		
 			//shoot
-		#region
+			#region
 			if (global.gp_tab = gp_face1)
 			{
-				shoot = " X"
+				shoot ="X"
 			}
 			else if (global.gp_tab = gp_face2)
 			{
@@ -179,13 +182,13 @@ function Gamepad_getname() {
 			{
 				shoot = "START"
 			}
-		#endregion
+			#endregion
 	    
 			//start
-		#region
+			#region
 			if (global.gp_enter = gp_face1)
 			{
-				enter_pressed = " X"
+				enter_pressed ="X"
 			}
 			else if (global.gp_enter = gp_face2)
 			{
@@ -223,13 +226,13 @@ function Gamepad_getname() {
 			{
 				enter_pressed = "START"
 			}
-		#endregion
+			#endregion
 
 			//select
-		#region
+			#region
 			if (global.gp_select = gp_face1)
 			{
-				Select = " X"
+				Select ="X"
 			}
 			else if (global.gp_select = gp_face2)
 			{
@@ -267,13 +270,13 @@ function Gamepad_getname() {
 			{
 				Select = "START"
 			}
-		#endregion
+			#endregion
 		
 			//R1
-		#region
+			#region
 			if (global.gp_R1 = gp_face1)
 			{
-				R1 = " X"
+				R1 ="X"
 			}
 			else if (global.gp_R1 = gp_face2)
 			{
@@ -311,13 +314,13 @@ function Gamepad_getname() {
 			{
 				R1 = "START"
 			}
-		#endregion
+			#endregion
 
 			//R2
-		#region
+			#region
 			if (global.gp_R2 = gp_face1)
 			{
-				R2 = " X"
+				R2 ="X"
 			}
 			else if (global.gp_R2 = gp_face2)
 			{
@@ -355,13 +358,13 @@ function Gamepad_getname() {
 			{
 				R2 = "START"
 			}
-		#endregion
+			#endregion
 	    
 			//L1
-		#region
+			#region
 			if (global.gp_L1 = gp_face1)
 			{
-				L1 = " X"
+				L1 ="X"
 			}
 			else if (global.gp_L1 = gp_face2)
 			{
@@ -399,13 +402,13 @@ function Gamepad_getname() {
 			{
 				L1 = "START"
 			}
-		#endregion
+			#endregion
 
 			//L2
-		#region
+			#region
 			if (global.gp_L2 = gp_face1)
 			{
-				L2 = " X"
+				L2 ="X"
 			}
 			else if (global.gp_L2 = gp_face2)
 			{
@@ -443,7 +446,896 @@ function Gamepad_getname() {
 			{
 				L2 = "START"
 			}
-		#endregion
+			#endregion
+		}
+		
+		if (variable_instance_exists(self,"xbox_or_ps"))
+		{
+			if (xbox_or_ps == -1) //sony controller
+			{
+				//jump
+				#region
+				if (global.gp_space = gp_face1)
+				{
+					jump ="X"
+				}
+				else if (global.gp_space = gp_face2)
+				{
+					jump = "CIRCLE"
+				}
+				else if (global.gp_space = gp_face3)
+				{
+					jump = "SQUARE"
+				}
+				else if (global.gp_space = gp_face4)
+				{
+					jump = "TRIANGLE"
+				}
+				else if (global.gp_space = gp_shoulderr)
+				{
+					jump = "R1"
+				}
+				else if (global.gp_space = gp_shoulderl)
+				{
+					jump = "L1"
+				}
+				else if (global.gp_space = gp_shoulderrb)
+				{
+					jump = "R2"
+				}
+				else if (global.gp_space = gp_shoulderlb)
+				{
+					jump = "L2"
+				}
+				else if (global.gp_space = gp_select)
+				{
+					jump = "SELECT"
+				}
+				else if (global.gp_space = gp_start)
+				{
+					jump = "START"
+				}
+				#endregion
+		
+				//ability
+				#region
+				if (global.gp_ability = gp_face1)
+				{
+					ability ="X"
+				}
+				else if (global.gp_ability = gp_face2)
+				{
+					ability = "CIRCLE"
+				}
+				else if (global.gp_ability = gp_face3)
+				{
+					ability = "SQUARE"
+				}
+				else if (global.gp_ability = gp_face4)
+				{
+					ability = "TRIANGLE"
+				}
+				else if (global.gp_ability = gp_shoulderr)
+				{
+					ability = "R1"
+				}
+				else if (global.gp_ability = gp_shoulderl)
+				{
+					ability = "L1"
+				}
+				else if (global.gp_ability = gp_shoulderrb)
+				{
+					ability = "R2"
+				}
+				else if (global.gp_ability = gp_shoulderlb)
+				{
+					ability = "L2"
+				}
+				else if (global.gp_ability = gp_select)
+				{
+					ability = "SELECT"
+				}
+				else if (global.gp_ability = gp_start)
+				{
+					ability = "START"
+				}
+				#endregion
+		
+				//dash
+				#region
+				if (global.gp_G = gp_face1)
+				{
+					dash ="X"
+				}
+				else if (global.gp_G = gp_face2)
+				{
+					dash = "CIRCLE"
+				}
+				else if (global.gp_G = gp_face3)
+				{
+					dash = "SQUARE"
+				}
+				else if (global.gp_G = gp_face4)
+				{
+					dash = "TRIANGLE"
+				}
+				else if (global.gp_G = gp_shoulderr)
+				{
+					dash = "R1"
+				}
+				else if (global.gp_G = gp_shoulderl)
+				{
+					dash = "L1"
+				}
+				else if (global.gp_G = gp_shoulderrb)
+				{
+					dash = "R2"
+				}
+				else if (global.gp_G = gp_shoulderlb)
+				{
+					dash = "L2"
+				}
+				else if (global.gp_G = gp_select)
+				{
+					dash = "SELECT"
+				}
+				else if (global.gp_G = gp_start)
+				{
+					dash = "START"
+				}
+				#endregion
+		
+				//shoot
+				#region
+				if (global.gp_tab = gp_face1)
+				{
+					shoot ="X"
+				}
+				else if (global.gp_tab = gp_face2)
+				{
+					shoot = "CIRCLE"
+				}
+				else if (global.gp_tab = gp_face3)
+				{
+					shoot = "SQUARE"
+				}
+				else if (global.gp_tab = gp_face4)
+				{
+					shoot = "TRIANGLE"
+				}
+				else if (global.gp_tab = gp_shoulderr)
+				{
+					shoot = "R1"
+				}
+				else if (global.gp_tab = gp_shoulderl)
+				{
+					shoot = "L1"
+				}
+				else if (global.gp_tab = gp_shoulderrb)
+				{
+					shoot = "R2"
+				}
+				else if (global.gp_tab = gp_shoulderlb)
+				{
+					shoot = "L2"
+				}
+				else if (global.gp_tab = gp_select)
+				{
+					shoot = "SELECT"
+				}
+				else if (global.gp_tab = gp_start)
+				{
+					shoot = "START"
+				}
+				#endregion
+	    
+				//start
+				#region
+				if (global.gp_enter = gp_face1)
+				{
+					enter_pressed ="X"
+				}
+				else if (global.gp_enter = gp_face2)
+				{
+					enter_pressed = "CIRCLE"
+				}
+				else if (global.gp_enter = gp_face3)
+				{
+					enter_pressed = "SQUARE"
+				}
+				else if (global.gp_enter = gp_face4)
+				{
+					enter_pressed = "TRIANGLE"
+				}
+				else if (global.gp_enter = gp_shoulderr)
+				{
+					enter_pressed = "R1"
+				}
+				else if (global.gp_enter = gp_shoulderl)
+				{
+					enter_pressed = "L1"
+				}
+				else if (global.gp_enter = gp_shoulderrb)
+				{
+					enter_pressed = "R2"
+				}
+				else if (global.gp_enter = gp_shoulderlb)
+				{
+					enter_pressed = "L2"
+				}
+				else if (global.gp_enter = gp_select)
+				{
+					enter_pressed = "SELECT"
+				}
+				else if (global.gp_enter = gp_start)
+				{
+					enter_pressed = "START"
+				}
+				#endregion
+
+				//select
+				#region
+				if (global.gp_select = gp_face1)
+				{
+					Select ="X"
+				}
+				else if (global.gp_select = gp_face2)
+				{
+					Select = "CIRCLE"
+				}
+				else if (global.gp_select = gp_face3)
+				{
+					Select = "SQUARE"
+				}
+				else if (global.gp_select = gp_face4)
+				{
+					Select = "TRIANGLE"
+				}
+				else if (global.gp_select = gp_shoulderr)
+				{
+					Select = "R1"
+				}
+				else if (global.gp_select = gp_shoulderl)
+				{
+					Select = "L1"
+				}
+				else if (global.gp_select = gp_shoulderrb)
+				{
+					Select = "R2"
+				}
+				else if (global.gp_select = gp_shoulderlb)
+				{
+					Select = "L2"
+				}
+				else if (global.gp_select = gp_select)
+				{
+					Select = "SELECT"
+				}
+				else if (global.gp_select = gp_start)
+				{
+					Select = "START"
+				}
+				#endregion
+		
+				//R1
+				#region
+				if (global.gp_R1 = gp_face1)
+				{
+					R1 ="X"
+				}
+				else if (global.gp_R1 = gp_face2)
+				{
+					R1 = "CIRCLE"
+				}
+				else if (global.gp_R1 = gp_face3)
+				{
+					R1 = "SQUARE"
+				}
+				else if (global.gp_R1 = gp_face4)
+				{
+					R1 = "TRIANGLE"
+				}
+				else if (global.gp_R1 = gp_shoulderr)
+				{
+					R1 = "R1"
+				}
+				else if (global.gp_R1 = gp_shoulderl)
+				{
+					R1 = "R1"
+				}
+				else if (global.gp_R1 = gp_shoulderrb)
+				{
+					R1 = "R2"
+				}
+				else if (global.gp_R1 = gp_shoulderlb)
+				{
+					R1 = "L2"
+				}
+				else if (global.gp_R1 = gp_select)
+				{
+					R1 = "SELECT"
+				}
+				else if (global.gp_R1 = gp_start)
+				{
+					R1 = "START"
+				}
+				#endregion
+
+				//R2
+				#region
+				if (global.gp_R2 = gp_face1)
+				{
+					R2 ="X"
+				}
+				else if (global.gp_R2 = gp_face2)
+				{
+					R2 = "CIRCLE"
+				}
+				else if (global.gp_R2 = gp_face3)
+				{
+					R2 = "SQUARE"
+				}
+				else if (global.gp_R2 = gp_face4)
+				{
+					R2 = "TRIANGLE"
+				}
+				else if (global.gp_R2 = gp_shoulderr)
+				{
+					R2 = "R1"
+				}
+				else if (global.gp_R2 = gp_shoulderl)
+				{
+					R2 = "L1"
+				}
+				else if (global.gp_R2 = gp_shoulderrb)
+				{
+					R2 = "R2"
+				}
+				else if (global.gp_R2 = gp_shoulderlb)
+				{
+					R2 = "R2"
+				}
+				else if (global.gp_R2 = gp_select)
+				{
+					R2 = "R2"
+				}
+				else if (global.gp_R2 = gp_start)
+				{
+					R2 = "START"
+				}
+				#endregion
+	    
+				//L1
+				#region
+				if (global.gp_L1 = gp_face1)
+				{
+					L1 ="X"
+				}
+				else if (global.gp_L1 = gp_face2)
+				{
+					L1 = "CIRCLE"
+				}
+				else if (global.gp_L1 = gp_face3)
+				{
+					L1 = "SQUARE"
+				}
+				else if (global.gp_L1 = gp_face4)
+				{
+					L1 = "TRIANGLE"
+				}
+				else if (global.gp_L1 = gp_shoulderr)
+				{
+					L1 = "R1"
+				}
+				else if (global.gp_L1 = gp_shoulderl)
+				{
+					L1 = "L1"
+				}
+				else if (global.gp_L1 = gp_shoulderrb)
+				{
+					L1 = "R2"
+				}
+				else if (global.gp_L1 = gp_shoulderlb)
+				{
+					L1 = "L2"
+				}
+				else if (global.gp_L1 = gp_select)
+				{
+					L1 = "SELECT"
+				}
+				else if (global.gp_L1 = gp_start)
+				{
+					L1 = "START"
+				}
+				#endregion
+
+				//L2
+				#region
+				if (global.gp_L2 = gp_face1)
+				{
+					L2 ="X"
+				}
+				else if (global.gp_L2 = gp_face2)
+				{
+					L2 = "CIRCLE"
+				}
+				else if (global.gp_L2 = gp_face3)
+				{
+					L2 = "SQUARE"
+				}
+				else if (global.gp_L2 = gp_face4)
+				{
+					L2 = "TRIANGLE"
+				}
+				else if (global.gp_L2 = gp_shoulderr)
+				{
+					L2 = "R1"
+				}
+				else if (global.gp_L2 = gp_shoulderl)
+				{
+					L2 = "L1"
+				}
+				else if (global.gp_L2 = gp_shoulderrb)
+				{
+					L2 = "R2"
+				}
+				else if (global.gp_L2 = gp_shoulderlb)
+				{
+					L2 = "L2"
+				}
+				else if (global.gp_L2 = gp_select)
+				{
+					L2 = "L2"
+				}
+				else if (global.gp_L2 = gp_start)
+				{
+					L2 = "START"
+				}
+				#endregion
+			}
+			else if (xbox_or_ps == 1) //xbox controller
+			{
+				//jump
+				#region
+				if (global.gp_space = gp_face1)
+				{
+					jump = "A"
+				}
+				else if (global.gp_space = gp_face2)
+				{
+					jump = "B"
+				}
+				else if (global.gp_space = gp_face3)
+				{
+					jump = "X"
+				}
+				else if (global.gp_space = gp_face4)
+				{
+					jump = "Y"
+				}
+				else if (global.gp_space = gp_shoulderr)
+				{
+					jump = "R1"
+				}
+				else if (global.gp_space = gp_shoulderl)
+				{
+					jump = "L1"
+				}
+				else if (global.gp_space = gp_shoulderrb)
+				{
+					jump = "R2"
+				}
+				else if (global.gp_space = gp_shoulderlb)
+				{
+					jump = "L2"
+				}
+				else if (global.gp_space = gp_select)
+				{
+					jump = "SELECT"
+				}
+				else if (global.gp_space = gp_start)
+				{
+					jump = "START"
+				}
+				#endregion
+		
+				//ability
+				#region
+				if (global.gp_ability = gp_face1)
+				{
+					ability = "A"
+				}
+				else if (global.gp_ability = gp_face2)
+				{
+					ability = "B"
+				}
+				else if (global.gp_ability = gp_face3)
+				{
+					ability = "X"
+				}
+				else if (global.gp_ability = gp_face4)
+				{
+					ability = "Y"
+				}
+				else if (global.gp_ability = gp_shoulderr)
+				{
+					ability = "R1"
+				}
+				else if (global.gp_ability = gp_shoulderl)
+				{
+					ability = "L1"
+				}
+				else if (global.gp_ability = gp_shoulderrb)
+				{
+					ability = "R2"
+				}
+				else if (global.gp_ability = gp_shoulderlb)
+				{
+					ability = "L2"
+				}
+				else if (global.gp_ability = gp_select)
+				{
+					ability = "SELECT"
+				}
+				else if (global.gp_ability = gp_start)
+				{
+					ability = "START"
+				}
+				#endregion
+		
+				//dash
+				#region
+				if (global.gp_G = gp_face1)
+				{
+					dash = "A"
+				}
+				else if (global.gp_G = gp_face2)
+				{
+					dash = "B"
+				}
+				else if (global.gp_G = gp_face3)
+				{
+					dash = "X"
+				}
+				else if (global.gp_G = gp_face4)
+				{
+					dash = "Y"
+				}
+				else if (global.gp_G = gp_shoulderr)
+				{
+					dash = "R1"
+				}
+				else if (global.gp_G = gp_shoulderl)
+				{
+					dash = "L1"
+				}
+				else if (global.gp_G = gp_shoulderrb)
+				{
+					dash = "R2"
+				}
+				else if (global.gp_G = gp_shoulderlb)
+				{
+					dash = "L2"
+				}
+				else if (global.gp_G = gp_select)
+				{
+					dash = "SELECT"
+				}
+				else if (global.gp_G = gp_start)
+				{
+					dash = "START"
+				}
+				#endregion
+		
+				//shoot
+				#region
+				if (global.gp_tab = gp_face1)
+				{
+					shoot = "A"
+				}
+				else if (global.gp_tab = gp_face2)
+				{
+					shoot = "B"
+				}
+				else if (global.gp_tab = gp_face3)
+				{
+					shoot = "X"
+				}
+				else if (global.gp_tab = gp_face4)
+				{
+					shoot = "Y"
+				}
+				else if (global.gp_tab = gp_shoulderr)
+				{
+					shoot = "R1"
+				}
+				else if (global.gp_tab = gp_shoulderl)
+				{
+					shoot = "L1"
+				}
+				else if (global.gp_tab = gp_shoulderrb)
+				{
+					shoot = "R2"
+				}
+				else if (global.gp_tab = gp_shoulderlb)
+				{
+					shoot = "L2"
+				}
+				else if (global.gp_tab = gp_select)
+				{
+					shoot = "SELECT"
+				}
+				else if (global.gp_tab = gp_start)
+				{
+					shoot = "START"
+				}
+				#endregion
+	    
+				//start
+				#region
+				if (global.gp_enter = gp_face1)
+				{
+					enter_pressed = "A"
+				}
+				else if (global.gp_enter = gp_face2)
+				{
+					enter_pressed = "B"
+				}
+				else if (global.gp_enter = gp_face3)
+				{
+					enter_pressed = "X"
+				}
+				else if (global.gp_enter = gp_face4)
+				{
+					enter_pressed = "Y"
+				}
+				else if (global.gp_enter = gp_shoulderr)
+				{
+					enter_pressed = "R1"
+				}
+				else if (global.gp_enter = gp_shoulderl)
+				{
+					enter_pressed = "L1"
+				}
+				else if (global.gp_enter = gp_shoulderrb)
+				{
+					enter_pressed = "R2"
+				}
+				else if (global.gp_enter = gp_shoulderlb)
+				{
+					enter_pressed = "L2"
+				}
+				else if (global.gp_enter = gp_select)
+				{
+					enter_pressed = "SELECT"
+				}
+				else if (global.gp_enter = gp_start)
+				{
+					enter_pressed = "START"
+				}
+				#endregion
+
+				//select
+				#region
+				if (global.gp_select = gp_face1)
+				{
+					Select = "A"
+				}
+				else if (global.gp_select = gp_face2)
+				{
+					Select = "B"
+				}
+				else if (global.gp_select = gp_face3)
+				{
+					Select = "X"
+				}
+				else if (global.gp_select = gp_face4)
+				{
+					Select = "Y"
+				}
+				else if (global.gp_select = gp_shoulderr)
+				{
+					Select = "R1"
+				}
+				else if (global.gp_select = gp_shoulderl)
+				{
+					Select = "L1"
+				}
+				else if (global.gp_select = gp_shoulderrb)
+				{
+					Select = "R2"
+				}
+				else if (global.gp_select = gp_shoulderlb)
+				{
+					Select = "L2"
+				}
+				else if (global.gp_select = gp_select)
+				{
+					Select = "SELECT"
+				}
+				else if (global.gp_select = gp_start)
+				{
+					Select = "START"
+				}
+				#endregion
+		
+				//R1
+				#region
+				if (global.gp_R1 = gp_face1)
+				{
+					R1 = "A"
+				}
+				else if (global.gp_R1 = gp_face2)
+				{
+					R1 = "B"
+				}
+				else if (global.gp_R1 = gp_face3)
+				{
+					R1 = "X"
+				}
+				else if (global.gp_R1 = gp_face4)
+				{
+					R1 = "Y"
+				}
+				else if (global.gp_R1 = gp_shoulderr)
+				{
+					R1 = "R1"
+				}
+				else if (global.gp_R1 = gp_shoulderl)
+				{
+					R1 = "R1"
+				}
+				else if (global.gp_R1 = gp_shoulderrb)
+				{
+					R1 = "R2"
+				}
+				else if (global.gp_R1 = gp_shoulderlb)
+				{
+					R1 = "L2"
+				}
+				else if (global.gp_R1 = gp_select)
+				{
+					R1 = "SELECT"
+				}
+				else if (global.gp_R1 = gp_start)
+				{
+					R1 = "START"
+				}
+				#endregion
+
+				//R2
+				#region
+				if (global.gp_R2 = gp_face1)
+				{
+					R2 = "A"
+				}
+				else if (global.gp_R2 = gp_face2)
+				{
+					R2 = "B"
+				}
+				else if (global.gp_R2 = gp_face3)
+				{
+					R2 = "X"
+				}
+				else if (global.gp_R2 = gp_face4)
+				{
+					R2 = "Y"
+				}
+				else if (global.gp_R2 = gp_shoulderr)
+				{
+					R2 = "R1"
+				}
+				else if (global.gp_R2 = gp_shoulderl)
+				{
+					R2 = "L1"
+				}
+				else if (global.gp_R2 = gp_shoulderrb)
+				{
+					R2 = "R2"
+				}
+				else if (global.gp_R2 = gp_shoulderlb)
+				{
+					R2 = "R2"
+				}
+				else if (global.gp_R2 = gp_select)
+				{
+					R2 = "R2"
+				}
+				else if (global.gp_R2 = gp_start)
+				{
+					R2 = "START"
+				}
+				#endregion
+	    
+				//L1
+				#region
+				if (global.gp_L1 = gp_face1)
+				{
+					L1 = "A"
+				}
+				else if (global.gp_L1 = gp_face2)
+				{
+					L1 = "B"
+				}
+				else if (global.gp_L1 = gp_face3)
+				{
+					L1 = "X"
+				}
+				else if (global.gp_L1 = gp_face4)
+				{
+					L1 = "Y"
+				}
+				else if (global.gp_L1 = gp_shoulderr)
+				{
+					L1 = "R1"
+				}
+				else if (global.gp_L1 = gp_shoulderl)
+				{
+					L1 = "L1"
+				}
+				else if (global.gp_L1 = gp_shoulderrb)
+				{
+					L1 = "R2"
+				}
+				else if (global.gp_L1 = gp_shoulderlb)
+				{
+					L1 = "L2"
+				}
+				else if (global.gp_L1 = gp_select)
+				{
+					L1 = "SELECT"
+				}
+				else if (global.gp_L1 = gp_start)
+				{
+					L1 = "START"
+				}
+				#endregion
+
+				//L2
+				#region
+				if (global.gp_L2 = gp_face1)
+				{
+					L2 = "A"
+				}
+				else if (global.gp_L2 = gp_face2)
+				{
+					L2 = "B"
+				}
+				else if (global.gp_L2 = gp_face3)
+				{
+					L2 = "X"
+				}
+				else if (global.gp_L2 = gp_face4)
+				{
+					L2 = "Y"
+				}
+				else if (global.gp_L2 = gp_shoulderr)
+				{
+					L2 = "R1"
+				}
+				else if (global.gp_L2 = gp_shoulderl)
+				{
+					L2 = "L1"
+				}
+				else if (global.gp_L2 = gp_shoulderrb)
+				{
+					L2 = "R2"
+				}
+				else if (global.gp_L2 = gp_shoulderlb)
+				{
+					L2 = "L2"
+				}
+				else if (global.gp_L2 = gp_select)
+				{
+					L2 = "L2"
+				}
+				else if (global.gp_L2 = gp_start)
+				{
+					L2 = "START"
+				}
+				#endregion
+			}
+		}
 		
 		
 	}

@@ -9,6 +9,7 @@ sword_spriteindex = 0
 idleanim_walktimer = 0
 idleanim_turntimer = 0
 
+snd = -1;
 
 random_pickup1 = irandom_range(0,5);
 random_pickup2 = irandom_range(0,5);

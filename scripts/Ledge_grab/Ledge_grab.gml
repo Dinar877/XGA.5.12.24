@@ -52,10 +52,10 @@ function Ledge_grab() {
 			{
 			    with(obj_player)
 			    {
-			    y = inst1.bbox_top - ((bbox_top-bbox_bottom)/2);
-			    global.jumpingdm = 0;
-			    global.hang = 1;
-				hang_switch = 1
+				    y = inst1.bbox_top - ((bbox_top-bbox_bottom)/2);
+				    global.jumpingdm = 0;
+				    global.hang = 1;
+					hang_switch = 1
 			    }
 			}
 		}
@@ -65,10 +65,10 @@ function Ledge_grab() {
 			{
 			    with(obj_player)
 			    {
-			    y = inst2.bbox_top - ((bbox_top-bbox_bottom)/2);
-			    global.jumpingdm = 0;
-			    global.hang = 1;
-				hang_switch = 1
+				    y = inst2.bbox_top - ((bbox_top-bbox_bottom)/2);
+				    global.jumpingdm = 0;
+				    global.hang = 1;
+					hang_switch = 1
 			    }
 			}
 		}
@@ -121,7 +121,7 @@ function Ledge_grab() {
 	
 		//go to climbing state(climb up ledge)
 		if (place_meeting(x+1,y,obj_block)) && (!place_meeting(x+1,y-1,obj_block2_noclimb))
-		&& (global.image_speed_lockdown == 0) && (global.turningLedge == 0) && (gamepad4_wait >= 1) && (input_horizontal > 0) && !(left_key_pressed) && !(left_key) && (jump_pressed)
+		&& (global.image_speed_lockdown == 0) && (global.turningLedge == 0) && (gamepad4_wait >= 1) && (input_horizontal >= 0) && !(left_key_pressed) && !(left_key) && (jump_pressed)
 		{
 		    State_machine_switch_state(Climb_up_ledge);
 			hang_switch = 0;
@@ -131,7 +131,7 @@ function Ledge_grab() {
 			global.hangAiming = 0;
 		}
 		else if (place_meeting(x-1,y,obj_block)) && (!place_meeting(x-1,y-1,obj_block2_noclimb))
-		&& (global.image_speed_lockdown == 0) && (global.turningLedge == 0) && (gamepad4_wait >= 1) && (input_horizontal < 0) && !(right_key_pressed) && !(right_key) && (jump_pressed)
+		&& (global.image_speed_lockdown == 0) && (global.turningLedge == 0) && (gamepad4_wait >= 1) && (input_horizontal <= 0) && !(right_key_pressed) && !(right_key) && (jump_pressed)
 		{
 		    State_machine_switch_state(Climb_up_ledge);
 			hang_switch = 0;
@@ -175,7 +175,7 @@ function Ledge_grab() {
 			global.hangAiming = 0;
 	    }
 
-		//start going to jump-off-ledge state from normal hang state
+		//start going from normal hang state to jump of ledge/ledge shooting state
 	    if (place_meeting(x+1,y,obj_block)) && (right_key_pressed-left_key_pressed < 0) && (!right_key) //turn to face away from block ledge to our right
 		&& (object_player2_0_sprites.sprite_index = spr_hang_right)
 	    {
@@ -188,7 +188,7 @@ function Ledge_grab() {
 	    }
 		
 		
-		//start going from jump-off-ledge state to normal hang state
+		//start going from jump-off-ledge state to normal hang state	
 	    if (place_meeting(x+1,y,obj_block)) && (right_key_pressed-left_key_pressed > 0) && (!left_key) //turn to face away from block ledge to our right
 		&& (global.image_speed_lockdown = 1) && (global.hangAiming = 1)
 	    {
@@ -217,7 +217,7 @@ function Ledge_grab() {
 	
 		//go to climbing state(climb up ledge)
 	    if (place_meeting(x+1,y,obj_block)) && (!place_meeting(x+1,y-1,obj_block2_noclimb))
-		&& (global.image_speed_lockdown == 0) && (input_horizontal > 0) && (!left_key_pressed) && (!left_key) && (jump_pressed) && (global.turningLedge == 0)
+		&& (global.image_speed_lockdown == 0) && (input_horizontal >= 0) && (!left_key_pressed) && (!left_key) && (jump_pressed) && (global.turningLedge == 0)
 	    {
 	        State_machine_switch_state(Climb_up_ledge);
 			hang_switch = 0
@@ -227,7 +227,7 @@ function Ledge_grab() {
 			global.hangAiming = 0;
 	    }
 	    else if (place_meeting(x-1,y,obj_block)) && (!place_meeting(x-1,y-1,obj_block2_noclimb))
-		&& (global.image_speed_lockdown == 0) && (input_horizontal < 0) && (!right_key_pressed) && (!right_key) && (jump_pressed) && (global.turningLedge == 0)
+		&& (global.image_speed_lockdown == 0) && (input_horizontal <= 0) && (!right_key_pressed) && (!right_key) && (jump_pressed) && (global.turningLedge == 0)
 	    {
 	        State_machine_switch_state(Climb_up_ledge);
 			hang_switch = 0

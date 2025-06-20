@@ -147,10 +147,10 @@ function Check_if_ledge(){
 				{
 				    with(obj_player)
 				    {
-				    y = inst1.bbox_top - ((bbox_top-bbox_bottom)/2);
-				    global.jumpingdm = 0;
-				    global.hang = 1;
-					hang_switch = 1
+					    y = inst1.bbox_top - ((bbox_top-bbox_bottom)/2);
+					    global.jumpingdm = 0;
+					    global.hang = 1;
+						hang_switch = 1
 				    }
 				}
 			}
@@ -160,10 +160,10 @@ function Check_if_ledge(){
 				{
 				    with(obj_player)
 				    {
-				    y = inst2.bbox_top - ((bbox_top-bbox_bottom)/2);
-				    global.jumpingdm = 0;
-				    global.hang = 1;
-					hang_switch = 1
+					    y = inst2.bbox_top - ((bbox_top-bbox_bottom)/2);
+					    global.jumpingdm = 0;
+					    global.hang = 1;
+						hang_switch = 1
 				    }
 				}
 			}

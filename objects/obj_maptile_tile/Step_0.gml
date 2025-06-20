@@ -370,9 +370,11 @@ if (gotsprite = 0) && (discovered = 1)
 		}
 		//plain floor2 - tiny corner right
 		if (place_meeting(x+1,y,obj_mapchecker2)) && (place_meeting(x-1,y,obj_mapchecker2)) && (!place_meeting(x,y+1,obj_mapchecker2)) && (place_meeting(x,y-1,obj_mapchecker2))
-		 && (!place_meeting(x,y,obj_door_normal_left))
-		 && (!position_meeting(x+sprite_width,y-sprite_height,obj_mapchecker2)) && (position_meeting(x-sprite_width,y-sprite_height,obj_mapchecker2))
-		 && (!position_meeting(x+sprite_width,y+sprite_height,obj_mapchecker2)) && (!position_meeting(x-sprite_width,y+sprite_height,obj_mapchecker2))
+		&& (!place_meeting(x,y,obj_door_normal_left))
+		&& (!position_meeting(x+sprite_width,y-sprite_height,obj_mapchecker2)) 
+		&& (position_meeting(x-sprite_width,y-sprite_height,obj_mapchecker2))
+		//&& (position_meeting(x+sprite_width,y+sprite_height,obj_mapchecker2)) 
+		//&& (!position_meeting(x-sprite_width,y+sprite_height,obj_mapchecker2))
 		{
 			with(other)
 			{

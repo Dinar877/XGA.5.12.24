@@ -8,8 +8,8 @@
   "name":"obj_camera_shaker",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"camera",
+    "path":"folders/Objects/player/camera.yy",
   },
   "parentObjectId":null,
   "persistent":false,

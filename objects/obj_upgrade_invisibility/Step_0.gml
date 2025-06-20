@@ -56,8 +56,11 @@ if (place_meeting(x,y,obj_player)) && (global.upgrade_process = 0)
 		}
 	}
 	
+	//invisibility available
 	global.invisibility_available = 1;
-	global.ability_select = 0
+	//global.upgradecollected[963] = 1;
+	
+	global.ability_select = 0;
 	
 	if (global.mode_recommended > 0)
 	{

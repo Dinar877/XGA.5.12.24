@@ -13,6 +13,12 @@ else
 	audio_resume_sound(snd_magma)	
 }
 
+//play sfx properly
+if (!audio_is_playing(emitter_player))
+{
+	emitter_player = audio_play_sound_at(snd_magma,x,y,0,20,100,1,true,1000,global.sfx_volume)
+}
+
 
 dist = point_distance(id.x,id.y,obj_player.x,obj_player.y)
-audio_emitter_gain(global.inst_audio_emitterID[inst_n], (30/dist) * global.sfx_volume)
+audio_sound_gain(emitter_player, (20/dist) * global.sfx_volume,0)

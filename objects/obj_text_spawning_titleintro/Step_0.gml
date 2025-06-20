@@ -9,10 +9,10 @@ Gamepad_variables()
 if (new1 = 0) && (!instance_exists(obj_scrnDark_random_loadroom_intro))
 {
 	//relevant
-	message2 = " DINAR AND CIRI PRESENT... "
+	message2 = " DINAR87 AND CIRI PRESENT... "
 	new1 = 2;
 	
-	textmap1 = instance_create_depth(x-(15*2),y,self.depth-1,obj_texty_generic_introONLY);
+	textmap1 = instance_create_depth(x-(15*3),y,self.depth-1,obj_texty_generic_introONLY);
 
 	with(textmap1)
 	{

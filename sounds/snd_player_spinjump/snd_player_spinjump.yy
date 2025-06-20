@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.992653,
+  "duration":0.9287982,
   "name":"snd_player_spinjump",
   "parent":{
     "name":"player",

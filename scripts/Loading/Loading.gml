@@ -1,37 +1,147 @@
 function Loading() {
 	//for making collected upgrades not respawn
-	global.upgradecollected[999] = 0;
-	global.upgradecollected_main[999] = 0;
-	global.upgradetrue[999] = 0;
-	global.upgradeID_room[999] = 0
 	global.upgradeID_N = 0;
+	//upgrades
+	global.walljump = 0;
+	global.airdash = 0;
+	global.hydrodash = 0;
+	global.shoot_autoR_upgrade = 0;
 	
-	global.tilex[9999] = 0;
-	global.tiley[9999] = 0;
-	global.tiledata[9999] = 0;
-	global.tilesprite[9999] = 0;
-	global.tilesector[9999] = 0;
-	global.tileroom[9999] = 0;
-			
-	global.tileblocker[9999] = 0;
-	global.tileblocker2[9999] = 0;
-	global.tileitem[9999] = 0;
-	global.tile_hazard[9999] = 0;
-	global.tile_hazard_sprite[9999] = 0;
-	global.tile_hazard_redblockerID[9999] = 0;
-			
+	//choose abilities
+	global.ability_select = 1;
+	global.ability_limit = 0;
+
+	//sword
+	global.sword_available = 0;
+	global.sword_swing_available = 0;
+	global.sword_wave_available = 0;
+
+
+	//abilities-invisibility
+	global.invisibility_state = 0
+	global.invisibility_available = 0;
+	global.invisibility_ammo = 0;
+	global.invisibility_limit = 0;
+	global.invisibility_prep = 0
+
+	global.invisibility_recharge = 0;
+
+	//abilities-nanoshield
+	global.nanoshield_state = 0
+	global.nanoshield_available = 0;
+	global.nanoshield_ammo = 0;
+	global.nanoshield_limit = 0;
+
+	//abilities-nuclearblast
+	global.nuclearblast_state = 0;		
+	global.nuclearblast_available = 0;
+	global.nuclearblast_ammo = 0;
+	global.nuclearblast_limit = 0;
+
+	//abilities-shockwave
+	global.shockwave_state = 0
+	global.shockwave_available = 0
+	global.shockwave_ammo = 0
+	global.shockwave_limit = 0
+	global.shockwave = 0
+
+	global.nanoshield_recharge = 0;
+
+	global.explosiveammo = 0
+	global.animation_end = 0
+	global.jumping_maxheight = 0
+
+	global.constantspd = 0;
+	global.facingDir = 1;
+	global.turning = 0;
+	global.turning_dash2 = 0;
+	global.turningLedge = 0;
+	global.lockdown_facingDir = 0;
+	global.grounded = 1;
+	global.landed = 0;
+	global.crouching = 0;
+
+	global.wallscaler = 0;
+	global.speedboots = 0;
+	global.screwjump = 0;
+	global.spacejump = 0;
+	global.suit_count = 0;
+	global.invisibility = 0;
+	global.nanoshield = 0;
+	global.nuclearblast = 0
+	global.xvision = 0
+	global.kelvin = 0
+
+	global.autohack = 0
+	global.superautohack = 0
+
+	global.upgrade_charge = 0;
+	global.charging = 0;
+	global.charge_ready = 0;
+	global.charge_shot = 0;
+
+	global.beam_spread_available = 0;
+	global.beam_spread = 0;
+
+	global.beam_burn = 0;
+	global.beam_burn_available = 0;
+
+	global.beam_homing = 0;
+	global.beam_homing_available = 0;
+
+	global.beam_shield = 0;
+	global.beam_shield_available = 0;
+
+	global.suit_pure = 0;
+	global.suit_shell = 0
+	global.suit_shock = 0
+	
+	
+	
+	//global.vars that are not arrays
 	global.ability_limit = 0
 	global.ability_select = 0
 	global.tiledataN = 0;
-	global.sector_active = 0;
-	
-	global.mapgrid_tilegivenX[9999] = 0;
-	global.mapgrid_tilegivenY[9999] = 0;
+	global.tileHazardDataN = 0;
 	global.mapgrid_tilegivenN = 0;
-		
-	global.doors_redblocker[999] = 0;
-	global.doors_true[999] = 0;
-	global.bossblockers[999] = 0
+	global.sector_active = 0;
+	global.midgame = 0;
+	global.corrupted = 0;
+	
+	
+	
+	//reset all values for tile IDs, tile blocker IDs and tile hazard IDs
+	for (var ll = 0; ll < 9999; ll++)
+	{
+		global.tilex[ll] = 0;
+		global.tiley[ll] = 0;
+		global.tiledata[ll] = 0;
+		global.tilesprite[ll] = 0;
+		global.tilesector[ll] = 0;
+		global.tileroom[ll] = 0;	
+		global.tileblocker[ll] = 0;
+		global.tileblocker2[ll] = 0;
+		global.tileitem[ll] = 0;
+		global.tile_hazard[ll] = 0;
+		global.tile_hazard_sprite[ll] = 0;
+		global.tile_hazard_redblockerID[ll] = 0;
+		global.mapgrid_tilegivellX[ll] = 0;
+		global.mapgrid_tilegivellY[ll] = 0;
+	}
+	
+	//reset all values for upgrade IDs, Redblocker IDs and bossblockerIDs
+	for (var ll = 0; ll < 999; ll++)
+	{
+		global.upgradecollected[ll] = 0;
+		global.upgradecollected_maill[ll] = 0;
+		global.upgradetrue[ll] = 0;
+		global.upgradeID_room[ll] = 0
+		global.doors_redblocker[ll] = 0;
+		global.doors_true[ll] = 0;
+		global.bossblockers[ll] = 0
+	}
+	
+	
 	
 	//get data from normal save file
 	if (file_exists("XGA.SAVEFILE.dat"))
@@ -50,12 +160,9 @@ function Loading() {
 				global.sector_music = ds_map_find_value(listvalue, "global.sectormusic");
 				
 				
-				if (audio_is_playing(global.sector_music) <= 0) && (global.sector_music > 0) && (audio_sound_is_playable(global.sector_music))
-				{
-					audio_play_sound(global.sector_music,2000,true)
-					audio_sound_gain(global.sector_music,0,0)
-					audio_sound_gain(global.sector_music,global.music_volume,1500)
-				}
+				RefMusicLoop()
+				
+				
 		
 				if (global.spacestation_active)
 						{
@@ -120,6 +227,9 @@ function Loading() {
 				////////////////////////MAP TILES!!!
 				//getting every discovered tile
 				global.tiledataN = ds_map_find_value(listvalue,"Tile.Data.N");
+				
+				//getting the maptile hazard total
+				global.tileHazardDataN = ds_map_find_value(listvalue,"Tile.Data.Hazard.N");
 	
 				for ( n2 = 0; n2 < global.tiledataN + 1; n2 += 1)
 				{
@@ -258,6 +368,9 @@ function Loading() {
 						inst.originY = global.marker_coordsY[nmarker];
 						inst.origionalX = global.marker_coordsX2[nmarker];
 						inst.origionalY = global.marker_coordsY2[nmarker];
+						
+						//gets the original number order this map marker was spawned as
+						inst.markerN = nmarker;
 				
 						inst.sectortile = ds_map_find_value(listvalue,"Marker.DataSector"+string(nmarker));
 						var n098 = 3

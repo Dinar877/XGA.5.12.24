@@ -9,7 +9,7 @@ emitter_start = 0
 emitter_pitch = 1;
 emitter_vol = 0;
 emitterSin = 0
-audio_play_sound_on(global.inst_audio_emitterID[inst_n],snd_magma,true,100,global.sfx_volume)
+emitter_player = audio_play_sound_at(snd_magma,x,y,0,20,100,1,true,1000,global.sfx_volume)
 audio_emitter_pitch(global.inst_audio_emitterID[inst_n],emitter_pitch)
 audio_emitter_gain(global.inst_audio_emitterID[inst_n],emitter_vol)
 

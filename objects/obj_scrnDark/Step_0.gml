@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//go to room1
+//go to room1 when loading game
 if (endload == 0) && (saving = 0) && (endsaving == 0) && (global.dead_ending == 0) && (global.pierce_killswitch == 0)
 && (goToRoom <= 0)
 {
@@ -21,6 +21,21 @@ if (endload == 0) && (saving = 0) && (endsaving == 0) && (global.dead_ending == 
 			instance_activate_all();
 			room_goto(room1);	
 		}
+	}
+}
+
+//for changing to any room once totally black
+if (changerooms = 1) && (room1 > 0)
+{
+	if (image_alpha < 1.0)
+	{
+		image_alpha += 0.005;	
+	}
+	else if (image_alpha >= 1.0)
+	{
+		instance_activate_all();
+		room_goto(room1);	
+		instance_destroy();
 	}
 }
 

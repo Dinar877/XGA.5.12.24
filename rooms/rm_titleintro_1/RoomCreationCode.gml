@@ -109,7 +109,7 @@ global.shockwave_state = 0
 //music
 global.sector_active = -1;
 global.sector_music = -1
-global.music_volume = 0.6
+global.music_volume = 1
 global.sfx_volume = 1
 
 
