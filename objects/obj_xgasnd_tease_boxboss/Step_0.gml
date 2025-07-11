@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.cutsceneID[12] > 0)
+if (global.cutsceneID[Cutscenes.xgaTeaseBoxboss] > 0)
 {
 	instance_destroy()
 	exit;
@@ -31,6 +31,6 @@ if (footstep_volume > 0) && (on = 1)
 }
 else if (footstep_volume <= 0)
 {
-	global.cutsceneID[12] = 1
+	global.cutsceneID[Cutscenes.xgaTeaseBoxboss] = 1
 	instance_destroy()
 }

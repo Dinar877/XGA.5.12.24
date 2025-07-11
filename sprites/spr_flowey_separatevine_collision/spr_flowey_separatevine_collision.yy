@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":1,
   "parent":{
-    "name":"bigflowey",
-    "path":"folders/Sprites/Bosses/bigflowey.yy",
+    "name":"flowey",
+    "path":"folders/Sprites/Bosses/flowey.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

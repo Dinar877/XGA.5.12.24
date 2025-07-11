@@ -200,21 +200,64 @@ if (hp <= 0)
 	
 	global.doors_redblocker[redblockerID] = 1;
 	
-	instance_create(random_range(id.bbox_left, id.bbox_right), random_range(id.bbox_top, id.bbox_bottom), obj_gear_piece);
-	instance_create(random_range(id.bbox_left, id.bbox_right), random_range(id.bbox_top, id.bbox_bottom), obj_gear_piece);
-	instance_create(random_range(id.bbox_left, id.bbox_right), random_range(id.bbox_top, id.bbox_bottom), obj_gear_piece);
-	instance_create(random_range(id.bbox_left, id.bbox_right), random_range(id.bbox_top, id.bbox_bottom), obj_gear_piece);
-	instance_create(random_range(id.bbox_left, id.bbox_right), random_range(id.bbox_top, id.bbox_bottom), obj_gear_piece);
-	instance_create(random_range(id.bbox_left, id.bbox_right), random_range(id.bbox_top, id.bbox_bottom), obj_gear_piece);
+	if (doorDirection = -1)
+	{
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_left, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+	}
+	else if (doorDirection = 1)
+	{
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+		instance_create_layer(id.bbox_right, random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_blockerdoor_piece);
+	}
 	
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
-	instance_create_layer(random_range(xmin, xmax), random_range(ymin, ymax),layer_get_id("Inst_doors"), obj_explosion_random);
+	with(obj_blockerdoor_piece)
+	{
+		whichBlocker = 1;	
+		
+		if (other.doorDirection = 1)
+		{
+			direction1 = -1;	
+		}
+		else if (other.doorDirection = -1)
+		{
+			direction1 = 1;	
+		}
+		
+		sprite_index = round(random_range(spr_doorstopper_spread_piece_1,spr_doorstopper_spread_piece_4));	
+	}
 	
 
 	instance_destroy();

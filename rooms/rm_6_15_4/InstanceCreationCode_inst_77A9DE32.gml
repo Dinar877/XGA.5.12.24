@@ -1,4 +1,4 @@
-if (global.bossblockers[1] > 0)
+if (global.bossblockers[bossblockers.darkeaterStage1] > 0)
 {
 	instance_destroy();
 }

@@ -2,20 +2,20 @@
 // You can write your code in this editor
 if (direction1 > 0)
 {
-    image_angle += 40;
+    image_angle += 10;
     x = floor(x+(startx-adder1));
     if (adder1 < 1)
     {
-    adder1 += 0.1;
+		adder1 += 0.1;
     }
 }
 if (direction1 <= 0)
 {
-    image_angle -= 40;
+    image_angle -= 10;
     x = floor(x-(startx-adder1));
     if (adder1 < 1)
     {
-    adder1 += 0.1;
+		adder1 += 0.1;
     }
     
 }
@@ -31,7 +31,10 @@ else if (direction2 < 0)
     adder2 += 0.1;	
 }
 
-if ((place_meeting(x,y,obj_block)) or (place_meeting(x,y,obj_slope1_left)) or (place_meeting(x,y,obj_slope1_right))) && (hit = 0) && (!place_meeting(x,y-(starty-adder2),obj_block))
+if ((place_meeting(x,y,obj_block)) or (place_meeting(x,y,obj_slope1_left)) or (place_meeting(x,y,obj_slope1_right))) 
+&& (hit = 0) 
+&& (starty-adder2 < 0) //falling only
+&& (!place_meeting(x,y-(starty-adder2),obj_block)) && (!place_meeting(x,y-1,obj_block))
 {
     hit = 1
 	adder1 = 1
@@ -42,7 +45,7 @@ if (hit = 1)
 {
     if (direction1 > 0)
     {
-	    image_angle -= 60;
+	    image_angle -= 30;
 		
 		x = floor(x+(adder1));
 		adder1 += 0.1;
@@ -52,7 +55,7 @@ if (hit = 1)
     }
     if (direction1 <= 0)
     {
-	    image_angle += 60;
+	    image_angle += 30;
 		
 		x = floor(x-(adder1));
 		adder1 += 0.1;

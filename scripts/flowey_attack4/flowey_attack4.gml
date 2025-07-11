@@ -1,4 +1,6 @@
 function flowey_attack4() {
+	
+	
 	if (round(image_index) == 21) && (!audio_is_playing(snd_swordswoosh))
 	{
 		snd = audio_play_sound(snd_swordswoosh,1000,false,global.sfx_volume)	

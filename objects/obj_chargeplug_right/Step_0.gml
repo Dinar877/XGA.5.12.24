@@ -33,6 +33,8 @@ if (place_meeting(id.x,id.y,obj_player)) && (global.dash2_spark = 1) && (open = 
 	audio_sound_set_track_position(snd,2)
 	audio_sound_gain(snd,global.sfx_volume,0)
 	audio_sound_gain(snd,0,3000)
+	
+	audio_play_sound(snd_gate_opening, 1000,false, global.sfx_volume)
 		
 	instance_create_depth(x,y,id.depth-1,obj_chargeplug_electricity)
 	

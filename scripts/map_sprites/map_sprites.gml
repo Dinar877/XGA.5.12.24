@@ -1,10 +1,11 @@
-///Blockers!!!
 function map_sprites() {
 	
+			
+				
 			 //reblocker-yellow
 			 if (instance_place(x,y,obj_door_redblocker))
 			 {
-				var inst_blocky = (instance_place(x,y,obj_door_redblocker))
+				inst_blocky = (instance_place(x,y,obj_door_redblocker))
 			
 				//red
 				if (inst_blocky.sprite_index = spr_doorstopper_left_original) && (inst_blocky.door_type = 0)
@@ -62,7 +63,7 @@ function map_sprites() {
 					}
 					
 					//increase maptile hazard count by +1
-					global.tileHazardDataN++;
+					//global.tileHazardDataN++;
 				}
 				else if (inst_blocky.sprite_index = spr_doorstopper_right_original) && (inst_blocky.door_type = 2)
 				{
@@ -126,7 +127,7 @@ function map_sprites() {
 			 //spread shot blocker
 			 if (instance_place(x,y,obj_door_spreadblocker))
 			 {
-				var inst_blocky = (instance_place(x,y,obj_door_spreadblocker))
+				inst_blocky = (instance_place(x,y,obj_door_spreadblocker))
 				
 				if (inst_blocky.sprite_index = spr_doorstopper_left_original_s)
 				{
@@ -156,7 +157,7 @@ function map_sprites() {
 			 //shield blocker
 			 if (instance_place(x,y,obj_door_shieldblocker))
 			 {
-				var inst_blocky = (instance_place(x,y,obj_door_shieldblocker))
+				inst_blocky = (instance_place(x,y,obj_door_shieldblocker))
 				
 				if (inst_blocky.sprite_index = spr_doorstopper_left_original_shield)
 				{

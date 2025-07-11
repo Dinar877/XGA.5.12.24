@@ -6,21 +6,21 @@ or (global.upgrade_process = 1)
 	exit;	
 }
 
-if (global.bossblockers[2] > 0)
+if (global.bossblockers[bossblockers.bugspider] > 0)
 {
 	instance_destroy();
 	exit
 }
 
 // You can write your code in this editor
-if (global.cutsceneID[28] > 0) or (place_meeting(x,y,obj_block2_invisible_bossdoor))
+if (global.cutsceneID[Cutscenes.bugspiderDrill] > 0) or (place_meeting(x,y,obj_block2_invisible_bossdoor))
 {
 	with(obj_setpiece_bugspider_sprites)
 	{
 		instance_destroy()	
 	}
 	instance_destroy();
-	global.cutsceneID[28] = 1
+	global.cutsceneID[Cutscenes.bugspiderDrill] = 1
 	exit;
 }
 

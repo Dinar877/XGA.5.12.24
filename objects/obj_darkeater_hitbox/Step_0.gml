@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.bossblockers[90] > 0)
+if (global.bossblockers[bossblockers.xga] > 0)
 {
 	instance_destroy()	
 	
@@ -81,7 +81,7 @@ if (audio_emitter_exists(global.inst_audio_emitterID[inst_n]))
 //BOSS BATTLE INITIATE
 if (room == rm_redtemple_finalboss) && (global.pierce_killswitch = 0)
 {
-	if (collision_circle(x,y,90,obj_player,false,true)) && (warning = 0) && (!instance_exists(obj_scrnDark_warning)) && (global.bossblockers[BossblockerID] <= 0)
+	if (collision_circle(x,y,160,obj_player,false,true)) && (warning = 0) && (!instance_exists(obj_scrnDark_warning)) && (global.bossblockers[BossblockerID] <= 0)
 	&& (obj_darkeater_sprites.hp > 0)
 	{
 		with(object_player2_0_sprites)

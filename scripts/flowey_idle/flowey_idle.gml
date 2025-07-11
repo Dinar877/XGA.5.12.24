@@ -33,7 +33,7 @@ function flowey_idle() {
 		 piercetimer = 0
 		 State_machine_switch_state(flowey_attack4)
 	}
-	else if (sprite_index = spr_flowey_idle) && (piercetimer >= 1) && (collision_circle(x,y,50,obj_player,false,true))
+	else if (sprite_index = spr_flowey_idle) && (piercetimer >= 1) && (collision_circle(x,y,90,obj_player,false,true))
 	{
 		 sprite_index = spr_flowey_pierce;
 		 image_index = 0;
@@ -51,13 +51,18 @@ function flowey_idle() {
 		dist = obj_player.x
 		instance_create_depth(dist,464,id.depth-1,obj_boss_flowey_eyevine)
 		dist = 0
+		
+		//sfx
+		snd = audio_play_sound(snd_grassrustle,1000,false,global.sfx_volume * 2)
+		audio_sound_gain(snd,0,1500)
+		audio_sound_pitch(snd,3)
 	}
 
 	shoottimer += random_range(((1/room_speed)/1.5),((1/room_speed)/2.5))
 	vinetimer += random_range(((1/room_speed)/1.5),((1/room_speed)/2.5))
 	attack4timer += random_range(((1/room_speed)/1.5),((1/room_speed)/2.5))
 	eyetimer += random_range(((1/room_speed)/2),((1/room_speed)/3))
-	piercetimer += random_range(((1/room_speed)/2),((1/room_speed)/3))
+	piercetimer += random_range(((1/room_speed)/1),((1/room_speed)/1.5))
 
 
 

@@ -390,7 +390,9 @@ function Loading() {
 					global.abilityID[nability] = ds_map_find_value(listvalue,"abilityID"+string(nability));
 				}
 		
-				global.ability_select = ds_map_find_value(listvalue, "global.ability_select");
+				//global.ability_select = ds_map_find_value(listvalue, "global.ability_select");
+				global.ability_select = 0
+				global.ability_limit = 0
 		
 				global.invisibility_state = ds_map_find_value(listvalue, "global.invisibility_state");
 				global.invisibility_available = ds_map_find_value(listvalue, "global.invisibility_available");
@@ -398,7 +400,7 @@ function Loading() {
 				global.invisibility_limit = ds_map_find_value(listvalue, "global.invisibility_limit");
 		
 				//abilities UI-invisibility
-				if (global.upgradecollected[963] == 1) && (!instance_exists(obj_ability_invisibility))
+				if (global.upgradecollected[upgrades.invisibility] == 1) && (!instance_exists(obj_ability_invisibility))
 				{
 					instance_create_layer(__view_get( e__VW.XView, 0 )+93,__view_get( e__VW.YView, 0 )+1,layer_get_id("Inst_healthui"),obj_ability_invisibility);
 					with(obj_ability_invisibility)
@@ -414,7 +416,7 @@ function Loading() {
 				global.nanoshield_limit = ds_map_find_value(listvalue, "global.nanoshield_limit");
 		
 				//abilities UI-nanoshield
-				if (global.upgradecollected[962] == 1) && (!instance_exists(obj_ability_nanoshield))
+				if (global.upgradecollected[upgrades.nanoshield] == 1) && (!instance_exists(obj_ability_nanoshield))
 				{
 					instance_create_layer(__view_get( e__VW.XView, 0 )+93,__view_get( e__VW.YView, 0 )+1,layer_get_id("Inst_healthui"),obj_ability_nanoshield);
 					with(obj_ability_nanoshield)
@@ -430,7 +432,7 @@ function Loading() {
 				global.nuclearblast_limit = ds_map_find_value(listvalue, "global.nuclearblast_limit");
 		
 				//abilities UI-nuclearblast
-				if (global.upgradecollected[964] == 1) && (!instance_exists(obj_ability_nuclearblast))
+				if (global.upgradecollected[upgrades.nuclearblast] == 1) && (!instance_exists(obj_ability_nuclearblast))
 				{
 					instance_create_layer(__view_get( e__VW.XView, 0 )+93,__view_get( e__VW.YView, 0 )+1,layer_get_id("Inst_healthui"),obj_ability_nuclearblast);
 					with(obj_ability_nuclearblast)
@@ -446,7 +448,7 @@ function Loading() {
 				global.shockwave_limit = ds_map_find_value(listvalue, "global.shockwave_limit");
 		
 				//abilities UI-shockwave
-				if (global.upgradecollected[965] == 1) && (!instance_exists(obj_ability_shockwave))
+				if (global.upgradecollected[upgrades.shockwave] == 1) && (!instance_exists(obj_ability_shockwave))
 				{
 					instance_create_layer(__view_get( e__VW.XView, 0 )+93,__view_get( e__VW.YView, 0 )+1,layer_get_id("Inst_healthui"),obj_ability_shockwave)
 					with(obj_ability_shockwave)

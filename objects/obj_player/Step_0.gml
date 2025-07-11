@@ -1665,25 +1665,55 @@ while (place_meeting(x-1,y-1,obj_newslope_right)) && (state != Dashing2_use)
 
 //fail safe if inside collision block - top
 if (!position_meeting(x,bbox_bottom+1,obj_block))
+&& (position_meeting(x,bbox_top,obj_block))
 && (place_meeting(x,y,obj_block))
-	{
-		while (place_meeting(x,y,obj_block))
-		&& (!position_meeting(x,bbox_bottom+1,obj_block))
-			{
-				y ++;	
-			}
-	}
+{
+	while (place_meeting(x,y,obj_block))
+	&& (!position_meeting(x,bbox_bottom+1,obj_block))
+	&& (position_meeting(x,bbox_top,obj_block))
+		{
+			y ++;	
+		}
+}
 	
 //fail safe if inside collision block - bottom
 if (!position_meeting(x,bbox_top-1,obj_block))
+&& (position_meeting(x,bbox_bottom,obj_block))
 && (place_meeting(x,y,obj_block))
-	{
-		while (place_meeting(x,y,obj_block))
-		&& (!position_meeting(x,bbox_top-1,obj_block))
-			{
-				y --;	
-			}
-	}
+{
+	while (place_meeting(x,y,obj_block))
+	&& (!position_meeting(x,bbox_top-1,obj_block))
+	&& (position_meeting(x,bbox_bottom,obj_block))
+		{
+			y --;	
+		}
+}
+
+//fail safe if inside collision block - right
+if (!position_meeting(bbox_left-1,y,obj_block))
+&& (position_meeting(bbox_right,y,obj_block))
+&& (place_meeting(x,y,obj_block))
+{
+	while (place_meeting(x,y,obj_block))
+	&& (!position_meeting(bbox_left-1,y,obj_block))
+	&& (position_meeting(bbox_right,y,obj_block))
+		{
+			x --;	
+		}
+}
+	
+//fail safe if inside collision block - left
+if (!position_meeting(bbox_right+1,y,obj_block))
+&& (position_meeting(bbox_left,y,obj_block))
+&& (place_meeting(x,y,obj_block))
+{
+	while (place_meeting(x,y,obj_block))
+	&& (!position_meeting(bbox_right+1,y,obj_block))
+	&& (position_meeting(bbox_left,y,obj_block))
+		{
+			x++;	
+		}
+}
 	
 	
 

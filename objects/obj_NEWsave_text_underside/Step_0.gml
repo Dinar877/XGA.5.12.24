@@ -204,7 +204,7 @@ if (image_speed = 0)
 			{
 				instance_create(0,0,obj_sndmaker_sector2)
 			}
-			else if (room == rm_S3_NEWsave_LR) && (global.bossblockers[3] <= 0)
+			else if (room == rm_S3_NEWsave_LR) && (global.bossblockers[bossblockers.flowey] <= 0)
 			{
 				instance_create(0,0,obj_sndmaker_preboss_any)
 			}

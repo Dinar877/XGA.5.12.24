@@ -55,7 +55,7 @@ if (place_meeting(x,y,obj_player)) && (global.upgrade_process = 0)
 	else global.nuclearblast_limit += 1;
 	
 	global.nuclearblast_available = 1
-	global.upgradecollected[964] = 1;
+	global.upgradecollected[upgrades.nuclearblast] = 1;
 
 	
 	

@@ -8,7 +8,7 @@ timer = 0
 
 footstep_volume = 1
 
-if (global.bossblockers[3] <= 0)
+if (global.bossblockers[bossblockers.flowey] <= 0)
 {
 	instance_destroy();
 	exit;

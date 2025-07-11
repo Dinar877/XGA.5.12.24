@@ -55,7 +55,7 @@ if (place_meeting(x,y,obj_player)) && (global.upgrade_process = 0)
 	else global.shockwave_limit += 3;
 	
 	global.shockwave_available = 1
-	global.upgradecollected[965] = 1;
+	global.upgradecollected[upgrades.shockwave] = 1;
 
 	
 	

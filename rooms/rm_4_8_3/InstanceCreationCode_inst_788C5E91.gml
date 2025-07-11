@@ -1,4 +1,4 @@
-if (global.bossblockers[2] > 0) or (global.cutsceneID[28] > 0)
+if (global.bossblockers[bossblockers.bugspider] > 0) or (global.cutsceneID[Cutscenes.bugspiderDrill] > 0)
 {
 	instance_destroy();
 	exit;

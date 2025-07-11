@@ -7,7 +7,7 @@ or (global.upgrade_process = 1)
 	exit;	
 }
 
-if (global.cutsceneID[28] > 0) or (global.bossblockers[2] > 0)
+if (global.cutsceneID[Cutscenes.bugspiderDrill] > 0) or (global.bossblockers[bossblockers.bugspider] > 0)
 {
 	instance_destroy();
 	exit;

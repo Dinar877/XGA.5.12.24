@@ -10,8 +10,8 @@
   "name":"obj_stalictite_icecave_spike_boss",
   "overriddenProperties":[],
   "parent":{
-    "name":"sector1",
-    "path":"folders/Objects/enemies/sector1.yy",
+    "name":"bugspider",
+    "path":"folders/Objects/boss_battles/bugspider.yy",
   },
   "parentObjectId":{
     "name":"obj_link_enemies",

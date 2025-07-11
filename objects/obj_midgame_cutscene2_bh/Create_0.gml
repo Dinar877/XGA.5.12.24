@@ -6,7 +6,7 @@ if (global.cutscene = 0) && (global.cutscene_presuit = 0) && (global.midgame = 0
 }
 
 //if cutscene has already played before
-if (global.cutsceneID[50] == 1)
+if (global.cutsceneID[Cutscenes.midgameScientist] == 1)
 {
 	instance_destroy();
 	exit;

@@ -1,25 +1,25 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.bossblockers[22] <= 0) && (global.sector_active = 1) && (global.midgame > 0)
+if (global.bossblockers[bossblockers.darklord] <= 0) && (global.sector_active = 1) && (global.midgame > 0)
 		{
 			global.corrupted = 1
 		}
-else if (global.bossblockers[21] <= 0) && (global.sector_active = 3) && (global.midgame > 0)
+else if (global.bossblockers[bossblockers.gorilla] <= 0) && (global.sector_active = 3) && (global.midgame > 0)
 		{
 			global.corrupted = 1
 		}
-else if (global.bossblockers[20] <= 0) && (global.sector_active = 4) && (global.midgame > 0)
+else if (global.bossblockers[bossblockers.turtle] <= 0) && (global.sector_active = 4) && (global.midgame > 0)
 		{
 			global.corrupted = 1
 		}
-else if (global.bossblockers[4] <= 0) && (global.sector_active = 2) && (global.midgame > 0)
+else if (global.bossblockers[bossblockers.kingstalker] <= 0) && (global.sector_active = 2) && (global.midgame > 0)
 		{
 			global.corrupted = 1
 		}
-else if ((global.bossblockers[22] <= 0)
-		or (global.bossblockers[4] <= 0)
-		or (global.bossblockers[21] <= 0)
-		or (global.bossblockers[20] <= 0))
+else if ((global.bossblockers[bossblockers.darklord] <= 0)
+		or (global.bossblockers[bossblockers.kingstalker] <= 0)
+		or (global.bossblockers[bossblockers.gorilla] <= 0)
+		or (global.bossblockers[bossblockers.turtle] <= 0))
 		&& (global.sector_active = 0) && (global.midgame > 0)
 		{
 			global.corrupted = 1
@@ -47,10 +47,10 @@ if (global.corrupted > 0)
 	//corrupting sectors
 	if (global.sector_active = 0) && (global.corrupted > 0)
 	{
-		if (global.bossblockers[22] > 0)
-		&& (global.bossblockers[4] > 0)
-		&& (global.bossblockers[21] > 0)
-		&& (global.bossblockers[20] > 0) && (global.midgame > 0)
+		if (global.bossblockers[bossblockers.darklord] > 0)
+		&& (global.bossblockers[bossblockers.kingstalker] > 0)
+		&& (global.bossblockers[bossblockers.gorilla] > 0)
+		&& (global.bossblockers[bossblockers.turtle] > 0) && (global.midgame > 0)
 		{
 			//global.corrupted = 0
 		}

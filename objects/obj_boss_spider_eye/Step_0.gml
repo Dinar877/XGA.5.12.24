@@ -5,7 +5,7 @@ if (global.bossblockers[BossblockerID] > 0)
 	instance_destroy();
 	
 	//spread beam
-		if (!instance_exists(obj_upgrade_spreadbeam)) && (global.upgradecollected[951] = 0)
+		if (!instance_exists(obj_upgrade_spreadbeam)) && (global.upgradecollected[upgrades.spreadshot] = 0)
 		{
 			var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_spreadbeam)
 			with(inst1)

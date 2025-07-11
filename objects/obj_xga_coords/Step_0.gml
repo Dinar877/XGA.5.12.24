@@ -2,10 +2,11 @@
 // You can write your code in this editor
 
 //despawn xga if in save room, or if XGA has spawned but left the room
-if (instance_exists(obj_NEWsav_bottom))
+if ((instance_exists(obj_NEWsav_bottom))
 or (instance_exists(obj_navigation_pillar1))
 or (instance_exists(obj_elevator_bottom))
-or ((doortype1 = 1) && (!instance_exists(obj_darkeater_hitbox)) && (global.darkeater_active = 0))
+or ((doortype1 = 1) && (!instance_exists(obj_darkeater_hitbox)) && (global.darkeater_active = 0)))
+&& (xgaMusicSwitch == 1)
 {
 	if (audio_is_playing(ost_xga_chasemusic))
 	{

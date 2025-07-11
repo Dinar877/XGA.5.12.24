@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.cutsceneID[3] == 0)
+if (global.cutsceneID[Cutscenes.blackholetalk1] == 0)
 {
 	instance_destroy();	
 	exit;

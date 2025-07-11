@@ -16,7 +16,7 @@ if (spawn = 0)
 		}
 	
 	
-	if (global.upgradecollected[950] > 0)
+	if (global.upgradecollected[upgrades.chargeshot] > 0)
 	{
 		//charge
 		global.tex[0+counter] = instance_create_depth(x,y+24+(24*counter),id.depth-1,obj_textblock_generic);
@@ -35,7 +35,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[951] > 0)
+	if (global.upgradecollected[upgrades.spreadshot] > 0)
 	{
 		//spread
 		global.tex[0+counter] = instance_create_depth(x,y+24+(24*counter),id.depth-1,obj_textblock_generic);
@@ -54,7 +54,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[952] > 0)
+	if (global.upgradecollected[upgrades.impactshot] > 0)
 	{
 		//BURN
 		global.tex[0+counter] = instance_create_depth(x,y+24+(24*counter),id.depth-1,obj_textblock_generic);
@@ -74,7 +74,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[953] > 0)
+	if (global.upgradecollected[upgrades.reflectshot] > 0)
 	{
 		//REFLECT
 		global.tex[0+counter] = instance_create_depth(x,y+24+(24*counter),id.depth-1,obj_textblock_generic);
@@ -94,7 +94,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[954] > 0)
+	if (global.upgradecollected[upgrades.shieldshot] > 0)
 	{
 		//SHIELD
 		global.tex[0+counter] = instance_create_depth(x,y+24+(24*counter),id.depth-1,obj_textblock_generic);
@@ -124,7 +124,7 @@ if (spawn = 0)
 			text = " ENGINES";
 		}
 		
-	if (global.upgradecollected[955] > 0)
+	if (global.upgradecollected[upgrades.dashengine] > 0)
 	{
 		//charge
 		global.tex[0+counter] = instance_create_depth(x,y+168+(24*1),id.depth-1,obj_textblock_generic);
@@ -144,7 +144,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[966] > 0)
+	if (global.upgradecollected[upgrades.voltengine] > 0)
 	{
 		//charge
 		global.tex[0+counter] = instance_create_depth(x,y+168+(24*2),id.depth-1,obj_textblock_generic);
@@ -175,7 +175,7 @@ if (spawn = 0)
 			text = " MISC. UPGRADES";
 		}
 		
-	if (global.upgradecollected[1] > 0)
+	if (global.upgradecollected[upgrades.wallscaler] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+262+(24*1),id.depth-1,obj_textblock_generic);
@@ -195,7 +195,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[958] > 0)
+	if (global.upgradecollected[upgrades.heatBalancer] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+262+(24*2),id.depth-1,obj_textblock_generic);
@@ -215,7 +215,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[957] > 0)
+	if (global.upgradecollected[upgrades.xVision] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+262+(24*3),id.depth-1,obj_textblock_generic);
@@ -237,7 +237,7 @@ if (spawn = 0)
 	
 	
 	
-	if (global.upgradecollected[959] > 0)
+	if (global.upgradecollected[upgrades.hydrodash] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+262+(24*4),id.depth-1,obj_textblock_generic);
@@ -257,7 +257,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[968] > 0)
+	if (global.upgradecollected[upgrades.jetjump] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+262+(24*5),id.depth-1,obj_textblock_generic);
@@ -277,7 +277,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[970] > 0)
+	if (global.upgradecollected[upgrades.instacharge] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+262+(24*6),id.depth-1,obj_textblock_generic);
@@ -309,7 +309,7 @@ if (spawn = 0)
 			text = " ABILITIES";
 		}
 		
-	if (global.upgradecollected[962] > 0)
+	if (global.upgradecollected[upgrades.nanoshield] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+430+(24*2),id.depth-1,obj_textblock_generic);
@@ -337,7 +337,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[963] > 0)
+	if (global.upgradecollected[upgrades.invisibility] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+430+(24*3),id.depth-1,obj_textblock_generic);
@@ -365,7 +365,7 @@ if (spawn = 0)
 		counter++
 	}
 	
-	if (global.upgradecollected[964] > 0)
+	if (global.upgradecollected[upgrades.nuclearblast] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+430+(24*4),id.depth-1,obj_textblock_generic);
@@ -394,7 +394,7 @@ if (spawn = 0)
 	}
 	
 	
-	if (global.upgradecollected[965] > 0)
+	if (global.upgradecollected[upgrades.shockwave] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+430+(24*5),id.depth-1,obj_textblock_generic);
@@ -432,7 +432,7 @@ if (spawn = 0)
 		}
 		
 	//NORMAL SWORD
-	if (global.upgradecollected[967] > 0)
+	if (global.upgradecollected[upgrades.xsaber] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+430+(24*8),id.depth-1,obj_textblock_generic);
@@ -454,7 +454,7 @@ if (spawn = 0)
 	
 	
 	//SWORD SWING
-	if (global.upgradecollected[969] > 0)
+	if (global.upgradecollected[upgrades.xswing] > 0)
 	{
 		//wallscaler
 		global.tex[0+counter] = instance_create_depth(x,y+430+(24*9),id.depth-1,obj_textblock_generic);
@@ -475,7 +475,7 @@ if (spawn = 0)
 	}
 	
 	//SWORD Wave
-	if (global.upgradecollected[971] > 0)
+	if (global.upgradecollected[upgrades.xwave] > 0)
 	{
 		global.tex[0+counter] = instance_create_depth(x,y+430+(24*10),id.depth-1,obj_textblock_generic);
 		with(global.tex[0+counter])

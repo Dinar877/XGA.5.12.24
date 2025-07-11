@@ -7,7 +7,7 @@ if (global.bossblockers[BossblockerID] > 0)
 }
 
 
-Music_loop(sndID, 0, 0);
+Music_loop(sndID, 3.441, 22.585);
 			
 sndID = -1;
 instance_destroy();

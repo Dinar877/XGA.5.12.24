@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":2.948912,
+  "duration":2.9489117,
   "name":"snd_beamexplosion",
   "parent":{
     "name":"beam",

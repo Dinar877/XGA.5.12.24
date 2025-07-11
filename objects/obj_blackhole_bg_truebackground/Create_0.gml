@@ -25,10 +25,10 @@ death1 = 0;
 texel = shader_get_uniform(shd_watery3, "texel")
 
 
-if (global.bossblockers[22] > 0)
-&& (global.bossblockers[4] > 0)
-&& (global.bossblockers[21] > 0)
-&& (global.bossblockers[20] > 0) && (global.midgame > 0)
+if (global.bossblockers[bossblockers.darklord] > 0)
+&& (global.bossblockers[bossblockers.kingstalker] > 0)
+&& (global.bossblockers[bossblockers.gorilla] > 0)
+&& (global.bossblockers[bossblockers.turtle] > 0) && (global.midgame > 0)
 {
 	sprite_index = spr_navigation_blackhole_red	
 }

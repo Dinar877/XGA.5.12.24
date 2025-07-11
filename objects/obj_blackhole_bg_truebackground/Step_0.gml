@@ -32,7 +32,7 @@ if (instance_exists(obj_player))
 	&& (!instance_exists(obj_endgame_xga_energycircle))
 	&& (scrnbg == 0)
 	&& (sprite_index == spr_navigation_blackhole_red)
-	&& (global.upgradecollected[966] == 0)
+	&& (global.upgradecollected[upgrades.voltengine] == 0)
 	{
 		instance_create_layer(x,y,layer_get_id("Inst_scrn"),obj_endgame_xga_energycircle)
 		scrnbg = 1

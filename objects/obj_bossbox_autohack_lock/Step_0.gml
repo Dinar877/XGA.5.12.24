@@ -31,7 +31,7 @@ if (place_meeting(id.x,id.y,obj_shockwave_energycircle)) && (image_speed != 0)
 }
 
 
-if (sprite_index = spr_autohack_door_opening) && (dontgo = 0) && (global.bossblockers[5] > 0)
+if (sprite_index = spr_autohack_door_opening) && (dontgo = 0) && (global.bossblockers[bossblockers.box] > 0)
 {
 	instance_deactivate_object(inst1)	
 	instance_deactivate_object(inst2)	

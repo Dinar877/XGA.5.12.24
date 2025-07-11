@@ -8,15 +8,26 @@ tileposy_checker = 0
 gotTile = 0;
 discovered = 0;
 room1 = room;
-inst_maptile = 0;
+
+inst_maptile = -1;
+inst_mapchecker1 = -1;
+inst_blocky = -1;
+inst_item = -1;
+
 hazardID = -1
 hazardID2 = -1
 hazardID_redblockerID = 0
+redblockerID = -1;
+
+blockerID2 = -1
 blockerID2 = -1;
+
 upgradeID = -1
 upgradeID2 = -1
 
 switch_mapchecker2 = 0
+
+door_type = -1;
 
 global.mapgrid_tilex = 0;
 global.mapgrid_tiley = 0;

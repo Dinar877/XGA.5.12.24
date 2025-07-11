@@ -9,8 +9,8 @@
   "name":"obj_music_loop_testing",
   "overriddenProperties":[],
   "parent":{
-    "name":"player",
-    "path":"folders/Objects/player.yy",
+    "name":"old",
+    "path":"folders/Objects/player/old.yy",
   },
   "parentObjectId":null,
   "persistent":false,

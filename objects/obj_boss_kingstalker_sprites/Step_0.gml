@@ -11,7 +11,7 @@ if (global.bossblockers[BossblockerID] > 0)
 {
 	instance_destroy();
 	
-	if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[963] <= 0)
+	if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[upgrades.invisibility] <= 0)
 	{
 		var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_invisibility)
 		with(inst1)
@@ -19,7 +19,7 @@ if (global.bossblockers[BossblockerID] > 0)
 			upgradeID = 963	
 		}	
 	}
-	else if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[963] = 1)
+	else if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[upgrades.invisibility] = 1)
 	&& (!instance_exists(obj_ability_invisibility))
 	{
 		var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_invisibility_extension)
@@ -199,7 +199,7 @@ if (deathanim > 0)
 		global.bossblockers[BossblockerID] = 1
 
 		
-		if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[963] <= 0)
+		if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[upgrades.invisibility] <= 0)
 		{
 			var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_invisibility)
 			with(inst1)
@@ -207,7 +207,7 @@ if (deathanim > 0)
 				upgradeID = 963	
 			}	
 		}
-		else if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[963] = 1)
+		else if (!instance_exists(obj_upgrade_invisibility)) && (global.upgradecollected[upgrades.invisibility] = 1)
 		{
 			var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_invisibility_extension)
 		}

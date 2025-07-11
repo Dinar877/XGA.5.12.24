@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_rollingwheels",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":3.2217686,
+  "name":"snd_rollingwheels",
+  "parent":{
+    "name":"enemy",
+    "path":"folders/Music+SFX/SFX/enemy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_rollingwheels.wav",
+  "type":0,
+  "volume":1.0,
+}

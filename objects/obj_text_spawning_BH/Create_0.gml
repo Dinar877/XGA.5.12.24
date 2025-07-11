@@ -63,22 +63,22 @@ newTextAvailable = 0;
 //which text
 if (global.corrupted == 0)
 {
-	if (global.cutsceneID[3] <= 0)
+	if (global.cutsceneID[Cutscenes.blackholetalk1] <= 0)
 	{
 		newTextAvailable = 3;	
 	}
-	else if (global.cutsceneID[3] == 1)
+	else if (global.cutsceneID[Cutscenes.blackholetalk1] == 1)
 	{
 		newTextAvailable = 6; //talk anytime	
 	}
 }
 else if (global.corrupted == 1)
 {
-	if (global.cutsceneID[4] <= 0)
+	if (global.cutsceneID[Cutscenes.blackholetalk2] <= 0)
 	{
 		newTextAvailable = 4;	
 	}
-	else if (global.cutsceneID[4] == 1)
+	else if (global.cutsceneID[Cutscenes.blackholetalk2] == 1)
 	{
 		newTextAvailable = 7; //talk anytime
 	}

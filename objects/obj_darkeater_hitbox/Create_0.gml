@@ -322,6 +322,15 @@ else if (global.darkeater_active = 0)
 	}
 }
 
+//controls music reseting for xga coords
+if (instance_exists(obj_xga_coords))
+{
+	with(obj_xga_coords)
+	{
+		xgaMusicSwitch = 1;	
+	}
+}
+
 
 
 //audio shiieeeet

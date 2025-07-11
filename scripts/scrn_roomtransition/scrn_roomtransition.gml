@@ -190,7 +190,7 @@ function scrn_roomtransition() {
 				else if (instance_exists(obj_camera_stopperU)) && (instance_exists(obj_camera_stopperD)) && (instance_exists(obj_camera_stopperL)) && (instance_exists(obj_camera_stopperR))
 				{
 					//X
-					if !(global.climbing)
+					if !(global.climbing) && (instance_exists(obj_player))
 					{
 						x = obj_player.x
 					}
@@ -218,7 +218,7 @@ function scrn_roomtransition() {
 					{
 						y = 90
 					}
-					else if !(global.climbing)
+					else if !(global.climbing) && (instance_exists(obj_player))
 					{
 						y = obj_player.y-yspin-yshake-yshake2;
 					}
@@ -281,7 +281,7 @@ function scrn_roomtransition() {
 				else if (instance_exists(obj_camera_stopperU)) && (instance_exists(obj_camera_stopperD)) && (instance_exists(obj_camera_stopperL)) && (instance_exists(obj_camera_stopperR))
 				{
 					//X
-					if !(global.climbing)
+					if !(global.climbing) && (instance_exists(obj_player))
 					{
 						x = obj_player.x
 					}
@@ -309,7 +309,7 @@ function scrn_roomtransition() {
 					{
 						y = 90
 					}
-					else if !(global.climbing)
+					else if !(global.climbing) && (instance_exists(obj_player))
 					{
 						y = obj_player.y-yspin-yshake-yshake2;
 					}

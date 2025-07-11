@@ -9,10 +9,19 @@ or (global.upgrade_process = 1)
 
 if (instance_exists(inst2) > 0) && (instance_exists(inst4) > 0)
 {
-	x = inst2.x;
-	y = inst2.y;
+	image_angle = inst4.image_angle;
+
 	
-	image_angle = inst4.image_angle
+	if (inst4.image_angle = 0)
+	{
+		x = inst2.x;
+		y = inst2.y+3;
+	}
+	else if (inst4.image_angle = 180)
+	{
+		x = inst2.x;
+		y = inst2.y-3;
+	}
 }
 else
 {

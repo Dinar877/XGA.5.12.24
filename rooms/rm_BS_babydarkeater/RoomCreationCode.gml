@@ -3,7 +3,7 @@ global.mapgrid_xZeroMove = 1
 
 global.doorpath1 = rm_BS_bigsnail
 
-if (global.bossblockers[1] <= 0)
+if (global.bossblockers[bossblockers.darkeaterStage1] <= 0)
 {
 	if (audio_is_playing(snd_preboss) > 0)
 		{

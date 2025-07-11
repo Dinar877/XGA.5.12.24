@@ -1,4 +1,4 @@
-if (global.bossblockers[66] > 0)
+if (global.bossblockers[bossblockers.robospider] > 0)
 {
 	instance_destroy();
 	exit

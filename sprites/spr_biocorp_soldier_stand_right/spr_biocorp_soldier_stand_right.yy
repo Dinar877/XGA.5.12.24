@@ -39,8 +39,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"biocorp_soldier",
-    "path":"folders/Sprites/enemies/Red_Temple_mothership/biocorp_soldier.yy",
+    "name":"black biocorp_soldier",
+    "path":"folders/Sprites/enemies/Red_Temple_mothership/black biocorp_soldier.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -415,10 +415,10 @@ if (killall <= 0)
 			global.midgame = 1
 			
 			//for testing late game cutscene
-			global.bossblockers[22] = 1
-			global.bossblockers[21] = 1
-			global.bossblockers[20] = 1
-			global.bossblockers[4] = 1
+			global.bossblockers[bossblockers.darklord] = 1
+			global.bossblockers[bossblockers.gorilla] = 1
+			global.bossblockers[bossblockers.turtle] = 1
+			global.bossblockers[bossblockers.kingstalker] = 1
 			
 			global.mode_casual = 0;
 			//global.mode_test = 1

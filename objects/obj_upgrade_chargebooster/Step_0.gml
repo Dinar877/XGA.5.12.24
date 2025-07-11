@@ -21,7 +21,7 @@ or (global.upgrade_process = 1)
 }
 
 //if we have enough charge boosters for the instacharge upgrade
-if (global.charge_booster >= 1.4) && (global.upgradecollected[970] == 0)
+if (global.charge_booster >= 1.4) && (global.upgradecollected[upgrades.instacharge] == 0)
 && (!instance_exists(obj_upgrade_instacharge))
 {
 	//create insta charge

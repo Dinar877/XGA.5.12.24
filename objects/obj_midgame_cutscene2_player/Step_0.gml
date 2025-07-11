@@ -37,7 +37,7 @@ if (sprite_index = midgame_cutscene2_player_part2) && (image_index >= image_numb
 	global.cutscene = 0;
 	global.cutscene_presuit = 0;
 	global.cutscene_suit = 0;
-	global.cutsceneID[50] = 1;
+	global.cutsceneID[Cutscenes.midgameScientist] = 1;
 
 	//spawn back player objects
 	instance_create_layer(644,565,layer_get_id("Inst_level_0"),obj_player);
@@ -45,9 +45,9 @@ if (sprite_index = midgame_cutscene2_player_part2) && (image_index >= image_numb
 	{
 		//BEAMS
 		global.upgrade_charge = 1;
-		global.upgradecollected[950] = 1;
+		global.upgradecollected[upgrades.chargeshot] = 1;
 		global.beam_spread_available = 1;
-		global.upgradecollected[951] = 1;
+		global.upgradecollected[upgrades.spreadshot] = 1;
 		
 		//ABILITIES
 		global.shockwave_available = 1;
@@ -59,19 +59,19 @@ if (sprite_index = midgame_cutscene2_player_part2) && (image_index >= image_numb
 		global.ability_limit = 2;
 		
 		//MISC.
-		if (global.upgradecollected[1] = 1)
+		if (global.upgradecollected[upgrades.wallscaler] = 1)
 		{
 			global.wallscaler = 1;	
 		}
-		if (global.upgradecollected[957] = 1)
+		if (global.upgradecollected[upgrades.xVision] = 1)
 		{
 			global.xvision = 1;	
 		}
-		if (global.upgradecollected[968] = 1)
+		if (global.upgradecollected[upgrades.jetjump] = 1)
 		{
 			global.spacejump = 1;	
 		}
-		if (global.upgradecollected[959] = 1)
+		if (global.upgradecollected[upgrades.hydrodash] = 1)
 		{
 			global.hydrodash = 1;	
 		}

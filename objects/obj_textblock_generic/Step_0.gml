@@ -394,7 +394,9 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 			}
 		}
 	}
-	else if (resolutions = 1) //SCREEN SIZES
+	
+	//SCREEN SIZES
+	if (resolutions = 1) 
 	{
 		with(obj_textblock_generic)
 		{

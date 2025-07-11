@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.bossblockers[4] > 0)
+if (global.bossblockers[bossblockers.kingstalker] > 0)
 {
 	instance_destroy();
 	audio_stop_sound(snd_kingstalker_snoring)

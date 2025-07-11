@@ -19,13 +19,10 @@ global.darkeater_roomN = 0
 
 //audio
 global.inst_audio_N = 0;
-global.inst_audio_emitterID[999] = 0
 
 //particle systems
 global.inst_particle_N = 0;
-global.inst_particle_system[999] = 0
-global.inst_particle_emitterID[999] = 0
-global.inst_particle_type[999] = 0
+
 
 //map systems
 global.mapgrid_startroomx = 0;
@@ -36,36 +33,9 @@ global.mapgrid_1x1 = 0;
 global.mapgrid_xZeroMove = 0;
 global.mapgrid_yZeroMove = 0;
 
-global.marker_inst[9999] = 0;
-global.marker_N = 0;
-global.marker_no[9999] = 0;
-global.marker_coordsX[9999] = 0;
-global.marker_coordsY[9999] = 0;
-global.marker_coordsX2[9999] = 0;
-global.marker_coordsY2[9999] = 0;
-global.marker_sectortile[9999] = 0;
 
 //upgrade
-global.upgradecollected[999] = 0;
-global.upgradecollected_main[999] = 0;
-global.upgradetrue[999] = 0;
-global.upgradeID_room[999] = 0
 global.upgradeID_N = 0;
-	
-//map blockers
-global.tilex[9999] = 0;
-global.tiley[9999] = 0;
-global.tiledata[9999] = 0;
-global.tilesprite[9999] = 0;
-global.tilesector[9999] = 0;
-global.tileroom[9999] = 0;
-
-global.tileblocker[9999] = 0;
-global.tileblocker2[9999] = 0;
-global.tileitem[9999] = 0;
-global.tile_hazard[9999] = 0;
-global.tile_hazard_sprite[9999] = 0;
-global.tile_hazard_redblockerID[9999] = 0;
 
 global.tiledataN = 0;
 		
@@ -74,15 +44,9 @@ global.sector_active = 0;
 	
 	
 	
-global.mapgrid_tilegivenX[9999] = 0;
-global.mapgrid_tilegivenY[9999] = 0;
-global.mapgrid_tilegivenN = 0;
-		
-//global.switches
-global.doors_redblocker[999] = 0;
-global.doors_true[999] = 0;
 
-global.bossblockers[999] = 0;
+global.mapgrid_tilegivenN = 0;
+
 
 
 
@@ -161,6 +125,75 @@ global.doorpathUP = 0;
 global.doorpathDOWN = 0;
 
 
+
+
+//all 99 arrays
+for (var p1 = 0; p1 < 99; p1++)
+{
+	//cutscenes
+	global.cutsceneID[p1] = 0
+}
+
+//all 999 arrays
+for (var p2 = 0; p2 < 999; p2++)
+{
+	//global.switches
+	global.doors_redblocker[p2] = 0;
+	global.doors_true[p2] = 0;
+
+	global.bossblockers[p2] = 0;
+	
+	//upgrade
+	global.upgradecollected[p2] = 0;
+	global.upgradecollected_main[p2] = 0;
+	global.upgradetrue[p2] = 0;
+	global.upgradeID_room[p2] = 0
+	
+	//particle systems
+	global.inst_particle_N = 0;
+	global.inst_particle_system[p2] = 0
+	global.inst_particle_emitterID[p2] = 0
+	global.inst_particle_type[p2] = 0
+	
+	//audio
+	global.inst_audio_emitterID[p2] = 0
+}
+
+//all 9999 arrays
+for (var p3 = 0; p3 < 9999; p3++)
+{
+	//mapgrid
+	global.mapgrid_tilegivenX[p3] = 0;
+	global.mapgrid_tilegivenY[p3] = 0;
+	
+	//markers
+	global.marker_inst[p3] = 0;
+	global.marker_no[p3] = 0;
+	global.marker_coordsX[p3] = 0;
+	global.marker_coordsY[p3] = 0;
+	global.marker_coordsX2[p3] = 0;
+	global.marker_coordsY2[p3] = 0;
+	global.marker_sectortile[p3] = 0;
+	
+	//maps
+	global.tilex[p3] = 0;
+	global.tiley[p3] = 0;
+	global.tiledata[p3] = 0;
+	global.tilesprite[p3] = 0;
+	global.tilesector[p3] = 0;
+	global.tileroom[p3] = 0;
+
+	global.tileblocker[p3] = 0;
+	global.tileblocker2[p3] = 0;
+	global.tileitem[p3] = 0;
+	global.tile_hazard[p3] = 0;
+	global.tile_hazard_sprite[p3] = 0;
+	global.tile_hazard_redblockerID[p3] = 0;
+}
+
+
+
+
 //custom controls-keyboard shit
 global.key_left = vk_left;
 global.key_up = vk_up
@@ -217,9 +250,6 @@ global.saving = 0;
 global.fast_travel = 0;
 
 
-
-//cutscene
-global.cutsceneID[99] = 0
 
 global.cutscene = 0
 global.cutscene_suit = 0

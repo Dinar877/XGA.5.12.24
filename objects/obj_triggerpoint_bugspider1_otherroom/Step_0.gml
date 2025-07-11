@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (place_meeting(x,y,obj_player)) && (global.cutsceneID[28] <= 0)
+if (place_meeting(x,y,obj_player)) && (global.cutsceneID[Cutscenes.bugspiderDrill] <= 0)
 {
-	global.cutsceneID[28] = 1
+	global.cutsceneID[Cutscenes.bugspiderDrill] = 1
 }

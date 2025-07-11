@@ -46,25 +46,25 @@ if (new1 == 0)
 		}
 		else if (newTextAvailable == 7)
 		{
-			if (global.bossblockers[21] == 0)
+			if (global.bossblockers[bossblockers.gorilla] == 0)
 			{
 				text = " ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 2!!";
 			}
-			else if (global.bossblockers[21] == 1)
-			&& (global.bossblockers[4] == 0)
+			else if (global.bossblockers[bossblockers.gorilla] == 1)
+			&& (global.bossblockers[bossblockers.kingstalker] == 0)
 			{
 				text = " EvEN MORE ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 2 BEL<W LAVA.";
 			}
-			else if (global.bossblockers[21] == 1)
-			&& (global.bossblockers[4] == 1)
-			&& (global.bossblockers[22] == 0)
+			else if (global.bossblockers[bossblockers.gorilla] == 1)
+			&& (global.bossblockers[bossblockers.kingstalker] == 1)
+			&& (global.bossblockers[bossblockers.darklord] == 0)
 			{
 				text = " ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 1!";
 			}
-			else if (global.bossblockers[21] == 1)
-			&& (global.bossblockers[4] == 1)
-			&& (global.bossblockers[22] == 1)
-			&& (global.bossblockers[20] == 0)
+			else if (global.bossblockers[bossblockers.gorilla] == 1)
+			&& (global.bossblockers[bossblockers.kingstalker] == 1)
+			&& (global.bossblockers[bossblockers.darklord] == 1)
+			&& (global.bossblockers[bossblockers.turtle] == 0)
 			{
 				text = " ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 4!";
 			}

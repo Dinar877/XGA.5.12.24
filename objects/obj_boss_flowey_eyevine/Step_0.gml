@@ -27,6 +27,8 @@ if (shoottimer < 1)
 	{
 		instance_create_depth(x,y+26,id.depth-1,obj_chunk_slow)
 		instance_create_depth(x,y+26,id.depth-1,obj_chunk_slow)
+		instance_create_depth(x,y+26,id.depth-1,obj_chunk_slow)
+		instance_create_depth(x,y+26,id.depth-1,obj_chunk_slow)
 		spawntimer = 0
 	}
 	else spawntimer += 0.3

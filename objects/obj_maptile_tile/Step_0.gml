@@ -99,9 +99,12 @@ if (gotsprite = 1) && (discovered = 1) && (tileN = 0)
 && (!global.room_transition_nodoors) && (!global.room_transition_nodoors_2) && (!global.room_transition_nodoors_more)) or (global.stopper_2ndscrnshot = 1))
 {
 	//deals with all the blockers, items and hazard sprites
-	with(inst_mapchecker1)
+	if (instance_exists(inst_mapchecker1))
 	{
-		map_sprites()
+		with(inst_mapchecker1)
+		{
+			map_sprites()
+		}
 	}
 	
 	
@@ -147,6 +150,7 @@ if (gotsprite = 1) && (discovered = 1) && (tileN = 0)
 if (gotsprite = 0) && (discovered = 1) 
 && (((!global.room_transition) && (!global.room_transition1) && (!global.room_transition_more)
 && (!global.room_transition_nodoors) && (!global.room_transition_nodoors_2) && (!global.room_transition_nodoors_more)) or (global.stopper_2ndscrnshot = 1))
+&& (instance_exists(inst_mapchecker1))
 {
 	with(inst_mapchecker1)
 	{

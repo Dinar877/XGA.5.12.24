@@ -9,7 +9,7 @@ or (global.upgrade_process = 1)
 
 if (global.bossblockers[BossblockerID] > 0)
 {
-	if (!instance_exists(obj_item_chargebeam)) && (global.upgradecollected[950] = 0)
+	if (!instance_exists(obj_item_chargebeam)) && (global.upgradecollected[upgrades.chargeshot] = 0)
 		{
 			var inst1 = instance_create_layer(x,y-spriteheight,layer_get_id("Inst_level_0"),obj_item_chargebeam)
 			with(inst1)

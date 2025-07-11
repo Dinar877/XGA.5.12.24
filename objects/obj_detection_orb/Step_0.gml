@@ -24,6 +24,8 @@ var inst4 = (instance_nearest(x,y,obj_bullet))
 //enemy_hurt_player_code(3)
 
 
+
+//bullet detection
 if (instance_place(x,y,obj_bullet))
 {
     with((instance_place(x,y,obj_bullet)))
@@ -36,10 +38,36 @@ if (instance_place(x,y,obj_bullet))
         started1 = 1;	
         enemy_contact = 1;
     }
+	
+	//player detected - spawn xga
+	if (instance_exists(obj_xga_coords))
+	{
+		obj_xga_coords.timer_xga = 2
+		global.darkeater_active = 1
+	}
 }
 
-//sword
+
+//nuclearblast detection
+if (instance_place(x,y,obj_explosion_random_big)) && (global.nuclearblast = 1)
+{
+	//player detected - spawn xga
+	if (instance_exists(obj_xga_coords))
+	{
+		obj_xga_coords.timer_xga = 2
+		global.darkeater_active = 1
+	}	
+}
+
+//sword detection
 if (instance_place(id.x,id.y,obj_player_sword_hitbox))
 {
     sword_hurtenemycode_noeffect()
+	
+	//player detected - spawn xga
+	if (instance_exists(obj_xga_coords))
+	{
+		obj_xga_coords.timer_xga = 2
+		global.darkeater_active = 1
+	}	
 }

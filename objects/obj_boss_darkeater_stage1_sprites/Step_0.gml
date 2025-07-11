@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if (global.bossblockers[BossblockerID] > 0)
 {
-	if (!instance_exists(obj_upgrade_wallscaler)) && (global.upgradecollected[1] = 0)
+	if (!instance_exists(obj_upgrade_wallscaler)) && (global.upgradecollected[upgrades.wallscaler] = 0)
 		{
 			var inst1 = instance_create_layer(x,y-spriteheight,layer_get_id("Inst_level_0"),obj_upgrade_wallscaler)
 			with(inst1)

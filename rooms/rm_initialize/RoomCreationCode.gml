@@ -2,16 +2,13 @@
 //the map of the entire collection of rooms), where each map tile is.
 keyboard_unset_map();
 
-
-window_set_size(1920,1080);
-surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
-//window_set_fullscreen(true);
-texture_set_interpolation(false);
+//enums
+EnumsInitialise();
 
 //show_debug_overlay(true);
 
 //screen size scale
-global.screenScale = 10;
+//global.screenScale = 10;
 
 
 //xga pathfinding
@@ -490,8 +487,21 @@ if (!audio_group_is_loaded(audiogroup_sfx))
 //load current UI settings
 LoadingUI();
 
+//testing screen size
+/*
+var view = view_camera[e__VW.Camera];
+window_set_fullscreen(true)
+surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
+global.screenScale = 10;
+texture_set_interpolation(false);
+
+
+//hides mouse cursor
+//window_set_cursor(cr_none);
+*/
+
 //go to next room
-room_goto(rm_epilepsy_warning);
+//room_goto(rm_epilepsy_warning);
 //room_goto(rm_controller_recommended);
 //room_goto(rm_load)
-//room_goto(rm_load_anyroom);
+room_goto(rm_load_anyroom);

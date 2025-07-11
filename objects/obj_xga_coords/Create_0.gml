@@ -52,4 +52,7 @@ while (xgaFacingChoice == 0)
 //fail safe switch to break while loop if xga spawn is always impossible
 xgaStopSpawning = 0;
 
+//makes sure music reset does not happen every room, just once xga has already been spawned and either it or you exit
+xgaMusicSwitch = 0;
+
 testbobby = 0

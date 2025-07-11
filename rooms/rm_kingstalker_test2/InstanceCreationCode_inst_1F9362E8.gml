@@ -1,4 +1,4 @@
-if (global.bossblockers[5] > 0)
+if (global.bossblockers[bossblockers.box] > 0)
 {
 	instance_destroy()	
 }

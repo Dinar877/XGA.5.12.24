@@ -1,4 +1,4 @@
-if (global.bossblockers[22] > 0)
+if (global.bossblockers[bossblockers.darklord] > 0)
 {
 	instance_destroy()
 	exit

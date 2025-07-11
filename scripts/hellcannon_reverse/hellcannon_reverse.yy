@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"hellcannon_reverse",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"hellcannon_reverse",
+  "parent":{
+    "name":"hellcannon",
+    "path":"folders/Scripts/Enemy_stuff/mothership/hellcannon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

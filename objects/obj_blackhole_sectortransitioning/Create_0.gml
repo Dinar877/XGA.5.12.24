@@ -3,7 +3,7 @@
 WaveAmpl = shader_get_uniform(shd_watery3, "WaveAmpl")
 Time = shader_get_uniform(shd_watery3, "Time")
 PixelPos = shader_get_uniform(shd_watery3, "PixelPos")
-SmallNo = shader_set_uniform_f("SmallNo",0.01)
+//SmallNo = shader_set_uniform_f("SmallNo",0.01)
 uv_texture_sampler2D = shader_get_sampler_index(shd_watery3,"tex_water")
 
 timer1 = 1;

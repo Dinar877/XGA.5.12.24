@@ -7,7 +7,7 @@ if (redblockerID <= 0)
 	RedblockerID()	
 }
 
-if (global.doors_redblocker[redblockerID] > 0) or (global.corrupted > 0) or ((room = rm_S3_16_28) && (global.bossblockers[3] = 1))
+if (global.doors_redblocker[redblockerID] > 0) or (global.corrupted > 0) or ((room = rm_S3_16_28) && (global.bossblockers[bossblockers.flowey] = 1))
 {	
 	//destroy blockers
 	if (instance_exists(obj_block2_blocker))

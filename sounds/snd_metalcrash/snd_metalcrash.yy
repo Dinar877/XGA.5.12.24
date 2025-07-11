@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":2.742857,
+  "duration":2.6935148,
   "name":"snd_metalcrash",
   "parent":{
     "name":"environment",

@@ -8,7 +8,7 @@ or (global.upgrade_process = 1)
 }
 
 //if cutscene already played
-if (global.cutsceneID[50] >= 1)
+if (global.cutsceneID[Cutscenes.midgameScientist] >= 1)
 {
 	if (instance_exists(obj_npc_pressjump))
 	{
@@ -54,7 +54,7 @@ else if (sprite_index = spr_darkeater_teleport_right_part1) && (image_index >= i
 {
 	instance_destroy();
 	
-	global.cutsceneID[50] = 1;
+	global.cutsceneID[Cutscenes.midgameScientist] = 1;
 	
 	if (instance_exists(object_player2_0_sprites))
 	{

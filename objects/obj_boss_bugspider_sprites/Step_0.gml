@@ -9,7 +9,7 @@ or (global.upgrade_process = 1)
 
 if (global.bossblockers[BossblockerID] > 0)
 {
-	if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[962] = 0)
+	if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[upgrades.nanoshield] = 0)
 	{
 		var inst1 = instance_create_layer(x,y-spriteheight,layer_get_id("Inst_level_0"),obj_upgrade_nanoshield)
 		with(inst1)
@@ -17,7 +17,7 @@ if (global.bossblockers[BossblockerID] > 0)
 			upgradeID = 962;	
 		}	
 	}
-	else if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[962] = 1)
+	else if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[upgrades.nanoshield] = 1)
 	&& (!instance_exists(obj_ability_nanoshield))
 	{
 		var inst1 = instance_create_layer(x,y-spriteheight,layer_get_id("Inst_level_0"),obj_upgrade_nanoshield_extension)	
@@ -174,7 +174,7 @@ if (deathanim > 0)
 			instance_destroy()	
 		}
 		
-		if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[962] = 0)
+		if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[upgrades.nanoshield] = 0)
 		{
 			var inst1 = instance_create_layer(x,y-spriteheight,layer_get_id("Inst_level_0"),obj_upgrade_nanoshield)
 			with(inst1)
@@ -182,7 +182,7 @@ if (deathanim > 0)
 				upgradeID = 962;	
 			}	
 		}
-		else if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[962] = 1)
+		else if (!instance_exists(obj_upgrade_nanoshield)) && (global.upgradecollected[upgrades.nanoshield] = 1)
 		{
 			var inst1 = instance_create_layer(x,y-spriteheight,layer_get_id("Inst_level_0"),obj_upgrade_nanoshield_extension)	
 		}

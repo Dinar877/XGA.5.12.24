@@ -54,9 +54,9 @@ inactive = 0
 
 if (global.mode_casual == 0)
 {
-	hp = 1500;
+	hp = 1000;
 }
-else hp = 1500;
+else hp = 1000;
 
 sword_deadswitch = 0
 

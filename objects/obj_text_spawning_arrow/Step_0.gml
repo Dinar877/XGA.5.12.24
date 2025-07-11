@@ -109,16 +109,16 @@ if (jump_pressed) && (instance_exists(spawnerID)) && (textyID > -1)
 					{
 						if (obj_bh.newTextAvailable = 3)
 						{
-							global.cutsceneID[3] = 1;	
+							global.cutsceneID[Cutscenes.blackholetalk1] = 1;	
 							instance_create_layer(644,520,layer_get_id("Inst_level_0"),obj_bh_spawn_sword);
 						}
 						else if (obj_bh.newTextAvailable = 4)
 						{
-							global.cutsceneID[4] = 1;	
+							global.cutsceneID[Cutscenes.blackholetalk2] = 1;	
 						}
 						else if (obj_bh.newTextAvailable = 5)
 						{
-							global.cutsceneID[5] = 1;	
+							global.cutsceneID[Cutscenes.blackholetalk3] = 1;	
 						}
 					}
 				}

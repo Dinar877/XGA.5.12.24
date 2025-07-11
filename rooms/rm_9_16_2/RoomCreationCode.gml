@@ -3,7 +3,7 @@ global.mapgrid_xZeroMove = 1
 
 global.doorpath3 = rm_tutorial_NEWsave_LR
 
-if (global.bossblockers[1] <= 0)
+if (global.bossblockers[bossblockers.darkeaterStage1] <= 0)
 {
 	if (audio_is_playing(snd_preboss) > 0)
 		{

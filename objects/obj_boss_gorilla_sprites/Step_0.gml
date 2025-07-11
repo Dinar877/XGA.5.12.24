@@ -4,7 +4,7 @@ if (global.bossblockers[BossblockerID] > 0)
 {
 	instance_destroy();
 	
-	if (!instance_exists(obj_upgrade_kelvin)) && (global.upgradecollected[958] <= 0)
+	if (!instance_exists(obj_upgrade_kelvin)) && (global.upgradecollected[upgrades.heatBalancer] <= 0)
 		{
 			var inst1 = instance_create_layer(x,440,layer_get_id("Inst_level_0"),obj_upgrade_kelvin)
 			with(inst1)
@@ -157,7 +157,7 @@ if (deathanim > 0)
 		
 		
 		
-		if (!instance_exists(obj_upgrade_kelvin)) && (global.upgradecollected[958] <= 0)
+		if (!instance_exists(obj_upgrade_kelvin)) && (global.upgradecollected[upgrades.heatBalancer] <= 0)
 		{
 			var inst1 = instance_create_layer(x,440,layer_get_id("Inst_level_0"),obj_upgrade_kelvin)
 			with(inst1)

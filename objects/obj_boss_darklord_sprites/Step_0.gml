@@ -12,7 +12,7 @@ if (global.bossblockers[BossblockerID] > 0)
 {
 	instance_destroy();
 	
-	if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[964] <= 0)
+	if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[upgrades.nuclearblast] <= 0)
 	{
 		var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_nuclearblast)
 		with(inst1)
@@ -20,7 +20,7 @@ if (global.bossblockers[BossblockerID] > 0)
 			upgradeID = 964	
 		}	
 	}
-	else if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[964] = 1)
+	else if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[upgrades.nuclearblast] = 1)
 	&& (!instance_exists(obj_ability_nuclearblast))
 	{
 		var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_nuclearblast_extension)
@@ -176,7 +176,7 @@ if (deathanim > 0)
 			}
 		}
 		
-		if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[964] <= 0)
+		if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[upgrades.nuclearblast] <= 0)
 		{
 			var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_nuclearblast)
 			with(inst1)
@@ -184,7 +184,7 @@ if (deathanim > 0)
 				upgradeID = 964	
 			}	
 		}
-		else if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[964] = 1)
+		else if (!instance_exists(obj_upgrade_nuclearblast)) && (global.upgradecollected[upgrades.nuclearblast] = 1)
 		{
 			var inst1 = instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_upgrade_nuclearblast_extension)
 		}

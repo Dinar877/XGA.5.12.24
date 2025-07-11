@@ -459,7 +459,7 @@ if (surface_exists(surface)) && (global.pause <= 0)
 
 				global.pause_player = 0
 				
-				global.upgradecollected[957] = 1
+				global.upgradecollected[upgrades.xVision] = 1
 				
 				with(obj_player)
 				{

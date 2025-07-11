@@ -33,7 +33,7 @@ if (sprite_index = spr_bh_big) or (sprite_index = spr_bh_small) or (sprite_index
 
 //for flashing white shader
 if (newTextAvailable > 0) && (instance_exists(obj_npc_pressjump))
-&& (((global.cutsceneID[3] == 0) && (newTextAvailable == 3)) or ((global.cutsceneID[4] == 0) && (newTextAvailable == 4)))
+&& (((global.cutsceneID[Cutscenes.blackholetalk1] == 0) && (newTextAvailable == 3)) or ((global.cutsceneID[Cutscenes.blackholetalk2] == 0) && (newTextAvailable == 4)))
 {
 	if (FadeNow > 0) 
 	{ 
@@ -44,10 +44,10 @@ if (newTextAvailable > 0) && (instance_exists(obj_npc_pressjump))
 		FadeNow = 0.5;
 	}
 }
-else if (((global.cutsceneID[3] == 1) && (newTextAvailable == 3)) 
-or ((global.cutsceneID[3] == 1) && (newTextAvailable == 6))
-or ((global.cutsceneID[4] == 1) && (newTextAvailable == 4)) 
-or ((global.cutsceneID[4] == 1) && (newTextAvailable == 7)))
+else if (((global.cutsceneID[Cutscenes.blackholetalk1] == 1) && (newTextAvailable == 3)) 
+or ((global.cutsceneID[Cutscenes.blackholetalk1] == 1) && (newTextAvailable == 6))
+or ((global.cutsceneID[Cutscenes.blackholetalk2] == 1) && (newTextAvailable == 4)) 
+or ((global.cutsceneID[Cutscenes.blackholetalk2] == 1) && (newTextAvailable == 7)))
 {
 	FadeNow = 0.0;	
 }
@@ -64,8 +64,8 @@ if (sprite_index = spr_midgame_cutscene2_bh_bigtosmall) && (image_index >= image
 	sprite_index = spr_bh_small;
 }
 
-if ((newTextAvailable == 3) && (global.cutsceneID[3] == 1))
-or ((newTextAvailable == 4) && (global.cutsceneID[4] == 1))
+if ((newTextAvailable == 3) && (global.cutsceneID[Cutscenes.blackholetalk1] == 1))
+or ((newTextAvailable == 4) && (global.cutsceneID[Cutscenes.blackholetalk2] == 1))
 {
 	if (instance_exists(obj_npc_pressjump))	
 	{
@@ -78,10 +78,10 @@ or ((newTextAvailable == 4) && (global.cutsceneID[4] == 1))
 /////////////////////
 if (instance_exists(obj_player))
 {
-	if (((newTextAvailable == 3) && (global.cutsceneID[3] == 0))
-	or ((newTextAvailable == 6) && (global.cutsceneID[3] == 1) && (global.cutsceneID[4] == 0))
-	or ((newTextAvailable == 4) && (global.cutsceneID[4] == 0))
-	or ((newTextAvailable == 7) && (global.cutsceneID[4] == 1)))
+	if (((newTextAvailable == 3) && (global.cutsceneID[Cutscenes.blackholetalk1] == 0))
+	or ((newTextAvailable == 6) && (global.cutsceneID[Cutscenes.blackholetalk1] == 1) && (global.cutsceneID[Cutscenes.blackholetalk2] == 0))
+	or ((newTextAvailable == 4) && (global.cutsceneID[Cutscenes.blackholetalk2] == 0))
+	or ((newTextAvailable == 7) && (global.cutsceneID[Cutscenes.blackholetalk2] == 1)))
 	&& (shocksuitcutsceneswitch == 0)
 	{
 		//talk
@@ -279,13 +279,19 @@ if (instance_exists(obj_player))
 		}
 		else if (move1switch == 1) && (move2switch == 0)
 		{
+			var plx = floor(obj_player.x)
+			var ply = floor(obj_player.y)
+			
+			
 			//fly in to player
-			if (round(x) != obj_player.x) && (round(y) != obj_player.y)
+			if (floor(x) < plx-1) or (floor(x) > plx+1)
+			or (floor(y) < ply-1) or (floor(y) > ply+1)
 			{
-				x = lerp(x,obj_player.x,0.25);
-				y = lerp(y,obj_player.y,0.25);
+				x = lerp(x,plx,0.25);
+				y = lerp(y,ply,0.25);
 			}
-			else 
+			else if (floor(x) >= plx-1) && (floor(x) <= plx+1)
+			&& (floor(y) >= ply-1) && (floor(y) <= ply+1)
 			{
 				move2switch = 1;
 				
