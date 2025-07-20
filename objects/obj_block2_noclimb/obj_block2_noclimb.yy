@@ -8,8 +8,8 @@
   "name":"obj_block2_noclimb",
   "overriddenProperties":[],
   "parent":{
-    "name":"blocks",
-    "path":"folders/Objects/blocks.yy",
+    "name":"special",
+    "path":"folders/Objects/collision/special.yy",
   },
   "parentObjectId":null,
   "persistent":false,

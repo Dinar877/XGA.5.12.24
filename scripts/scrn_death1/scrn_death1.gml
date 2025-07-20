@@ -79,6 +79,7 @@ function scrn_death1() {
 		audio_group_set_gain(audiogroup_sfx,0,100)
 		audio_group_set_gain(audiogroup_music,0,100)
 		audio_group_stop_all(audiogroup_music)
+		audio_group_stop_all(audiogroup_sfx)
 		audio_stop_all()
 	
 		if (global.dead == 1) && (started1 = 0) && (FadeNow <= 1.0)

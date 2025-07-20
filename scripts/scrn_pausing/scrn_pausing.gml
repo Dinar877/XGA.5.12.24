@@ -282,7 +282,7 @@ function scrn_pausing() {
 	///Make first screen shot and fade out with second one
 	if (global.stopper_2ndscrnshot = 0) && (global.pause_transition == 1) && (deact1 == 1) && (react == 0)
 	{
-		audio_group_set_gain(audiogroup_sfx,0,100)
+		audio_group_stop_all(audiogroup_sfx);
 	
 		if (global.pause_transition == 1) && (started1 = 0) && (FadeNow <= 1.0)
 	    {

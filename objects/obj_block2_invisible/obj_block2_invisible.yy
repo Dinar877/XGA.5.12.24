@@ -8,8 +8,8 @@
   "name":"obj_block2_invisible",
   "overriddenProperties":[],
   "parent":{
-    "name":"blocks",
-    "path":"folders/Objects/blocks.yy",
+    "name":"basic",
+    "path":"folders/Objects/collision/basic.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -21,7 +21,7 @@ if (!audio_is_playing(emitter_player))
 
 //audio
 dist = point_distance(id.x,id.y,obj_player.x,obj_player.y)
-audio_sound_gain(emitter_player,(30/dist) * global.sfx_volume,0)
+audio_sound_gain(emitter_player,(10/dist) * global.sfx_volume,0)
 
 
 

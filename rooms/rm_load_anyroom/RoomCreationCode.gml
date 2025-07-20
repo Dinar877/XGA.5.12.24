@@ -154,8 +154,8 @@ global.roomgoto1 = rm_load_anyroom;
 
 
 //screen size
-window_set_size(960,540);
-//window_set_size(320,180);
+//window_set_size(960,540);
+window_set_size(320,180);
 surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 //window_set_fullscreen(true);
 texture_set_interpolation(false);
@@ -166,7 +166,7 @@ texture_set_interpolation(false);
 //test cutscenes
 global.corrupted = 0
 global.midgame = 0
-global.sector_active = 2
+global.sector_active = 0
 
 global.cutscene = 0
 global.cutscene_presuit = 0
@@ -184,4 +184,4 @@ global.pause_player = 0
 
 
 //goto desired room
-room_goto(rm_11_7_6_xgatest)
+room_goto(rm_11_7_6)

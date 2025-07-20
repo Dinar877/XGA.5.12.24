@@ -42,6 +42,7 @@ function PlayerLanding(){
 		global.dash2_spark = 0
 		global.turning_dash2 = 0;
 		global.dash2_jump = 0
+		global.lockdown_facingDir = 0
 	}
 	else if (place_meeting(x,y+1,obj_slope1_left) != 0)
 	{
@@ -84,7 +85,7 @@ function PlayerLanding(){
 		global.dash2_spark = 0
 		global.turning_dash2 = 0;
 		global.dash2_jump = 0
-	     
+	    global.lockdown_facingDir = 0
 	}
 	else if (place_meeting(x,y+1,obj_slope1_right) != 0)
 	{
@@ -127,7 +128,7 @@ function PlayerLanding(){
 		global.dash2_spark = 0
 		global.turning_dash2 = 0;
 		global.dash2_jump = 0
-	     
+	    global.lockdown_facingDir = 0
 	}
 	else if (place_meeting(x,y+1,obj_newslope_left) != 0 ) //newslopes
 	{
@@ -170,7 +171,7 @@ function PlayerLanding(){
 		global.dash2_spark = 0
 		global.turning_dash2 = 0;
 		global.dash2_jump = 0
-	     
+	    global.lockdown_facingDir = 0
 	}
 	else if (place_meeting(x,y+1,obj_newslope_right) != 0)
 	{
@@ -213,7 +214,7 @@ function PlayerLanding(){
 		global.dash2_spark = 0
 		global.turning_dash2 = 0;
 		global.dash2_jump = 0
-	     
+	    global.lockdown_facingDir = 0
 	}
 	
 	#endregion

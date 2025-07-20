@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.149729,
+  "duration":0.14975056,
   "name":"snd_typing",
   "parent":{
     "name":"player",

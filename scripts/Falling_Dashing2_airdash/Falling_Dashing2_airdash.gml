@@ -223,7 +223,7 @@ function Falling_Dashing2_airdash() {
 	
 			if (speed_x != 0)
 			{
-				hspd = floor(abs(speed_x) * input_horizontal)
+				hspd = floor(abs(speed_x) * input_horizontal);
 			}
 			else if (speed_x == 0)
 			{

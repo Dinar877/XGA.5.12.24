@@ -11,6 +11,9 @@ function Sfx_end(){
 	audio_stop_sound(snd_kingstalker_snoring)
 	audio_stop_sound(snd_underwater_moving)
 	
+	audio_stop_sound(snd_portal_nearby)
+	audio_stop_sound(snd_ticking)
+	
 	audio_stop_sound(snd_drill)
 	audio_stop_sound(snd_metalrolling)
 	audio_stop_sound(snd_metalbang)

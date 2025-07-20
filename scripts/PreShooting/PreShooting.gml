@@ -80,7 +80,7 @@ function PreShooting(){
 	
 	//other fall states to mid air shooting
 	if ((state = Falling_doublejump) 
-	or (state = Falling_Dashing2) or (state = Falling_Dashing2_airdash) or (state = Falling_Dashing2_hydrodash)
+	or (state = Falling_Dashing2) or (state = Falling_Dashing2_airdash) or (state = Falling_Dashing2_hydrodash) or (state = Falling_dashhoop)
 	or (state = Sword_jump))
 	{
 		if (shoot_pressed) && (shoot) && (global.shoot = 0) && (global.turning = 0) && (global.turning_dash2 = 0)

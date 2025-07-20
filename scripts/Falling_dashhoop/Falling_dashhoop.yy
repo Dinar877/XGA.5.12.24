@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Falling_dashhoop",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Falling_dashhoop",
+  "parent":{
+    "name":"Dashing",
+    "path":"folders/Scripts/Dashing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

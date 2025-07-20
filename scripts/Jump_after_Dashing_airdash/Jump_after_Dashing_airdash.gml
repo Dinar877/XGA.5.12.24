@@ -135,10 +135,6 @@ function Jump_after_Dashing_airdash() {
 	global.jumpingdm = 1;
 
 
-	if (state_new) = true
-	{
-	    //will eventually have stuff in but for now? :'(   
-	}
 
 	with(object_player2_0_sprites)
 	{

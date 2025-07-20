@@ -6,8 +6,8 @@
   "name":"obj_block2_move_hor3",
   "overriddenProperties":[],
   "parent":{
-    "name":"blocks",
-    "path":"folders/Objects/blocks.yy",
+    "name":"special",
+    "path":"folders/Objects/collision/special.yy",
   },
   "parentObjectId":{
     "name":"obj_block2_move",

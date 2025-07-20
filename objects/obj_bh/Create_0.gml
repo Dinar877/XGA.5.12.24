@@ -48,17 +48,17 @@ move1Y = 480;
 move2switch = 0;
 
 //delete object if already have shock suit
-if (global.upgradecollected[upgrades.voltengine] == 1)
+if (global.upgradecollected[upgrades.voltengine] == true)
 {
 	instance_destroy();
 	exit;
 }
 
 
-if (global.bossblockers[bossblockers.darklord] > 0)
-&& (global.bossblockers[bossblockers.kingstalker] > 0)
-&& (global.bossblockers[bossblockers.gorilla] > 0)
-&& (global.bossblockers[bossblockers.turtle] > 0) && (global.midgame > 0)
+if (global.bossblockers[bossblockers.darklord] = true)
+&& (global.bossblockers[bossblockers.kingstalker] = true)
+&& (global.bossblockers[bossblockers.gorilla] = true)
+&& (global.bossblockers[bossblockers.turtle] = true) && (global.midgame = true)
 {
 	sprite_index = spr_bh_verysmall_bw;
 	x = 648;
@@ -66,18 +66,18 @@ if (global.bossblockers[bossblockers.darklord] > 0)
 
 	shocksuitcutsceneswitch = 1;
 }
-else if (global.corrupted > 0)
+else if (global.corrupted = true)
 {
 	sprite_index = spr_bh_small;
 	x = 648;
 	y = 536;
 	
 	//after midgame
-	if (global.cutsceneID[Cutscenes.blackholetalk2] <= 0)
+	if (global.cutsceneID[Cutscenes.blackholetalk2] = false)
 	{
 		newTextAvailable = 4; //initial
 	}
-	else if (global.cutsceneID[Cutscenes.blackholetalk2] == 1)
+	else if (global.cutsceneID[Cutscenes.blackholetalk2] == true)
 	{
 		newTextAvailable = 7; //talk anytime
 	}
@@ -86,11 +86,11 @@ else if (global.corrupted > 0)
 //before midgame
 if (global.midgame == 0)
 {
-	if (global.cutsceneID[Cutscenes.blackholetalk1] <= 0)
+	if (global.cutsceneID[Cutscenes.blackholetalk1] = false)
 	{
 		newTextAvailable = 3; //initial
 	}
-	else if (global.cutsceneID[Cutscenes.blackholetalk1] == 1) && (global.cutsceneID[Cutscenes.blackholetalk2] == 0)
+	else if (global.cutsceneID[Cutscenes.blackholetalk1] == true) && (global.cutsceneID[Cutscenes.blackholetalk2] == false)
 	{
 		newTextAvailable = 6; //talk anytime	
 	}

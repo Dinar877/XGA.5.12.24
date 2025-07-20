@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_waterfall",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":13.081361,
+  "name":"snd_waterfall",
+  "parent":{
+    "name":"environment",
+    "path":"folders/Music+SFX/SFX/environment.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_waterfall.mp3",
+  "type":0,
+  "volume":0.5,
+}

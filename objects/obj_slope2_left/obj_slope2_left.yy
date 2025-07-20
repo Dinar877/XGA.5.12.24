@@ -9,8 +9,8 @@
   "name":"obj_slope2_left",
   "overriddenProperties":[],
   "parent":{
-    "name":"blocks",
-    "path":"folders/Objects/blocks.yy",
+    "name":"basic",
+    "path":"folders/Objects/collision/basic.yy",
   },
   "parentObjectId":{
     "name":"obj_slope1_left",

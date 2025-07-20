@@ -488,7 +488,7 @@ if (!audio_group_is_loaded(audiogroup_sfx))
 LoadingUI();
 
 //testing screen size
-/*
+
 var view = view_camera[e__VW.Camera];
 window_set_fullscreen(true)
 surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
@@ -497,11 +497,11 @@ texture_set_interpolation(false);
 
 
 //hides mouse cursor
-//window_set_cursor(cr_none);
-*/
+window_set_cursor(cr_none);
+
 
 //go to next room
-//room_goto(rm_epilepsy_warning);
+room_goto(rm_epilepsy_warning);
 //room_goto(rm_controller_recommended);
 //room_goto(rm_load)
-room_goto(rm_load_anyroom);
+//room_goto(rm_load_anyroom);

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":2.124626,
   "name":"snd_charging",
   "parent":{
     "name":"enemy",

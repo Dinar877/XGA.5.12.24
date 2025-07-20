@@ -8,8 +8,8 @@
   "name":"obj_bg_computerroom1",
   "overriddenProperties":[],
   "parent":{
-    "name":"background_objects",
-    "path":"folders/Objects/background_objects.yy",
+    "name":"background objects",
+    "path":"folders/Objects/OLD/background objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
