@@ -572,7 +572,7 @@
   "name":"rm_S3_23_22_xgatest",
   "parent":{
     "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "path":"folders/Rooms/unused/testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

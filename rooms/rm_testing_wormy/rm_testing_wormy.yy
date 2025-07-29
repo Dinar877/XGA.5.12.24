@@ -136,7 +136,7 @@
   "name":"rm_testing_wormy",
   "parent":{
     "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "path":"folders/Rooms/unused/testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

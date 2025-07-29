@@ -12,7 +12,9 @@ if (global.pause_map = 0)
 && (global.pause_player = 0)
 && (instance_exists(obj_ability_shockwave))
 {
+	draw_set_alpha(image_alpha);
 	draw_self();
+	draw_set_alpha(1);
 	x = obj_ability_shockwave.x+2;
 	y = obj_ability_shockwave.y+15;
 }

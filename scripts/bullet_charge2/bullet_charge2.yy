@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"bullet_charge2",
   "parent":{
-    "name":"bullets",
-    "path":"folders/Scripts/bullets.yy",
+    "name":"Bullets",
+    "path":"folders/Scripts/Bullets.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

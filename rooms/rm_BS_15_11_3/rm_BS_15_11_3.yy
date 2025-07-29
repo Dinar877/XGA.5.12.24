@@ -608,7 +608,7 @@
   "name":"rm_BS_15_11_3",
   "parent":{
     "name":"boss testing",
-    "path":"folders/Rooms/testing/boss testing.yy",
+    "path":"folders/Rooms/unused/testing/boss testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

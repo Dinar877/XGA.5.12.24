@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_tentacles",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":18.009773,
+  "name":"snd_tentacles",
+  "parent":{
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_tentacles.mp3",
+  "type":0,
+  "volume":1.0,
+}

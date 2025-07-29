@@ -6,7 +6,7 @@
   "name":"bullet_spread_unchargedshot",
   "parent":{
     "name":"bullets_spread",
-    "path":"folders/Scripts/bullets/bullets_spread.yy",
+    "path":"folders/Scripts/Bullets/bullets_spread.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

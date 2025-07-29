@@ -6,7 +6,7 @@
   "name":"bullet_shield_chargeblast",
   "parent":{
     "name":"bullets_shield",
-    "path":"folders/Scripts/bullets/bullets_shield.yy",
+    "path":"folders/Scripts/Bullets/bullets_shield.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

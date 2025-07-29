@@ -592,7 +592,7 @@
   "name":"rm_testing_movement_collisions",
   "parent":{
     "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "path":"folders/Rooms/unused/testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

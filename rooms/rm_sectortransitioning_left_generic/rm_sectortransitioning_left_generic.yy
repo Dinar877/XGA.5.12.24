@@ -39,7 +39,7 @@
   "name":"rm_sectortransitioning_left_generic",
   "parent":{
     "name":"sector_transitioning",
-    "path":"folders/Rooms/room builder/sector_transitioning.yy",
+    "path":"folders/Rooms/Room builder/sector_transitioning.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

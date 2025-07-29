@@ -46,8 +46,8 @@
   ],
   "name":"rm_blank1_generic",
   "parent":{
-    "name":"room builder",
-    "path":"folders/Rooms/room builder.yy",
+    "name":"Room builder",
+    "path":"folders/Rooms/Room builder.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

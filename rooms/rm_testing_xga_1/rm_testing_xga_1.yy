@@ -359,7 +359,7 @@
   "name":"rm_testing_xga_1",
   "parent":{
     "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "path":"folders/Rooms/unused/testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

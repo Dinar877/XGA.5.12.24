@@ -166,7 +166,7 @@
   "name":"rm_PF_1x1",
   "parent":{
     "name":"1 max",
-    "path":"folders/Rooms/room builder/partial fill/1 max.yy",
+    "path":"folders/Rooms/Room builder/partial fill/1 max.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

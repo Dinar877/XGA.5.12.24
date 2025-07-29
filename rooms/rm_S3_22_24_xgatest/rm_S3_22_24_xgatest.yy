@@ -645,7 +645,7 @@
   "name":"rm_S3_22_24_xgatest",
   "parent":{
     "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "path":"folders/Rooms/unused/testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

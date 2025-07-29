@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Doors",
-    "path":"folders/Sprites/Doors.yy",
+    "name":"autohack",
+    "path":"folders/Sprites/Doors/autohack.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

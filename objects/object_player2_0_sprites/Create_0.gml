@@ -46,6 +46,7 @@ started_ledge = 0;
 reload_timer = 0;
 explosion_limit = 3;
 timer = 0
+cutsceneTimer = 0
 
 started_roomtransition = 0
 

@@ -61,11 +61,13 @@ function palette_drawevent(){
 	
 	
 	//TESTING Texel Height to figure out why 8th row of pixels are being skipped
+	/*
 	var _tex_ph_test = _tex_ph
 	for (i = 0; i < _tex_th; i += _tex_ph)
 	{
 		var _tex_ph_test2 = i / _tex_ph
 	}
+	*/
 	
 	
 	//texture debug switch- OFF

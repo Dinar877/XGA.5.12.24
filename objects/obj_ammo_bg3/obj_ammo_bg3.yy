@@ -10,8 +10,8 @@
   "name":"obj_ammo_bg3",
   "overriddenProperties":[],
   "parent":{
-    "name":"abilities",
-    "path":"folders/Objects/ui/abilities.yy",
+    "name":"old",
+    "path":"folders/Objects/ui/old.yy",
   },
   "parentObjectId":{
     "name":"obj_link_healthUI",

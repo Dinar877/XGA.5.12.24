@@ -6,7 +6,7 @@
   "name":"bullet_homing_blasteffect_megashot",
   "parent":{
     "name":"bullets_homing",
-    "path":"folders/Scripts/bullets/bullets_homing.yy",
+    "path":"folders/Scripts/Bullets/bullets_homing.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

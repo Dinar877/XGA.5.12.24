@@ -66,10 +66,7 @@ if (image_index >= image_number-1)
 	audio_group_load(audiogroup_music)
 	if (audio_group_is_loaded(audiogroup_music))
 	{
-		global.sector_music = snf_memory_area
-		audio_play_sound(global.sector_music,2000,true)
-		audio_sound_gain(global.sector_music,0,0)
-		audio_sound_gain(global.sector_music,global.music_volume,1500)
+		instance_create_depth(x,y,depth-1,obj_aud_memoryarea)
 	}
 	audio_group_load(audiogroup_sfx)
 	

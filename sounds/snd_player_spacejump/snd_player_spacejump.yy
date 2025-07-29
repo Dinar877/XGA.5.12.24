@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.55727893,
   "name":"snd_player_spacejump",
   "parent":{
     "name":"player",

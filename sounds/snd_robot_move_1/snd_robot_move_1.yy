@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.822018,
+  "duration":0.82201815,
   "name":"snd_robot_move_1",
   "parent":{
     "name":"trueintro",

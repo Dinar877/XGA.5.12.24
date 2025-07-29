@@ -46,8 +46,8 @@
   ],
   "name":"rm_trueintro_opening_xga",
   "parent":{
-    "name":"trueintro",
-    "path":"folders/Rooms/tutorial/trueintro.yy",
+    "name":"True Intro",
+    "path":"folders/Rooms/True Intro.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

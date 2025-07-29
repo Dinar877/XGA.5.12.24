@@ -33,8 +33,8 @@
   ],
   "name":"rm_trueintro_opening_TEXT",
   "parent":{
-    "name":"trueintro",
-    "path":"folders/Rooms/tutorial/trueintro.yy",
+    "name":"True Intro",
+    "path":"folders/Rooms/True Intro.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

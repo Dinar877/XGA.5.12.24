@@ -1,11 +1,11 @@
 /// @description  Draw the background
 draw_background_tiled(bg_one, __view_get( e__VW.XView, 0 )/1.1, __view_get( e__VW.YView, 0 )/1.1);
 
-if (global.corrupted <= 0)
+if (global.corrupted == false)
 {
 	draw_background_tiled(spr_s4_bluesky_bg, __view_get( e__VW.XView, 0 )/1.2, (__view_get( e__VW.YView, 0))/1.2);
 }
-else if (global.corrupted > 0)
+else if (global.corrupted == true)
 { 
 	draw_background_tiled(spr_s4_bluesky_dark_bg, __view_get( e__VW.XView, 0 )/1.2, (__view_get( e__VW.YView, 0))/1.2);
 }

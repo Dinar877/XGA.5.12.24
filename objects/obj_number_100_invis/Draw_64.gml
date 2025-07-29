@@ -10,7 +10,9 @@ if (global.pause_map = 0)
 && (global.pause = 0)
 && (global.pause_player = 0)
 {
+	draw_set_alpha(image_alpha);
 	draw_self();
 	x = obj_ability_invisibility.x+2;
 	y = obj_ability_invisibility.y+15;
+	draw_set_alpha(1);
 }

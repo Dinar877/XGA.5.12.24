@@ -26,8 +26,8 @@
   ],
   "name":"rm_initialize_testing_collisions",
   "parent":{
-    "name":"group_base",
-    "path":"folders/Rooms/group_base.yy",
+    "name":"Initialisation",
+    "path":"folders/Rooms/Initialisation.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

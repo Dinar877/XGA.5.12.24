@@ -170,8 +170,8 @@
   ],
   "name":"rm_8_15_1",
   "parent":{
-    "name":"path1",
-    "path":"folders/Rooms/tutorial/path1.yy",
+    "name":"tutorial path",
+    "path":"folders/Rooms/Main Sector/tutorial path.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

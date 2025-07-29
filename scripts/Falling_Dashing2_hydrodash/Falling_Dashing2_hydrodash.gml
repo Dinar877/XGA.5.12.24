@@ -52,8 +52,8 @@ function Falling_Dashing2_hydrodash() {
 				}
 				else if (image_index >= 7) && (image_index < 8) && (global.spacejump) && (!global.screwjump) && (obj_player.enemy_slowdownswitch = 0)
 				{
-					audio_stop_sound(snd_player_spacejump);
-					audio_play_sound(snd_player_spacejump,1000,false,global.sfx_volume);	
+					audio_stop_sound(snd_player_spinjump_shorter);
+					audio_play_sound(snd_player_spinjump_shorter,1000,false,global.sfx_volume);	
 					sound_spin = 0;
 				}
 				else if (image_index >= 7) && (image_index < 8) && (global.screwjump) && (obj_player.enemy_slowdownswitch = 0)

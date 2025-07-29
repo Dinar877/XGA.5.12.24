@@ -19,6 +19,15 @@ else if (counter < 1) && (room = rm_trueintro_opening_TEXT)
 		y = lerp(y,111,0.01)
 	}
 }
+else if (counter < 1) && (room = rm_endgame_voltsuit)
+{
+	counter += (1/60)/10
+	y = lerp(y,277,0.02)
+	with(obj_camera_intro)
+	{
+		y = lerp(y,277,0.02)
+	}
+}
 
 if (image_alpha <= 0)
 {

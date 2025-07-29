@@ -143,7 +143,7 @@
   "name":"rm_itemroom_generic_right",
   "parent":{
     "name":"itemroom",
-    "path":"folders/Rooms/room builder/itemroom.yy",
+    "path":"folders/Rooms/Room builder/itemroom.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

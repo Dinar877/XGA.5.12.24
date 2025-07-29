@@ -20,8 +20,8 @@
   ],
   "name":"rm_load_anyroom",
   "parent":{
-    "name":"group_base",
-    "path":"folders/Rooms/group_base.yy",
+    "name":"Initialisation",
+    "path":"folders/Rooms/Initialisation.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

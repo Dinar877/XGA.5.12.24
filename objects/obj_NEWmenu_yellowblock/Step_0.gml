@@ -171,43 +171,11 @@ if (killall <= 0)
 			killall = 1
 			if (file_exists("XGA.SAVEFILE.dat"))
 			{
-				global.upgradecollected[999] = 0;
-				global.upgradetrue[999] = 0;
-		
-				global.tiledata[9999] = false;
-				global.tilesprite[9999] = false;
-				global.tilex[9999] = false;
-				global.tiley[9999] = false;
-				global.tilesector[9999] = false;
-				global.tileroom[9999] = 0;
-				
-				global.tileblocker[9999] = false;
-				global.tileblocker2[9999] = false;
-				global.tileitem[9999] = false;
-				global.tiledataN = 0;
-		
-				global.doors_redblocker[999] = false;
 				global.loading_startgame = 1;
 				instance_create_layer(160,120,layer_get_id("Inst_healthui_mapborder"),obj_floatpoint11);
 			}
 			else if (!file_exists("XGA.SAVEFILE.dat"))
 			{
-				//for making collected upgrades not respawn
-				global.upgradecollected[999] = 0;
-				global.upgradetrue[999] = 0;
-		
-				global.tiledata[9999] = false;
-				global.tilesprite[9999] = false;
-				global.tilex[9999] = false;
-				global.tiley[9999] = false;
-				global.tileroom[9999] = 0;
-		
-				global.tiledataN = 0;
-		
-		
-		
-				global.doors_redblocker[999] = false;
-		
 				instance_create_layer(160,90,layer_get_id("Inst_healthui_mapborder"),obj_floatpoint11);
 			}
 	
@@ -263,28 +231,6 @@ if (killall <= 0)
 			
 			global.mode_test = 1
 			
-			//for making collected upgrades not respawn
-			global.upgradecollected[999] = 0;
-			global.upgradecollected_main[999] = 0;
-			global.upgradetrue[999] = 0;
-	
-			global.tiledata[9999] = false;
-			global.tilesprite[9999] = false;
-			global.tilex[9999] = false;
-			global.tiley[9999] = false;
-			global.tilesector[9999] = false;
-			global.tileroom[9999] = 0;
-			
-			global.tileblocker[9999] = false;
-			global.tileblocker2[9999] = false;
-			global.tileitem[9999] = false;
-			global.tiledataN = 0;
-	
-			global.mapgrid_tilegivenX[9999] = false;
-			global.mapgrid_tilegivenY[9999] = false;
-			global.mapgrid_tilegivenN = 0;
-	
-			global.doors_redblocker[999] = false;
 			if (file_exists("XGA.SAVEFILE.dat"))
 			{
 				file_delete("XGA.SAVEFILE.dat")
@@ -363,7 +309,7 @@ if (killall <= 0)
 		*/
 		
 		
-		//No selected. Go back.
+		//"START A NEW GAME" No selected. Go back.
 		if (jump_pressed) && (selected > 0) && (image_alpha >= 1) && (is_options == 0) && (is_savefile == 0)
 		&& (is_load_yes == 0) && (is_load_no == 0)
 		&& (is_recommended == 0) && (is_casual == 0) && (is_test == 1)
@@ -386,14 +332,14 @@ if (killall <= 0)
 				}
 				else if (menu_index_offpath > 0)
 				{
-					menu_index_heading --;
-					menu_index_offpath --;
+					menu_index_heading = 0;
+					menu_index_offpath = 0;
 					menu_index_item = 0
 				}
 				else 
 				{
-				menu_index_heading --;
-				menu_index_item = 0
+					menu_index_heading = 0;
+					menu_index_item = 0
 				}
 			}
 			with(obj_NEWmenu_blueblock)
@@ -424,29 +370,7 @@ if (killall <= 0)
 			//global.mode_test = 1
 			global.cutscene = 1
 			
-			//for making collected upgrades not respawn
-			global.upgradecollected[999] = 0;
-			global.upgradecollected_main[999] = 0;
-			global.upgradetrue[999] = 0;
-			global.upgradeID_room[999] = false
-	
-			global.tiledata[9999] = false;
-			global.tilesprite[9999] = false;
-			global.tilex[9999] = false;
-			global.tiley[9999] = false;
-			global.tilesector[9999] = false;
-			global.tileroom[9999] = 0;
-			
-			global.tileblocker[9999] = false;
-			global.tileblocker2[9999] = false;
-			global.tileitem[9999] = false;
-			global.tiledataN = 0;
-	
-			global.mapgrid_tilegivenX[9999] = false;
-			global.mapgrid_tilegivenY[9999] = false;
-			global.mapgrid_tilegivenN = 0;
-	
-			global.doors_redblocker[999] = false;
+
 			if (file_exists("XGA.SAVEFILE.dat"))
 			{
 				file_delete("XGA.SAVEFILE.dat")

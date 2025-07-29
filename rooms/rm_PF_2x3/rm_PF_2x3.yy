@@ -361,7 +361,7 @@
   "name":"rm_PF_2x3",
   "parent":{
     "name":"3 max",
-    "path":"folders/Rooms/room builder/partial fill/3 max.yy",
+    "path":"folders/Rooms/Room builder/partial fill/3 max.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

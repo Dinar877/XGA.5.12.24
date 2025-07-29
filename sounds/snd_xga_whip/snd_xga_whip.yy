@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.574694,
+  "duration":0.52732426,
   "name":"snd_xga_whip",
   "parent":{
     "name":"xga",

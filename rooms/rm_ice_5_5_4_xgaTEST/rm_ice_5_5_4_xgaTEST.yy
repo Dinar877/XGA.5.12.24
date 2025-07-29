@@ -718,7 +718,7 @@
   "name":"rm_ice_5_5_4_xgaTEST",
   "parent":{
     "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "path":"folders/Rooms/unused/testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

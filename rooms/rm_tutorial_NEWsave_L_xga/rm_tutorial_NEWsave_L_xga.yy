@@ -170,7 +170,7 @@
   "name":"rm_tutorial_NEWsave_L_xga",
   "parent":{
     "name":"testing",
-    "path":"folders/Rooms/testing.yy",
+    "path":"folders/Rooms/unused/testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -9,8 +9,8 @@
   "name":"obj_number_1_burn",
   "overriddenProperties":[],
   "parent":{
-    "name":"abilities",
-    "path":"folders/Objects/ui/abilities.yy",
+    "name":"old",
+    "path":"folders/Objects/ui/old.yy",
   },
   "parentObjectId":{
     "name":"obj_link_healthUI",

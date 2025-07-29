@@ -33,14 +33,15 @@ global.upgradecollected[upgrades.shieldshot] = 1;
 
 global.suit_pure = 1;
 global.upgradecollected[upgrades.dashengine] = 1;
+global.suit_count++
 
-global.suit_shock = 1
-global.upgradecollected[upgrades.voltengine] = 1
-global.speedboots = 1
-global.screwjump = 1
-
-global.suit_count = 2
-
+/*
+global.suit_shock = 0
+global.upgradecollected[upgrades.voltengine] = 0
+global.speedboots = 0
+global.screwjump = 0
+global.suit_count++
+*/
 
 
 
@@ -134,7 +135,7 @@ global.upgradecollected[upgrades.xswing] = 1;
 global.sword_wave_available  = 1;
 global.upgradecollected[upgrades.xwave] = 1;
 
-
+//*/
 
 #endregion
 
@@ -154,8 +155,8 @@ global.roomgoto1 = rm_load_anyroom;
 
 
 //screen size
-//window_set_size(960,540);
-window_set_size(320,180);
+window_set_size(960,540);
+//window_set_size(320,180);
 surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 //window_set_fullscreen(true);
 texture_set_interpolation(false);
@@ -166,15 +167,18 @@ texture_set_interpolation(false);
 //test cutscenes
 global.corrupted = 0
 global.midgame = 0
-global.sector_active = 0
+global.sector_active = 5
 
-global.cutscene = 0
+global.cutscene = 1
 global.cutscene_presuit = 0
 global.cutscene_suit = 0
 
 global.cutsceneID[Cutscenes.blackholetalk1] = 0
 global.cutsceneID[Cutscenes.blackholetalk2] = 0
 global.cutsceneID[Cutscenes.midgameScientist] = 0
+
+global.bossblockers[bossblockers.bugspider] = 1
+global.bossblockers[bossblockers.robospider] = 1
 global.bossblockers[bossblockers.kingstalker] = 0
 global.bossblockers[bossblockers.turtle] = 0
 global.bossblockers[bossblockers.gorilla] = 0
@@ -184,4 +188,4 @@ global.pause_player = 0
 
 
 //goto desired room
-room_goto(rm_11_7_6)
+room_goto(rm_endgame_voltsuit)

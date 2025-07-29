@@ -168,7 +168,7 @@
   "name":"rm_blank_save_L",
   "parent":{
     "name":"save rooms",
-    "path":"folders/Rooms/room builder/save rooms.yy",
+    "path":"folders/Rooms/Room builder/save rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

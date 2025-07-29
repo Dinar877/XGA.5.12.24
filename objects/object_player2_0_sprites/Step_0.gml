@@ -26,38 +26,39 @@ or (global.teleport = 1)
 
 
 
-if (global.invisibility <= 0) && (global.nuclearblast <= 0) && (global.nanoshield <= 0) && ((global.upgrade_process_data > 0) or (global.upgrade_process_data_active > 0))
+if (global.invisibility = false) && (global.nuclearblast = false) && (global.nanoshield = false)  && (global.shockwave = false) 
+&& ((global.upgrade_process_data = true) or (global.upgrade_process_data_active = true))
 {
 	
 	surface3index += 1/4
 
-	if (surface3alpha <= 0.5) && (surface2neg == 1)
+	if (surface3alpha <= 0.5) && (surface2neg == true)
 	{
-		surface2neg = 0;
-		surface2pos = 1;
+		surface2neg = false;
+		surface2pos = true;
 	}
-	else if(surface3alpha > 0.5) && (surface2neg == 1)
+	else if(surface3alpha > 0.5) && (surface2neg == true)
 	{
 		surface3alpha -= 0.005;
 	}
 
-	if (surface3alpha >= 0.7) && (surface2pos == 1)
+	if (surface3alpha >= 0.7) && (surface2pos == true)
 	{
-		surface2neg = 1;
-		surface2pos = 0;
+		surface2neg = true;
+		surface2pos = false;
 	}
-	else if (surface3alpha < 0.7) && (surface2pos == 1)
+	else if (surface3alpha < 0.7) && (surface2pos == true)
 	{
 		surface3alpha += 0.005;
 	}
 
 }
-else if (global.upgrade_process_data_active <= 0) && (global.upgrade_process_data <= 0)
+else if (global.upgrade_process_data_active = false) && (global.upgrade_process_data = false)
 {
 	surface3index = 0;
 }
 
-if (global.pause_player > 0)
+if (global.pause_player = true)
 {
 	//typing elevator
 	if ((sprite_index = spr_typing_begin_left) or (sprite_index = spr_typing_begin_right)) && (image_index >= image_number-1)
@@ -136,6 +137,60 @@ if (global.pause_player > 0)
 			{
 				instance_create_layer(obj_camera.x,obj_camera.y,layer_get_id("Inst_healthui_mapborder"),obj_scrnDark_trueintro_xgaroom)
 			}
+		}
+	}
+	
+	
+	//cutscene- elevator corruptions 1
+	if (room == rm_cutscene_elevator_1) 
+	&& (!instance_exists(obj_scrnDark_random_loadroom_intro))
+	&& (global.cutsceneID[Cutscenes.elevatorCorruption1] = false)
+	{
+		if (sprite_index = spr_stand_left_2) && (cutsceneTimer < 1)
+		{
+			cutsceneTimer += ((1/60)/2); 
+		}
+		else if (sprite_index = spr_stand_left_2) && (cutsceneTimer >= 1) 
+		&& (!instance_exists(obj_cutscene_elevatorcorruption_1))
+		{
+			image_alpha = 0;
+			instance_create_depth(obj_player.x,obj_player.y,depth-1,obj_cutscene_elevatorcorruption_1);
+		}
+	}
+	//cutscene- elevator corruption 2
+	if (room == rm_cutscene_elevator_4) 
+	&& (!instance_exists(obj_scrnDark_random_loadroom_intro))
+	&& (global.cutsceneID[Cutscenes.elevatorCorruption2] = false)
+	{
+		if (sprite_index = spr_stand_left_2) && (cutsceneTimer < 1)
+		{
+			cutsceneTimer += ((1/60)/2); 
+		}
+		else if (sprite_index = spr_stand_left_2) && (cutsceneTimer >= 1) 
+		&& (!instance_exists(obj_cutscene_elevatorcorruption_1))
+		{
+			image_alpha = 0;
+			instance_create_depth(obj_player.x,obj_player.y,depth-1,obj_cutscene_elevatorcorruption_1);
+		}
+	}
+	
+	
+	
+	//cutscene- volt suit transform
+	if (room == rm_endgame_voltsuit) 
+	&& (!instance_exists(obj_cutscene_voltsuit_transform))
+	&& (global.cutsceneID[Cutscenes.voltEngineGet] = false)
+	{
+		cutsceneTimer += ((1/60)/2); 
+		if (sprite_index = spr_stand_left_2) && (cutsceneTimer >= 1) 
+		&& (!instance_exists(obj_cutscene_voltsuit_transform))
+		{
+			image_alpha = 0;
+			
+			global.pause_player = 1;
+			global.cutscene = 1;
+			
+			instance_create_depth(obj_player.x,obj_player.y,depth-1,obj_cutscene_voltsuit_transform);
 		}
 	}
 	

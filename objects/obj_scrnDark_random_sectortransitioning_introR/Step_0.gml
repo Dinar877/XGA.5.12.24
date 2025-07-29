@@ -10,6 +10,7 @@ if (timer >= 1)
 	if (image_alpha >= 1)
 	{
 		instance_activate_all()
+		audio_stop_sound(snd_tram_going)
 		room_goto(global.sector_next_right)
 	}
 

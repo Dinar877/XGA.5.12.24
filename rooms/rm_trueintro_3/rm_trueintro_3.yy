@@ -187,8 +187,8 @@
   ],
   "name":"rm_trueintro_3",
   "parent":{
-    "name":"trueintro",
-    "path":"folders/Rooms/tutorial/trueintro.yy",
+    "name":"True Intro",
+    "path":"folders/Rooms/True Intro.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

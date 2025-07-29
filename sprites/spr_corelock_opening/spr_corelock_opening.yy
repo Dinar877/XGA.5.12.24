@@ -53,8 +53,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Doors",
-    "path":"folders/Sprites/Doors.yy",
+    "name":"corelock",
+    "path":"folders/Sprites/Doors/corelock.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

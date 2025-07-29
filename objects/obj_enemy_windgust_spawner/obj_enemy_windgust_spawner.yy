@@ -10,8 +10,8 @@
   "name":"obj_enemy_windgust_spawner",
   "overriddenProperties":[],
   "parent":{
-    "name":"sector4",
-    "path":"folders/Objects/enemies/sector4.yy",
+    "name":"special",
+    "path":"folders/Objects/collision/special.yy",
   },
   "parentObjectId":{
     "name":"obj_link_enemies_nohit",

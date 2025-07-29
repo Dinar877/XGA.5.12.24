@@ -6,12 +6,16 @@ or (global.upgrade_process_data = 1)
 	exit;	
 }
 
+
+
 if (global.pause_map = 0)
 && (global.pause = 0)
 && (global.pause_player = 0)
 && (instance_exists(obj_ability_nanoshield))
 {
+	draw_set_alpha(image_alpha);
 	draw_self();
+	draw_set_alpha(1);
 	x = obj_ability_nanoshield.x+10;
 	y = obj_ability_nanoshield.y+15;
 }

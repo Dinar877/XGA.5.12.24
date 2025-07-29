@@ -191,8 +191,8 @@
   ],
   "name":"rm_lockdownroom2",
   "parent":{
-    "name":"endgame",
-    "path":"folders/Rooms/tutorial/endgame.yy",
+    "name":"main sector endgame section",
+    "path":"folders/Rooms/Main Sector/main sector endgame section.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

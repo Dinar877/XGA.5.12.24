@@ -409,7 +409,7 @@
   "name":"rm_PF_2x4",
   "parent":{
     "name":"4 max",
-    "path":"folders/Rooms/room builder/partial fill/4 max.yy",
+    "path":"folders/Rooms/Room builder/partial fill/4 max.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

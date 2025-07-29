@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.18285714,
   "name":"snd_player_hang",
   "parent":{
     "name":"player",

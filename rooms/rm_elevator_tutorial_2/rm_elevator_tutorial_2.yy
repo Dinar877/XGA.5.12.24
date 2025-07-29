@@ -244,8 +244,8 @@
   ],
   "name":"rm_elevator_tutorial_2",
   "parent":{
-    "name":"main sector",
-    "path":"folders/Rooms/tutorial/main sector.yy",
+    "name":"main sector normal",
+    "path":"folders/Rooms/Main Sector/main sector normal.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

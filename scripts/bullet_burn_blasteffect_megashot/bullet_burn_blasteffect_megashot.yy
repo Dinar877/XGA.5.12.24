@@ -6,7 +6,7 @@
   "name":"bullet_burn_blasteffect_megashot",
   "parent":{
     "name":"bullets_burn",
-    "path":"folders/Scripts/bullets/bullets_burn.yy",
+    "path":"folders/Scripts/Bullets/bullets_burn.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

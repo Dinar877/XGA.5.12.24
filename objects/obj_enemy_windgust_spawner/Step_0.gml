@@ -12,9 +12,14 @@ else
 	audio_resume_sound(snd_wind)	
 }
 
-//audio shiieeeet
+//audio
+if (!audio_is_playing(emitter_player))
+{
+	emitter_player = audio_play_sound_at(snd_wind,id.x,id.y,0,20,100,1,true,1000);
+}
+
 dist = point_distance(id.x,id.y,obj_player.x,obj_player.y)
-audio_emitter_gain(global.inst_audio_emitterID[inst_n], (20/dist) * global.sfx_volume)
+audio_sound_gain(emitter_player,(40/dist) * global.sfx_volume,0)
 
 
 //getting hurt by shit
@@ -74,7 +79,6 @@ if (hp <= 0)
 	}
 	else sword_hurtenemycode_item()
 
-	audio_emitter_free(global.inst_audio_emitterID[inst_n])
 
 	instance_destroy(inst1)
 	instance_destroy(inst2)
@@ -88,6 +92,8 @@ if (hp <= 0)
 	{
 		vspd_wind = 0	
 	}
+	
+	audio_stop_sound(snd_wind)
 	
 	instance_destroy();
 }

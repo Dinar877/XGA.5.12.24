@@ -186,8 +186,8 @@
   ],
   "name":"rm_lockdownroom1",
   "parent":{
-    "name":"midgame",
-    "path":"folders/Rooms/tutorial/midgame.yy",
+    "name":"main sector midgame section",
+    "path":"folders/Rooms/Main Sector/main sector midgame section.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
