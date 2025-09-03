@@ -41,6 +41,8 @@ function enemy_hurt_player_code(argument0) {
 			nanoshield_hp--	
 		}
 	}
+
+	
 	exit;
 
 

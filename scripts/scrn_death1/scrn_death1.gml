@@ -21,6 +21,24 @@ function scrn_death1() {
 	{
 	    depth = -10;
 	    FadeNow = 0.0;
+		
+		//darkeater potential cooldown
+		if (instance_exists(obj_darkeater_hitbox))
+		{
+			global.darkeater_death_limit++;
+			
+			if (global.darkeater_death_limit >= 3) && (global.darkeater_death_pre_time_limit > 0)
+			{
+				global.darkeater_death_time_limit = (4*60*60);	
+			}
+			
+			//start the pre potenital cooldown time limit
+			if (global.darkeater_death_pre_time_limit == 0)
+			{
+				global.darkeater_death_pre_time_limit = (1*60*60);
+			}
+		}
+		
 	    instance_deactivate_all(obj_scrn_roomtransition);
 	    instance_activate_object(obj_link_healthUI);
 		instance_activate_object(obj_link_audio);
@@ -70,12 +88,6 @@ function scrn_death1() {
 	///Make first screen shot and fade out with second one
 	if (global.stopper_2ndscrnshot = 0) && (global.dead == 1) && (deact1 == 1) && (react == 0)
 	{
-		//if killed by xga, remember previous music
-		if (global.sector_music_xga > 0)
-		{
-			global.sector_music = global.sector_music_xga;	
-		}
-	   
 		audio_group_set_gain(audiogroup_sfx,0,100)
 		audio_group_set_gain(audiogroup_music,0,100)
 		audio_group_stop_all(audiogroup_music)
@@ -180,17 +192,13 @@ function scrn_death1() {
 											audio_stop_sound(snd_xga_heartbeat)
 											global.darkeater_active = 0;
 										
-											if (object_exists(obj_maptile_tile))
-											{
-												with(obj_maptile_tile)
-												{
-													instance_destroy()	
-												}
-											}
 										
-											if (object_exists(obj_healthblockstart))
+										
+											//DESTROY HEALTH UI
+								
+											if (instance_exists(obj_originalHP_block))
 											{
-												with(obj_healthblockstart)
+												with(obj_originalHP_block)
 												{
 													instance_destroy()	
 												}
@@ -204,13 +212,33 @@ function scrn_death1() {
 												}
 											}
 										
-											if (object_exists(obj_ability_nanoshield))
+											//DESTROY ABILITIES IF EXIST
+											if (instance_exists(obj_ability_invisibility))
+											{
+												with(obj_ability_invisibility)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_1_invis)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_10_invis)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_100_invis)
+												{
+													instance_destroy()	
+												}
+											}
+											if (instance_exists(obj_ability_nanoshield))
 											{
 												with(obj_ability_nanoshield)
 												{
 													instance_destroy()	
 												}
-												with(obj_number_100_nanoshield)
+												with(obj_number_1_nanoshield)
 												{
 													instance_destroy()	
 												}
@@ -218,7 +246,73 @@ function scrn_death1() {
 												{
 													instance_destroy()	
 												}
-												with(obj_number_1_nanoshield)
+												with(obj_number_100_nanoshield)
+												{
+													instance_destroy()	
+												}
+											}
+											if (instance_exists(obj_ability_nuclearblast))
+											{
+												with(obj_ability_nuclearblast)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_1_nuclearblast)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_10_nuclearblast)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_100_nuclearblast)
+												{
+													instance_destroy()	
+												}
+											}
+											if (instance_exists(obj_ability_shockwave))
+											{
+												with(obj_ability_shockwave)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_1_shockwave)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_10_shockwave)
+												{
+													instance_destroy()	
+												}
+												with(obj_number_100_shockwave)
+												{
+													instance_destroy()	
+												}
+											}
+											
+											//DESTROY MAPTILES
+									
+											if (instance_exists(obj_maptile_tile))
+											{
+												with(obj_maptile_tile)
+												{
+													instance_destroy()	
+												}
+											}
+									
+								
+									
+											if (instance_exists(obj_maptile_tile_hint))
+											{
+												with(obj_maptile_tile_hint)
+												{
+													instance_destroy()	
+												}
+											}
+									
+											if (instance_exists(obj_deathscreennuke_maptile))
+											{
+												with(obj_deathscreennuke_maptile)
 												{
 													instance_destroy()	
 												}
@@ -470,12 +564,127 @@ function scrn_death1() {
 					y = 106;
 				
 					if (instance_exists(obj_NEWsav_standbyeffect))
+					{
+						with(obj_NEWsav_standbyeffect)
 						{
-							with(obj_NEWsav_standbyeffect)
-							{
-								stopnow = 1	
-							}
+							stopnow = 1	
 						}
+					}
+					
+					//HEALTH UI	CO-ORDS
+					if (instance_exists(obj_originalHP_block))
+					{
+						with(obj_originalHP_block)
+						{
+							x = 28+xpos-sprite_width;
+							y = 3+ypos;
+						}
+					}
+								
+					if (instance_exists(obj_originalHP_block_start))
+					{
+						with(obj_originalHP_block_start)
+						{
+							x = 28+xpos-sprite_width;
+							y = 3+ypos;
+						}
+					}
+					
+					//ABILITY CO-ORDS
+					abilities();
+					
+					if (instance_exists(obj_ability_invisibility))
+					{
+						with(obj_ability_invisibility)
+						{
+							x = drawX+(abilitylimitID*17)-17;
+							y = drawY;
+						}
+						with(obj_number_1_invis)
+						{
+							x = obj_ability_invisibility.x+10;
+							y = obj_ability_invisibility.y+15;
+						}
+						with(obj_number_10_invis)
+						{
+							x = obj_ability_invisibility.x+6;
+							y = obj_ability_invisibility.y+15;
+						}
+						with(obj_number_100_invis)
+						{
+							x = obj_ability_invisibility.x+2;
+							y = obj_ability_invisibility.y+15;
+						}
+					}
+					if (instance_exists(obj_ability_nanoshield))
+					{
+						with(obj_ability_nanoshield)
+						{
+							x = drawX+(abilitylimitID*17)-17;
+							y = drawY;
+						}
+						with(obj_number_1_nanoshield)
+						{
+							x = obj_ability_nanoshield.x+10;
+							y = obj_ability_nanoshield.y+15;
+						}
+						with(obj_number_10_nanoshield)
+						{
+							x = obj_ability_nanoshield.x+6;
+							y = obj_ability_nanoshield.y+15;
+						}
+						with(obj_number_100_nanoshield)
+						{
+							x = obj_ability_nanoshield.x+2;
+							y = obj_ability_nanoshield.y+15;
+						}
+					}
+					if (instance_exists(obj_ability_nuclearblast))
+					{
+						with(obj_ability_nuclearblast)
+						{
+							x = drawX+(abilitylimitID*17)-17;
+							y = drawY;
+						}
+						with(obj_number_1_nuclearblast)
+						{
+							x = obj_ability_nuclearblast.x+10
+							y = obj_ability_nuclearblast.y+15;
+						}
+						with(obj_number_10_nuclearblast)
+						{
+							x = obj_ability_nuclearblast.x+6
+							y = obj_ability_nuclearblast.y+15;
+						}
+						with(obj_number_100_nuclearblast)
+						{
+							x = obj_ability_nuclearblast.x+2;
+							y = obj_ability_nuclearblast.y+15;
+						}
+					}
+					if (instance_exists(obj_ability_shockwave))
+					{
+						with(obj_ability_shockwave)
+						{
+							x = drawX+(abilitylimitID*17)-17;
+							y = drawY;
+						}
+						with(obj_number_1_shockwave)
+						{
+							x = obj_ability_shockwave.x+10
+							y = obj_ability_shockwave.y+15;
+						}
+						with(obj_number_10_shockwave)
+						{
+							x = obj_ability_shockwave.x+6
+							y = obj_ability_shockwave.y+15;
+						}
+						with(obj_number_100_shockwave)
+						{
+							x = obj_ability_shockwave.x+2
+							y = obj_ability_shockwave.y+15;
+						}
+					}
 				}
 			}
 			
@@ -548,14 +757,14 @@ function scrn_death1() {
 	                       timer_death = 50;
 						   
 						   //health
-	                       if (global.spacestation_active)
-										{
-											global.health1 = global.health_limit
-										}
-										else if (!global.spacestation_active)
-										{
-											global.health1 = 8
-										}
+							if (global.spacestation_active)
+							{
+								global.health1 = global.health_limit
+							}
+							else if (!global.spacestation_active)
+							{
+								global.health1 = 6
+							}
 										
 							//ammo
 							if (global.shoot_ammo != global.shoot_ammo_start)
@@ -593,8 +802,13 @@ function scrn_death1() {
 	                global.dashend = 0;
 					global.dashbegin2 = 0;
 					global.dash2 = 0;
-					global.darkeater_active = 0
 	                global.lockdown_facingDir = 0;
+					
+					//reset to original music is escaped xga
+					ResetOriginalMusic()
+					
+					global.darkeater_active = 0
+					
 	                __view_set( e__VW.Object, 0, obj_camera );
 	                image_alpha = 0.0;
 	                deact1 = 0;

@@ -13,8 +13,8 @@ if (!place_meeting(x,y,obj_mapborder_underside)) or (sectortile != global.sector
 
 if (place_meeting(x,y,obj_mapborder_underside)) && (sectortile == global.sector_active)
 {
-	if (gotsprite != 0) && (discovered = 1) && (global.pause_map = 0) && (global.pause_player = 0)
-	&& (global.pause = 0) && (global.pause_transition = 0)
+	if (gotsprite != 0) && (discovered = true) && (global.pause_map = 0) && (global.pause_player = false)
+	&& (global.pause = false) && (global.pause_transition = false)
 	{
 			//create the surface
 			if (!surface_exists(surface1))
@@ -40,20 +40,29 @@ if (place_meeting(x,y,obj_mapborder_underside)) && (sectortile == global.sector_
 					//draw_self();
 					draw_sprite(sprite_index, image_index, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)));
 						
-					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] <= 0)
-						{
-							draw_sprite_ext(blockerID,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)
-						}
+					//door blockers
+					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] == false)
+					{
+						draw_sprite_ext(blockerID,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)
+					}
 							
-					if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] <= 0)
-						{
-							draw_sprite_ext(hazardID2,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)	
-						}
-					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] <= 0)
-						{
-							draw_sprite_ext(spr_itemlocated,inst_item_imageindex, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)		
-							inst_item_imageindex += (1/room_speed)
-						}
+					//hazard blockers
+					if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] == false)
+					{
+						draw_sprite_ext(hazardID2,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)	
+					}
+						
+					//items
+					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == false)
+					{
+						draw_sprite_ext(spr_itemlocated,inst_item_imageindex, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)		
+						inst_item_imageindex += (1/room_speed)
+					}
+					else if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == true)
+					{
+						draw_sprite_ext(spr_itemcollected,inst_item_imageindex, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)		
+						inst_item_imageindex += (1/room_speed)
+					}
 						
 					timerfade = 1;
 					shader_reset();
@@ -75,20 +84,29 @@ if (place_meeting(x,y,obj_mapborder_underside)) && (sectortile == global.sector_
 					//draw_self();
 					draw_sprite(sprite_index, image_index, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)));
 						
-					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] <= 0)
-						{
-							draw_sprite_ext(blockerID,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)
-						}
-							
-					if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] <= 0)
-						{
-							draw_sprite_ext(hazardID2,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)	
-						}
-					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] <= 0)
-						{
-							draw_sprite_ext(spr_itemlocated,inst_item_imageindex, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)		
-							inst_item_imageindex += (1/room_speed)
-						}
+					//door blockers
+					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] = false)
+					{
+						draw_sprite_ext(blockerID,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)
+					}
+						
+					//hazards blockers
+					if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] = false)
+					{
+						draw_sprite_ext(hazardID2,0, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)	
+					}
+					
+					//items
+					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] = false)
+					{
+						draw_sprite_ext(spr_itemlocated,inst_item_imageindex, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)		
+						inst_item_imageindex += (1/room_speed)
+					}
+					else if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] = true)
+					{
+						draw_sprite_ext(spr_itemcollected,inst_item_imageindex, 10+((tileposx*10)-(global.mapgrid_playerx*10)), 10+((tileposy*10)-(global.mapgrid_playery*10)),1,1,0,c_white,image_alpha)		
+						inst_item_imageindex += (1/room_speed)
+					}
 						
 					timerfade = 0;
 					

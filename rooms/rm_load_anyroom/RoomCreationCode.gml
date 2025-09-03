@@ -35,13 +35,13 @@ global.suit_pure = 1;
 global.upgradecollected[upgrades.dashengine] = 1;
 global.suit_count++
 
-/*
-global.suit_shock = 0
-global.upgradecollected[upgrades.voltengine] = 0
-global.speedboots = 0
-global.screwjump = 0
+
+global.suit_shock = 1
+global.upgradecollected[upgrades.voltengine] = 1
+global.speedboots = 1
+global.screwjump = 1
 global.suit_count++
-*/
+
 
 
 
@@ -49,8 +49,8 @@ global.suit_count++
 global.ability_select = 0;
 
 global.nanoshield_available = 1;
-global.nanoshield_limit = 50;
-global.nanoshield_ammo = 50;
+global.nanoshield_limit = 999;
+global.nanoshield_ammo = 999;
 global.nanoshield_state = 1;
 global.upgradecollected[upgrades.nanoshield] = 1;
 if (!instance_exists(obj_ability_nanoshield))
@@ -64,8 +64,8 @@ if (!instance_exists(obj_ability_nanoshield))
 }
 
 global.invisibility_available = 1;
-global.invisibility_limit = 50;
-global.invisibility_ammo = 50;
+global.invisibility_limit = 999;
+global.invisibility_ammo = 999;
 global.invisibility_state = 1;
 global.upgradecollected[upgrades.invisibility] = 1;
 if (!instance_exists(obj_ability_invisibility))
@@ -79,8 +79,8 @@ if (!instance_exists(obj_ability_invisibility))
 }
 
 global.nuclearblast_available = 1;
-global.nuclearblast_limit = 30;
-global.nuclearblast_ammo = 30;
+global.nuclearblast_limit = 33;
+global.nuclearblast_ammo = 33;
 global.nuclearblast_state = 1;
 global.upgradecollected[upgrades.shockwave] = 1;
 if (!instance_exists(obj_ability_nuclearblast))
@@ -94,8 +94,8 @@ if (!instance_exists(obj_ability_nuclearblast))
 }
 
 global.shockwave_available = 1;
-global.shockwave_limit = 50;
-global.shockwave_ammo = 50;
+global.shockwave_limit = 999;
+global.shockwave_ammo = 999;
 global.shockwave_state = 1;
 global.upgradecollected[upgrades.nuclearblast] = 1;
 if (!instance_exists(obj_ability_shockwave))
@@ -167,9 +167,9 @@ texture_set_interpolation(false);
 //test cutscenes
 global.corrupted = 0
 global.midgame = 0
-global.sector_active = 5
+global.sector_active = 1
 
-global.cutscene = 1
+global.cutscene = 0
 global.cutscene_presuit = 0
 global.cutscene_suit = 0
 
@@ -188,4 +188,6 @@ global.pause_player = 0
 
 
 //goto desired room
-room_goto(rm_endgame_voltsuit)
+obj_player.x = 470
+obj_player.y = 270
+room_goto(rm_BS_testing_xga3)

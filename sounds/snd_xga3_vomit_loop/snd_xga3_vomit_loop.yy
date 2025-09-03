@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_xga3_vomit_loop",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":2.046077,
+  "name":"snd_xga3_vomit_loop",
+  "parent":{
+    "name":"xga3",
+    "path":"folders/Music+SFX/SFX/xga/xga3.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_xga3_vomit_loop.mp3",
+  "type":0,
+  "volume":1.0,
+}

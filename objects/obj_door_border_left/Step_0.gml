@@ -24,27 +24,13 @@ if (place_meeting(x,y,obj_player)) && (started == 0)  && (global.room_transition
 			vspd = 0
 			image_speed_stop = 1
 			
-			if (global.camera_shiftdown == 0)
+			if (sprite_index = spr_player)
 			{
-				if (sprite_index = spr_player)
-				{
-					global.door_height = obj_camera.y-obj_door_border_left.y
-				}
-				else if (sprite_index = spr_player_jump)
-				{
-					global.door_height = obj_camera.y-obj_door_border_left.y-7
-				}
+				global.door_height = obj_player.y-obj_door_border_left.y
 			}
-			else if (global.camera_shiftdown == 1)
+			else if (sprite_index = spr_player_jump)
 			{
-				if (sprite_index = spr_player)
-				{
-					global.door_height = obj_player.y-obj_door_border_left.y
-				}
-				else if (sprite_index = spr_player_jump)
-				{
-					global.door_height = obj_player.y-obj_door_border_left.y-7
-				}
+				global.door_height = obj_player.y-obj_door_border_left.y-7
 			}
 			
 			global.state = state

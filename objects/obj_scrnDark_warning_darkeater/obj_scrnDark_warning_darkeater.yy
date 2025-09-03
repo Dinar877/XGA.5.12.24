@@ -9,8 +9,8 @@
   "name":"obj_scrnDark_warning_darkeater",
   "overriddenProperties":[],
   "parent":{
-    "name":"scrnDark",
-    "path":"folders/Objects/scrnDark.yy",
+    "name":"XGA",
+    "path":"folders/Objects/XGA.yy",
   },
   "parentObjectId":null,
   "persistent":true,

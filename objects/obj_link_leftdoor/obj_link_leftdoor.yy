@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_link_leftdoor",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_link_leftdoor",
   "overriddenProperties":[],
@@ -27,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_block2_move",
+    "path":"sprites/spr_block2_move/spr_block2_move.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

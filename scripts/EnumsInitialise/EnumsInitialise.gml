@@ -14,10 +14,19 @@ function EnumsInitialise(){
 		elevatorCorruption1 = 13,
 		elevatorCorruption2 = 14,
 		voltEngineGet = 15,
+		biocorpArrive = 16,
+		biocorpBrainchip = 17,
 		bridgeFallIntro = 22,
 		bugspiderDrill = 28,
 		midgameScientist = 50,
-		trueintro3TriggerPoint = 88
+		trueintro3TriggerPoint = 88,
+		xga2scream = 89,
+		xga2entrance = 90,
+		ceoTalk1 = 91,
+		ceoTalk2 = 92,
+		xga3scream = 93,
+		xga3entrance = 94,
+		credits = 95
 	}
 
 	enum bossblockers
@@ -32,7 +41,22 @@ function EnumsInitialise(){
 		darklord = 22,
 		robospider = 66,
 		xga = 90,
-		bigsnail = 91
+		bigsnail = 91,
+		
+		MSbugspider = 23,
+		MSflowey = 24,
+		MSkingstalker = 25,
+		MSbox = 26,
+		MSturtle = 27,
+		MSgorilla = 28,
+		MSdarklord = 29,
+		MSrobospider = 30,
+		MSxga = 31,
+		MSbigsnail = 32,
+		
+		xga2 = 33,
+		ceo = 34,
+		xga3 = 35
 	}
 
 	enum upgrades
@@ -52,6 +76,7 @@ function EnumsInitialise(){
 		hydrodash = 959,
 		jetjump = 968,
 		instacharge = 970,
+		attractor = 972,
 		
 		nanoshield = 962,
 		invisibility = 963,
@@ -60,7 +85,21 @@ function EnumsInitialise(){
 		
 		xsaber = 967,
 		xswing = 969,
-		xwave = 971
+		xwave = 971,
+		xdrill = 973
+	}
+	
+	enum itemTotals
+	{
+		mainsector = 1,
+		sector1 = 1,
+		sector2 = 1,
+		sector3 = 1,
+		sector4 = 1,
+		temple = 1,
+		vaults = 1,
+		systemcore = 1,
+		mothership = 1
 	}
 
 }

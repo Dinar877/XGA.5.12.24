@@ -8,8 +8,8 @@
   "name":"obj_enemy_tentacely_hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"mothership",
-    "path":"folders/Objects/enemies/mothership.yy",
+    "name":"red temple",
+    "path":"folders/Objects/enemies/red temple.yy",
   },
   "parentObjectId":null,
   "persistent":true,

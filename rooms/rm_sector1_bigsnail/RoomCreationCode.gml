@@ -1,3 +1,4 @@
+global.doorpath2 = rm_sector1_cave_room11
 global.doorpath3 = rm_sector1_cave_room4;
 
 global.mapgrid_startroomx = 15;

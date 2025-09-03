@@ -4,10 +4,10 @@ if (global.corrupted <= 0)
 {
 	sndID = ost_sector4_remastered
 }
-else sndID = ost_sector4_sand_remastered
+else sndID = ost_sector4_cor_remastered
 
-/*
-if (audio_is_playing(global.sector_music) > 0) && (sndID != global.sector_music)
-		{
-			audio_sound_gain(global.sector_music,0,700)
-		}
+//destroy and don't play music if being chased by xga
+if (global.darkeater_active == true)
+{
+	instance_destroy();	
+}

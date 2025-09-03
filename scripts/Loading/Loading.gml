@@ -170,7 +170,7 @@ function Loading() {
 						}
 				else if (!global.spacestation_active)
 						{
-							global.health1 = 8
+							global.health1 = 6
 						}
 
 				global.health_limit = ds_map_find_value(listvalue, "global.health_limit");

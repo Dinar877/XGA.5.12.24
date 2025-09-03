@@ -7,7 +7,8 @@ if (global.pierce_killswitch)
 	exit;	
 }
 
-if (place_meeting(x,y,obj_player)) && (started == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0) && (global.room_transition_nodoors == 0)
+if (place_meeting(x,y,obj_player)) && (started == 0) 
+&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
 && (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0) 
 {
 	started = 1;
@@ -18,33 +19,26 @@ if (place_meeting(x,y,obj_player)) && (started == 0) && (global.room_transition_
 				image_speed = 0	
 			}
 	
+	//debugging
+	with(obj_camera)
+	{
+		var n = 0;
+	}
+	
 	with(obj_player)
 		{
 			hspd = 0
 			vspd = 0
 			image_speed_stop = 1
 			
-			if (global.camera_shiftdown == 0)
+			
+			if (sprite_index = spr_player)
 			{
-				if (sprite_index = spr_player)
-				{
-				global.door_height = obj_camera.y-obj_door_border_right.y
-				}
-				else if (sprite_index = spr_player_jump)
-				{
-				global.door_height = obj_camera.y-obj_door_border_right.y-7
-				}
-			}
-			else if (global.camera_shiftdown == 1)
-			{
-				if (sprite_index = spr_player)
-				{
 				global.door_height = obj_player.y-obj_door_border_right.y
-				}
-				else if (sprite_index = spr_player_jump)
-				{
+			}
+			else if (sprite_index = spr_player_jump)
+			{
 				global.door_height = obj_player.y-obj_door_border_right.y-7
-				}
 			}
 			
 			global.state = state

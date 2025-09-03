@@ -33,6 +33,8 @@ function Sfx_end(){
 	
 	audio_stop_sound(snd_hydromachine)
 	audio_stop_sound(snd_magma)
+	audio_stop_sound(snd_wind)
+	audio_stop_sound(snd_wind_sfx)
 	
 	//temprarily disable all sfx
 	audio_group_set_gain(audiogroup_sfx, 0, 0)

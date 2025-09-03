@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":5.664,
+  "duration":5.6312246,
   "name":"snd_drill",
   "parent":{
     "name":"enemy",

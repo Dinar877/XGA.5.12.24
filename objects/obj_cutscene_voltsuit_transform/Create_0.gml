@@ -2,6 +2,7 @@ switch1 = 0;
 timer = 0;
 sndID = -1;
 sndSwitch = 0;
+sndPitch = 0;
 
 
 if (global.facingDir = 1) 

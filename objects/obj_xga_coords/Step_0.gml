@@ -7,23 +7,23 @@ or (instance_exists(obj_navigation_pillar1))
 or (instance_exists(obj_elevator_bottom))
 or ((doortype1 = 1) && (!instance_exists(obj_darkeater_hitbox)) && (global.darkeater_active = 0)))
 && (xgaMusicSwitch == 1)
-{
-	if (audio_is_playing(ost_xga_chasemusic))
-	{
-		audio_stop_sound(ost_xga_chasemusic);
-	}
-	
-	//remember previous music if any
-	if (global.sector_music_xga > 0)
-	{
-		global.sector_music = global.sector_music_xga;
-	}
-	
-	//get previous music based on what global.sector_music is
-	RefMusicLoop()
+{	
+	//reset to original music if escaped xga
+	ResetOriginalMusic()
 
 	
 	audio_stop_sound(snd_xga_heartbeat)
+	
+	instance_destroy();
+	exit;
+}
+
+//despawn xga during cooldown
+if (global.darkeater_death_limit >= 3)
+{
+	//reset to original music if escaped xga
+	ResetOriginalMusic()
+
 	
 	global.darkeater_active = 0;
 	
@@ -31,22 +31,12 @@ or ((doortype1 = 1) && (!instance_exists(obj_darkeater_hitbox)) && (global.darke
 	exit;
 }
 
+
 //despawn xga in final boss room
 if (room = rm_redtemple_finalboss)
 {
-	if (audio_is_playing(ost_xga_chasemusic))
-	{
-		audio_stop_sound(ost_xga_chasemusic);
-	}
-	
-	//remember previous music if any
-	if (global.sector_music_xga > 0)
-	{
-		global.sector_music = global.sector_music_xga;
-	}
-	
-	//get previous music based on what global.sector_music is
-	RefMusicLoop()
+	//reset to original music if escaped xga
+	ResetOriginalMusic()
 
 	
 	audio_stop_sound(snd_xga_heartbeat)
@@ -64,11 +54,7 @@ or (room = rm_S4_BOX_bossroom) or (room = rm_kingstalker_test1)
 or (room = rm_sector4_robospider) or (room = rm_sector4_turtle)
 && (global.darkeater_active == 0)
 {
-	if (audio_is_playing(ost_xga_chasemusic))
-	{
-		audio_stop_sound(ost_xga_chasemusic);
-	}
-	
+	audio_stop_sound(ost_xga_chasemusic);
 	audio_stop_sound(snd_xga_heartbeat)
 	
 	global.darkeater_active = 0;
@@ -80,11 +66,6 @@ or (room = rm_sector4_robospider) or (room = rm_sector4_turtle)
 //XGA is afraid of electricity. That's his one weakness.
 if (instance_exists(obj_harmful_electricity_emitter_L)) or (instance_exists(obj_harmful_electricity_emitter_u))
 {
-	if (audio_is_playing(ost_xga_chasemusic))
-	{
-		audio_stop_sound(ost_xga_chasemusic);
-	}
-	
 	//destroy all eye orbs if electricity present
 	if (instance_exists(obj_detection_orb))
 	{
@@ -94,14 +75,8 @@ if (instance_exists(obj_harmful_electricity_emitter_L)) or (instance_exists(obj_
 		}	
 	}
 	
-	//remember previous music if any
-	if (global.sector_music_xga > 0)
-	{
-		global.sector_music = global.sector_music_xga;
-	}
-	
-	//get previous music based on what global.sector_music is
-	RefMusicLoop()
+	//reset to original music if escaped xga
+	ResetOriginalMusic()
 
 	
 	audio_stop_sound(snd_xga_heartbeat)
@@ -288,6 +263,7 @@ else if (timer_xga < 1) && (spawn_xga_at_door = 0)
 //always spawn xga
 //difference_y = 0;
 //timer_xga = 1;
+//spawn_xga_at_door = 0
 
 
 //leading up to player // creating xga instance
@@ -309,7 +285,7 @@ if ((abs(difference_y) == 0) or (global.darkeater_active = 1) or (footstep_total
 	global.darkeater_roomN = round(random_range(5,8))
 	
 	//save the original music globally
-	global.sector_music_xga = global.sector_music;
+	//global.sector_music_xga = global.sector_music;
 	
 	doortype1 = 1
 	

@@ -30,7 +30,7 @@ jump_speed_reduced = -4;
 climbspeed = 0;
 reduceclimbspeed = 0;
 
-speed_x = 1;
+speed_x = 0.25;
 
 momentum = 0;
 enemy_slowdownswitch = 0;

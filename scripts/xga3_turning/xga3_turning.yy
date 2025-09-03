@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"xga3_turning",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"xga3_turning",
+  "parent":{
+    "name":"xga3",
+    "path":"folders/Scripts/Bosses/xga3.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

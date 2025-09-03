@@ -62,9 +62,9 @@ audio_stop_sound(snd_player_screwattack)
 	
 	if (global.mode_recommended > 0)
 	{
-		global.nuclearblast_limit += 3;
+		global.nuclearblast_limit += 10;
 	}
-	else global.nuclearblast_limit += 3;
+	else global.nuclearblast_limit += 10;
 	
 	global.nuclearblast_ammo = global.nuclearblast_limit;
 	

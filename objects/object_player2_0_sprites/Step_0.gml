@@ -173,26 +173,8 @@ if (global.pause_player = true)
 			instance_create_depth(obj_player.x,obj_player.y,depth-1,obj_cutscene_elevatorcorruption_1);
 		}
 	}
+
 	
-	
-	
-	//cutscene- volt suit transform
-	if (room == rm_endgame_voltsuit) 
-	&& (!instance_exists(obj_cutscene_voltsuit_transform))
-	&& (global.cutsceneID[Cutscenes.voltEngineGet] = false)
-	{
-		cutsceneTimer += ((1/60)/2); 
-		if (sprite_index = spr_stand_left_2) && (cutsceneTimer >= 1) 
-		&& (!instance_exists(obj_cutscene_voltsuit_transform))
-		{
-			image_alpha = 0;
-			
-			global.pause_player = 1;
-			global.cutscene = 1;
-			
-			instance_create_depth(obj_player.x,obj_player.y,depth-1,obj_cutscene_voltsuit_transform);
-		}
-	}
 	
 	/////cutscene-getting corrupted-flashing
 	/*
@@ -270,6 +252,38 @@ if (global.pause_player = true)
 	
 	
 	exit;	
+}
+
+//cutscene- volt suit escape
+if (room == rm_endgame_voltsuit) 
+&& (!instance_exists(obj_cutscene_voltsuit_transform))
+&& (global.cutsceneID[Cutscenes.voltEngineGet] = false)
+{
+	cutsceneTimer += ((1/60)/6); 
+	if (sprite_index = spr_stand_left_2) && (cutsceneTimer >= 1) 
+	&& (!instance_exists(obj_cutscene_voltsuit_transform))
+	{
+		image_alpha = 0;
+			
+		global.pause_player = 1;
+		global.cutscene = 1;
+		global.cutscene_suit = 1
+			
+		instance_create_depth(obj_player.x,obj_player.y+1,depth-1,obj_cutscene_voltsuit_transform);
+		exit;
+	}
+	else if (sprite_index = spr_stand_right_2) && (cutsceneTimer >= 1) 
+	&& (!instance_exists(obj_cutscene_voltsuit_transform))
+	{
+		image_alpha = 0;
+			
+		global.pause_player = 1;
+		global.cutscene = 1;
+		global.cutscene_suit = 1
+			
+		instance_create_depth(obj_player.x,obj_player.y+1,depth-1,obj_cutscene_voltsuit_transform);
+		exit;
+	}
 }
 
 

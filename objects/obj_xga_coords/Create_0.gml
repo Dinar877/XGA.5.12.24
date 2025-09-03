@@ -15,11 +15,13 @@ doortype1 = 0
 
 timer_xga = 0
 
+
 if (instance_number(obj_mapchecker2) > 1) //so we don't spawn xga in 1x1 rooms as that's too unfair
 {
 	spawn_xga_at_door = round(random_range(0,5));
 }
 else spawn_xga_at_door = 1;
+
 //spawn_xga_at_door = 0
 
 

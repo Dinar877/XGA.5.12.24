@@ -8,7 +8,7 @@ facing = -1;
 drillnow = 0;
 rolltimer = 0;
 
-hp = 800;
+hp = 1200;
 
 deathanim = 0;
 spriteheight = -1;

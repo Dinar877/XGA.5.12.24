@@ -97,7 +97,7 @@ if (global.nanoshield == 1) && (global.room_transition == 0) && (global.room_tra
 		
 		if (global.health1 < global.health_limit) && (global.nanoshield_state = 1)
 		{
-			global.health1 += 1/room_speed
+			global.health1 += ((1/60)/3)
 		}
 		
 		timerup += 2/room_speed

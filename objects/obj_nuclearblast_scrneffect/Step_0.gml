@@ -20,20 +20,42 @@ if (global.room_transition_prep = 1)
 //deplete enemy hp
 if (instance_place(x,y,obj_link_enemies)) && (global.dead_begin = 0) && (global.dead = 0)
 {
-	with(instance_place(x,y,obj_link_enemies))
+	with(obj_link_enemies)
 	{
-		if (variable_instance_exists(obj_link_enemies,"hp")) && (variable_instance_exists(obj_link_enemies,"enemy_hurt"))
+		if (place_meeting(x,y,obj_nuclearblast_scrneffect))
 		{
-			if (global.nuclearblast_state == 0)
+			if (variable_instance_exists(self,"hp")) && (variable_instance_exists(self,"enemy_hurt"))
 			{
-				hp -= (1/60)*2
-			}
-			else if (global.nuclearblast_state == 1)
-			{
-				hp -= (1/60)*4
-			}
+				if (variable_instance_exists(self,"warning")) //bosses
+				{
+					if (warning == true)
+					{
+						if (global.nuclearblast_state == 0)
+						{
+							hp -= (1/60) * 20
+						}
+						else if (global.nuclearblast_state == 1)
+						{
+							hp -= (1/60) * 40
+						}
 			
-			enemy_hurt = 0.9
+						enemy_hurt = 0.9
+					}
+				}
+				else if (!variable_instance_exists(self,"warning")) //regular enemies
+				{
+					if (global.nuclearblast_state == 0)
+					{
+						hp -= (1/60) * 20
+					}
+					else if (global.nuclearblast_state == 1)
+					{
+						hp -= (1/60) * 40
+					}
+			
+					enemy_hurt = 0.9
+				}
+			}
 		}
 	}
 }

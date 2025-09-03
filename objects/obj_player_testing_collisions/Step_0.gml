@@ -47,7 +47,7 @@ else if (global.room_transition = 1)
 
 
 //Collision shit
-/*
+
 //create our own hspd 
 if (input_horizontal != 0)
 {
@@ -58,14 +58,15 @@ else
 	hspd = 0;
 	hspd_enemy = 0;
 }
-*/
+
 
 
 
 //reset hspd from collision scripts setting hspd to 0
 
-speed_x = random_range(1,1);
+//speed_x = 0.25
 
+/*
 if (global.facingDir > 0) //turn around
 && (place_meeting(x+(sign(speed_x)*1),y,obj_block))
 && (!place_meeting(x+(sign(speed_x)*1),y,obj_slope1_left))
@@ -106,7 +107,7 @@ else if (global.facingDir < 0)
 	//hspd = -speed_x
 	global.facingDir = -1;
 }
-
+*/
 
 
 //Horizontal

@@ -34,7 +34,5 @@ else
 {
 	instance_destroy(obj_scrnDark_trueintro_fadeout)
 	instance_destroy(obj_camera_intro)
-	
-	obj_camera.x = 480;
-	obj_camera.y = 277;
+	instance_destroy(obj_cutscene_voltsuit_playertrap)
 }

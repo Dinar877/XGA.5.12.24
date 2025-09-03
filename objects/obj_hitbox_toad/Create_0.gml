@@ -22,6 +22,10 @@ inst_blockfree = (place_meeting(x,y+1,obj_block)) && (!position_meeting(x+(facin
 && (!place_meeting(x+hspd,y+1,obj_slope1_left)) && (!place_meeting(x+hspd,y+1,obj_slope1_right))
 
 onSlope = 0;
+nearSlope = 0;
+
+inst_blockfree_L = 0;
+inst_blockfree_R = 0;
 
 blockInFront = (place_meeting(x+(hspd),y,obj_block))
 slopeInFront = (!place_meeting(x+hspd,y,obj_slope1_left)) && (!place_meeting(x+hspd,y,obj_slope1_right)) && (!place_meeting(x+hspd,y,obj_newslope_left)) && (!place_meeting(x+hspd,y,obj_newslope_right))

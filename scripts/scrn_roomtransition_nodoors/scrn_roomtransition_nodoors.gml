@@ -134,7 +134,7 @@ function scrn_roomtransition_nodoors() {
 		global.room_transition_prep = 0;
 		
 		//make sure player is immediately in correct position
-		if (doorleft)
+ 		if (doorleft)
 		{
 			instance_activate_object(obj_door_border_right);
 			instance_activate_object(obj_player);
@@ -157,6 +157,7 @@ function scrn_roomtransition_nodoors() {
 			}
 			
 			instance_deactivate_object(obj_player)
+			instance_deactivate_object(object_player2_0_sprites);
 		}
 		else if (doorright)
 		{
@@ -316,7 +317,7 @@ function scrn_roomtransition_nodoors() {
 					{
 						y = obj_door_border_right.y+global.door_height+1
 					}
-					depth = obj_scrn_roomtransition.depth-1	
+					//depth = obj_scrn_roomtransition.depth-1	
 				}
 				with(obj_camera)
 				{
@@ -361,7 +362,7 @@ function scrn_roomtransition_nodoors() {
 					{
 						y = obj_door_border_left.y+global.door_height+1
 					}
-					depth = obj_scrn_roomtransition.depth-1	
+					//depth = obj_scrn_roomtransition.depth-1	
 				}
 				with(obj_camera)
 				{
@@ -519,7 +520,6 @@ function scrn_roomtransition_nodoors() {
 						else if (global.jumpingdm > 0)
 						{
 							State_machine_switch_state(Falling)
-							
 						}
 						
 						if (state = Crouching) or (state = Crouch_shoot)
@@ -528,6 +528,15 @@ function scrn_roomtransition_nodoors() {
 						    sprite_index = spr_player;
 						    global.crouching = 0;
 					    }
+						
+						if (state = Freeze)
+						{
+							State_machine_switch_state(Idle);
+						}
+						else if (state = Hurt)
+						{
+							State_machine_switch_state(Idle);
+						}
 					
 						if (place_meeting(x,y,obj_block)) && (!position_meeting(x,bbox_top-1,obj_block))
 						{

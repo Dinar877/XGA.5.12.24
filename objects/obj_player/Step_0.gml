@@ -313,6 +313,24 @@ if (enter_pressed) && (global.pause_transition = 0) && (global.room_transition =
 global.marker_imageindex += 2/60;
 
 
+//cooldown for if xga killed us too many times before
+if (global.darkeater_death_time_limit > 0)
+{
+	global.darkeater_death_time_limit --;	
+}
+else if (global.darkeater_death_time_limit <= 0) && (global.darkeater_death_limit >= 3) //reset everything
+{
+	global.darkeater_death_time_limit = 0;
+	global.darkeater_death_pre_time_limit = 0;
+	global.darkeater_death_limit = 0;
+}
+
+if (global.darkeater_death_pre_time_limit > 0)
+{
+	global.darkeater_death_pre_time_limit --;	
+}
+
+
 
 
 ////////////////ABILITIES

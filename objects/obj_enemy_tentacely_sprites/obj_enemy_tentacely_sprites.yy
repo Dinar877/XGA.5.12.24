@@ -10,8 +10,8 @@
   "name":"obj_enemy_tentacely_sprites",
   "overriddenProperties":[],
   "parent":{
-    "name":"mothership",
-    "path":"folders/Objects/enemies/mothership.yy",
+    "name":"red temple",
+    "path":"folders/Objects/enemies/red temple.yy",
   },
   "parentObjectId":{
     "name":"obj_link_enemies",

@@ -23,9 +23,21 @@ else if (n = 4)
 
 image_angle = round(random_range(image_angle = 20,image_angle = -20));
 
-inst1 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
-inst2 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
-inst3 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
+
+
+if (!place_meeting(x,y,obj_corelock))
+{
+	inst1 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
+	inst2 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
+	inst3 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
+}
+else if (place_meeting(x,y,obj_corelock))
+{
+	inst1 = instance_create(x,y,obj_explosion_debris_corelock)
+	inst2 = instance_create(x,y,obj_explosion_debris_corelock)
+	inst3 = instance_create(x,y,obj_explosion_debris_corelock)
+}
+
 
 snd = round(random_range(snd_beamexplosion,snd_beamexplosion2))
 

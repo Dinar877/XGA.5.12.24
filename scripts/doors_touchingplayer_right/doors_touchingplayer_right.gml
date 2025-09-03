@@ -110,7 +110,7 @@ function doors_touchingplayer_right()
 	            {
 	                if (global.room_y == 1) && (!place_meeting(x,y,obj_player)) && (global.room_transition1 = 0) && (backend == 0)
 	                {
-	                backend = 1;
+						backend = 1;
 	                }
 	                else backend = 0;
 	            }

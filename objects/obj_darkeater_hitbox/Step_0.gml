@@ -28,6 +28,7 @@ or (global.room_transition_nodoors = 1)
 or (global.room_transition_nodoors_more = 1)
 or (global.room_transition_nodoors_2 = 1)
 or (global.cutscene_suit = 1)
+or (global.dead = 1)
 or (!instance_exists(obj_player))
 or (!instance_exists(obj_darkeater_sprites))
 {

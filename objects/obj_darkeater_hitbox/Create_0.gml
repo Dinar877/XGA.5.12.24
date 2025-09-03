@@ -299,7 +299,9 @@ else if (global.darkeater_active = 0)
 	}
 	
 	//If a path is impossible, don't spawn
-	if (global.darkeater_pathgeneral <= 0) or (doorID == doorID_start)
+	if (global.darkeater_pathgeneral <= 0) 
+	or (doorID == doorID_start)
+	or (place_meeting(x,y,obj_block))
 	{
 		instance_destroy()
 		
@@ -336,10 +338,10 @@ if (instance_exists(obj_xga_coords))
 //audio shiieeeet
 if (!audio_is_playing(ost_xga_chasemusic)) && (!audio_is_playing(snd_xga_heartbeat))
 && (room != rm_redtemple_finalboss)
+&& (global.darkeater_active == false)
 {
 	instance_create_depth(x,y,id.depth+1,obj_sndmaker_xga_hunting)
 }
-
 
 
 

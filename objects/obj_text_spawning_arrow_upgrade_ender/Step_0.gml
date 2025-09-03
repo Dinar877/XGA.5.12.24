@@ -36,7 +36,7 @@ if (jump_pressed) && (textyID > -1) && (instance_exists(spawnerID))
 	}
 	
 	//during shock suit cutscene
-	if (global.cutscene == 1) && ((room = rm_11_7_6) or (room = rm_11_7_6_xgatest))
+	if (global.cutscene == 1) && ((room = rm_11_7_6) or (room = rm_11_7_6_xgatest) or (room = rm_endgame_voltsuit))
 	{
 		global.cutscene = 0;
 		global.cutscene_presuit = 0;

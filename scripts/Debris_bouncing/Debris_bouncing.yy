@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Debris_bouncing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Debris_bouncing",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

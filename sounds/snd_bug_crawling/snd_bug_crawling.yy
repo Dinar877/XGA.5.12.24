@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":2.583401,
+  "duration":2.5834014,
   "name":"snd_bug_crawling",
   "parent":{
     "name":"enemy",

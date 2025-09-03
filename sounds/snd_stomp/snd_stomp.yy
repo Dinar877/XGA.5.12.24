@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.39775,
+  "duration":1.3977551,
   "name":"snd_stomp",
   "parent":{
     "name":"trueintro",

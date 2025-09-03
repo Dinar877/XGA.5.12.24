@@ -156,6 +156,7 @@ function scrn_roomtransition_nodoors_2() {
 			}
 			
 			instance_deactivate_object(obj_player)
+			instance_deactivate_object(object_player2_0_sprites);
 		}
 		else if (doorright)
 		{
@@ -311,7 +312,7 @@ function scrn_roomtransition_nodoors_2() {
 					{
 						y = obj_door_border_right_2.y+global.door_height+1
 					}
-					depth = obj_scrn_roomtransition.depth-1	
+					//depth = obj_scrn_roomtransition.depth-1	
 				}
 				with(obj_camera)
 				{
@@ -356,7 +357,7 @@ function scrn_roomtransition_nodoors_2() {
 					{
 						y = obj_door_border_left_2.y+global.door_height+1
 					}
-					depth = obj_scrn_roomtransition.depth-1	
+					//depth = obj_scrn_roomtransition.depth-1	
 				}
 				with(obj_camera)
 				{
@@ -500,24 +501,29 @@ function scrn_roomtransition_nodoors_2() {
 						&& ((global.dash2 = 0) && (global.dashbegin2 = 0) && (global.turning_dash2 = 0) && (global.dashend = 0))
 						{
 							State_machine_switch_state(Idle)
-							
 						}
 						else if (global.jumpingdm <= 0)
 						&& (global.dashbegin2 > 0)
 						{
 							State_machine_switch_state(Dashing2_begin)
-							
 						}
 						else if (global.jumpingdm <= 0)
 						&& ((global.dash2 > 0) or (global.turning_dash2 > 0) or (global.dashend > 0))
 						{
 							State_machine_switch_state(Dashing2_use)
-							
 						}
 						else if (global.jumpingdm > 0)
 						{
 							State_machine_switch_state(Falling)
-							
+						}
+						
+						if (state = Freeze)
+						{
+							State_machine_switch_state(Idle);
+						}
+						else if (state = Hurt)
+						{
+							State_machine_switch_state(Idle);
 						}
 						
 						if (state = Crouching) or (state = Crouch_shoot)

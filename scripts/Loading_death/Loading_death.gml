@@ -163,21 +163,12 @@ function Loading_death() {
 				RefMusicLoop()
 				
 				
-		
-				if (global.spacestation_active)
-						{
-							global.health1 = ds_map_find_value(listvalue, "global.health1");
-						}
-				else if (!global.spacestation_active)
-						{
-							global.health1 = 6
-						}
-					
-				
+
 				//health	
 				global.health_limit = ds_map_find_value(listvalue, "global.health_limit");
 				global.healthtankN = ds_map_find_value(listvalue, "global.health_tank_N");
 				global.upgrade_health =ds_map_find_value(listvalue, "global.upgrade_health");
+				global.health1 = global.health_limit;
 				
 				//ammo
 				global.shoot_ammo_start = ds_map_find_value(listvalue, "global.shoot_ammo_start");
@@ -188,8 +179,25 @@ function Loading_death() {
 				global.midgame = ds_map_find_value(listvalue, "global.midgame");
 				
 				
+				//DESTROY HEALTH UI				
+				if (instance_exists(obj_originalHP_block))
+				{
+					with(obj_originalHP_block)
+					{
+						instance_destroy()	
+					}
+				}
+								
+				if (instance_exists(obj_originalHP_block_start))
+				{
+					with(obj_originalHP_block_start)
+					{
+						instance_destroy()	
+					}
+				}
 				
-			
+				
+				//START A NEW HEALTH UI
 				while (global.health_limit > (instance_number(obj_originalHP_block_start)) + (instance_number(obj_originalHP_block)))
 				{
 					if (instance_number(obj_originalHP_block_start) <= 6)
@@ -210,7 +218,7 @@ function Loading_death() {
 						}
 					}
 				}
-
+				
 			
 		
 				global.babysnail_amount = ds_map_find_value(listvalue, "global.babysnail_amount");
@@ -427,8 +435,8 @@ function Loading_death() {
 		
 				global.invisibility_state = ds_map_find_value(listvalue, "global.invisibility_state");
 				global.invisibility_available = ds_map_find_value(listvalue, "global.invisibility_available");
-				global.invisibility_ammo = ds_map_find_value(listvalue, "global.invisibility_ammo");
 				global.invisibility_limit = ds_map_find_value(listvalue, "global.invisibility_limit");
+				global.invisibility_ammo = global.invisibility_limit;
 		
 				//abilities UI-invisibility
 				if (global.upgradecollected[upgrades.invisibility] == 1)
@@ -443,8 +451,8 @@ function Loading_death() {
 	
 				global.nanoshield_state = ds_map_find_value(listvalue, "global.nanoshield_state");
 				global.nanoshield_available = ds_map_find_value(listvalue, "global.nanoshield_available");
-				global.nanoshield_ammo = ds_map_find_value(listvalue, "global.nanoshield_ammo");
 				global.nanoshield_limit = ds_map_find_value(listvalue, "global.nanoshield_limit");
+				global.nanoshield_ammo = global.nanoshield_limit;
 		
 				//abilities UI-nanoshield
 				if (global.upgradecollected[upgrades.nanoshield] == 1)
@@ -459,8 +467,8 @@ function Loading_death() {
 		
 				global.nuclearblast_state = ds_map_find_value(listvalue, "global.nuclearblast_state");
 				global.nuclearblast_available = ds_map_find_value(listvalue, "global.nuclearblast_available");
-				global.nuclearblast_ammo = ds_map_find_value(listvalue, "global.nuclearblast_ammo");
 				global.nuclearblast_limit = ds_map_find_value(listvalue, "global.nuclearblast_limit");
+				global.nuclearblast_ammo  = global.nuclearblast_limit;
 		
 				//abilities UI-nuclearblast
 				if (global.upgradecollected[upgrades.nuclearblast] == 1)
@@ -475,8 +483,9 @@ function Loading_death() {
 			
 				global.shockwave_state = ds_map_find_value(listvalue, "global.shockwave_state");
 				global.shockwave_available = ds_map_find_value(listvalue, "global.shockwave_available");
-				global.shockwave_ammo = ds_map_find_value(listvalue, "global.shockwave_ammo");
 				global.shockwave_limit = ds_map_find_value(listvalue, "global.shockwave_limit");
+				
+				global.shockwave_ammo = global.shockwave_limit;
 		
 				//abilities UI-shockwave
 				if (global.upgradecollected[upgrades.shockwave] == 1)

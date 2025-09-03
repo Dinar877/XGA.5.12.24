@@ -3,6 +3,7 @@
 if (global.pause_transition = 1)// or (global.pause_exit = 1)
 or (global.pause_map = 1)
 or (global.upgrade_process = 1)
+or (global.dead = 1)
 {
 	exit;	
 }

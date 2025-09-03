@@ -12,8 +12,8 @@
   "duration":6.7367573,
   "name":"snd_player_scream",
   "parent":{
-    "name":"player",
-    "path":"folders/Music+SFX/SFX/player.yy",
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

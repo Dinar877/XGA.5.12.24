@@ -6,7 +6,7 @@ if (global.corrupted <= 0)
 }
 else if (global.corrupted > 0)
 {
-	Music_loop(sndID, 0, 0);
+	Music_loop(sndID, 0.114,120.11);
 }
 			
 sndID = -1

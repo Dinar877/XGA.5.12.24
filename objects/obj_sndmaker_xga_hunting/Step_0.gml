@@ -1,8 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//record previous music used
+if (sndID != global.sector_music)
+{
+	global.sector_music_xga = global.sector_music;
+}
+
 //stop current music if not xga chase music
-if (audio_is_playing(global.sector_music) > 0) && (sndID != global.sector_music)
+if (audio_is_playing(global.sector_music) > 0) 
+&& (sndID != global.sector_music) 
 {
 	audio_stop_sound(global.sector_music)
 }	

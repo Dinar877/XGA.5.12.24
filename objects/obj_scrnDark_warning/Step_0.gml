@@ -114,7 +114,7 @@ if (image_alpha <= 0) && (timer1 >= 1)
 		}
 		else if (spawnerID = obj_darkeater_hitbox)   //XGA
 		{
-			audio_play_sound(ost_xga_chasemusic, 1000, true);
+			Music_loop(ost_xga_chasemusic, 0.117, 82.75);
 		}
 		
 		instance_destroy()

@@ -4,8 +4,8 @@ sndID = snd_preboss
 BossblockerID = 0
 sndswitch = 0
 
-/*
-if (audio_is_playing(global.sector_music) > 0) && (sndID != global.sector_music)
-		{
-			audio_sound_gain(global.sector_music,0,700)
-		}
+//destroy and don't play music if being chased by xga
+if (global.darkeater_active == true)
+{
+	instance_destroy();	
+}

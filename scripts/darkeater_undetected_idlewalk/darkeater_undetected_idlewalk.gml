@@ -177,36 +177,6 @@ function darkeater_undetected_idlewalk() {
 			//
 			//if on top of block, about to move onto thin air
 			if (!place_meeting(x+(facing*3),y,obj_block)) //no blocks to the side of us 
-			&& (!position_meeting(bbox_right+(facing*3),bbox_bottom+1,obj_block))  //no block under us along our current path
-			&& (place_meeting(x,y+1,obj_block)) //already standing on a block
-			&& (!place_meeting(x-(facing*3),y,obj_slope1_left)) && (!place_meeting(x+(facing*3),y,obj_slope1_right)) //no slopes involved
-			&& (!place_meeting(x+1,y,obj_slope1_left))
-			&& (!place_meeting(x-1,y,obj_slope1_right))
-			{
-				//before object is standing only 1 pixel remaining on block's edge, move object closer.
-				while (position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) 
-				&& (place_meeting(x,y+1,obj_block))
-				{
-					x += sign(facing);
-				}
-		
-				//stop object at exactly 1 pixel remaining on block edge
-				if (!position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) && (position_meeting(bbox_right,bbox_bottom+1,obj_block))
-				&& (place_meeting(x,y+1,obj_block))
-				{
-					x += (facing*3);	
-				}
-			}
-		}
-		else if (pathXpos < (x))
-		{
-			hspd = -0.25;
-			Moving_slow_left_lessthan1()
-			
-			//code for pushing xga off blocks, so he'll run off them
-			//
-			//if on top of block, about to move onto thin air
-			if (!place_meeting(x+(facing*3),y,obj_block)) //no blocks to the side of us 
 			&& (!position_meeting(bbox_left+(facing*3),bbox_bottom+1,obj_block))  //no block under us along our current path
 			&& (place_meeting(x,y+1,obj_block)) //already standing on a block
 			&& (!place_meeting(x-(facing*3),y,obj_slope1_left)) && (!place_meeting(x+(facing*3),y,obj_slope1_right)) //no slopes involved
@@ -222,6 +192,36 @@ function darkeater_undetected_idlewalk() {
 		
 				//stop object at exactly 1 pixel remaining on block edge
 				if (!position_meeting(bbox_left+sign(facing),bbox_bottom+1,obj_block)) && (position_meeting(bbox_left,bbox_bottom+1,obj_block))
+				&& (place_meeting(x,y+1,obj_block))
+				{
+					x += (facing*3);	
+				}
+			}
+		}
+		else if (pathXpos < (x))
+		{
+			hspd = -0.25;
+			Moving_slow_left_lessthan1()
+			
+			//code for pushing xga off blocks, so he'll run off them
+			//
+			//if on top of block, about to move onto thin air
+			if (!place_meeting(x+(facing*3),y,obj_block)) //no blocks to the side of us 
+			&& (!position_meeting(bbox_right+(facing*3),bbox_bottom+1,obj_block))  //no block under us along our current path
+			&& (place_meeting(x,y+1,obj_block)) //already standing on a block
+			&& (!place_meeting(x-(facing*3),y,obj_slope1_left)) && (!place_meeting(x+(facing*3),y,obj_slope1_right)) //no slopes involved
+			&& (!place_meeting(x+1,y,obj_slope1_left))
+			&& (!place_meeting(x-1,y,obj_slope1_right))
+			{
+				//before object is standing only 1 pixel remaining on block's edge, move object closer.
+				while (position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) 
+				&& (place_meeting(x,y+1,obj_block))
+				{
+					x += sign(facing);
+				}
+		
+				//stop object at exactly 1 pixel remaining on block edge
+				if (!position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) && (position_meeting(bbox_right,bbox_bottom+1,obj_block))
 				&& (place_meeting(x,y+1,obj_block))
 				{
 					x += (facing*3);	
@@ -300,36 +300,6 @@ function darkeater_undetected_idlewalk() {
 			//
 			//if on top of block, about to move onto thin air
 			if (!place_meeting(x+(facing*3),y,obj_block)) //no blocks to the side of us 
-			&& (!position_meeting(bbox_right+(facing*3),bbox_bottom+1,obj_block))  //no block under us along our current path
-			&& (place_meeting(x,y+1,obj_block)) //already standing on a block
-			&& (!place_meeting(x-(facing*3),y,obj_slope1_left)) && (!place_meeting(x+(facing*3),y,obj_slope1_right)) //no slopes involved
-			&& (!place_meeting(x+1,y,obj_slope1_left))
-			&& (!place_meeting(x-1,y,obj_slope1_right))
-			{
-				//before object is standing only 1 pixel remaining on block's edge, move object closer.
-				while (position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) 
-				&& (place_meeting(x,y+1,obj_block))
-				{
-					x += sign(facing);
-				}
-		
-				//stop object at exactly 1 pixel remaining on block edge
-				if (!position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) && (position_meeting(bbox_right,bbox_bottom+1,obj_block))
-				&& (place_meeting(x,y+1,obj_block))
-				{
-					x += (facing*3);	
-				}
-			}
-		}
-		else if (pathXpos < (x))
-		{
-			hspd = -0.25;
-			Moving_slow_left_lessthan1()
-			
-			//code for pushing xga off blocks, so he'll run off them
-			//
-			//if on top of block, about to move onto thin air
-			if (!place_meeting(x+(facing*3),y,obj_block)) //no blocks to the side of us 
 			&& (!position_meeting(bbox_left+(facing*3),bbox_bottom+1,obj_block))  //no block under us along our current path
 			&& (place_meeting(x,y+1,obj_block)) //already standing on a block
 			&& (!place_meeting(x-(facing*3),y,obj_slope1_left)) && (!place_meeting(x+(facing*3),y,obj_slope1_right)) //no slopes involved
@@ -345,6 +315,36 @@ function darkeater_undetected_idlewalk() {
 		
 				//stop object at exactly 1 pixel remaining on block edge
 				if (!position_meeting(bbox_left+sign(facing),bbox_bottom+1,obj_block)) && (position_meeting(bbox_left,bbox_bottom+1,obj_block))
+				&& (place_meeting(x,y+1,obj_block))
+				{
+					x += (facing*3);	
+				}
+			}
+		}
+		else if (pathXpos < (x))
+		{
+			hspd = -0.25;
+			Moving_slow_left_lessthan1()
+			
+			//code for pushing xga off blocks, so he'll run off them
+			//
+			//if on top of block, about to move onto thin air
+			if (!place_meeting(x+(facing*3),y,obj_block)) //no blocks to the side of us 
+			&& (!position_meeting(bbox_right+(facing*3),bbox_bottom+1,obj_block))  //no block under us along our current path
+			&& (place_meeting(x,y+1,obj_block)) //already standing on a block
+			&& (!place_meeting(x-(facing*3),y,obj_slope1_left)) && (!place_meeting(x+(facing*3),y,obj_slope1_right)) //no slopes involved
+			&& (!place_meeting(x+1,y,obj_slope1_left))
+			&& (!place_meeting(x-1,y,obj_slope1_right))
+			{
+				//before object is standing only 1 pixel remaining on block's edge, move object closer.
+				while (position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) 
+				&& (place_meeting(x,y+1,obj_block))
+				{
+					x += sign(facing);
+				}
+		
+				//stop object at exactly 1 pixel remaining on block edge
+				if (!position_meeting(bbox_right+sign(facing),bbox_bottom+1,obj_block)) && (position_meeting(bbox_right,bbox_bottom+1,obj_block))
 				&& (place_meeting(x,y+1,obj_block))
 				{
 					x += (facing*3);	

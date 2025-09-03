@@ -17,6 +17,8 @@ function darkeater_killpierce(){
 	global.grounded = 0;
 	global.climbing = 0;
 	
+	
+	
 	//health ui
 	with(obj_healthnumberten)
 			{
@@ -52,6 +54,8 @@ function darkeater_killpierce(){
 		global.dead_begin = 0;
 		global.hurt = 0;
 		global.pierce_killswitch = 0;
+		
+		
 		
 		audio_sound_gain(sndID2,0,3000);
 		audio_sound_gain(sndID3,0,3000);

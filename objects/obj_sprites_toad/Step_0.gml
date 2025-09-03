@@ -127,11 +127,29 @@ if (hp > 0) && (instance_exists(obj_player)) && (instance_exists(inst2))
 		or (place_meeting(x,y+(2),obj_newslope_right)) 
 		or (place_meeting(x,y+(2),obj_newslope_left))) 
 		
+		nearSlope = ((place_meeting(x+(facing*4),y+(5),obj_slope1_right)) 
+		or (place_meeting(x+(facing*4),y+(5),obj_slope1_left))
+		or (place_meeting(x+(facing*4),y+(5),obj_newslope_right)) 
+		or (place_meeting(x+(facing*4),y+(5),obj_newslope_left))) 
+		
 		//checks if we're on the edge of a platform
 		inst_blockfree = (place_meeting(x,y+2,obj_block)) 
 		&& (!onSlope)
-		&& (((position_meeting(bbox_left,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_left+1,bbox_bottom+(1),obj_block)))
-		or ((position_meeting(bbox_right,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_right-1,bbox_bottom+(1),obj_block))))
+		&& (!nearSlope)
+		&& (((position_meeting(bbox_left,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_left+(facing),bbox_bottom+(1),obj_block)))
+		or ((position_meeting(bbox_right,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_right+(facing),bbox_bottom+(1),obj_block))))
+		
+		inst_blockfree_L = (position_meeting(bbox_left,bbox_bottom+1,obj_block)) 
+		&& (!position_meeting(bbox_left-1,bbox_bottom+1,obj_block)) 
+		&& (!onSlope) 
+		&& (!nearSlope)
+		&& (facing = -1)
+		
+		inst_blockfree_R = (position_meeting(bbox_right,bbox_bottom+1,obj_block))
+		&& (!position_meeting(bbox_right+1,bbox_bottom+1,obj_block)) 
+		&& (!onSlope) 
+		&& (!nearSlope)
+		&& (facing = 1)
 		
 		
 		//slope in front of us

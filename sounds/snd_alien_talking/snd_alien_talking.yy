@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.933061,
+  "duration":1.895034,
   "name":"snd_alien_talking",
   "parent":{
     "name":"trueintro",

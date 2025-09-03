@@ -113,6 +113,8 @@ function darkeater_pierce() {
 			
 			global.pierce_killswitch = 1;
 			
+			
+			
 			with(obj_player)
 			{
 				hspd = 0;

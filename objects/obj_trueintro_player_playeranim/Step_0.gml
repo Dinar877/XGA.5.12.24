@@ -42,7 +42,7 @@ if (image_index >= image_number-1)
 	with(obj_player)
 	{
 		global.dead = 0
-		global.health1 = 8
+		global.health1 = 6
 		global.lockdown_facingDir = 0
 		global.facingDir = 1
 		State_machine_switch_state(Idle)	

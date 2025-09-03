@@ -6,3 +6,5 @@ global.doorpath1 = rm_S3_22_33
 global.doorpath3 = rm_sector2_boss_gorilla
 
 global.doorpath2 = rm_S3_24_30
+
+global.doorpath4 = rm_sector2_secret;

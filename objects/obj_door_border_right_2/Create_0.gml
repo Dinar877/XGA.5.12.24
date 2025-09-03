@@ -7,6 +7,8 @@ door_speed = 0.12
 
 started_roomtransition = 0
 
+hidden = 0;
+
 instance_create(x,y+1,obj_door_border_maptilespawnpointR)
 
 if (!instance_place(bbox_left-1,y-8,obj_block_door_behind))

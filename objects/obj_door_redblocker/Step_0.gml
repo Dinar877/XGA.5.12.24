@@ -114,6 +114,17 @@ else if (global.doors_redblocker[redblockerID] == 0) && (activated == 0)
 	}
 }
 
+//door direction
+if (sprite_index = spr_doorstopper_left_original)
+{
+	doorDirection = -1;
+}
+else if (sprite_index = spr_doorstopper_right_original)
+{
+	doorDirection = 1;
+}
+
+
 
 //bullet shit
 if (instance_place(x,y,obj_bullet))
@@ -172,6 +183,25 @@ if (hp <= 0)
 		{
 			direction1 = -1	
 			door_type = 4
+			
+			var randNum = (round(random_range(0,3)))
+		
+			if (randNum == 0)
+			{
+				sprite_index = spr_doorstopper_original_piece_1
+			}
+			else if (randNum == 1)
+			{
+				sprite_index = spr_doorstopper_original_piece_2
+			}
+			else if (randNum == 2)
+			{
+				sprite_index = spr_doorstopper_original_piece_3
+			}
+			else if (randNum == 3)
+			{
+				sprite_index = spr_doorstopper_original_piece_4
+			}
 		}
 	}
 	else if (sprite_index = spr_doorstopper_right_original)
@@ -210,8 +240,30 @@ if (hp <= 0)
 		{
 			direction1 = 1	
 			door_type = 4
+			
+			var randNum = (round(random_range(0,3)))
+		
+			if (randNum == 0)
+			{
+				sprite_index = spr_doorstopper_original_piece_1
+			}
+			else if (randNum == 1)
+			{
+				sprite_index = spr_doorstopper_original_piece_2
+			}
+			else if (randNum == 2)
+			{
+				sprite_index = spr_doorstopper_original_piece_3
+			}
+			else if (randNum == 3)
+			{
+				sprite_index = spr_doorstopper_original_piece_4
+			}
 		}
 	}
+	
+	//sfx
+	audio_play_sound(snd_glass_shatter,1000,false,global.sfx_volume);
 	
 	global.doors_redblocker[redblockerID] = 1;
 	

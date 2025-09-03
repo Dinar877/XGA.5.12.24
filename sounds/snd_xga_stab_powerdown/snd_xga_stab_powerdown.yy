@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":5.806848,
   "name":"snd_xga_stab_powerdown",
   "parent":{
     "name":"xga",

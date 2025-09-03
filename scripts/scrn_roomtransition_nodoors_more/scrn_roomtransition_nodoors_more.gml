@@ -154,6 +154,7 @@ function scrn_roomtransition_nodoors_more() {
 			}
 			
 			instance_deactivate_object(obj_player)
+			instance_deactivate_object(object_player2_0_sprites);
 		}
 		else if (doorright)
 		{
@@ -308,7 +309,7 @@ function scrn_roomtransition_nodoors_more() {
 					{
 						y = obj_door_border_right_more.y+global.door_height+1
 					}
-					depth = obj_scrn_roomtransition.depth-1	
+					//depth = obj_scrn_roomtransition.depth-1	
 				}
 				with(obj_camera)
 				{
@@ -353,7 +354,7 @@ function scrn_roomtransition_nodoors_more() {
 					{
 						y = obj_door_border_left_more.y+global.door_height+1
 					}
-					depth = obj_scrn_roomtransition.depth-1	
+					//depth = obj_scrn_roomtransition.depth-1	
 				}
 				with(obj_camera)
 				{
@@ -515,6 +516,15 @@ function scrn_roomtransition_nodoors_more() {
 						{
 							State_machine_switch_state(Falling)
 							
+						}
+						
+						if (state = Freeze)
+						{
+							State_machine_switch_state(Idle);
+						}
+						else if (state = Hurt)
+						{
+							State_machine_switch_state(Idle);
 						}
 						
 						if (state = Crouching) or (state = Crouch_shoot)

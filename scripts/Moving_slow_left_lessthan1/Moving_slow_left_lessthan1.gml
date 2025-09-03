@@ -192,13 +192,17 @@ function Moving_slow_left_lessthan1() {
 
 		
 	//going up block to right slope
-	if (place_meeting((x)-2,(y),obj_slope1_right)) && (!place_meeting((x),(y)+2,obj_slope1_right))
-	&& (!place_meeting((x)-2,(y),obj_block)) && (place_meeting(x,(y)+1,obj_block))
+	if (place_meeting((x)-2,(y),obj_slope1_right)) 
+	&& (!place_meeting((x),(y)+2,obj_slope1_right))
+	&& (!place_meeting((x)-2,(y),obj_block)) 
+	&& (place_meeting(x,(y)+1,obj_block))
 	&& (stop4 == 0)
 	        {
 	                //not yet touching slope
-					if (place_meeting((x)-2,(y),obj_slope1_right)) && (!place_meeting((x),(y)+2,obj_slope1_right))
-					&& (!place_meeting((x)-2,(y),obj_block)) && (place_meeting(x,(y)+1,obj_block))
+					if (place_meeting((x)-2,(y),obj_slope1_right)) 
+					&& (!place_meeting((x),(y)+2,obj_slope1_right))
+					&& (!place_meeting((x)-2,(y),obj_block)) 
+					&& (place_meeting(x,(y)+1,obj_block))
 					&& (!place_meeting((x)+moveX,(y),obj_slope1_right))
 					&& (stop4 == 0)
 	                {    
@@ -206,8 +210,10 @@ function Moving_slow_left_lessthan1() {
 						
 						stop4 = 1;
 	                }
-					else if (place_meeting((x)+moveX,(y),obj_slope1_right)) && (!place_meeting((x),(y)+2,obj_slope1_right))
-					&& (!place_meeting((x)-2,(y),obj_block)) && (place_meeting(x,(y)+1,obj_block))
+					else if (place_meeting((x)+moveX,(y),obj_slope1_right)) 
+					&& (!place_meeting((x),(y)+2,obj_slope1_right))
+					&& (!place_meeting((x)-2,(y),obj_block)) 
+					&& (place_meeting(x,(y)+1,obj_block))
 					&& (stop4 == 0)
 	                {    
 		                x += moveX;
@@ -288,8 +294,8 @@ function Moving_slow_left_lessthan1() {
 	//if on top of block, about to move onto thin air
 	if (!place_meeting(x+(moveX),y,obj_block)) //no blocks to the side of us 
 	&& (!place_meeting(x+(moveX),y-moveX,obj_block)) //no block under us along our current path
-	&& (!position_meeting(bbox_left+moveX,bbox_bottom-moveX+1,obj_block))  //no block under us along our current path
-	&& (!position_meeting(bbox_left+(sign(moveX)),bbox_bottom+2,obj_block))  //no block under us along our current path
+	&& (!position_meeting(bbox_right+moveX,bbox_bottom-moveX+1,obj_block))  //no block under us along our current path
+	&& (!position_meeting(bbox_right+(sign(moveX)),bbox_bottom+2,obj_block))  //no block under us along our current path
 	&& (place_meeting(x,y+2,obj_block)) //already standing on a block
 	&& (!place_meeting(x,y+2,obj_slope1_left))
 	&& (!place_meeting(x,y+2,obj_slope1_right))
@@ -305,11 +311,11 @@ function Moving_slow_left_lessthan1() {
 	&& (stop4 == 0)
 	{
 		//before object is standing only 1 pixel remaining on block's edge, move object closer.
-		while (position_meeting(bbox_left+sign(moveX),bbox_bottom+1,obj_block)) 
+		while (position_meeting(bbox_right+sign(moveX),bbox_bottom+1,obj_block)) 
 		&& (place_meeting(x,y+2,obj_block))
 		&& (!place_meeting(x+(sign(moveX)),y-(sign(moveX)),obj_block))
-		&& (!position_meeting(bbox_left+moveX,bbox_bottom-moveX+1,obj_block))  //no block under us along our current path
-		&& (!position_meeting(bbox_left+(sign(moveX)),bbox_bottom+2,obj_block))  //no block under us along our current path
+		&& (!position_meeting(bbox_right+moveX,bbox_bottom-moveX+1,obj_block))  //no block under us along our current path
+		&& (!position_meeting(bbox_right+(sign(moveX)),bbox_bottom+2,obj_block))  //no block under us along our current path
 		{
 			x += sign(moveX);
 			
@@ -317,16 +323,16 @@ function Moving_slow_left_lessthan1() {
 		}
 		
 		//stop object at exactly 1 pixel remaining on block edge
-		if (!position_meeting(bbox_left+sign(moveX),bbox_bottom+1,obj_block)) && (position_meeting(bbox_left,bbox_bottom+1,obj_block))
+		if (!position_meeting(bbox_right+sign(moveX),bbox_bottom+1,obj_block)) && (position_meeting(bbox_right,bbox_bottom+1,obj_block))
 		&& (place_meeting(x,y+2,obj_block))
-		&& (!position_meeting(bbox_left,bbox_bottom+1,obj_slope1_left))
-		&& (!position_meeting(bbox_left,bbox_bottom+1,obj_slope1_right))
-		&& (!position_meeting(bbox_left+sign(moveX),bbox_bottom+1-sign(moveX),obj_slope1_left))
-		&& (!position_meeting(bbox_left+sign(moveX),bbox_bottom+1-sign(moveX),obj_slope1_right))
-		&& (!position_meeting(bbox_left,bbox_bottom+1,obj_newslope_left))
-		&& (!position_meeting(bbox_left,bbox_bottom+1,obj_newslope_right))
-		&& (!position_meeting(bbox_left+sign(moveX),bbox_bottom+1-sign(moveX),obj_newslope_left))
-		&& (!position_meeting(bbox_left+sign(moveX),bbox_bottom+1-sign(moveX),obj_newslope_right))
+		&& (!position_meeting(bbox_right,bbox_bottom+1,obj_slope1_left))
+		&& (!position_meeting(bbox_right,bbox_bottom+1,obj_slope1_right))
+		&& (!position_meeting(bbox_right+sign(moveX),bbox_bottom+1-sign(moveX),obj_slope1_left))
+		&& (!position_meeting(bbox_right+sign(moveX),bbox_bottom+1-sign(moveX),obj_slope1_right))
+		&& (!position_meeting(bbox_right,bbox_bottom+1,obj_newslope_left))
+		&& (!position_meeting(bbox_right,bbox_bottom+1,obj_newslope_right))
+		&& (!position_meeting(bbox_right+sign(moveX),bbox_bottom+1-sign(moveX),obj_newslope_left))
+		&& (!position_meeting(bbox_right+sign(moveX),bbox_bottom+1-sign(moveX),obj_newslope_right))
 		{
 			moveX = 0;	
 			

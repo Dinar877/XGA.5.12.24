@@ -9,6 +9,8 @@ direction2 = -1
 adder1 = 0;
 adder2 = 0;
 hit = 0;
+hit2 = 0;
+timer = 0;
 
 startx = random_range(4,5)
 starty = random_range(1,4)

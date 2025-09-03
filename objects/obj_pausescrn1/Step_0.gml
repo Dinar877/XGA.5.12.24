@@ -221,7 +221,7 @@ if (new1 == 0) && (state == 0)
 	#endregion
 	
 	//map markerdogshite
-	messagemap1 = "PRESS 'JUMP' TO \nPLACE/REMOVE MAP MARKERS."
+	messagemap1 = "PRESS 'JUMP' TO PLACE/REMOVE MAP MARKERS."
 	textmap1 = instance_create_depth(x+10,y+157,self.depth-1,obj_texty_heading);
 
 	with(textmap1)

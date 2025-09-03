@@ -115,6 +115,16 @@ else if (global.doors_redblocker[redblockerID] == 0) && (activated == 0)
 	}
 }
 
+//door direction
+if (sprite_index = spr_doorstopper_left_original_s)
+{
+	doorDirection = -1;
+}
+else if (sprite_index = spr_doorstopper_right_original_s)
+{
+	doorDirection = 1;
+}
+
 
 //bullet shit
 if (instance_place(x,y,obj_bullet))
@@ -256,8 +266,29 @@ if (hp <= 0)
 			direction1 = 1;	
 		}
 		
-		sprite_index = round(random_range(spr_doorstopper_spread_piece_1,spr_doorstopper_spread_piece_4));	
+		var randNum = (round(random_range(0,3)))
+		
+		if (randNum == 0)
+		{
+			sprite_index = spr_doorstopper_spread_piece_1
+		}
+		else if (randNum == 1)
+		{
+			sprite_index = spr_doorstopper_spread_piece_2
+		}
+		else if (randNum == 2)
+		{
+			sprite_index = spr_doorstopper_spread_piece_3
+		}
+		else if (randNum == 3)
+		{
+			sprite_index = spr_doorstopper_spread_piece_4
+		}
 	}
+	
+	
+	//sfx
+	audio_play_sound(snd_glass_shatter,1000,false,global.sfx_volume);
 	
 
 	instance_destroy();

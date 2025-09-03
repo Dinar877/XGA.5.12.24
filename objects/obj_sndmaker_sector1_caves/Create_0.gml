@@ -8,3 +8,9 @@ else if (global.corrupted > 0)
 {
 	sndID = ost_sector1_cave_remastered
 }
+
+//destroy and don't play music if being chased by xga
+if (global.darkeater_active == true)
+{
+	instance_destroy();	
+}

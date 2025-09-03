@@ -10,11 +10,14 @@ or (global.upgrade_process = 1)
 image_angle += 1/2
 
 if (place_meeting(x,y,obj_player)) && (global.darkeater_active = 0) && (global.invisibility <= 0)
+&& (global.dead == 0) && (global.pierce_killswitch == 0)
 {	
 	if (instance_exists(obj_xga_coords))
 	{
 		obj_xga_coords.timer_xga = 2
 		global.darkeater_active = 1
+		
+		global.sector_music_xga = global.sector_music;
 	}
 }
 
@@ -27,6 +30,8 @@ var inst4 = (instance_nearest(x,y,obj_bullet))
 
 //bullet detection
 if (instance_place(x,y,obj_bullet))
+&& (global.darkeater_active = 0)
+&& (global.dead == 0) && (global.pierce_killswitch == 0)
 {
     with((instance_place(x,y,obj_bullet)))
     {
@@ -44,23 +49,46 @@ if (instance_place(x,y,obj_bullet))
 	{
 		obj_xga_coords.timer_xga = 2
 		global.darkeater_active = 1
+		
+		global.sector_music_xga = global.sector_music
 	}
 }
 
 
 //nuclearblast detection
-if (instance_place(x,y,obj_explosion_random_big)) && (global.nuclearblast = 1)
+if (instance_place(x,y,obj_nuclearblast_scrneffect)) && (global.nuclearblast = 1)
+&& (global.darkeater_active = 0)
+&& (global.dead == 0) && (global.pierce_killswitch == 0)
 {
 	//player detected - spawn xga
 	if (instance_exists(obj_xga_coords))
 	{
 		obj_xga_coords.timer_xga = 2
 		global.darkeater_active = 1
+		
+		global.sector_music_xga = global.sector_music
+	}	
+}
+
+//shockwave detection
+if (instance_place(x,y,obj_shockwave_energycircle)) && (global.shockwave = 1)
+&& (global.darkeater_active = 0)
+&& (global.dead == 0) && (global.pierce_killswitch == 0)
+{
+	//player detected - spawn xga
+	if (instance_exists(obj_xga_coords))
+	{
+		obj_xga_coords.timer_xga = 2
+		global.darkeater_active = 1
+		
+		global.sector_music_xga = global.sector_music
 	}	
 }
 
 //sword detection
 if (instance_place(id.x,id.y,obj_player_sword_hitbox))
+&& (global.darkeater_active = 0)
+&& (global.dead == 0) && (global.pierce_killswitch == 0)
 {
     sword_hurtenemycode_noeffect()
 	
@@ -69,5 +97,7 @@ if (instance_place(id.x,id.y,obj_player_sword_hitbox))
 	{
 		obj_xga_coords.timer_xga = 2
 		global.darkeater_active = 1
+		
+		global.sector_music_xga = global.sector_music
 	}	
 }

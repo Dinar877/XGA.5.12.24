@@ -24,7 +24,9 @@ global.darkeater_x = 0
 global.darkeater_y = 0
 global.darkeater_active = 0
 global.darkeater_roomN = 0
-
+global.darkeater_death_limit = 0;
+global.darkeater_death_time_limit = (4*60*60);
+global.darkeater_death_pre_time_limit = (1*60*60);
 
 //audio
 global.inst_audio_N = 0;

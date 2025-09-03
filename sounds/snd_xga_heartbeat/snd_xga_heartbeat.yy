@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_xga_heartbeat",
   "audioGroupId":{
-    "name":"audiogroup_sfx",
-    "path":"audiogroups/audiogroup_sfx",
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
   },
   "bitDepth":1,
   "bitRate":128,
@@ -12,8 +12,8 @@
   "duration":50.319023,
   "name":"snd_xga_heartbeat",
   "parent":{
-    "name":"xga",
-    "path":"folders/Music+SFX/SFX/xga.yy",
+    "name":"music!!",
+    "path":"folders/Music+SFX/music!!.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

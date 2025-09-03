@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":12.048,
+  "duration":12.011768,
   "name":"snd_gaspipe",
   "parent":{
     "name":"trueintro",

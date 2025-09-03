@@ -419,12 +419,12 @@ function scrn_roomtransition1() {
 					    }
 						
 						
-						if (global.state != Freeze)
+						if (global.state != Freeze) && (global.state != Hurt)
 						{
 							State_machine_switch_state(global.state);
 						}
 						
-						if (global.state != Jumping) && (global.state != Jump_after_Dashing2) && (state != Freeze)
+						if (global.state != Jumping) && (global.state != Jump_after_Dashing2) && (state != Freeze) && (state != Hurt)
 						{
 							State_machine_switch_state(global.state);
 						}
@@ -433,6 +433,10 @@ function scrn_roomtransition1() {
 							State_machine_switch_state(Falling);
 						}
 						else if (state = Freeze)
+						{
+							State_machine_switch_state(Idle);
+						}
+						else if (state = Hurt)
 						{
 							State_machine_switch_state(Idle);
 						}

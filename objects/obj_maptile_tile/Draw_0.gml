@@ -24,18 +24,27 @@ if (global.pause_map = 1) or (global.navigation = 1)
 						shader_set_uniform_f(fade_color, 1.0, 1.0, 1.0, FadeNow2);
 						draw_self()
 			
-						if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] <= 0)
-							{
-								draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
-							}
-							
-						if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] <= 0)
-							{
-								draw_sprite_ext(hazardID2,0,x,y,1,1,0,c_white,image_alpha)	
-							}
-						if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] <= 0)
+						//door blockers
+						if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] == false)
 						{
-							draw_sprite_ext(spr_itemlocated,inst_item_imageindex,x,y,1,1,0,c_white,image_alpha)	
+							draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
+						}
+							
+						//hazard blockers
+						if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] == false)
+						{
+							draw_sprite_ext(hazardID2,0, x, y,1,1,0,c_white,image_alpha)	
+						}
+						
+						//items
+						if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == false)
+						{
+							draw_sprite_ext(spr_itemlocated,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
+							inst_item_imageindex += (1/room_speed)
+						}
+						else if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == true)
+						{
+							draw_sprite_ext(spr_itemcollected,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
 							inst_item_imageindex += (1/room_speed)
 						}
 			
@@ -47,20 +56,31 @@ if (global.pause_map = 1) or (global.navigation = 1)
 					{
 						draw_set_alpha(image_alpha)
 						draw_self()
-						if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] <= 0)
-							{
-								draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
-							}
-							
-						if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] <= 0)
-							{
-								draw_sprite_ext(hazardID2,0,x,y,1,1,0,c_white,image_alpha)	
-							}
-						if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] <= 0)
+						
+						//door blockers
+						if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] == false)
 						{
-							draw_sprite_ext(spr_itemlocated,inst_item_imageindex,x,y,1,1,0,c_white,image_alpha)		
+							draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
+						}
+							
+						//hazard blockers
+						if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] == false)
+						{
+							draw_sprite_ext(hazardID2,0, x, y,1,1,0,c_white,image_alpha)	
+						}
+						
+						//items
+						if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == false)
+						{
+							draw_sprite_ext(spr_itemlocated,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
 							inst_item_imageindex += (1/room_speed)
 						}
+						else if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == true)
+						{
+							draw_sprite_ext(spr_itemcollected,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
+							inst_item_imageindex += (1/room_speed)
+						}
+						
 						timerfade = 0;
 						draw_set_alpha(1)
 					}
@@ -78,18 +98,27 @@ if (global.pause_map = 1) or (global.navigation = 1)
 					shader_set_uniform_f(fade_color, 1.0, 1.0, 1.0, FadeNow2);
 					draw_self()
 					
-					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] <= 0)
-							{
-								draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
-							}
-							
-						if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] <= 0)
-							{
-								draw_sprite_ext(hazardID2,0,x,y,1,1,0,c_white,image_alpha)	
-							}
-					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] <= 0)
+					//door blockers
+					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] == false)
 					{
-						draw_sprite_ext(spr_itemlocated,inst_item_imageindex,x,y,1,1,0,c_white,image_alpha)		
+						draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
+					}
+							
+					//hazard blockers
+					if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] == false)
+					{
+						draw_sprite_ext(hazardID2,0, x, y,1,1,0,c_white,image_alpha)	
+					}
+						
+					//items
+					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == false)
+					{
+						draw_sprite_ext(spr_itemlocated,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
+						inst_item_imageindex += (1/room_speed)
+					}
+					else if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == true)
+					{
+						draw_sprite_ext(spr_itemcollected,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
 						inst_item_imageindex += (1/room_speed)
 					}
 			
@@ -102,20 +131,31 @@ if (global.pause_map = 1) or (global.navigation = 1)
 					draw_set_alpha(image_alpha)
 					
 					draw_self()
-					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] <= 0)
-							{
-								draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
-							}
-							
-						if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] <= 0)
-							{
-								draw_sprite_ext(hazardID2,0,x,y,1,1,0,c_white,image_alpha)	
-							}
-					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] <= 0)
+					
+					//door blockers
+					if (blockerID >= MapTiles_groupDoor_blueleft) && (blockerID <= MapTiles_groupDoor_yellow_right) && (global.doors_redblocker[blockerID2] == false)
 					{
-						draw_sprite_ext(spr_itemlocated,inst_item_imageindex,x,y,1,1,0,c_white,image_alpha)		
+						draw_sprite_ext(blockerID,0, x, y,1,1,0,c_white,image_alpha)
+					}
+							
+					//hazard blockers
+					if (hazardID2 >= MapTiles_autohack) && (hazardID2 <= MapTiles_vine) && (global.doors_redblocker[hazardID_redblockerID] == false)
+					{
+						draw_sprite_ext(hazardID2,0, x, y,1,1,0,c_white,image_alpha)	
+					}
+						
+					//items
+					if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == false)
+					{
+						draw_sprite_ext(spr_itemlocated,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
 						inst_item_imageindex += (1/room_speed)
 					}
+					else if (upgradeID2 > 0) && (global.upgradecollected[upgradeID2] == true)
+					{
+						draw_sprite_ext(spr_itemcollected,inst_item_imageindex, x, y,1,1,0,c_white,image_alpha)		
+						inst_item_imageindex += (1/room_speed)
+					}
+					
 					timerfade = 0;
 					draw_set_alpha(1)
 				}

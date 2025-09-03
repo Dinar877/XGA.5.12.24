@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_player_brainchip_activating",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":66.32413,
+  "name":"snd_player_brainchip_activating",
+  "parent":{
+    "name":"cutscenes",
+    "path":"folders/Music+SFX/SFX/cutscenes.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_player_brainchip_activating.wav",
+  "type":0,
+  "volume":1.0,
+}

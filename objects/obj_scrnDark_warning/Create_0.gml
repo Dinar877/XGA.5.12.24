@@ -72,6 +72,10 @@ else if (instance_exists(obj_boss_bigsnail_hitbox))
 {
 	spawnerID = obj_boss_bigsnail_hitbox
 }
+else if (instance_exists(obj_boss_xga3))
+{
+	spawnerID = obj_boss_xga3
+}
 else spawnerID = -1
 
 //position correctly on screen

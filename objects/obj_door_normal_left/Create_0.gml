@@ -3,6 +3,7 @@ if (!instance_place(bbox_right,y,obj_block_door))
 	instydoor = instance_create(bbox_right,y,obj_block_door);
 }
 
+hidden = 0;
 
 if (!instance_place(bbox_right-3,bbox_top,obj_block_door_behind))
 {

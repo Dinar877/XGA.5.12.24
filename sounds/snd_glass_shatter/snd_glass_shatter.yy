@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":3.918367,
+  "duration":3.8545125,
   "name":"snd_glass_shatter",
   "parent":{
     "name":"trueintro",

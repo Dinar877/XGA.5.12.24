@@ -6,6 +6,7 @@ started = 0;
 door_speed = 0.12
 
 started_roomtransition = 0
+hidden = 0;
 
 instance_create(x,y+1,obj_door_border_maptilespawnpointR)
 

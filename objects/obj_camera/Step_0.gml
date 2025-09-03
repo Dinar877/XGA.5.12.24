@@ -185,14 +185,14 @@ if (instance_exists(obj_player))
 	
 	
 	//SAVE ROOMS ONLY-they alone have a room size like this
-		if (room_height == 180) && (room_width == 320)
-		&& (global.room_transition_prep = 0) && (global.camera_shiftdown == 0)
-		&& (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0)
-		&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
-		{
-			x = 160
-			y = 90
-		}
+	if (room_height == 180) && (room_width == 320)
+	&& (global.room_transition_prep = 0) && (global.camera_shiftdown == 0)
+	&& (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0)
+	&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+	{
+		x = 160
+		y = 90
+	}
 	
 
 
