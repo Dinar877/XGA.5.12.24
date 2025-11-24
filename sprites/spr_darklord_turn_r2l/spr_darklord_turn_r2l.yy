@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_darklord_turn_r2l",
   "bboxMode":0,
   "bbox_bottom":137,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"cc1243a1-f7bd-44db-ad1f-b26b558a99b3","name":"cc1243a1-f7bd-44db-ad1f-b26b558a99b3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8aa3e89b-cdc8-4822-92ea-df0faec45dec","name":"8aa3e89b-cdc8-4822-92ea-df0faec45dec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f9523a31-1b38-4e16-8207-ec33c566198f","name":"f9523a31-1b38-4e16-8207-ec33c566198f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cc1243a1-f7bd-44db-ad1f-b26b558a99b3","name":"cc1243a1-f7bd-44db-ad1f-b26b558a99b3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8aa3e89b-cdc8-4822-92ea-df0faec45dec","name":"8aa3e89b-cdc8-4822-92ea-df0faec45dec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f9523a31-1b38-4e16-8207-ec33c566198f","name":"f9523a31-1b38-4e16-8207-ec33c566198f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cc1243a1-f7bd-44db-ad1f-b26b558a99b3","path":"sprites/spr_darklord_turn_r2l/spr_darklord_turn_r2l.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3a16abb5-12c5-4703-a8e2-df4097bf765c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8aa3e89b-cdc8-4822-92ea-df0faec45dec","path":"sprites/spr_darklord_turn_r2l/spr_darklord_turn_r2l.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f5be30aa-cdff-436d-a13f-9e0d0abeab42","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f9523a31-1b38-4e16-8207-ec33c566198f","path":"sprites/spr_darklord_turn_r2l/spr_darklord_turn_r2l.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f81f8cb0-9acb-40a2-bd54-c30f15e846a7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cc1243a1-f7bd-44db-ad1f-b26b558a99b3","path":"sprites/spr_darklord_turn_r2l/spr_darklord_turn_r2l.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3a16abb5-12c5-4703-a8e2-df4097bf765c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8aa3e89b-cdc8-4822-92ea-df0faec45dec","path":"sprites/spr_darklord_turn_r2l/spr_darklord_turn_r2l.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f5be30aa-cdff-436d-a13f-9e0d0abeab42","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f9523a31-1b38-4e16-8207-ec33c566198f","path":"sprites/spr_darklord_turn_r2l/spr_darklord_turn_r2l.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f81f8cb0-9acb-40a2-bd54-c30f15e846a7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

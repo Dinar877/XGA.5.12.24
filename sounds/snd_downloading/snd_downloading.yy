@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_downloading",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":3.199501,
+  "exportDir":"",
   "name":"snd_downloading",
   "parent":{
     "name":"player",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_downloading.mp3",
-  "type":0,
   "volume":0.5,
 }

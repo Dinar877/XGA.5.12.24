@@ -10,7 +10,7 @@ else if (sprite_index = spr_bh_textbox) && (image_alpha >= 1)
 {
 	if (text_drawn = 0) && (spawningID > -1)
 	{
-		instance_create_depth(x+12,y+22,self.depth-1,spawningID)
+		instance_create_depth(x+22,y+22,self.depth-1,spawningID)
 		text_drawn = 1;
 	}	
 }

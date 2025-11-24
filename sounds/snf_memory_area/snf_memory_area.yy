@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snf_memory_area",
   "audioGroupId":{
     "name":"audiogroup_music",
     "path":"audiogroups/audiogroup_music",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":61.805714,
+  "exportDir":"",
   "name":"snf_memory_area",
   "parent":{
     "name":"navigation",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snf_memory_area.mp3",
-  "type":0,
   "volume":1.0,
 }

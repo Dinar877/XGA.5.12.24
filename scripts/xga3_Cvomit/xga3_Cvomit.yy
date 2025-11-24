@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"xga3_Cvomit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"xga3_Cvomit",
+  "parent":{
+    "name":"xga3",
+    "path":"folders/Scripts/Bosses/xga3.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

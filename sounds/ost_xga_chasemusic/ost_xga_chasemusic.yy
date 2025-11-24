@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"ost_xga_chasemusic",
   "audioGroupId":{
     "name":"audiogroup_music",
     "path":"audiogroups/audiogroup_music",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":87.77249,
+  "exportDir":"",
   "name":"ost_xga_chasemusic",
   "parent":{
     "name":"music!!",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"ost_xga_chasemusic.mp3",
-  "type":0,
   "volume":0.5,
 }

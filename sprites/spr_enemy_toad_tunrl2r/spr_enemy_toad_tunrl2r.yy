@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_toad_tunrl2r",
   "bboxMode":0,
   "bbox_bottom":60,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8842c906-c6af-4f43-b326-d9fb2a625316","name":"8842c906-c6af-4f43-b326-d9fb2a625316","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"445350bd-fb51-4e29-86a8-f4131f3d9e43","name":"445350bd-fb51-4e29-86a8-f4131f3d9e43","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7e1c2893-6750-48c6-85c8-e419b91b31a9","name":"7e1c2893-6750-48c6-85c8-e419b91b31a9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8842c906-c6af-4f43-b326-d9fb2a625316","name":"8842c906-c6af-4f43-b326-d9fb2a625316","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"445350bd-fb51-4e29-86a8-f4131f3d9e43","name":"445350bd-fb51-4e29-86a8-f4131f3d9e43","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7e1c2893-6750-48c6-85c8-e419b91b31a9","name":"7e1c2893-6750-48c6-85c8-e419b91b31a9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8842c906-c6af-4f43-b326-d9fb2a625316","path":"sprites/spr_enemy_toad_tunrl2r/spr_enemy_toad_tunrl2r.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2d03d939-7bc8-4176-8b8f-3c67091dc75e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"445350bd-fb51-4e29-86a8-f4131f3d9e43","path":"sprites/spr_enemy_toad_tunrl2r/spr_enemy_toad_tunrl2r.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4ebfa4b7-2cec-4b24-80f6-a494e0a61c54","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e1c2893-6750-48c6-85c8-e419b91b31a9","path":"sprites/spr_enemy_toad_tunrl2r/spr_enemy_toad_tunrl2r.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"83f38b4f-3cf1-418c-8549-d616a6fd0bca","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8842c906-c6af-4f43-b326-d9fb2a625316","path":"sprites/spr_enemy_toad_tunrl2r/spr_enemy_toad_tunrl2r.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2d03d939-7bc8-4176-8b8f-3c67091dc75e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"445350bd-fb51-4e29-86a8-f4131f3d9e43","path":"sprites/spr_enemy_toad_tunrl2r/spr_enemy_toad_tunrl2r.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4ebfa4b7-2cec-4b24-80f6-a494e0a61c54","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e1c2893-6750-48c6-85c8-e419b91b31a9","path":"sprites/spr_enemy_toad_tunrl2r/spr_enemy_toad_tunrl2r.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"83f38b4f-3cf1-418c-8549-d616a6fd0bca","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

@@ -498,6 +498,8 @@ global.screenScale = 10;
 texture_set_interpolation(false);
 
 
+
+
 //hides mouse cursor
 window_set_cursor(cr_none);
 */

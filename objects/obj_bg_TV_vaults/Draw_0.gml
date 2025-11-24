@@ -1,0 +1,1 @@
+draw_background_tiled(spr_vaults_bg1, __view_get( e__VW.XView, 0 )/4, __view_get( e__VW.YView, 0 )/4);

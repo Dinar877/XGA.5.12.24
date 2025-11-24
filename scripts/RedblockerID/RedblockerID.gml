@@ -7,7 +7,13 @@ function RedblockerID(){
 		for (var n = 2; n < 999; n++)
 		{
 			//exclusions
-			if (n != 866) //plug gate leading to XGA 1.0 boss fight. Since script randomizes IDs per playthrough, sometimes player would get trapped when loading their old save files into an updated version of the game (at least this is my current theory why the bug happens occasionally). 
+			if (n != specialRedblockerIDs.mainsectorBridge) 
+			&& (n != specialRedblockerIDs.mainsectorYellowDoor) 
+			&& (n != specialRedblockerIDs.mainsectorXGA_1_0_plug) //Since script randomizes IDs per playthrough, sometimes player would get trapped when loading their old save files into an updated version of the game (at least this is my current theory why the bug happens occasionally). 
+			&& (n != specialRedblockerIDs.sector3BOXautohack) 
+			&& (n != specialRedblockerIDs.sector3BOXspikewall) 
+			&& (n != specialRedblockerIDs.sector1FalseWall_1) 
+			&& (n != specialRedblockerIDs.sector1FalseWall_2) 
 			{
 				if (global.doors_redblocker[n] <= 0) && (global.doors_true[n] <= 0) 
 				//doors_true records instance id, doors_redblocker records whether their switch is turned on or off

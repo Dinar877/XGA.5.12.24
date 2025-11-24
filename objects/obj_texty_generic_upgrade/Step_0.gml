@@ -68,7 +68,7 @@ if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) or (stringy ==
 		{
 			alpha = 1;
 			text = other.text;
-			message_pos += other.time + other.message_pos;
+			message_pos += floor(other.time + other.message_pos);
 			spawnerID = other.spawnerID
 			pauser = 0;
 			string_positionY = 0;
@@ -82,7 +82,7 @@ if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) or (stringy ==
 		spd = 0;
 		with(spawnerID)
 		{
-			time = (other.time+other.message_pos)
+			time = floor(other.time + other.message_pos)
 		}
 	}
 }

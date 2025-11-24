@@ -259,11 +259,13 @@ if (hp <= 0)
 		
 		if (other.doorDirection = 1)
 		{
-			direction1 = -1;	
+			direction1 = 1;	
+			Debris_init(round(random_range(2,5)),round(random_range(-4,4)),0.2, 10);
 		}
 		else if (other.doorDirection = -1)
 		{
-			direction1 = 1;	
+			direction1 = -1;	
+			Debris_init(round(random_range(-2,-5)),round(random_range(-4,4)),0.2, 10);
 		}
 		
 		var randNum = (round(random_range(0,3)))

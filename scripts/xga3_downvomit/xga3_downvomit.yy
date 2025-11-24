@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"xga3_downvomit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"xga3_downvomit",
+  "parent":{
+    "name":"xga3",
+    "path":"folders/Scripts/Bosses/xga3.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

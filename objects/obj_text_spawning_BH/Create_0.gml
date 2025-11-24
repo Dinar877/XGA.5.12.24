@@ -88,13 +88,38 @@ else if (global.corrupted == 1)
 
 if (newTextAvailable == 3)
 {
-	text = " I WAS CREATED FROM BOTH YOUR'S AND XGA'S ENERGY BLASTS. DISPENSING ITEM.";	
+	text = " I WAS CREATED FROM BOTH YOUR'S AND XGA'S ENERGY BLASTS. CURRENTLY ACTIVE ABILITIES: ANTI-XGA DETECTION FIELD. CURRENT STORED ITEMS: X-SABER. DISPENSING ITEM...";	
 }
 else if (newTextAvailable == 4)
 {
-	text = " ERROR. NO ENERGY REMAINING FOR USER ANTI-XGA DETECTION FIELD. CAUTION ADVISED! RETURN T0O EACH SEC11OR AND DE1TR0Y THE R1MA1NING BI0WEAP1NS!";	
+	text = " ER1OR! 5ERROR! 1SYSTEM DAM>7GE! 99% OF EN1RGY USED F/R ANTI-XGA LIGHTNING S5IELD! N0 ENERGY REMA1101INING F7*R USER ANTI-XGA DETECTION FIEL100110D. R()TURN T0O EACH SEC11OR AND DE1TR0Y THE R1MA1NING BI0WEAP1NS! CAUT01!ION ADVI1ED!!!!!";	//texty object not working here. "(floor(time)+message_pos+time2 < text_length)" is equal to 93 and new line not triggered as a result.. 
 }
 else if (newTextAvailable == 6)
 {
 	text = " HURRY! BIOCORP IS COMING SOON!";	
+}
+else if (newTextAvailable == 7)
+{
+	if (global.bossblockers[bossblockers.gorilla] == 0)
+	{
+		text = " ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 2!!";
+	}
+	else if (global.bossblockers[bossblockers.gorilla] == 1)
+	&& (global.bossblockers[bossblockers.kingstalker] == 0)
+	{
+		text = " EvEN MORE ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 2 BEL<W LAVA.";
+	}
+	else if (global.bossblockers[bossblockers.gorilla] == 1)
+	&& (global.bossblockers[bossblockers.kingstalker] == 1)
+	&& (global.bossblockers[bossblockers.darklord] == 0)
+	{
+		text = " ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 1!";
+	}
+	else if (global.bossblockers[bossblockers.gorilla] == 1)
+	&& (global.bossblockers[bossblockers.kingstalker] == 1)
+	&& (global.bossblockers[bossblockers.darklord] == 1)
+	&& (global.bossblockers[bossblockers.turtle] == 0)
+	{
+		text = " ABNOr-23oMaTIE11S DETE110101CTE1D IN SEC?0R 4!";
+	}
 }

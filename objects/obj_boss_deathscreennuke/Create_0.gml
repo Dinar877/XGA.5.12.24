@@ -100,4 +100,8 @@ else if (instance_exists(obj_boss_bigsnail_hitbox))
 {
 	bossID = obj_boss_bigsnail_hitbox
 }
+else if (instance_exists(obj_boss_xga3))
+{
+	bossID = obj_boss_xga3
+}
 else bossID = -1

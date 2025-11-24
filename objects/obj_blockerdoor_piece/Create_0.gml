@@ -1,19 +1,7 @@
 whichBlocker = 0;
 
-
+layer = layer_get_id("Inst_level_0");
 
 image_angle = round(random_range(image_angle = 50,image_angle = -50));
 
-direction1 = sign(random_range(1,-1))
-direction2 = -1
-adder1 = 0;
-adder2 = 0;
-hit = 0;
-hit2 = 0;
-timer = 0;
-
-startx = random_range(4,5)
-starty = random_range(1,4)
-
-doorpiece_surface = -1
-door_type = 0
+Debris_init(round(random_range(-5,5)),round(random_range(-4,4)),0.2, 10)

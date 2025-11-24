@@ -5,7 +5,7 @@ vspd = 0;
 facing = 1;
 drillnow = 0;
 
-hp = 30;
+hp = 300;
 
 deathanim = 0;
 spriteheight = 2;

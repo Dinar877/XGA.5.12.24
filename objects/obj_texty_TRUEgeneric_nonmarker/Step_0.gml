@@ -25,7 +25,7 @@ stringy2 = string_char_at(text,floor(time)+time2+message_pos+1)
 
 if (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2+1 < text_length)
 {
-	while (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2+1  < text_length)
+	while (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2+1 < text_length)
 	{
 		time2++;
 		stringy2 = string_char_at(text,floor(time)+message_pos+time2+1)
@@ -67,7 +67,7 @@ if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) or (stringy ==
 				{
 					alpha = 1;
 					text = other.text;
-					message_pos += other.time + other.message_pos;
+					message_pos += floor(other.time) + floor(other.message_pos);
 					spawnerID = other.spawnerID
 					pauser = 0;
 					string_positionY = 0;
@@ -80,21 +80,21 @@ if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) or (stringy ==
 						time = 1;
 						string_positionY ++;
 					}
-					text_length = string_length(text)
+					text_length = string_length(text);
 				}
 		}
 		else if (instance_exists(obj_text_spawning_trueintro_opening)) && (instance_number(obj_texty_TRUEgeneric_nonmarker) >= 3) && (time < text_length)
 		{
 			with(spawnerID)
 			{
-				time = (other.time+other.message_pos)
+				time = floor(other.time+other.message_pos);
 			}
 			instance_create_depth(x+283,y+5,id.depth-5,obj_text_spawning_arrow)
 			with(obj_text_spawning_arrow)
 			{
-				textyID = other.object_index
-				spawnerID = other.spawnerID
-				message_pos = other.time
+				textyID = other.object_index;
+				spawnerID = other.spawnerID;
+				message_pos = floor(other.time);;
 			}
 		}
 		else if (instance_exists(obj_text_spawning_endgame)) && (instance_number(obj_texty_TRUEgeneric_nonmarker) >= 3) && (time < text_length)
@@ -106,9 +106,9 @@ if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) or (stringy ==
 			instance_create_depth(x+283,y+5,id.depth-5,obj_text_spawning_arrow)
 			with(obj_text_spawning_arrow)
 			{
-				textyID = other.object_index
-				spawnerID = other.spawnerID
-				message_pos = other.time
+				textyID = other.object_index;
+				spawnerID = other.spawnerID;
+				message_pos = floor(other.time);
 			}
 		}
 }
@@ -127,7 +127,7 @@ if (instance_exists(obj_text_spawning_trueintro_opening)) && (!instance_exists(o
 				{
 					textyID = other.object_index;
 					spawnerID = other.spawnerID;
-					message_pos = other.time;
+					message_pos = floor(other.time);
 				}
 }
 
@@ -138,14 +138,14 @@ if (instance_exists(obj_text_spawning_endgame)) && (!instance_exists(obj_text_sp
 {			
 				with(spawnerID)
 				{
-					time = (other.time+other.message_pos);
+					time = floor(other.time+other.message_pos);
 				}
 				instance_create_depth(x+283,y+5,id.depth-5,obj_text_spawning_arrow)
 				with(obj_text_spawning_arrow)
 				{
 					textyID = other.object_index;
 					spawnerID = other.spawnerID;
-					message_pos = other.time;
+					message_pos = floor(other.time);
 				}
 }
 

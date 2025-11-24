@@ -25,6 +25,9 @@ function LoadingUI() {
 					window_set_size(320,180);
 					surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 					global.screenScale = 0;
+					
+					//reenables mouse cursor if previously disabled
+					window_set_cursor(cr_default);
 				}
 				else if (global.screenScale == 2)
 				{
@@ -33,6 +36,9 @@ function LoadingUI() {
 					window_set_size(640,360);
 					surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 					global.screenScale = 2;
+					
+					//reenables mouse cursor if previously disabled
+					window_set_cursor(cr_default);
 				}
 				else if (global.screenScale == 4)
 				{
@@ -41,6 +47,9 @@ function LoadingUI() {
 					window_set_size(960,540);
 					surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 					global.screenScale = 4;
+					
+					//reenables mouse cursor if previously disabled
+					window_set_cursor(cr_default);
 				}
 				else if (global.screenScale == 6)
 				{
@@ -57,6 +66,9 @@ function LoadingUI() {
 					window_set_size(1920,1080);
 					surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 					global.screenScale = 8;
+					
+					//reenables mouse cursor if previously disabled
+					window_set_cursor(cr_default);
 				}
 				else if (global.screenScale = 10)
 				{
@@ -66,6 +78,10 @@ function LoadingUI() {
 						window_set_fullscreen(true)
 						surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 						global.screenScale = 10;
+						
+						//hides mouse cursor
+						window_set_cursor(cr_none);
+
 					}
 				}
 				#endregion

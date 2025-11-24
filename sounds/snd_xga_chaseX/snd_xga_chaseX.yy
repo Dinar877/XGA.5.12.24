@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_xga_chaseX",
   "audioGroupId":{
     "name":"audiogroup_music",
     "path":"audiogroups/audiogroup_music",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":4.2055783,
+  "exportDir":"",
   "name":"snd_xga_chaseX",
   "parent":{
     "name":"unused",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_xga_chaseX.wav",
-  "type":0,
   "volume":1.0,
 }

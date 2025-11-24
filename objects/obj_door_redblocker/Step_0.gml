@@ -183,6 +183,7 @@ if (hp <= 0)
 		{
 			direction1 = -1	
 			door_type = 4
+			xSpeed = -4
 			
 			var randNum = (round(random_range(0,3)))
 		
@@ -240,6 +241,8 @@ if (hp <= 0)
 		{
 			direction1 = 1	
 			door_type = 4
+			
+			xSpeed = 4
 			
 			var randNum = (round(random_range(0,3)))
 		

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_bh_talk",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":10.13551,
+  "exportDir":"",
   "name":"snd_bh_talk",
   "parent":{
     "name":"cutscenes",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_bh_talk.mp3",
-  "type":0,
   "volume":1.0,
 }

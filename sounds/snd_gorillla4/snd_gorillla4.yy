@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_gorillla4",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.402531,
+  "duration":1.4025397,
+  "exportDir":"",
   "name":"snd_gorillla4",
   "parent":{
     "name":"enemy",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_gorillla4.wav",
-  "type":0,
   "volume":0.5,
 }

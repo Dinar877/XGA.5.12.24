@@ -1,1 +1,0 @@
-ringDirection = 1

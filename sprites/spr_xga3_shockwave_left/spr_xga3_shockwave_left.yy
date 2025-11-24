@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_xga3_shockwave_left",
   "bboxMode":0,
   "bbox_bottom":199,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"adf9dfc6-040a-43e3-8e88-baaabec38cdc","name":"adf9dfc6-040a-43e3-8e88-baaabec38cdc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"67463d19-0f48-44d6-8482-a90d0473f592","name":"67463d19-0f48-44d6-8482-a90d0473f592","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cbcda34e-af23-483e-9f6e-015431e58b05","name":"cbcda34e-af23-483e-9f6e-015431e58b05","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"adf9dfc6-040a-43e3-8e88-baaabec38cdc","name":"adf9dfc6-040a-43e3-8e88-baaabec38cdc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"67463d19-0f48-44d6-8482-a90d0473f592","name":"67463d19-0f48-44d6-8482-a90d0473f592","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cbcda34e-af23-483e-9f6e-015431e58b05","name":"cbcda34e-af23-483e-9f6e-015431e58b05","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"xga 3.0",
-    "path":"folders/Sprites/Bosses/xga 3.0.yy",
+    "name":"old",
+    "path":"folders/Sprites/old.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -72,15 +72,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"adf9dfc6-040a-43e3-8e88-baaabec38cdc","path":"sprites/spr_xga3_shockwave_left/spr_xga3_shockwave_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ac68a144-ae13-4213-a89d-b91a3befbd98","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"67463d19-0f48-44d6-8482-a90d0473f592","path":"sprites/spr_xga3_shockwave_left/spr_xga3_shockwave_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f2761a1c-0c62-4002-b082-6498e666336f","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cbcda34e-af23-483e-9f6e-015431e58b05","path":"sprites/spr_xga3_shockwave_left/spr_xga3_shockwave_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"77cf1ccb-1e4d-4bc7-8a9c-7510ff5cba16","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"adf9dfc6-040a-43e3-8e88-baaabec38cdc","path":"sprites/spr_xga3_shockwave_left/spr_xga3_shockwave_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ac68a144-ae13-4213-a89d-b91a3befbd98","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"67463d19-0f48-44d6-8482-a90d0473f592","path":"sprites/spr_xga3_shockwave_left/spr_xga3_shockwave_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f2761a1c-0c62-4002-b082-6498e666336f","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cbcda34e-af23-483e-9f6e-015431e58b05","path":"sprites/spr_xga3_shockwave_left/spr_xga3_shockwave_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"77cf1ccb-1e4d-4bc7-8a9c-7510ff5cba16","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

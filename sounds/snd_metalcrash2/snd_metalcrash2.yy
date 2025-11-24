@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_metalcrash2",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
-  "compression":0,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.232336,
+  "duration":0.2323356,
+  "exportDir":"",
   "name":"snd_metalcrash2",
   "parent":{
     "name":"environment",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_metalcrash2.wav",
-  "type":0,
   "volume":0.5,
 }

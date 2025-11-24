@@ -7,12 +7,13 @@ or (global.upgrade_process = 1)
 	exit;	
 }
 
-if (global.bossblockers[BossblockerID] > 0)
+if (global.bossblockers[bossblockers.xga3] > 0)
 {
 	instance_destroy();
 	exit;
 }
 
+/*
 if (audio_exists(snd) > -1)
 {
 	if (audio_is_playing(snd)) && (audio_sound_get_track_position(snd) >= 1.3)
@@ -20,6 +21,7 @@ if (audio_exists(snd) > -1)
 		audio_stop_sound(snd)	
 	}
 }
+*/
 
 if (collision_circle(x,y,500,obj_player,false,true)) && (warning = 0) && (!instance_exists(obj_scrnDark_warning)) && (global.bossblockers[BossblockerID] <= 0)
 {
@@ -100,7 +102,7 @@ if (deathanim > 0)
 	deathanim += 1/2;
 	enemy_hurt = 1;
 	
-	if (deathanim >=100) && (!instance_exists(obj_boss_deathscreennuke))
+	if (deathanim >= 100) && (!instance_exists(obj_boss_deathscreennuke))
 	{
 		instance_create_layer(x,y,layer_get_id("Inst_scrn"),obj_boss_deathscreennuke)
 	}
@@ -112,8 +114,12 @@ if (deathanim > 0)
 				y = obj_mapchecker2.y+90	
 				dontmove = 0
 			}
+		instance_destroy(obj_xga3_Cvomit_pool)	
+		instance_destroy(obj_xga3_vomit_pool)	
+		instance_destroy(obj_xga3_vomit_splash)	
+		instance_destroy(obj_xga3_vomit_stream)	
 		instance_destroy()	
-		global.bossblockers[BossblockerID] = 1
+		global.bossblockers[bossblockers.xga3] = true;
 	}
 	
 }

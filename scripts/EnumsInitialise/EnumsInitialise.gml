@@ -76,6 +76,7 @@ function EnumsInitialise(){
 		hydrodash = 959,
 		jetjump = 968,
 		instacharge = 970,
+		chargebooster2instachargeLimit = 2,
 		attractor = 972,
 		
 		nanoshield = 962,
@@ -89,6 +90,21 @@ function EnumsInitialise(){
 		xdrill = 973
 	}
 	
+	enum bulletDamages
+	{
+		normal = 1,
+		chargeUC = 1,
+		chargeC = 20,
+		spreadUC = 2,
+		spreadC = 25,
+		burnUC = 3,
+		burnC = 30,
+		homingUC = 4,
+		homingC = 35,
+		shieldUC = 5,
+		shieldC = 40
+	}
+	
 	enum itemTotals
 	{
 		mainsector = 1,
@@ -100,6 +116,17 @@ function EnumsInitialise(){
 		vaults = 1,
 		systemcore = 1,
 		mothership = 1
+	}
+	
+	enum specialRedblockerIDs 
+	{
+		mainsectorBridge = 2,
+		mainsectorYellowDoor = 11,
+		mainsectorXGA_1_0_plug = 866,
+		sector3BOXautohack = 45,
+		sector3BOXspikewall = 50,
+		sector1FalseWall_1 = 155,
+		sector1FalseWall_2 = 160
 	}
 
 }

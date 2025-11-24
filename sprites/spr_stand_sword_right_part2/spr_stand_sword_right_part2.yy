@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_stand_sword_right_part2",
   "bboxMode":0,
   "bbox_bottom":67,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e28bdb22-1912-4b4c-a458-cb5c4d75ef9f","name":"e28bdb22-1912-4b4c-a458-cb5c4d75ef9f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d0d98419-1206-4a8f-b748-2e3299b647e3","name":"d0d98419-1206-4a8f-b748-2e3299b647e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"19b9dad0-925e-40dc-aeea-d30893657ced","name":"19b9dad0-925e-40dc-aeea-d30893657ced","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"edc610bd-96ec-45c6-819c-9396ff9ef1de","name":"edc610bd-96ec-45c6-819c-9396ff9ef1de","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0c503a4a-f5e0-4985-af57-26b1a02fc56a","name":"0c503a4a-f5e0-4985-af57-26b1a02fc56a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e28bdb22-1912-4b4c-a458-cb5c4d75ef9f","name":"e28bdb22-1912-4b4c-a458-cb5c4d75ef9f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d0d98419-1206-4a8f-b748-2e3299b647e3","name":"d0d98419-1206-4a8f-b748-2e3299b647e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"19b9dad0-925e-40dc-aeea-d30893657ced","name":"19b9dad0-925e-40dc-aeea-d30893657ced","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"edc610bd-96ec-45c6-819c-9396ff9ef1de","name":"edc610bd-96ec-45c6-819c-9396ff9ef1de","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0c503a4a-f5e0-4985-af57-26b1a02fc56a","name":"0c503a4a-f5e0-4985-af57-26b1a02fc56a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -72,21 +72,11 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e28bdb22-1912-4b4c-a458-cb5c4d75ef9f","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7208f403-b3d7-44a1-a2db-98f50f8f9a2a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0d98419-1206-4a8f-b748-2e3299b647e3","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3471399c-3e53-4d1f-a825-4a2d8397ecbc","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"19b9dad0-925e-40dc-aeea-d30893657ced","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a2f8dc5c-4b92-4df2-b910-7f6174a290a0","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"edc610bd-96ec-45c6-819c-9396ff9ef1de","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dc283e31-6dbe-4044-a96e-793482cb784a","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0c503a4a-f5e0-4985-af57-26b1a02fc56a","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"493b283a-3bea-4fa8-875d-2e7d91e802a9","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e28bdb22-1912-4b4c-a458-cb5c4d75ef9f","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7208f403-b3d7-44a1-a2db-98f50f8f9a2a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0d98419-1206-4a8f-b748-2e3299b647e3","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3471399c-3e53-4d1f-a825-4a2d8397ecbc","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"19b9dad0-925e-40dc-aeea-d30893657ced","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a2f8dc5c-4b92-4df2-b910-7f6174a290a0","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"edc610bd-96ec-45c6-819c-9396ff9ef1de","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"dc283e31-6dbe-4044-a96e-793482cb784a","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0c503a4a-f5e0-4985-af57-26b1a02fc56a","path":"sprites/spr_stand_sword_right_part2/spr_stand_sword_right_part2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"493b283a-3bea-4fa8-875d-2e7d91e802a9","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

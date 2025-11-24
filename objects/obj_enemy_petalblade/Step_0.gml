@@ -113,10 +113,12 @@ if (hp <= 0)
 	}
 	else sword_hurtenemycode_item()
 	
+	audio_stop_sound(snd_grassrustle)
+	
 	instance_destroy();
 }
 
 if (hp > 0)
 {
-State_machine_execute();
+	State_machine_execute();
 }

@@ -8,7 +8,11 @@ vspd = 0;
 facing = -1;
 drillnow = 0;
 
-hp = 2000000;
+if (global.mode_casual == 0)
+{
+	hp = 10000;
+}
+else hp = 10000;
 
 sword_deadswitch = 0
 sword_spriteindex = -1
@@ -27,6 +31,7 @@ invincible = 0
 flashwhite_limit = 0;
 
 snd = -1
+sndTimer = false;
 BossblockerID = 3
 
 prep_now = 0;
@@ -36,8 +41,12 @@ shoottimer = 0
 piercetimer = 0
 vinetimer = 0
 attack4timer = 0
+CvomitTimer = 0;
 
-sndTimer = false;
+attackLimit = false;
+imageIndexLimit = 0;
+
+
 
 spintimer = 0;
 shinetimer = 0;

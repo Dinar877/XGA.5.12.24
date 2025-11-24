@@ -25,7 +25,7 @@ if (instance_exists(obj_texty_generic_shorter))
 
 if (new1 == 0)
 {
-	text = " I HOPE THIS THING DOESN'T CAUSE TROUBLE FOR US...WOULDN'T WANT TO GO WITHOUT OUR FOOD RATIONS FOR THE NEXT 2 DAYS.";
+	text = " WE'RE RUNNING LOW ON THE FOSSILIZED ZAVAK DNA. HOPEFULLY THIS ONE DOESN'T BREAK DOWN LIKE THE OTHERS.";
 	new1 = 1;
 	Text(text,spd,self)
 	//irrelevant

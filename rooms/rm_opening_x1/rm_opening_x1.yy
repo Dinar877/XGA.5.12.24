@@ -20,8 +20,8 @@
   ],
   "name":"rm_opening_x1",
   "parent":{
-    "name":"unused",
-    "path":"folders/Rooms/unused.yy",
+    "name":"Unused",
+    "path":"folders/Rooms/Unused.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

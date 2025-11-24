@@ -38,7 +38,7 @@ if (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2+1 < t
 else time2 = 0;
 
 if ((string_char_at(text,floor(time)+message_pos-1) == ".") or (string_char_at(text,floor(time)+message_pos-1) == ",") or (string_char_at(text,floor(time)+message_pos-1) == "!"))
- && (floor(time)+message_pos+time2+1 < text_length) && (midpause <= 0)
+&& (floor(time)+message_pos+time2+1 < text_length) && (midpause <= 0)
 {
 	midpause = 1;
 }
@@ -65,7 +65,7 @@ if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) or (stringy ==
 		{
 			alpha = 1;
 			text = other.text;
-			message_pos += other.time + other.message_pos;
+			message_pos += floor(other.time + other.message_pos);
 			spawnerID = other.spawnerID
 			markerX = other.markerX
 			markerY = other.markerY
@@ -82,7 +82,7 @@ if (((stringy == " ") && (time2 > 0) && (floor(time)+time2 > 46)) or (stringy ==
 		spd = 0;
 		with(spawnerID)
 		{
-			time = (other.time+other.message_pos)
+			time = floor(other.time+other.message_pos)
 		}
 	}
 }

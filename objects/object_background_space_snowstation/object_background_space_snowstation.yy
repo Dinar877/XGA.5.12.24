@@ -8,8 +8,8 @@
   "name":"object_background_space_snowstation",
   "overriddenProperties":[],
   "parent":{
-    "name":"background_objects",
-    "path":"folders/Objects/background_objects.yy",
+    "name":"Sector 1",
+    "path":"folders/Objects/background_objects/Sector 1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

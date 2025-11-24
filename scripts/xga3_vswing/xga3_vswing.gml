@@ -1,10 +1,10 @@
 function xga3_vswing() {
 	if (sndTimer == false)
 	{
-		if (!audio_is_playing(snd_alien_talking))
+		if (!audio_is_playing(snd_xga3_vswing_roar))
 		{
 			sndTimer = true;
-			audio_stop_sound(snd_alien_talking);
+			audio_stop_sound(snd_xga3_vswing_roar);
 				
 			if (sprite_index = spr_xga3_idle_left)
 			{
@@ -43,48 +43,24 @@ function xga3_vswing() {
 			if (sprite_index = spr_xga3_vswing_left)
 			{
 				instance_create_depth(x-260,638,depth-1,obj_enemy_bigexplosion)
-			
-				var randy = random_range(200,300)
-			
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
+				
+				//spawn rocks imact visual effect
+				while (instance_number(obj_redtemple_piece) < 16)
+				{
+					var randy = random_range(200,300)
+					instance_create_depth(x-randy,632,depth-1,obj_redtemple_piece)
+				}
 			}
 			else if (sprite_index = spr_xga3_vswing_right)
 			{
 				instance_create_depth(x+200,638,depth-1,obj_enemy_bigexplosion)
 			
-				var randy = random_range(170,230)
-			
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
-				instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece)
+				//spawn rocks imact visual effect
+				while (instance_number(obj_redtemple_piece) < 16)
+				{
+					var randy = random_range(170,230);
+					instance_create_depth(x+randy,632,depth-1,obj_redtemple_piece);
+				}
 			}
 		}
 	

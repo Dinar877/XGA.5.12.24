@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_xga3_vswing_roar",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.775601,
+  "exportDir":"",
+  "name":"snd_xga3_vswing_roar",
+  "parent":{
+    "name":"xga3",
+    "path":"folders/Music+SFX/SFX/xga/xga3.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_xga3_vswing_roar.mp3",
+  "volume":1.0,
+}

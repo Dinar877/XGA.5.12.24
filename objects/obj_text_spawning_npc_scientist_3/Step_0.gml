@@ -25,10 +25,10 @@ if (instance_exists(obj_texty_generic_shorter))
 
 if (new1 == 0)
 {
-	text = " YOU'D BETTER NOT CAUSE TROUBLE FOR US! I'LL SHUT YOU DOWN MYSELF IF SO...PERMANENTLY.";
+	text = " ...I'M HUNGRY. I DON'T GET PAID ENOUGH FOR THIS SHIT.";
 	new1 = 1;
 	Text(text,spd,self)
 	//irrelevant
-	message3 = " WEAKLING";
+	message3 = " BRIAN SMITH";
 	Text_readit2_generic(message3,spd);
 }

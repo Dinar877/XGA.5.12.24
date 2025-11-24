@@ -8,8 +8,8 @@
   "name":"object_bg_pipes",
   "overriddenProperties":[],
   "parent":{
-    "name":"background_objects",
-    "path":"folders/Objects/background_objects.yy",
+    "name":"Sector 3",
+    "path":"folders/Objects/background_objects/Sector 3.yy",
   },
   "parentObjectId":null,
   "persistent":false,

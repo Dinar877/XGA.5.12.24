@@ -26,7 +26,7 @@ if (instance_exists(obj_texty_generic_shorter))
 if (new1 == 0)
 {
 	new1 = 1;
-	tex = instance_create_depth(x+10,y-5,id.depth-1,obj_texty_generic_shorter);
+	tex = instance_create_depth(x+1,y,id.depth-1,obj_texty_generic_shorter);
 
 	with(tex)
 	{

@@ -7,7 +7,7 @@ or (global.upgrade_process = 1)
 	exit;	
 }
 
-if (global.doors_redblocker[BossblockerID] > 0)
+if (global.bossblockers[bossblockers.flowey] > 0)
 {	
 	instance_destroy()
 	exit;

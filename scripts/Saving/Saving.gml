@@ -57,34 +57,34 @@ function Saving(argument0) {
 
 	//used for later with destroying already gotten upgrades
 	for ( n = 0; n < 999; n += 1)
+	{
+		if (global.upgradecollected[n] > 0)
 		{
-			if (global.upgradecollected[n] > 0)
-			{
-				ds_map_add(_map,"Global.Variables.upgrades" + string(n), 1);
-			}
-			else if (global.upgradecollected[n] <= 0)
-			{
-				ds_map_add(_map,"Global.Variables.upgrades" + string(n), 0);
-			}
-		
-			if (global.upgradeID_room[n] > 0)
-			{
-				ds_map_add(_map,"Global.Variables.upgrades.room" + string(n), global.upgradeID_room[n]);
-			}
-			else if (global.upgradeID_room[n] <= 0)
-			{
-				ds_map_add(_map,"Global.Variables.upgrades.room" + string(n), 0);
-			}
-			
-			if (global.upgradetrue[n] > 0)
-			{
-				ds_map_add(_map,"Global.Variables.upgrades.true" + string(n), global.upgradetrue[n]);
-			}
-			else if (global.upgradetrue[n] <= 0)
-			{
-				ds_map_add(_map,"Global.Variables.upgrades.true" + string(n), 0);
-			}
+			ds_map_add(_map,"Global.Variables.upgrades" + string(n), 1);
 		}
+		else if (global.upgradecollected[n] <= 0)
+		{
+			ds_map_add(_map,"Global.Variables.upgrades" + string(n), 0);
+		}
+		
+		if (global.upgradeID_room[n] > 0)
+		{
+			ds_map_add(_map,"Global.Variables.upgrades.room" + string(n), global.upgradeID_room[n]);
+		}
+		else if (global.upgradeID_room[n] <= 0)
+		{
+			ds_map_add(_map,"Global.Variables.upgrades.room" + string(n), 0);
+		}
+			
+		if (global.upgradetrue[n] > 0)
+		{
+			ds_map_add(_map,"Global.Variables.upgrades.true" + string(n), global.upgradetrue[n]);
+		}
+		else if (global.upgradetrue[n] <= 0)
+		{
+			ds_map_add(_map,"Global.Variables.upgrades.true" + string(n), 0);
+		}
+	}
 		
 		
 

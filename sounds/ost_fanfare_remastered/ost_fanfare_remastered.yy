@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"ost_fanfare_remastered",
   "audioGroupId":{
     "name":"audiogroup_music",
     "path":"audiogroups/audiogroup_music",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":158.09413,
+  "exportDir":"",
   "name":"ost_fanfare_remastered",
   "parent":{
     "name":"Ciri_remastered_soundtrack",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"ost_fanfare_remastered.mp3",
-  "type":0,
   "volume":0.6,
 }

@@ -8,8 +8,8 @@
   "name":"obj_bg_sector4_lockdown",
   "overriddenProperties":[],
   "parent":{
-    "name":"background_objects",
-    "path":"folders/Objects/background_objects.yy",
+    "name":"Sector 4",
+    "path":"folders/Objects/background_objects/Sector 4.yy",
   },
   "parentObjectId":null,
   "persistent":false,

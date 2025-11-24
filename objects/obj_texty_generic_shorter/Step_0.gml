@@ -6,7 +6,7 @@ Gamepad_variables()
 switch2 = 0
 
 //fade in text
-if (alpha < 1)
+if (alpha < 1) && (spd > 0)
 {
 	alpha += spd/10;
 }
@@ -30,6 +30,7 @@ stringy2 = string_char_at(text,floor(time)+time2+message_pos+1); //can get wrong
 
 //check if need to put next word on new line (I took out the "+1"s)
 if (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2 < text_length) && (time2 == 0) //don't trigger while loop unless time2 starts from 0
+&& (spd > 0) //don't trigger if already at the end of a full line
 {
 	while (stringy == " ") && (stringy2 != " ") && (floor(time)+message_pos+time2 < text_length)
 	{
@@ -73,7 +74,8 @@ or ((stringy == ".") && (floor(time)+time2 > 46))
 or ((stringy == "!") && (floor(time)+time2 > 46))
 or (stringy == "\n") //newline function inside text
 or ((stringy != " ") && (stringy != ".") && (stringy != ",") && (stringy != "\n") && (floor(time) == 46) && (time2 == 0))) //NEW (27/5/25) - finishing on a letter with 'time + time2 = 46'
-&& (switch1 = 0) && (floor(time)+message_pos+time2 <= text_length) //BH issue. When text amount is equal to full message, line break fails.
+&& (switch1 = 0) 
+&& (floor(time)+message_pos+time2 <= text_length) //BH issue. When text amount is equal to full message, line break fails.
 {
 		//if landed on 46th character and we need the next line to go one character forward into an empty space
 		if (stringy != " ") && (stringy != ".") && (stringy != ",") && (stringy != "\n") && (floor(time) == 46) && (time2 == 0)
@@ -82,36 +84,62 @@ or ((stringy != " ") && (stringy != ".") && (stringy != ",") && (stringy != "\n"
 			time++;
 		}
 		
-		strn = string_copy(text,time+message_pos,time2);
+		strn = string_copy(text,floor(time)+message_pos,time2);
 		strn_length = string_length(strn);
 		switch1 = 1
 	
-		tex = instance_create_depth(id.x,id.y+12,id.depth-5,obj_texty_generic_shorter);
-
-		with(tex)
+		if (instance_number(obj_texty_generic_shorter) < 3)
 		{
-			alpha = 1;
-			text = other.text;
-			spd = other.spd
-			message_pos += other.time + other.message_pos;
-			spawnerID = other.spawnerID
-			pauser = 0;
-			string_positionY = 0;
-			time = 0;
-			text_length = string_length(text)
+			tex = instance_create_depth(id.x,id.y+12,id.depth-5,obj_texty_generic_shorter);
+
+			with(tex)
+			{
+				alpha = 1;
+				text = other.text;
+				spd = other.spd
+				message_pos += floor(other.time) + floor(other.message_pos);
+				spawnerID = other.spawnerID
+				pauser = 0;
+				string_positionY = 0;
+				time = 0;
+				text_length = string_length(text)
 					
-			//for BH text
-			newTextAvailable = other.newTextAvailable;
-			BH = other.BH;
-		}
+				//for BH text
+				newTextAvailable = other.newTextAvailable;
+				BH = other.BH;
+			}
 		
-		spd = 0;
+			spd = 0;
+		}
+		else if (instance_number(obj_texty_generic_shorter) >= 3)
+		{
+			pauser = 1;
+			spd = 0;
+			with(spawnerID)
+			{
+				time = floor(other.time) + floor(other.message_pos);
+			}
+			
+			//spawn text arrow
+			if (instance_exists(obj_camera))
+			{
+				var inst_arrow = instance_create_depth(obj_camera.x+130, obj_camera.y-23, depth-5, obj_text_spawning_arrow)
+			
+				with(inst_arrow)
+				{
+					textyID = other.object_index;
+					spawnerID = other.spawnerID;
+					message_pos = floor(other.time);
+				}
+			}
+		}
 }
 
 //stop new text when at maximum for current line
 if (time >= 46) && (pauser == 0) && (stringy != " ")
 {
 	pauser = 1;
+	spd = 0;
 }
 
 
@@ -119,9 +147,53 @@ if (time >= 46) && (pauser == 0) && (stringy != " ")
 if (enter_pressed) && (pauser_end == 0)
 && (room != rm_startstation) && (room != rm_opening_x1) && (room != rm_midgame_cutscsne_room)
 && (!instance_exists(obj_introtext_arrowender_destroyallnow))
-&& (!instance_exists(obj_text_spawning_arrow))
 {
 	pauser_end = 1;	
+	spd = 0;
+	
+	if (instance_exists(obj_text_spawning_arrow))
+	{
+		with(obj_text_spawning_arrow)
+		{
+			instance_destroy()
+		}
+	}
+	if (instance_exists(obj_text_spawning_arrow_ender_any_trueend))
+		{
+			with(obj_text_spawning_arrow_ender_any_trueend)
+			{
+				instance_destroy()
+			}
+		}
+	if (instance_exists(obj_text_spawning_arrow_preender_any))
+		{
+			with(obj_text_spawning_arrow_preender_any)
+			{
+				instance_destroy()
+			}
+		}
+	if (instance_exists(obj_text_spawning_arrow_preender_any_any))
+		{
+			with(obj_text_spawning_arrow_preender_any_any)
+			{
+				instance_destroy()
+			}
+		}
+	if (instance_exists(obj_text_spawning_arrow_ender_any_trueend))
+		{
+			with(obj_text_spawning_arrow_ender_any_trueend)
+			{
+				instance_destroy()
+			}
+		}
+	if (instance_exists(obj_text_spawning_arrow_upgrade_ender))
+		{
+			with(obj_text_spawning_arrow_upgrade_ender)
+			{
+				instance_destroy()
+			}
+		}
+	
 	instance_create_depth(x+278,y+5,id.depth-5,obj_introtext_arrowender_destroyallnow)
 }
 
@@ -141,6 +213,8 @@ if (floor(time)+message_pos >= text_length) && (text_length > 25)
 	{
 		instance_create_depth(x+120,y+36,id.depth-5,obj_text_spawning_arrow)
 	}
+	
+	spd = 0;
 }
 
 

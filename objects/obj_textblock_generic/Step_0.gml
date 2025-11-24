@@ -416,6 +416,9 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 				window_set_size(320,180);
 				surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 				global.screenScale = 0;
+				
+				//reenables mouse cursor if previously disabled
+				window_set_cursor(cr_default);
 			}
 		}
 		else if (r_640x360 > 0)
@@ -428,6 +431,9 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 				window_set_size(640,360);
 				surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 				global.screenScale = 2;
+				
+				//reenables mouse cursor if previously disabled
+				window_set_cursor(cr_default);
 			}
 		}
 		else if (r_960x540 > 0)
@@ -440,6 +446,9 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 				window_set_size(960,540);
 				surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 				global.screenScale = 4;
+				
+				//reenables mouse cursor if previously disabled
+				window_set_cursor(cr_default);
 			}
 		}
 		else if (r_1366x768 > 0)
@@ -452,6 +461,9 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 				window_set_size(1366,768);
 				surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 				global.screenScale = 6;
+				
+				//reenables mouse cursor if previously disabled
+				window_set_cursor(cr_default);
 			}
 		}
 		else if (r_1920x1080 > 0)
@@ -464,6 +476,9 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 				window_set_size(1920,1080);
 				surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 				global.screenScale = 8;
+				
+				//reenables mouse cursor if previously disabled
+				window_set_cursor(cr_default);
 			}
 		}
 		else if (r_fullscrn > 0)
@@ -478,6 +493,9 @@ if (selected > 0) && (delay >= 1) && (jump_pressed)
 					window_set_fullscreen(true)
 					surface_resize(application_surface, __view_get( e__VW.WView, 0 ), __view_get( e__VW.HView, 0 ));
 					global.screenScale = 10;
+					
+					//disables mouse cursor
+					window_set_cursor(cr_none);
 				}		
 			}
 		}

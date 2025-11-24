@@ -8,8 +8,8 @@
   "name":"obj_bg_mothership_crystals",
   "overriddenProperties":[],
   "parent":{
-    "name":"background_objects",
-    "path":"folders/Objects/background_objects.yy",
+    "name":"System Core",
+    "path":"folders/Objects/background_objects/Mother Ship/System Core.yy",
   },
   "parentObjectId":null,
   "persistent":false,

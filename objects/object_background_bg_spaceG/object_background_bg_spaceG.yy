@@ -8,8 +8,8 @@
   "name":"object_background_bg_spaceG",
   "overriddenProperties":[],
   "parent":{
-    "name":"background_objects",
-    "path":"folders/Objects/background_objects.yy",
+    "name":"Main sector",
+    "path":"folders/Objects/background_objects/Main sector.yy",
   },
   "parentObjectId":null,
   "persistent":false,

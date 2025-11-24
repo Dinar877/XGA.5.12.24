@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_whitesoldier_bullet_shield",
   "bboxMode":0,
   "bbox_bottom":9,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"14702583-7b71-4151-bf76-38f37eac8230","name":"14702583-7b71-4151-bf76-38f37eac8230","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"50d60fa9-9c92-43b9-8387-ccfa54d9e56e","name":"50d60fa9-9c92-43b9-8387-ccfa54d9e56e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"14702583-7b71-4151-bf76-38f37eac8230","name":"14702583-7b71-4151-bf76-38f37eac8230","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"50d60fa9-9c92-43b9-8387-ccfa54d9e56e","name":"50d60fa9-9c92-43b9-8387-ccfa54d9e56e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,12 +71,8 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"14702583-7b71-4151-bf76-38f37eac8230","path":"sprites/spr_whitesoldier_bullet_shield/spr_whitesoldier_bullet_shield.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"69ea8700-f9e2-43cb-a46d-5223f2de9fe9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"50d60fa9-9c92-43b9-8387-ccfa54d9e56e","path":"sprites/spr_whitesoldier_bullet_shield/spr_whitesoldier_bullet_shield.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"31df2609-0ea5-45cf-9fa5-32d30f25844b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"14702583-7b71-4151-bf76-38f37eac8230","path":"sprites/spr_whitesoldier_bullet_shield/spr_whitesoldier_bullet_shield.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"69ea8700-f9e2-43cb-a46d-5223f2de9fe9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"50d60fa9-9c92-43b9-8387-ccfa54d9e56e","path":"sprites/spr_whitesoldier_bullet_shield/spr_whitesoldier_bullet_shield.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"31df2609-0ea5-45cf-9fa5-32d30f25844b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

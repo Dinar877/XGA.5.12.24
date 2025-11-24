@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_xga3_nanoball_explode",
   "bboxMode":0,
   "bbox_bottom":98,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"69466237-d4d0-445f-982f-7d3aeb4faa49","name":"69466237-d4d0-445f-982f-7d3aeb4faa49","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ddf9fc12-a673-44e5-892e-cdf3fdb07708","name":"ddf9fc12-a673-44e5-892e-cdf3fdb07708","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ae4c203b-4710-4119-9007-a5e14696d6ba","name":"ae4c203b-4710-4119-9007-a5e14696d6ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1bf5a2a5-c75c-4a26-95d9-636699534a20","name":"1bf5a2a5-c75c-4a26-95d9-636699534a20","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"66aa74f8-7ed6-4ac6-9f87-87d1a44f000c","name":"66aa74f8-7ed6-4ac6-9f87-87d1a44f000c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"69466237-d4d0-445f-982f-7d3aeb4faa49","name":"69466237-d4d0-445f-982f-7d3aeb4faa49","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ddf9fc12-a673-44e5-892e-cdf3fdb07708","name":"ddf9fc12-a673-44e5-892e-cdf3fdb07708","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ae4c203b-4710-4119-9007-a5e14696d6ba","name":"ae4c203b-4710-4119-9007-a5e14696d6ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1bf5a2a5-c75c-4a26-95d9-636699534a20","name":"1bf5a2a5-c75c-4a26-95d9-636699534a20","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"66aa74f8-7ed6-4ac6-9f87-87d1a44f000c","name":"66aa74f8-7ed6-4ac6-9f87-87d1a44f000c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"vomit attacks",
-    "path":"folders/Sprites/Bosses/xga 3.0/vomit attacks.yy",
+    "name":"Upvomit",
+    "path":"folders/Sprites/Bosses/xga 3.0/vomit attacks/Upvomit.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -74,21 +74,11 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"69466237-d4d0-445f-982f-7d3aeb4faa49","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b367dea3-b524-463a-a0f9-c6dc32f2a034","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ddf9fc12-a673-44e5-892e-cdf3fdb07708","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f449e3f8-4100-47e2-a192-7c492de1e087","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae4c203b-4710-4119-9007-a5e14696d6ba","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"674796cc-061f-407a-a0fb-7fdc3d4f3155","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1bf5a2a5-c75c-4a26-95d9-636699534a20","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8f30da9a-629f-4739-89a0-089e03336005","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66aa74f8-7ed6-4ac6-9f87-87d1a44f000c","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ea433658-f73b-46c4-973a-25bc95fc74b4","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"69466237-d4d0-445f-982f-7d3aeb4faa49","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b367dea3-b524-463a-a0f9-c6dc32f2a034","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ddf9fc12-a673-44e5-892e-cdf3fdb07708","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f449e3f8-4100-47e2-a192-7c492de1e087","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae4c203b-4710-4119-9007-a5e14696d6ba","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"674796cc-061f-407a-a0fb-7fdc3d4f3155","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1bf5a2a5-c75c-4a26-95d9-636699534a20","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8f30da9a-629f-4739-89a0-089e03336005","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"66aa74f8-7ed6-4ac6-9f87-87d1a44f000c","path":"sprites/spr_xga3_nanoball_explode/spr_xga3_nanoball_explode.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ea433658-f73b-46c4-973a-25bc95fc74b4","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

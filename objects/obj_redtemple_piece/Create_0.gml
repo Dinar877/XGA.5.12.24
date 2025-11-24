@@ -1,4 +1,5 @@
 decider = round(random_range(0,3))
+//decider = 1
 
 if (decider == 0)
 {
@@ -19,18 +20,8 @@ if (decider == 3)
 
 whichBlocker = 0;
 
-image_angle = round(random_range(image_angle = 50,image_angle = -50));
+layer = layer_get_id("Inst_level_0");
 
-direction1 = sign(random_range(1,-1))
-direction2 = -1
-adder1 = 0;
-adder2 = 0;
-hit = 0;
-hit2 = 0;
-timer = 0;
+image_angle = round(random_range(image_angle = 0,image_angle = 360));
 
-startx = 0
-starty = random_range(4,14)
-
-doorpiece_surface = -1
-door_type = 0
+Debris_init(0,round(random_range(-5,-14)),0.05, 10)

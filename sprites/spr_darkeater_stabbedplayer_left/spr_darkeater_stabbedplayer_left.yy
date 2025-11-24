@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_darkeater_stabbedplayer_left",
   "bboxMode":0,
   "bbox_bottom":129,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"bd7bdab5-468a-4821-92fc-64ed40a6cedb","name":"bd7bdab5-468a-4821-92fc-64ed40a6cedb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ec1d1f54-fc12-402f-bb96-48f0d5cb9893","name":"ec1d1f54-fc12-402f-bb96-48f0d5cb9893","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"176d8c5a-88d1-4dda-ae5d-105b637d9ac2","name":"176d8c5a-88d1-4dda-ae5d-105b637d9ac2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"22619cb9-2c89-4d35-96a4-06b127f1745d","name":"22619cb9-2c89-4d35-96a4-06b127f1745d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bd7bdab5-468a-4821-92fc-64ed40a6cedb","name":"bd7bdab5-468a-4821-92fc-64ed40a6cedb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ec1d1f54-fc12-402f-bb96-48f0d5cb9893","name":"ec1d1f54-fc12-402f-bb96-48f0d5cb9893","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"176d8c5a-88d1-4dda-ae5d-105b637d9ac2","name":"176d8c5a-88d1-4dda-ae5d-105b637d9ac2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"22619cb9-2c89-4d35-96a4-06b127f1745d","name":"22619cb9-2c89-4d35-96a4-06b127f1745d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,18 +73,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd7bdab5-468a-4821-92fc-64ed40a6cedb","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d4737627-87dd-428a-acd3-683c3ab0f03f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ec1d1f54-fc12-402f-bb96-48f0d5cb9893","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"72a76824-95c2-4f74-9726-e0840336a6c9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"176d8c5a-88d1-4dda-ae5d-105b637d9ac2","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3aa3dac8-2154-453a-ad3b-d0816f6a7128","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"22619cb9-2c89-4d35-96a4-06b127f1745d","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"63750a77-c0a4-4802-bc50-4670618b9c89","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd7bdab5-468a-4821-92fc-64ed40a6cedb","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d4737627-87dd-428a-acd3-683c3ab0f03f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ec1d1f54-fc12-402f-bb96-48f0d5cb9893","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"72a76824-95c2-4f74-9726-e0840336a6c9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"176d8c5a-88d1-4dda-ae5d-105b637d9ac2","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3aa3dac8-2154-453a-ad3b-d0816f6a7128","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"22619cb9-2c89-4d35-96a4-06b127f1745d","path":"sprites/spr_darkeater_stabbedplayer_left/spr_darkeater_stabbedplayer_left.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"63750a77-c0a4-4802-bc50-4670618b9c89","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_stand_newsword_left_part1",
   "bboxMode":0,
   "bbox_bottom":70,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7889964d-a8d9-4569-8de4-465f06593c63","name":"7889964d-a8d9-4569-8de4-465f06593c63","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"467d5517-38f9-4a09-94ff-f972371cefeb","name":"467d5517-38f9-4a09-94ff-f972371cefeb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5e93deea-e60e-425c-b124-6ecdf40d01df","name":"5e93deea-e60e-425c-b124-6ecdf40d01df","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0007bc98-252d-48f1-8888-9e50c4fa023d","name":"0007bc98-252d-48f1-8888-9e50c4fa023d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0f58a5d8-2e35-4a61-9fef-53b4f30f98c0","name":"0f58a5d8-2e35-4a61-9fef-53b4f30f98c0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c342bd82-c09b-4508-bf3f-9719858b527f","name":"c342bd82-c09b-4508-bf3f-9719858b527f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"50b75ae7-cc74-4296-9384-b16cdc54a647","name":"50b75ae7-cc74-4296-9384-b16cdc54a647","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"033c04a6-2f06-4f27-9636-74333697f5af","name":"033c04a6-2f06-4f27-9636-74333697f5af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"93504860-7a07-4a46-aec8-e87e66f43cd6","name":"93504860-7a07-4a46-aec8-e87e66f43cd6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ff4f809d-53c6-4b76-8a2c-94e2d56b498b","name":"ff4f809d-53c6-4b76-8a2c-94e2d56b498b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7889964d-a8d9-4569-8de4-465f06593c63","name":"7889964d-a8d9-4569-8de4-465f06593c63","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"467d5517-38f9-4a09-94ff-f972371cefeb","name":"467d5517-38f9-4a09-94ff-f972371cefeb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5e93deea-e60e-425c-b124-6ecdf40d01df","name":"5e93deea-e60e-425c-b124-6ecdf40d01df","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0007bc98-252d-48f1-8888-9e50c4fa023d","name":"0007bc98-252d-48f1-8888-9e50c4fa023d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0f58a5d8-2e35-4a61-9fef-53b4f30f98c0","name":"0f58a5d8-2e35-4a61-9fef-53b4f30f98c0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c342bd82-c09b-4508-bf3f-9719858b527f","name":"c342bd82-c09b-4508-bf3f-9719858b527f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"50b75ae7-cc74-4296-9384-b16cdc54a647","name":"50b75ae7-cc74-4296-9384-b16cdc54a647","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"033c04a6-2f06-4f27-9636-74333697f5af","name":"033c04a6-2f06-4f27-9636-74333697f5af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"93504860-7a07-4a46-aec8-e87e66f43cd6","name":"93504860-7a07-4a46-aec8-e87e66f43cd6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ff4f809d-53c6-4b76-8a2c-94e2d56b498b","name":"ff4f809d-53c6-4b76-8a2c-94e2d56b498b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -77,36 +77,16 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7889964d-a8d9-4569-8de4-465f06593c63","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"21c90783-016e-4d1a-a763-12e7f0243b4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"467d5517-38f9-4a09-94ff-f972371cefeb","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"83d3710b-de1c-42cf-8805-1572b6ddf288","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e93deea-e60e-425c-b124-6ecdf40d01df","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dc6d8a5d-113c-4103-807c-33bff4df2060","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0007bc98-252d-48f1-8888-9e50c4fa023d","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1ea94188-06a5-4ac0-87b1-631aabfcee2e","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0f58a5d8-2e35-4a61-9fef-53b4f30f98c0","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e844ada1-2f87-416f-a303-32009e0eb85e","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c342bd82-c09b-4508-bf3f-9719858b527f","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5d6c8f8d-37b7-4489-827b-1e77f0c7e6d1","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"50b75ae7-cc74-4296-9384-b16cdc54a647","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"73d343f0-97c8-42b4-8ddd-4b236b7cdb1e","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"033c04a6-2f06-4f27-9636-74333697f5af","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c0d06c3f-55e2-4bec-8730-1330783172be","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"93504860-7a07-4a46-aec8-e87e66f43cd6","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f5c6ee5f-407f-4ae5-a191-e4ff17384c71","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ff4f809d-53c6-4b76-8a2c-94e2d56b498b","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6620170b-150c-4399-84c1-5f1f31a36bc9","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7889964d-a8d9-4569-8de4-465f06593c63","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"21c90783-016e-4d1a-a763-12e7f0243b4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"467d5517-38f9-4a09-94ff-f972371cefeb","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"83d3710b-de1c-42cf-8805-1572b6ddf288","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e93deea-e60e-425c-b124-6ecdf40d01df","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"dc6d8a5d-113c-4103-807c-33bff4df2060","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0007bc98-252d-48f1-8888-9e50c4fa023d","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1ea94188-06a5-4ac0-87b1-631aabfcee2e","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0f58a5d8-2e35-4a61-9fef-53b4f30f98c0","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e844ada1-2f87-416f-a303-32009e0eb85e","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c342bd82-c09b-4508-bf3f-9719858b527f","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5d6c8f8d-37b7-4489-827b-1e77f0c7e6d1","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"50b75ae7-cc74-4296-9384-b16cdc54a647","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"73d343f0-97c8-42b4-8ddd-4b236b7cdb1e","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"033c04a6-2f06-4f27-9636-74333697f5af","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c0d06c3f-55e2-4bec-8730-1330783172be","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"93504860-7a07-4a46-aec8-e87e66f43cd6","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f5c6ee5f-407f-4ae5-a191-e4ff17384c71","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ff4f809d-53c6-4b76-8a2c-94e2d56b498b","path":"sprites/spr_stand_newsword_left_part1/spr_stand_newsword_left_part1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6620170b-150c-4399-84c1-5f1f31a36bc9","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

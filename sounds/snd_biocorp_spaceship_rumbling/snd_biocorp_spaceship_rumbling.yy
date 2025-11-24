@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_biocorp_spaceship_rumbling",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":246.81088,
+  "exportDir":"",
   "name":"snd_biocorp_spaceship_rumbling",
   "parent":{
     "name":"cutscenes",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_biocorp_spaceship_rumbling.wav",
-  "type":0,
   "volume":1.0,
 }

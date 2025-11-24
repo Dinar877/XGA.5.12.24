@@ -56,7 +56,7 @@ if (instance_exists(obj_camera_intro)) && (room = rm_trueintro_opening_TEXT)
 	{
 		global.xleft = 0
 		global.yup = 0
-		text = " The Zavak were a race of human-like aliens, where the leaders were hellbent on conquest and warfare across the universe. In their lust for power they created the corruption relic, which transformed matter around itself into super powered copies of the originals, and they used this to dominate many planets as they expanded their territory. However, their plan backfired."
+		text = " The Zavak were a race of human-like aliens, where the leaders were hellbent on conquest and warfare across the universe. Driven by excessive greed and hubris, they created the corruption relic, which transformed matter around itself into super powered copies of the originals, and they used this to dominate many planets as they expanded their territory. However, their plan backfired."
 		new1 = 1;
 		//new_cutscene = 1
 		Text_generic1(text,spd,self,obj_texty_TRUEgeneric_nonmarker)
@@ -74,7 +74,7 @@ if (new1 == 1) && (room = rm_trueintro_opening_TEXT) && (timer >= 1) && (new_cut
 		{
 			global.xleft = 0
 			global.yup = 0
-			text = " The same relic that had empowered their galactic conquests started turning their own soldiers and machines against them, and into mutated abominations with no minds of their own, other than to kill and spread the corruption given to them. The Zavak were arrogant and saw themselves as gods, so they had never bothered to prepare beforehand for serious threats."
+			text = " The same relic that had empowered their galactic conquests started turning their own soldiers and machines against them, and into mutated abominations with no minds of their own, other than to kill and spread the corruption given to them. The Zavak were arrogant and saw themselves as gods, so they had never bothered to prepare beforehand for serious threats. They were wiped out."
 			new1 = 1;
 			Text_generic1(text,spd,self,obj_texty_TRUEgeneric_nonmarker)
 		}
@@ -89,7 +89,7 @@ if (new1 == 1) && (room = rm_trueintro_opening_TEXT) && (timer >= 1) && (new_cut
 		{
 			global.xleft = 0
 			global.yup = 0
-			text = " Hundreds of years passed. BIO-CORP, a bio weapons private military company, found the relic and began trying to use its powers for themselves. They managed to use a spare cyborg they were developing to draw out the corruption from the relic into it."
+			text = " Hundreds of years passed. BIO-CORP, a bio weapons private military company, found the relic and began trying to use its powers for themselves. They've been creating many different life forms in an attempt to control the corruption effects. Recently they've had success with special cyborgs created from fossilized Zavak DNA combined with next gen military grade robotics."
 			new1 = 1;
 			Text_generic1(text,spd,self,obj_texty_TRUEgeneric_nonmarker)
 		}
@@ -105,7 +105,7 @@ if (new1 == 1) && (room = rm_trueintro_opening_TEXT) && (timer >= 1) && (new_cut
 		{
 			global.xleft = 0
 			global.yup = 0
-			text = " Today we have started researching and studying the cyborg we used to see if anything changes or develops from the corruption, keeping a close eye on the original relic, and additionally developing our own bio weapons using the corruption."
+			text = " Today we have started researching and studying the latest cyborg we built to see if anything changes or develops from the corruption, keeping a close eye on the original relic, and additionally developing our own bio weapons using the corruption."
 			new1 = 1;
 			Text_generic1(text,spd,self,obj_texty_TRUEgeneric_nonmarker)
 		}

@@ -59,9 +59,9 @@ flashwhite_limit = 0
 
 if (global.mode_casual == 0)
 {
-	hp = 100;
+	hp = 200;
 }
-else hp = 100;
+else hp = 200;
 
 
 

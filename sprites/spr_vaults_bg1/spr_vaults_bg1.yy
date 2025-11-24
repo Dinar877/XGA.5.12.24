@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_vaults_bg1",
   "bboxMode":0,
   "bbox_bottom":293,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"57c27f1f-da49-45cd-9e75-dadf6699b35c","name":"57c27f1f-da49-45cd-9e75-dadf6699b35c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ae391cbf-f36a-4ef4-b9bf-d3ac977ccc5f","name":"ae391cbf-f36a-4ef4-b9bf-d3ac977ccc5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":294,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"bdda066f-b79e-4a62-a371-b18282f2863c","blendMode":0,"displayName":"default","isLocked":false,"name":"bdda066f-b79e-4a62-a371-b18282f2863c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"263bb795-8bdf-45c4-b479-4d22bec26dbe","blendMode":0,"displayName":"default","isLocked":false,"name":"263bb795-8bdf-45c4-b479-4d22bec26dbe","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_vaults_bg1",
   "nineSlice":null,
@@ -70,9 +70,7 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"57c27f1f-da49-45cd-9e75-dadf6699b35c","path":"sprites/spr_vaults_bg1/spr_vaults_bg1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"85a56af2-c1ce-40f3-a752-42b4eb7f657a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae391cbf-f36a-4ef4-b9bf-d3ac977ccc5f","path":"sprites/spr_vaults_bg1/spr_vaults_bg1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fb7e0b59-a015-4b47-9db7-49b70d548916","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

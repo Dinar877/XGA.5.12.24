@@ -8,8 +8,8 @@
   "name":"object_background_sewer",
   "overriddenProperties":[],
   "parent":{
-    "name":"background_objects",
-    "path":"folders/Objects/background_objects.yy",
+    "name":"Sector 2",
+    "path":"folders/Objects/background_objects/Sector 2.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_beam1uncharged",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
-  "duration":6.94855,
+  "duration":6.948571,
+  "exportDir":"",
   "name":"snd_beam1uncharged",
   "parent":{
     "name":"beam",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_beam1uncharged",
-  "type":0,
   "volume":0.2,
 }
