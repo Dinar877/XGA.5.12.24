@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"XGA.5.12",
+  "%Name":"XGA.5.12.24",
   "AudioGroups":[
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMAudioGroup":"v1","%Name":"audiogroup_music","exportDir":"","name":"audiogroup_music","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -426,9 +426,9 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.2.213",
   },
-  "name":"XGA.5.12",
+  "name":"XGA.5.12.24",
   "resources":[
     {"id":{"name":"font_blackholetimer1","path":"fonts/font_blackholetimer1/font_blackholetimer1.yy",},},
     {"id":{"name":"font_intro","path":"fonts/font_intro/font_intro.yy",},},
