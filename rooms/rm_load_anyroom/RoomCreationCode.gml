@@ -180,6 +180,30 @@ if (!instance_exists(obj_ability_nanoshield))
 
 
 
+//test world map
+global.wm_found[WMdiscovered.mainsector] = true
+global.wm_found[WMdiscovered.s1] = true
+global.wm_found[WMdiscovered.s2] = true
+global.wm_found[WMdiscovered.s3] = true
+global.wm_found[WMdiscovered.s4] = true
+global.wm_found[WMdiscovered.t] = true
+global.wm_found[WMdiscovered.v] = true
+global.wm_found[WMdiscovered.sc] = true
+global.wm_found[WMdiscovered.ms] = true
+global.wm_found[WMdiscovered.bridge_mainsector_s1] = true
+global.wm_found[WMdiscovered.bridge_mainsector_s2] = true
+global.wm_found[WMdiscovered.bridge_mainsector_s3] = true
+global.wm_found[WMdiscovered.bridge_mainsector_s4] = true
+global.wm_found[WMdiscovered.bridge_mainsector_t] = true
+global.wm_found[WMdiscovered.bridge_s1_s4] = true
+global.wm_found[WMdiscovered.bridge_s1_t] = true
+global.wm_found[WMdiscovered.bridge_s2_s3] = true
+global.wm_found[WMdiscovered.bridge_s2_t] = true
+global.wm_found[WMdiscovered.bridge_v_sc] = true
+global.wm_found[WMdiscovered.bridge_sc_ms] = true
+
+
+
 //test cutscenes
 global.corrupted = 0
 global.midgame = 0
@@ -213,4 +237,4 @@ texture_set_interpolation(false);
 //goto desired room
 obj_player.x = 470
 obj_player.y = 270
-room_goto(rm_BS_15_11_3)
+room_goto(rm_11_7_6)

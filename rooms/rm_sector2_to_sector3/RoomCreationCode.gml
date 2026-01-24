@@ -5,3 +5,5 @@ global.mapgrid_startroomx = 21;
 global.mapgrid_startroomy = 20;
 
 global.sector_active = 2
+
+global.wm_found[WMdiscovered.bridge_s2_s3] = true

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"wm_select_object_step_event",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wm_select_object_step_event",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Scripts/Map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

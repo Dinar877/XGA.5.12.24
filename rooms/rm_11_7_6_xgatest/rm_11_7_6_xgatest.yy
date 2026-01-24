@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rm_11_7_6_xgatest",
-  "creationCodeFile":"${project_dir}/rooms/rm_11_7_6_xgatest/RoomCreationCode.gml",
+  "creationCodeFile":"rooms/rm_11_7_6_xgatest/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -264,7 +264,7 @@
           3,2272,3530,3531,-11,-2147483648,-85,2371,-10,-2147483648,4,3352,3353,3441,3442,-13,2371,4,3619,3620,
           3530,3531,-9,-2147483648,-85,2371,12,1825,1826,1827,1828,1827,1828,1825,1826,1827,1828,3441,3442,-17,
           2371,11,3619,3620,1825,1826,1827,1828,1828,1825,1826,1827,1828,-10315,2371,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tiles_1_tileset","path":"tilesets/tiles_1_tileset/tiles_1_tileset.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":8,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tiles_1_tileset","path":"tilesets/tiles_1_tileset/tiles_1_tileset.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":8,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":299,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":125,"SerialiseWidth":125,"TileCompressedData":[
           -1645,4700,40,3725,3726,3727,3725,3726,3727,3728,3725,3726,3727,3728,3729,3725,3726,3727,3728,3729,3725,
           3726,3727,3728,3725,3726,3727,3725,3726,3725,3726,3727,3728,3729,3726,3727,3725,3726,3727,3728,3729,

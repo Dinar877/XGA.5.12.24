@@ -11,6 +11,16 @@ function scrn_pause_exit() {
 	    image_alpha = 1;
 	    sprite_index = scrn;
 		
+		//delete world map
+		wm_deleteobjects();
+		
+		global.sector_active = global.pause_currentsector;
+		global.pause_worldmap = 0;
+		global.xleft = 0
+		global.yup = 0
+		global.wmX = 0
+		global.wmY = 0
+		
 		//sfx
 		if (room != rm_load)
 		{
@@ -243,6 +253,8 @@ function scrn_pause_exit() {
 				}
 			}
 			#endregion
+			
+			
 	    }
 	    if (FadeNow >= 1.0) && (global.pause_exit == 1) && (started1 = 1)
 	    {

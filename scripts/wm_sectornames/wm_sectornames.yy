@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"wm_sectornames",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wm_sectornames",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Scripts/Map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

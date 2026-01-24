@@ -6,5 +6,7 @@ global.mapgrid_startroomy = -3;
 
 global.sector_active = 1;
 
+global.wm_found[WMdiscovered.bridge_s1_s4] = true
+
 global.doorpath4 = rm_sector1_cave_room11
 global.doorpath1 = rm_sector4_gotosector1;

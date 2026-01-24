@@ -201,7 +201,10 @@ global.teleport = 0
 for (var p1 = 0; p1 < 99; p1++)
 {
 	//cutscenes
-	global.cutsceneID[p1] = 0
+	global.cutsceneID[p1] = 0;
+	
+	//world map found
+	global.wm_found[p1] = false;
 }
 
 //all 999 arrays
@@ -466,13 +469,19 @@ global.corelock_engage_xvision = 0;
 
 global.shootlimit = 0;
 
+
 global.pause = 0;
 global.pause_transition = 0;
 global.pause_map = 0;
+global.pause_worldmap = 0;
+global.pause_currentsector = 0;
+global.wmX = 0;
+global.wmY = 0;
 global.pause_status = 0;
 global.pause_options = 0;
 global.pause_logbook = 0;
 global.pause_exit = 0;
+
 
 global.controls_changed = 0;
 
@@ -507,5 +516,5 @@ window_set_cursor(cr_none);
 //go to next room
 //room_goto(rm_epilepsy_warning);
 //room_goto(rm_controller_recommended);
-//room_goto(rm_load)
-room_goto(rm_load_anyroom);
+room_goto(rm_load)
+//room_goto(rm_load_anyroom);

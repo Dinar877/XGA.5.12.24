@@ -4,6 +4,8 @@ global.mapgrid_xZeroMove = 1
 
 global.doorpath2 = rm_10_10_1
 
+global.wm_found[WMdiscovered.mainsector] = true
+
 if (global.cutscene = 1)
 {
 	instance_deactivate_all(true)

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (sectortile != global.sector_active)
+if (sectortile != global.sector_active) or (global.pause_worldmap)
 {
 	exit;	
 }
@@ -12,8 +12,8 @@ if (global.pause_map = 1) or (global.navigation = 1)
 			//shader stuff for flashing white
 			if (gotsprite != 0) && (discovered = 1) && ((global.pause_map = 1) or (global.navigation = 1) or ((global.pause_exit > 0) && (global.pause_map > 0) && (global.stopper_2ndscrnshot <= 0)))
 			{
-				x = __view_get( e__VW.XView, 0 ) + (160+(tileposx*10)-(global.mapgrid_playerx*10))+global.xleft;
-				y = __view_get( e__VW.YView, 0 ) + (90+(tileposy*10)-(global.mapgrid_playery*10))+global.yup;
+				x = __view_get( e__VW.XView, 0 ) + (160+(tileposx*10)-(global.mapgrid_playerx*10))+global.xleft+global.wmX;
+				y = __view_get( e__VW.YView, 0 ) + (90+(tileposy*10)-(global.mapgrid_playery*10))+global.yup+global.wmY;
 
 				if (((tileposx*10)-(global.mapgrid_playerx*10)) = 0) && ((((tileposy*10)-(global.mapgrid_playery*10))) = 0)
 					{
@@ -87,8 +87,8 @@ if (global.pause_map = 1) or (global.navigation = 1)
 			}
 		if (gotsprite != 0) && (discovered = 1) && ((global.pause_map = 1) or (global.navigation = 1) or ((global.pause_exit > 0) && (global.pause_map > 0) && (global.stopper_2ndscrnshot <= 0)))
 		{
-			x = __view_get( e__VW.XView, 0 ) + (160+(tileposx*10)-(global.mapgrid_playerx*10))+global.xleft
-			y = __view_get( e__VW.YView, 0 ) + (90+(tileposy*10)-(global.mapgrid_playery*10))+global.yup
+			x = __view_get( e__VW.XView, 0 ) + (160+(tileposx*10)-(global.mapgrid_playerx*10))+global.xleft+global.wmX;
+			y = __view_get( e__VW.YView, 0 ) + (90+(tileposy*10)-(global.mapgrid_playery*10))+global.yup+global.wmY;
 
 			if (((tileposx*10)-(global.mapgrid_playerx*10)) = 0) && ((((tileposy*10)-(global.mapgrid_playery*10))) = 0)
 				{

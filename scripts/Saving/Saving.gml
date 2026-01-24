@@ -181,7 +181,7 @@ function Saving(argument0) {
 			}
 		}
 	
-	//getting every map marker
+		//getting every map marker
 		for ( nmarker = 0; nmarker < global.marker_N + 1; nmarker += 1)
 		{
 			if (global.marker_no[nmarker] > 0)
@@ -202,6 +202,13 @@ function Saving(argument0) {
 				}
 			}
 		}
+		
+		//worldmap found
+		for (var wmn = 0; wmn < 99; wmn ++)
+		{
+			ds_map_add(_map,"WMfound."+string(wmn), global.wm_found[wmn]);
+		}
+		
 	
 		//abilities
 		for ( nability = 0; nability < 5; nability += 1)

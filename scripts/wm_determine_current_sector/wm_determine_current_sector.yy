@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"wm_determine_current_sector",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wm_determine_current_sector",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Scripts/Map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

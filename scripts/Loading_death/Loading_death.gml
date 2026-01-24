@@ -411,6 +411,12 @@ function Loading_death() {
 					}
 				}
 				
+				//World map found
+				for (var wmn = 0; wmn < 99; wmn ++)
+				{
+					global.wm_found[wmn] = ds_map_find_value(listvalue,"WMfound."+string(wmn));
+				}
+				
 	
 		
 				global.upgrade_charge = ds_map_find_value(listvalue, "global.upgrade_charge");

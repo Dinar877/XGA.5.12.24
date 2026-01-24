@@ -20,11 +20,12 @@ if (delay < 1)
 
 
 //Map
-if (new1 == 0) && (state == 0)
+if (new1 == 0) && (state == 0) && (global.pause_worldmap == 0)
 {	
 	#region
 	
-
+	//delete world map
+	wm_deleteobjects();
 	
 	//delete previous menu stuff
 		#region
@@ -221,7 +222,7 @@ if (new1 == 0) && (state == 0)
 	#endregion
 	
 	//map markerdogshite
-	messagemap1 = "PRESS 'JUMP' TO PLACE/REMOVE MAP MARKERS."
+	messagemap1 = "PRESS 'JUMP' TO PLACE/REMOVE MAP MARKERS.\nPRESS 'SHOOT' TO ACCESS THE WORLD MAP."
 	textmap1 = instance_create_depth(x+10,y+157,self.depth-1,obj_texty_heading);
 
 	with(textmap1)
@@ -285,28 +286,13 @@ if (new1 == 0) && (state == 0)
 		text_height = string_height_ext(text,font_size+(font_size/2),30);
 	}
 	
-	if (global.sector_active = -1)
-	{
-		message4 = "   ???"
-	}
-	else message4 = "SECTOR " + string(global.sector_active)
-
-	tex2 = instance_create_depth(x+134,y+5,self.depth-1,obj_texty_heading);
-
-	with(tex2)
-	{
-		text = other.message4;
-		spd = other.spd;
-		font = font_regular1;
 	
-		text_length = string_length(text)
-		font_size = font_get_size(font)
 	
-		draw_set_font(font);
+	//recognize current sector
+	wm_sectornames()
 	
-		text_width = string_width_ext(text,font_size+(font_size/2),280);
-		text_height = string_height_ext(text,font_size+(font_size/2),30);
-	}
+	
+	
 
 	message5 = "OPTIONS"
 
@@ -347,6 +333,316 @@ if (new1 == 0) && (state == 0)
 	}
 }
 
+//WorldMap
+if (new1 == 0) && (state == 0) && (global.pause_worldmap == 1)
+{	
+	#region
+	
+	//delete world map
+	wm_deleteobjects();
+	
+	//delete previous menu stuff
+		#region
+		if (instance_exists(obj_textblock_generic))
+				{
+					with(obj_textblock_generic)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock_controls_generic))
+				{
+					with(obj_textblock_controls_generic)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock_heading))
+				{
+					with(obj_textblock_heading)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock_mover_generic))
+				{
+					with(obj_textblock_mover_generic)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textselector_arrow_generic))
+				{
+					with(obj_textselector_arrow_generic)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_texty_heading))
+				{
+					with(obj_texty_heading)
+					{
+						instance_destroy();	
+					}
+				}
+		
+
+		//map menu stuff delete
+		if (instance_exists(obj_maptile_marker_cursor))
+				{
+					with(obj_maptile_marker_cursor)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_pausescrn_arrowdown))
+				{
+					with(obj_pausescrn_arrowdown)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_pausescrn_arrowup))
+				{
+					with(obj_pausescrn_arrowup)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_pausescrn_arrowleft))
+				{
+					with(obj_pausescrn_arrowleft)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_pausescrn_arrowright))
+				{
+					with(obj_pausescrn_arrowright)
+					{
+						instance_destroy();	
+					}
+				}
+
+				
+		//controllers
+		if (instance_exists(obj_NEWpausemenu_controller))
+				{
+					with(obj_NEWpausemenu_controller)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_NEWpausemenu_controls_controller1))
+				{
+					with(obj_NEWpausemenu_controls_controller1)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_NEWpausemenu_screensize_controller))
+				{
+					with(obj_NEWpausemenu_screensize_controller)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_NEWpausemenu_prestate_controller))
+				{
+					with(obj_NEWpausemenu_prestate_controller)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_NEWpausemenu_audio_controller))
+				{
+					with(obj_NEWpausemenu_audio_controller)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_pause_audiobar))
+				{
+					with(obj_pause_audiobar)
+					{
+						instance_destroy();	
+					}
+				}
+	
+		//screensize blocks
+		if (instance_exists(obj_textblock_320x180))
+				{
+					with(obj_textblock_320x180)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock_640x360))
+				{
+					with(obj_textblock_640x360)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock_960x540))
+				{
+					with(obj_textblock_960x540)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock1920x1080))
+				{
+					with(obj_textblock1920x1080)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock_1366x768))
+				{
+					with(obj_textblock_1366x768)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textblock_fullscrn))
+				{
+					with(obj_textblock_fullscrn)
+					{
+						instance_destroy();	
+					}
+				}
+		if (instance_exists(obj_textselector_arrow))
+				{
+					with(obj_textselector_arrow)
+					{
+						instance_destroy();	
+					}
+				}
+		#endregion
+		
+	global.pause_map = 0;
+	global.pause_worldmap = 1;
+	global.pause_logbook = 0
+	new1 = 1;
+	instate = 0
+	prestate = 1
+	
+	
+	wm_makeobjects()
+	
+	
+	with(obj_texty_heading)
+	{
+		instance_destroy();	
+	}
+	
+	#endregion
+	
+	//map markerdogshite
+	messagemap1 = "PRESS 'SHOOT' TO GO BACK TO THE LOCAL MAP."
+	textmap1 = instance_create_depth(x+10,y+157,self.depth-1,obj_texty_heading);
+
+	with(textmap1)
+	{
+		text = other.messagemap1;
+		spd = 0;
+		font = font_regular1;
+	
+		text_length = string_length(text)
+		font_size = font_get_size(font)
+	
+		draw_set_font(font);
+	
+		text_width = string_width_ext(text,font_size+(font_size/2),280);
+		text_height = string_height_ext(text,font_size+(font_size/2),30);
+	}
+	
+	
+	
+	message2 = "" //L
+	
+	
+	tex = instance_create_depth(x+8,y+2,self.depth-1,obj_texty_heading);
+
+	with(tex)
+	{
+		text = other.message2;
+		spd = other.spd;
+		font = font_regular1;
+	
+		text_length = string_length(text)
+		font_size = font_get_size(font)
+	
+		draw_set_font(font);
+	
+		text_width = string_width_ext(text,font_size+(font_size/2),280);
+		text_height = string_height_ext(text,font_size+(font_size/2),30);
+	}
+	
+	message3 = "" //R
+
+	tex2 = instance_create_depth(x+308,y+2,self.depth-1,obj_texty_heading);
+
+	with(tex2)
+	{
+		text = other.message3;
+		spd = other.spd;
+		font = font_regular1;
+	
+		text_length = string_length(text)
+		font_size = font_get_size(font)
+	
+		draw_set_font(font);
+	
+		text_width = string_width_ext(text,font_size+(font_size/2),280);
+		text_height = string_height_ext(text,font_size+(font_size/2),30);
+	}
+	
+	//recognize current sector
+	wm_sectornames()
+
+
+	message5 = "OPTIONS"
+
+	tex2 = instance_create_depth(x+33,y+0,self.depth-1,obj_texty_heading);
+
+	with(tex2)
+	{
+		text = other.message5;
+		spd = other.spd;
+		font = font_regular1;
+	
+		text_length = string_length(text)
+		font_size = font_get_size(font)
+	
+		draw_set_font(font);
+	
+		text_width = string_width_ext(text,font_size+(font_size/2),280);
+		text_height = string_height_ext(text,font_size+(font_size/2),30);
+	}
+	
+	message5 = "UPGRADES"
+
+	tex2 = instance_create_depth(x+241,y+0,self.depth-1,obj_texty_heading);
+
+	with(tex2)
+	{
+		text = other.message5;
+		spd = other.spd;
+		font = font_regular1;
+	
+		text_length = string_length(text)
+		font_size = font_get_size(font)
+	
+		draw_set_font(font);
+	
+		text_width = string_width_ext(text,font_size+(font_size/2),280);
+		text_height = string_height_ext(text,font_size+(font_size/2),30);
+	}
+}
+
+
 //Upgrades
 if (new1 == 0) && (state == 1)
 {
@@ -360,6 +656,10 @@ if (new1 == 0) && (state == 1)
 	prestate = 1
 	
 	//delete previous menu stuff
+	
+	//delete world map
+	wm_deleteobjects();
+	
 	#region
 		if (instance_exists(obj_textblock_generic))
 				{
@@ -659,6 +959,10 @@ if (room != rm_load)
 			global.pause_logbook = 0
 		
 			//delete previous menu stuff
+			
+			//delete world map
+			wm_deleteobjects();
+			
 			#region
 			if (instance_exists(obj_textblock_generic))
 					{
@@ -973,6 +1277,10 @@ if (room != rm_load)
 			global.pause_logbook = 0
 		
 			//delete previous menu stuff
+			
+			//delete world map
+			wm_deleteobjects();
+			
 			#region
 			if (instance_exists(obj_textblock_generic))
 					{
@@ -1302,6 +1610,10 @@ if (room != rm_load)
 			global.pause_logbook = 0
 		
 			//delete previous menu stuff
+			
+			//delete world map
+			wm_deleteobjects();
+			
 			#region
 			if (instance_exists(obj_textblock_generic))
 					{
@@ -1619,6 +1931,10 @@ if (room != rm_load)
 
 
 			//delete previous menu stuff
+			
+			//delete world map
+			wm_deleteobjects();
+			
 			#region
 			if (instance_exists(obj_textblock_generic))
 					{
@@ -2659,6 +2975,10 @@ else if (room == rm_load) //title screen options menu
 
 
 			//delete previous menu stuff
+			
+			//delete world map
+			wm_deleteobjects();
+			
 			#region
 			if (instance_exists(obj_textblock_generic))
 					{
@@ -2963,6 +3283,13 @@ if (gamepad_is_connected(correct_slot))
 		else state--
 		new1 = 0;
 		delay = 0
+		
+		global.sector_active = global.pause_currentsector;
+		global.pause_worldmap = 0;
+		global.wmX = 0
+		global.wmY = 0
+		
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 	}
 
 	if (instance_exists(obj_textblock_controls_generic))
@@ -2987,6 +3314,13 @@ if (gamepad_is_connected(correct_slot))
 						else state--
 						new1 = 0;
 						delay = 0
+						
+						global.sector_active = global.pause_currentsector;
+						global.pause_worldmap = 0;
+						global.wmX = 0
+						global.wmY = 0
+						
+						audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 					}
 				}
 			}
@@ -3009,6 +3343,13 @@ if (gamepad_is_connected(correct_slot))
 		else state++
 		new1 = 0;
 		delay = 0
+		
+		global.sector_active = global.pause_currentsector;
+		global.pause_worldmap = 0;
+		global.wmX = 0
+		global.wmY = 0
+		
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 	}
 
 	if (instance_exists(obj_textblock_controls_generic))
@@ -3033,6 +3374,13 @@ if (gamepad_is_connected(correct_slot))
 						else state++
 						new1 = 0;
 						delay = 0
+						
+						global.sector_active = global.pause_currentsector;
+						global.pause_worldmap = 0;
+						global.wmX = 0
+						global.wmY = 0
+						
+						audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 					}
 				}
 			}
@@ -3057,6 +3405,13 @@ else if (!gamepad_is_connected(correct_slot))
 		else state--
 		new1 = 0;
 		delay = 0
+		
+		global.sector_active = global.pause_currentsector;
+		global.pause_worldmap = 0;
+		global.wmX = 0
+		global.wmY = 0
+		
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 	}
 
 
@@ -3082,6 +3437,13 @@ else if (!gamepad_is_connected(correct_slot))
 						else state--
 						new1 = 0;
 						delay = 0
+						
+						global.sector_active = global.pause_currentsector;
+						global.pause_worldmap = 0;
+						global.wmX = 0
+						global.wmY = 0
+						
+						audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 					}
 				}
 			}
@@ -3104,6 +3466,13 @@ else if (!gamepad_is_connected(correct_slot))
 		else state++
 		new1 = 0;
 		delay = 0
+		
+		global.sector_active = global.pause_currentsector;
+		global.pause_worldmap = 0;
+		global.wmX = 0
+		global.wmY = 0
+		
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 	}
 
 
@@ -3129,12 +3498,36 @@ else if (!gamepad_is_connected(correct_slot))
 						else state++
 						new1 = 0;
 						delay = 0
+						
+						global.sector_active = global.pause_currentsector;
+						global.pause_worldmap = 0;
+						global.wmX = 0
+						global.wmY = 0
+						
+						audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
 					}
 				}
 			}
 		}
 	}
 }
+
+if (shoot_pressed) && (state = 0) && (new1 = 1) && (global.pause_worldmap = 0)
+{
+	global.pause_worldmap = 1
+	new1 = 0
+	
+	audio_play_sound(snd_menu_move,1000,false,global.sfx_volume);
+}
+else if (shoot_pressed) && (state = 0) && (new1 = 1) && (global.pause_worldmap = 1)
+{
+	global.sector_active = global.pause_currentsector;
+	global.pause_worldmap = 0
+	new1 = 0
+	
+	audio_play_sound(snd_menu_back,1000,false,global.sfx_volume);
+}
+
 
 
 //go back to normal (not in title screen)

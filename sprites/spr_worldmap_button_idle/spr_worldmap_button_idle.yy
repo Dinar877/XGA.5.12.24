@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"World Map",
-    "path":"folders/Sprites/menus/NEWpausescrn/World Map.yy",
+    "name":"Old world map",
+    "path":"folders/Sprites/menus/NEWpausescrn/Old world map.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

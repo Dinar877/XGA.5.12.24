@@ -6,7 +6,7 @@ global.mapgrid_startroomx = 0
 global.mapgrid_startroomy = 0
 global.mapgrid_totalCheckers = 1
 
-
+global.wm_found[WMdiscovered.v] = true;
 
 global.sector_active = 5
 

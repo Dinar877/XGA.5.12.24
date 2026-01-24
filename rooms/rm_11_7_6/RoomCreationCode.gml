@@ -12,3 +12,5 @@ global.doorpath4 = rm_13_9_4
 
 global.doorpath5 = rm_elevator_tutorial_3
 global.doorpath6 = rm_elevator_tutorial_4
+
+global.wm_found[WMdiscovered.mainsector] = true

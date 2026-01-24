@@ -8,6 +8,10 @@ global.sector_active = 2
 global.sector_next_left = 0
 global.sector_next_right = rm_elevator_tutorial_2;
 
+global.wm_found[WMdiscovered.s2] = true;
+global.wm_found[WMdiscovered.bridge_mainsector_s2] = true;
+
+
 obj_camera.x = 480;
 obj_camera.y = 277;
 

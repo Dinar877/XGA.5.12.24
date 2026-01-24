@@ -105,7 +105,7 @@ function EnumsInitialise(){
 		shieldC = 40
 	}
 	
-	enum itemTotals
+	enum itemTotals //unused
 	{
 		mainsector = 1,
 		sector1 = 1,
@@ -127,6 +127,30 @@ function EnumsInitialise(){
 		sector3BOXspikewall = 50,
 		sector1FalseWall_1 = 155,
 		sector1FalseWall_2 = 160
+	}
+	
+	enum WMdiscovered
+	{
+		mainsector = 0,
+		s1 = 1,
+		s2 = 2,
+		s3 = 3,
+		s4 = 4,
+		t = 5,
+		v = 6,
+		sc = 7,
+		ms = 8,
+		bridge_mainsector_s1 = 9,
+		bridge_mainsector_s2 = 10,
+		bridge_mainsector_s3 = 11,
+		bridge_mainsector_s4 = 12,
+		bridge_mainsector_t = 13,
+		bridge_s1_s4 = 14,
+		bridge_s2_s3 = 15,
+		bridge_s1_t = 16,
+		bridge_s2_t = 17,
+		bridge_v_sc = 18,
+		bridge_sc_ms = 19
 	}
 
 }

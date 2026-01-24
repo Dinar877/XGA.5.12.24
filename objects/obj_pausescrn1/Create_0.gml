@@ -74,7 +74,14 @@ R2 = 0;
 enter_pressed = 0;
 xbox_or_ps = 0
 
-global.tex[99] = false
+//text global var
+for (var p1 = 0; p1 < 99; p1++)
+{
+	global.tex[p1] = false
+}
+
+
+global.pause_currentsector = global.sector_active;
 
 Gamepad_variables()
 Gamepad_getname()
