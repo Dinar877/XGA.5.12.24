@@ -19,6 +19,7 @@ function Idle_landing() {
 	
 	double_jump = 0
 	jump_stopper1 = 0
+	dash_jump = 0
 	
 	sprite_index = spr_player;
 	global.grounded = 1;

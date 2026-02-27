@@ -1,6 +1,6 @@
 function Ledge_grab() {
 	
-	
+	dash_jump = 0
 	double_jump = 0
 
 	//MAKE PLAYER RIGHT HEIGHT
@@ -115,8 +115,14 @@ function Ledge_grab() {
 			global.hangAiming = 0;
 			hangtimer = 1;
 			hang_switch = 0;
+			hangOriginalX = 0
+			hangOriginalY = 0
+			hangOriginalFacingDir = 0
 			State_machine_switch_state(Falling);
 			y += 2;
+			
+			var sndIDDrop = audio_play_sound(snd_player_hang_letgo,1000,false,global.sfx_volume)
+			audio_stop_sound(snd_robot_move_2)
 		}
 	
 		//go to climbing state(climb up ledge)
@@ -147,6 +153,9 @@ function Ledge_grab() {
 	        global.image_speed_lockdown = 0;
 			global.turningLedge = 0;
 			hang_switch = 0;
+			hangOriginalX = 0
+			hangOriginalY = 0
+			hangOriginalFacingDir = 0
 			with(object_player2_0_sprites)
 			{
 				sprite_index = spr_cliff_jump_left;
@@ -163,6 +172,9 @@ function Ledge_grab() {
 	        global.image_speed_lockdown = 0;
 			global.turningLedge = 0;
 			hang_switch = 0;
+			hangOriginalX = 0
+			hangOriginalY = 0
+			hangOriginalFacingDir = 0
 			with(object_player2_0_sprites)
 			{
 				sprite_index = spr_cliff_jump_right;
@@ -211,8 +223,14 @@ function Ledge_grab() {
 			global.hangAiming = 0;
 			hangtimer = 1;
 			hang_switch = 0;
+			hangOriginalX = 0
+			hangOriginalY = 0
+			hangOriginalFacingDir = 0
 			State_machine_switch_state(Falling);
 			y += 2;
+			
+			var sndIDDrop = audio_play_sound(snd_player_hang_letgo,1000,false,global.sfx_volume)
+			audio_stop_sound(snd_robot_move_2)
 		}
 	
 		//go to climbing state(climb up ledge)
@@ -243,6 +261,9 @@ function Ledge_grab() {
 	        global.image_speed_lockdown = 0
 			global.turningLedge = 0
 			hang_switch = 0
+			hangOriginalX = 0
+			hangOriginalY = 0
+			hangOriginalFacingDir = 0
 			with(object_player2_0_sprites)
 			{
 				sprite_index = spr_cliff_jump_right
@@ -257,6 +278,9 @@ function Ledge_grab() {
 	        global.image_speed_lockdown = 0
 			global.turningLedge = 0
 			hang_switch = 0
+			hangOriginalX = 0
+			hangOriginalY = 0
+			hangOriginalFacingDir = 0
 			with(object_player2_0_sprites)
 			{
 				sprite_index = spr_cliff_jump_left
@@ -491,6 +515,7 @@ function Ledge_grab() {
 	}
 
 
-
+	//exit out of ledge state if on moving block and there's no longer enough free space above us
+	Check_if_ledge()
 
 }

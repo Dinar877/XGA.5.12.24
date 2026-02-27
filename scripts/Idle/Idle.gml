@@ -7,6 +7,7 @@ function Idle() {
 	//code
 	ledge_ready = 0;
 	double_jump = 0
+	dash_jump = 0
 	
 	hspd=0;
 	

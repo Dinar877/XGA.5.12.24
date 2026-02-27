@@ -324,7 +324,7 @@ function Moving_slow_left_biggerthan1() {
 	if (!place_meeting(x+(moveX),y,obj_block)) && (!collision_line(x,bbox_bottom,x+moveX,bbox_bottom,obj_block,false,true)) //no blocks to the side of us 
 	&& (!place_meeting(x+(moveX),y-moveX,obj_block)) && (!collision_line(x,bbox_bottom,x+moveX,bbox_bottom-moveX,obj_block,false,true)) //no blocks diagonally below us
 	&& (!position_meeting(bbox_right+(moveX),bbox_bottom+1,obj_block))  //no block under us along our current path
-	&& (place_meeting(x,y+1,obj_block)) //already standing on a block
+	&& (place_meeting(x,y+2,obj_block)) //already standing on a block
 	&& (!place_meeting(x-moveX,y,obj_slope1_left)) && (!collision_line(x,bbox_bottom,x-moveX,bbox_bottom,obj_slope1_left,false,true))  //no slopes involved
 	&& (!place_meeting(x+moveX,y,obj_slope1_right)) && (!collision_line(x,bbox_bottom,x+moveX,bbox_bottom,obj_slope1_right,false,true))  //no slopes involved
 	&& (!place_meeting(x+1,y,obj_slope1_left))
@@ -333,7 +333,7 @@ function Moving_slow_left_biggerthan1() {
 	{
 		//before object is standing only 1 pixel remaining on block's edge, move object closer.
 		while (position_meeting(bbox_right+sign(moveX),bbox_bottom+1,obj_block)) 
-		&& (place_meeting(x,y+1,obj_block))
+		&& (place_meeting(x,y+2,obj_block))
 		&& (!place_meeting(x+(moveX),y,obj_block)) && (!collision_line(x,bbox_bottom,x+moveX,bbox_bottom,obj_block,false,true)) //no blocks to the side of us 
 		&& (!place_meeting(x+(moveX),y-moveX,obj_block)) && (!collision_line(x,bbox_bottom,x+moveX,bbox_bottom-moveX,obj_block,false,true)) //no blocks diagonally below us
 		&& (moveX != 0)
@@ -351,6 +351,7 @@ function Moving_slow_left_biggerthan1() {
 			&& (moveX != 0)
 			{
 				x += (moveX);
+				exit;
 			}
 		}
 		

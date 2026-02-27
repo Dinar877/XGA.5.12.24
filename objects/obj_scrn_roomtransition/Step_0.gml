@@ -13,7 +13,7 @@ if (global.teleport)
 
 ////////////////////////////////////////////////////room transitions
 if (global.room_transition == 1)
-&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_3 == 0) && (global.room_transition_nodoors_more == 0)
 {
 	audio_stop_sound(snd_xga_heartbeat)
 	script_execute(scrn_roomtransition);
@@ -21,7 +21,7 @@ if (global.room_transition == 1)
 
 ////////////////////////////////////////////////////room transitions ALT
 if (global.room_transition1 == 1)
-&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_3 == 0) && (global.room_transition_nodoors_more == 0)
 {
 	audio_stop_sound(snd_xga_heartbeat)
 	script_execute(scrn_roomtransition1);
@@ -29,31 +29,46 @@ if (global.room_transition1 == 1)
 
 ////////////////////////////////////////////////////room transitions_more
 if (global.room_transition_more == 1)
-&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_3 == 0) && (global.room_transition_nodoors_more == 0)
 {
 	audio_stop_sound(snd_xga_heartbeat)
 	script_execute(scrn_roomtransition_more);
 }
 
+////////////////////////////////////////////////////room transitions_3
+if (global.room_transition_3 == 1)
+&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_3 == 0) && (global.room_transition_nodoors_more == 0)
+{
+	audio_stop_sound(snd_xga_heartbeat)
+	script_execute(scrn_roomtransition_3);
+}
+
 //////////////////////////////////////////////////room transition- no doors- UP
-if (global.room_transition_nodoors == 1) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+if (global.room_transition_nodoors == 1) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_3 == 0) && (global.room_transition_nodoors_more == 0)
 {
 	audio_stop_sound(snd_xga_heartbeat)
 	script_execute(scrn_roomtransition_nodoors)	
 }
 
 //////////////////////////////////////////////////room transition- no doors- 2
-if (global.room_transition_nodoors_2 == 1) && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_more == 0)
+if (global.room_transition_nodoors_2 == 1) && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_3 == 0) && (global.room_transition_nodoors_more == 0)
 {
 	audio_stop_sound(snd_xga_heartbeat)
 	script_execute(scrn_roomtransition_nodoors_2)	
 }
 
 //////////////////////////////////////////////////room transition- no doors- more
-if (global.room_transition_nodoors_more == 1) && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0)
+if (global.room_transition_nodoors_more == 1) && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_3 == 0) && (global.room_transition_nodoors_2 == 0)
 {
 	audio_stop_sound(snd_xga_heartbeat)
 	script_execute(scrn_roomtransition_nodoors_more)	
+}
+
+//////////////////////////////////////////////////room transition- no doors- 3
+if (global.room_transition_nodoors_3 == 1) && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+{
+	audio_stop_sound(snd_xga_heartbeat)
+	script_execute(scrn_roomtransition_nodoors_3)	
 }
 
 //////////////////////////////////// ////Pausing the game

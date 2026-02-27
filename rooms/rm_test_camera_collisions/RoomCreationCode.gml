@@ -1,0 +1,2 @@
+global.doorpath1 = rm_test_camera_collisions
+global.doorpath2 = rm_test_camera_collisions

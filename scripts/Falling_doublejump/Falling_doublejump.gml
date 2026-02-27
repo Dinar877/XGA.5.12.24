@@ -99,7 +99,7 @@ function Falling_doublejump() {
 		speed_x = 1;
 		hspd = floor(global.facingDir*speed_x);
 		audio_stop_sound(snd_player_spinjump)
-		audio_play_sound(snd_player_spinjump,1,false,global.sfx_volume)
+		audio_play_sound(snd_player_spinjump,1000,false,global.sfx_volume)
 	
 	}
 

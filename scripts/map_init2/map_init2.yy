@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"map_init2",
   "parent":{
-    "name":"Map",
-    "path":"folders/Scripts/Map.yy",
+    "name":"Old",
+    "path":"folders/Scripts/Old.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

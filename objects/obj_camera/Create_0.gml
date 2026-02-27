@@ -15,6 +15,11 @@ collision_R = collision_rectangle(obj_camera.x+185,obj_camera.y+125,obj_camera.x
 collision_U = collision_rectangle(obj_camera.x+185,obj_camera.y+125,obj_camera.x-185,obj_camera.y-125,obj_camera_stopperU,false,true);
 collision_D = collision_rectangle(obj_camera.x+185,obj_camera.y+125,obj_camera.x-185,obj_camera.y-125,obj_camera_stopperD,false,true);
 
+inst_L = instance_place(x,y,obj_camera_stopperL)
+inst_R = instance_place(x,y,obj_camera_stopperR)
+inst_U = instance_place(x,y,obj_camera_stopperU)
+inst_D = instance_place(x,y,obj_camera_stopperD)
+
 lockxl = 0;
 lockxr = 0;
 

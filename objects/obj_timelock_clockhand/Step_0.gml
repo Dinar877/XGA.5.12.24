@@ -9,21 +9,23 @@ if (!instance_exists(obj_player))
 x = obj_timelock_clock.x;
 y = obj_timelock_clock.y;
 
+//gets very accurate time 
+elapsedSeconds += delta_time / 1000000.0
 
-if (timer1 < timeLimit)
+
+if (elapsedSeconds < timeLimit)
 {
-	timer1 += timer1speed;
-	
-	image_angle = timer1;
+	var progress = min(1.0, elapsedSeconds / timeLimit);
+	image_angle = startAngle + progress * 360.0; // Clockwise full 360° rotation
 	
 	if (!audio_is_playing(snd_ticking))
 	{
 		audio_play_sound(snd_ticking,1000,false,global.sfx_volume);
 	}
 }
-else if (timer1 >= timeLimit)
+else if (elapsedSeconds >= timeLimit)
 {
-	timer1 = 0;
+	elapsedSeconds = 0;
 	
 	with(obj_timelock_switch)
 	{

@@ -23,7 +23,8 @@ function doors_movingplayer_left()
 		            //once door is in correct position
 		            if (x + 29 <= obj_camera.bbox_left)
 		            {
-		                if (global.room_transition_notnowR_more = 0) && (global.room_transition_notnowR1 = 0) && (global.room_transition_notnowR2 = 0)
+		                if (global.room_transition_notnowR_more = 0) 
+						&& (global.room_transition_notnowR1 = 0) && (global.room_transition_notnowR2 = 0) && (global.room_transition_notnowR3 = 0)
 		                {
 		                    //set notnow global var based on door type
 							if (instance_exists(obj_door_normal_left))
@@ -33,7 +34,7 @@ function doors_movingplayer_left()
 									global.room_transition_notnowR1 = 1;
 								}
 							}
-							else if (instance_exists(obj_door_normal_leftAlt))
+							if (instance_exists(obj_door_normal_leftAlt))
 							{
 								if (obj_door_normal_leftAlt.stopper1 = 1)
 								{
@@ -45,6 +46,13 @@ function doors_movingplayer_left()
 								if (obj_door_normal_left_more.stopper1 = 1)
 								{
 									global.room_transition_notnowR_more = 1;
+								}
+							}
+							if (instance_exists(obj_door_normal_left_3))
+							{
+								if (obj_door_normal_left_3.stopper1 = 1)
+								{
+									global.room_transition_notnowR3 = 1;
 								}
 							}
 							
@@ -93,7 +101,8 @@ function doors_movingplayer_left()
 		            //once door is in correct position
 		            if (x + 29 <= obj_camera.bbox_left)
 		            {
-		                if (global.room_transition_notnowR_more = 0) && (global.room_transition_notnowR1 = 0) && (global.room_transition_notnowR2 = 0)
+		                if (global.room_transition_notnowR_more = 0) 
+						&& (global.room_transition_notnowR1 = 0) && (global.room_transition_notnowR2 = 0) && (global.room_transition_notnowR3 = 0)
 		                {
 		                    //set notnow global var based on door type
 							if (instance_exists(obj_door_normal_left))
@@ -103,7 +112,7 @@ function doors_movingplayer_left()
 									global.room_transition_notnowR1 = 1;
 								}
 							}
-							else if (instance_exists(obj_door_normal_leftAlt))
+							if (instance_exists(obj_door_normal_leftAlt))
 							{
 								if (obj_door_normal_leftAlt.stopper1 = 1)
 								{
@@ -115,6 +124,13 @@ function doors_movingplayer_left()
 								if (obj_door_normal_left_more.stopper1 = 1)
 								{
 									global.room_transition_notnowR_more = 1;
+								}
+							}
+							if (instance_exists(obj_door_normal_left_3))
+							{
+								if (obj_door_normal_left_3.stopper1 = 1)
+								{
+									global.room_transition_notnowR3 = 1;
 								}
 							}
 							

@@ -55,6 +55,9 @@ function Ledge_jumpprep() {
 	        y += 3;
 	        grav = 0.5;
 	        global.lockdown_facingDir = 0;
+			
+			hangOriginalX = 0
+			hangOriginalY = 0
 	    }
     
 	    if ((jump) or keyboard_check(ord("W"))) && (global.climbing = 0) && (stop = 0) && (gamepad4_wait >= 1)
@@ -71,29 +74,31 @@ function Ledge_jumpprep() {
 	        stop1 = 0;
 	        grav = 0;
 	        global.lockdown_facingDir = 0;
+			hangOriginalX = 0
+			hangOriginalY = 0
 	    }
     
 	    //animation for going back to hanging
 	    if (stop1 = 0) && (global.animation_start1 = 0) && (global.turning = 0)
 	    {
-	    if (place_meeting(x+1,y,obj_block)) && (input > 0)
-	    {
-	        global.lockdown_facingDir = 0;
-	        global.animation_start1 = 1;
-	        stop1 = 1;
-	        global.jumpprep = 0;
-	    }
-	    else if (place_meeting(x-1,y,obj_block)) && (input < 0)
-	    {
-	        global.lockdown_facingDir = 0;
-	        global.animation_start1 = 1;
-	        stop1 = 1;
-	        global.jumpprep = 0;
-	    }
-	    else if  (input == 0)
-	    {
-	        global.animation_start1 = 0;
-	    }
+		    if (place_meeting(x+1,y,obj_block)) && (input > 0)
+		    {
+		        global.lockdown_facingDir = 0;
+		        global.animation_start1 = 1;
+		        stop1 = 1;
+		        global.jumpprep = 0;
+		    }
+		    else if (place_meeting(x-1,y,obj_block)) && (input < 0)
+		    {
+		        global.lockdown_facingDir = 0;
+		        global.animation_start1 = 1;
+		        stop1 = 1;
+		        global.jumpprep = 0;
+		    }
+		    else if  (input == 0)
+		    {
+		        global.animation_start1 = 0;
+		    }
 	    }
     
 		//sprites
@@ -190,6 +195,8 @@ function Ledge_jumpprep() {
 	        y += 3;
 	        grav = 0.5;
 	        global.lockdown_facingDir = 0;
+			hangOriginalX = 0
+			hangOriginalY = 0
 	    }
     
 	    if ((jump) or keyboard_check(ord("W"))) && (global.climbing = 0) && (stop = 0)
@@ -204,29 +211,31 @@ function Ledge_jumpprep() {
 	        global.hang = 0;
 	        grav = 0;
 	        global.lockdown_facingDir = 0;
+			hangOriginalX = 0
+			hangOriginalY = 0
 	    }
     
 	    //animation for going back to hanging
 	    if (stop1 = 0) && (global.animation_start1 = 0) && (global.turning = 0)
 	    {
-	    if (place_meeting(x+1,y,obj_block)) && (input > 0)
-	    {
-	        global.lockdown_facingDir = 0;
-	        global.animation_start1 = 1;
-	        stop1 = 1;
-	        global.jumpprep = 0;
-	    }
-	    else if (place_meeting(x-1,y,obj_block)) && (input < 0)
-	    {
-	        global.lockdown_facingDir = 0;
-	        global.animation_start1 = 1;
-	        stop1 = 1;
-	        global.jumpprep = 0;
-	    }
-	    else if  (input == 0)
-	    {
-	        global.animation_start1 = 0;
-	    }
+		    if (place_meeting(x+1,y,obj_block)) && (input > 0)
+		    {
+		        global.lockdown_facingDir = 0;
+		        global.animation_start1 = 1;
+		        stop1 = 1;
+		        global.jumpprep = 0;
+		    }
+		    else if (place_meeting(x-1,y,obj_block)) && (input < 0)
+		    {
+		        global.lockdown_facingDir = 0;
+		        global.animation_start1 = 1;
+		        stop1 = 1;
+		        global.jumpprep = 0;
+		    }
+		    else if  (input == 0)
+		    {
+		        global.animation_start1 = 0;
+		    }
 	    }
 	
 		//sprites
@@ -308,5 +317,8 @@ function Ledge_jumpprep() {
 	
 	}
 
+
+	//exit out of ledge state if on moving block and there's no longer enough free space above us
+	Check_if_ledge()
 
 }

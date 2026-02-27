@@ -126,8 +126,8 @@ if (hp > 0) && (instance_exists(obj_player)) && (instance_exists(inst2))
 		//checks if we're on the edge of a platform
 		inst_blockfree = (place_meeting(x,y+2,obj_block)) 
 		&& (!onSlope)
-		&& (((position_meeting(bbox_left,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_left+1,bbox_bottom+(1),obj_block)))
-		or ((position_meeting(bbox_right,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_right-1,bbox_bottom+(1),obj_block))))
+		&& (((position_meeting(bbox_left,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_left+1,bbox_bottom+(1),obj_block)) && (facing = 1))
+		or ((position_meeting(bbox_right,bbox_bottom+(1),obj_block)) && (!position_meeting(bbox_right-1,bbox_bottom+(1),obj_block)) && (facing = -1)))
 		
 		
 		//slope in front of us

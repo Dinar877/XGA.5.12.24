@@ -76,7 +76,7 @@ function Wall_jump() {
 	            global.spawnitem_wjl = 1;
 	            hspd = (global.facingDir*5);
 	            State_machine_switch_state(Jump_after_wj);
-				audio_play_sound(snd_player_walljump,1,false,global.sfx_volume);
+				audio_play_sound(snd_player_walljump,1000,false,global.sfx_volume);
 	            global.constantspd = 1;
             
 	        }
@@ -94,7 +94,7 @@ function Wall_jump() {
 	            global.jumpingdm = 1;
 	            hspd = (global.facingDir*5);
 	            State_machine_switch_state(Jump_after_wj);
-				audio_play_sound(snd_player_walljump,1,false,global.sfx_volume);
+				audio_play_sound(snd_player_walljump,1000,false,global.sfx_volume);
 	            global.walljump = 0;
 	            global.spawnitem_wjr = 1;
 	            global.constantspd = 1;

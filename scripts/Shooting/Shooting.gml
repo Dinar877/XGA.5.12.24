@@ -36,6 +36,6 @@ function Shooting() {
 	global.jumping = 0;
 	global.turning = 0;
 
-
+	dash_jump = 0
 
 }

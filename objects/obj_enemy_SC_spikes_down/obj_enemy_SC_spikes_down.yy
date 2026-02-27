@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_SC_enemy_spikes_up",
-    "path":"sprites/spr_SC_enemy_spikes_up/spr_SC_enemy_spikes_up.yy",
+    "name":"spr_SC_enemy_spikes_down",
+    "path":"sprites/spr_SC_enemy_spikes_down/spr_SC_enemy_spikes_down.yy",
   },
   "spriteMaskId":null,
   "visible":true,

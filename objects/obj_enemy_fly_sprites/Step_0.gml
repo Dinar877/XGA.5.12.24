@@ -9,8 +9,16 @@ or (global.upgrade_process = 1)
 
 if (inst2 > -1)
 {
-	x = inst2.x;
-	y = inst2.y+idleY;
+	if (instance_exists(inst2))
+	{
+		x = inst2.x;
+		y = inst2.y+idleY;
+	}
+	else
+	{
+		instance_destroy()
+		exit
+	}
 }
 
 //getting hurt by shit

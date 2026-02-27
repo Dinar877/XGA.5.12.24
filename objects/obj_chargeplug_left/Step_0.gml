@@ -44,8 +44,11 @@ if ((place_meeting(id.x,id.y,obj_player)) && (global.dash2_spark = 1) && (open =
 	{
 		with(obj_chargelock)
 		{
-			sprite_index = spr_corelock_opening
-			image_index = 0
+			if (plugIDLeft = other.id) or (plugIDRight = other.id)
+			{
+				sprite_index = spr_corelock_opening
+				image_index = 0
+			}
 		}
 	}
 	
@@ -58,7 +61,10 @@ if ((place_meeting(id.x,id.y,obj_player)) && (global.dash2_spark = 1) && (open =
 	{
 		with(obj_chargeplug_cable)
 		{
-			active = 1
+			if (plugIDLeft = other.id) or (plugIDRight = other.id)
+			{
+				active = 1
+			}
 		}
 	}
 	
@@ -74,14 +80,20 @@ else if (global.doors_redblocker[redblockerID] > 0)
 	{
 		with(obj_chargelock)
 		{
-			open = 1
+			if (plugIDLeft = other.id) or (plugIDRight = other.id)
+			{
+				open = 1
+			}
 		}
 	}
 	if (instance_exists(obj_chargeplug_cable))
 	{
 		with(obj_chargeplug_cable)
 		{
-			active = 1
+			if (plugIDLeft = other.id) or (plugIDRight = other.id)
+			{
+				active = 1
+			}
 		}
 	}
 	if (instance_exists(obj_chargeplug_switch))

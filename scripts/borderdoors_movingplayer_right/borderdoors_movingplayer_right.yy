@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"borderdoors_movingplayer_right",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"borderdoors_movingplayer_right",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

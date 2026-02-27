@@ -202,7 +202,14 @@ function scrn_roomtransition_nodoors_2() {
 				else if (instance_exists(obj_camera_stopperU)) && (instance_exists(obj_camera_stopperD)) && (instance_exists(obj_camera_stopperL)) && (instance_exists(obj_camera_stopperR))
 				{
 					//X
-					if !(global.climbing)
+					if (global.mapgrid_xZeroMove)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							x = obj_mapchecker2.x+160
+						}
+					}
+					else if !(global.climbing) && (instance_exists(obj_player))
 					{
 						x = obj_player.x
 					}
@@ -229,6 +236,13 @@ function scrn_roomtransition_nodoors_2() {
 					if (room_height == 180) && (room_width == 320)
 					{
 						y = 90
+					}
+					else if (global.mapgrid_yZeroMove)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							y = obj_mapchecker2.y+90
+						}
 					}
 					else if !(global.climbing)
 					{

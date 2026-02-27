@@ -216,6 +216,7 @@ global.cutscene_suit = 0
 global.cutsceneID[Cutscenes.blackholetalk1] = 0
 global.cutsceneID[Cutscenes.blackholetalk2] = 0
 global.cutsceneID[Cutscenes.midgameScientist] = 0
+global.cutsceneID[Cutscenes.voltEngineGet] = true
 
 global.bossblockers[bossblockers.bugspider] = 0
 global.bossblockers[bossblockers.robospider] = 0
@@ -237,4 +238,6 @@ texture_set_interpolation(false);
 //goto desired room
 obj_player.x = 470
 obj_player.y = 270
-room_goto(rm_11_7_6)
+obj_camera.x = obj_player.x
+obj_camera.y = obj_player.y
+room_goto(rm_V_11_1_9)

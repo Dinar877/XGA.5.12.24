@@ -2,6 +2,7 @@
 // You can write your code in this editor
 instance_create_layer(x,y,layer_get_id("Inst_level_0"),obj_sprites_toad)
 inst = instance_place(x,y,obj_sprites_toad)
+inst2 = 0
 
 facing = -1
 hspd = 0
@@ -11,6 +12,9 @@ run_now = 0;
 prep_now = 0;
 turning = 0;
 knockback_now = 0;
+
+idleanim_walktimer = 0
+idleanim_turntimer = 0
 
 inst_circle = collision_rectangle(x-100,y-5,x+100,y+5,obj_player,false,true)
 blockInFrontOfMe = (place_meeting(x+(facing*8),y,obj_block))

@@ -10,6 +10,7 @@ function Move() {
 	global.hydrodash_use = 0;
 	
 	double_jump = 0
+	dash_jump = 0
 
 	if (enemy_slowdownswitch = 0)
 	{
@@ -19,7 +20,7 @@ function Move() {
 			if (((image_index >= 6) && (image_index < 7)) or ((image_index >= 12) && (image_index < 13))) && (sound_footstep >= 1)
 			{
 				audio_stop_sound(snd_player_footstep);
-				var snd_foot = audio_play_sound(snd_player_footstep,1,false,global.sfx_volume);
+				var snd_foot = audio_play_sound(snd_player_footstep,1000,false,global.sfx_volume);
 				audio_sound_pitch(snd_foot,1+(random_range(-0.08,0.08)));
 				
 				
@@ -39,7 +40,7 @@ function Move() {
 			if (((image_index >= 6) && (image_index < 7)) or ((image_index >= 12) && (image_index < 13))) && (sound_footstep >= 1)
 			{
 				audio_stop_sound(snd_player_footstep);
-				var snd_foot = audio_play_sound(snd_player_footstep,1,false,global.sfx_volume);
+				var snd_foot = audio_play_sound(snd_player_footstep,1000,false,global.sfx_volume);
 				audio_sound_pitch(snd_foot,1+(random_range(-0.05,0.05)));
 				
 				sound_footstep = 0;

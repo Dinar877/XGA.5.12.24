@@ -9,14 +9,17 @@ function biocorp_soldier_shoot(){
 		var decider = round(random_range(0,2))
 		if (decider == 0)
 				{
+					audio_stop_sound(snd_beamexplosion)
 					var snd = audio_play_sound(snd_beamexplosion,1000,false,global.sfx_volume)	
 				}
 		else if (decider == 1)
 				{
+					audio_stop_sound(snd_beamexplosion1)
 					var snd = audio_play_sound(snd_beamexplosion1,1000,false,global.sfx_volume)	
 				}
 		else if (decider == 2)
 				{
+					audio_stop_sound(snd_beamexplosion2)
 					var snd = audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)	
 				}	
 		//snd = audio_sound_gain(snd,0.5,0)	
@@ -58,14 +61,17 @@ function biocorp_soldier_shoot(){
 		var decider = round(random_range(0,2))
 		if (decider == 0)
 				{
+					audio_stop_sound(snd_beamexplosion)
 					var snd = audio_play_sound(snd_beamexplosion,1000,false,global.sfx_volume)	
 				}
 		else if (decider == 1)
 				{
+					audio_stop_sound(snd_beamexplosion1)
 					var snd = audio_play_sound(snd_beamexplosion1,1000,false,global.sfx_volume)	
 				}
 		else if (decider == 2)
 				{
+					audio_stop_sound(snd_beamexplosion2)
 					var snd = audio_play_sound(snd_beamexplosion2,1000,false,global.sfx_volume)	
 				}	
 		//snd = audio_sound_gain(snd,0.5,0)	

@@ -9,8 +9,8 @@
   "name":"obj_timelock_line",
   "overriddenProperties":[],
   "parent":{
-    "name":"upgrade hazards",
-    "path":"folders/Objects/upgrade hazards.yy",
+    "name":"special",
+    "path":"folders/Objects/collision/special.yy",
   },
   "parentObjectId":null,
   "persistent":false,

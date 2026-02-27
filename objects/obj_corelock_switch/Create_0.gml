@@ -4,6 +4,8 @@ redblockerID = 0
 on = 0
 off = 1
 
+instCoreLock = instance_nearest(x,y,obj_corelock)
+
 FadeNow = 0.5;
 timerup = 0;
 timerdown = 0;

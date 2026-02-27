@@ -497,10 +497,14 @@ function scrn_death1() {
 				global.lockdown_facingDir = 0;
 											
 				//if not testing, go to last room saved at
-				if (!instance_exists(obj_player_spawnhere))
+				if (!instance_exists(obj_player_spawnhere)) && (!instance_exists(obj_player_jumpingDM_spawnhere))
 				{
-					room_goto(global.roomgoto1);
-				} else room_goto(rm_load)
+					room_goto(rm_load);
+				} 
+				else if (instance_exists(obj_player_spawnhere)) or (instance_exists(obj_player_jumpingDM_spawnhere))
+				{
+					room_goto(room)
+				}
 											
 				image_alpha -= 0.025;
 			}
@@ -674,10 +678,14 @@ function scrn_death1() {
 				Loading_death()
 										
 				//if not testing, go to last room saved at
-				if (!instance_exists(obj_player_spawnhere))
+				if (!instance_exists(obj_player_spawnhere)) && (!instance_exists(obj_player_jumpingDM_spawnhere))
 				{
 					room_goto(global.roomgoto1);
-				} else room_goto(room)
+				} 
+				else if (instance_exists(obj_player_spawnhere)) or (instance_exists(obj_player_jumpingDM_spawnhere))
+				{
+					room_goto(room)
+				}
 										
 				image_alpha = image_alpha - 0.05;
 								

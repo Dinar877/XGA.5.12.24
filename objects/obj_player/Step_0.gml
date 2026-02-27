@@ -75,7 +75,7 @@ script_execute(Gamepad_variables);
 
 //other stuff
 if (state != Ledge_jumpprep) && (state != Climb_up_ledge) && (state != Wall_jump) && (state != Jump_after_wj) && (global.turning = 0) && (global.dashuse = 0) && (global.dashbegin = 0) && (global.room_transition = 0)
-&& (global.dashbegin2 != 1) && (global.room_transition != 1) && (global.room_transition_more != 1) && (global.room_transition1 != 1) && (global.dead_begin != 1) && (global.navigation_effect <= 0)
+&& (global.dashbegin2 != 1) && (global.room_transition != 1) && (global.room_transition_more != 1) && (global.room_transition_3 != 1) && (global.room_transition1 != 1) && (global.dead_begin != 1) && (global.navigation_effect <= 0)
 {
 	input_horizontal = ((right_key) - (left_key));
 }
@@ -188,7 +188,7 @@ if (global.hurt = 1) && (state != Dead) && (!instance_exists(obj_player_dashspar
 
 
 //turning
-if (state != Ledge_grab) && (state != Ledge_jumpprep) && (state != Climb_up_ledge) && (state != Wall_jump) && (global.jumpingdm = 0) && (state != Ledge_grab)
+if (state != Ledge_grab) && (state != Ledge_jumpprep) && (state != Climb_up_ledge) && (state != Check_if_ledge) && (state != Wall_jump) && (global.jumpingdm = 0)
 && (state != Dashing2_use) && (state != Dashing2_turning) && (state != Hurt)
 && (state != Shoot_hang)
 && (state != Jump_after_wj) && (state != Jump_after_Dashing_airdash) && (state != Jump_after_Dashing_hydrodash)
@@ -334,13 +334,12 @@ if (global.darkeater_death_pre_time_limit > 0)
 
 
 ////////////////ABILITIES
-
+#region
 	
 if (global.invisibility == 1) && (global.hurt == 1)
 {
 	global.invisibility = 0;	
 }
-
 
 
 if (global.nuclearblast > 0) && (global.nuclearblast_state = 0)
@@ -403,11 +402,6 @@ if (global.nuclearblast > 0) && ((global.saving > 0) or (global.navigation > 0))
 				}
 }
 
-
-
-
-
-
 //Autohack spawning
 if (global.shockwave = 1) && (global.shockwave_state = 0) && (global.shockwave_ammo > 0)
 {
@@ -443,7 +437,7 @@ if (global.shockwave <= 0) && (global.shockwave_ammo <= 0) && (audio_is_playing(
 }
 
 
-
+#endregion
 
 
 
@@ -456,1327 +450,1331 @@ if (global.shockwave <= 0) && (global.shockwave_ammo <= 0) && (audio_is_playing(
 
 
 //Collision shit
-
-//hspd_enemy, vspd_wind disabled in room transitions
-if (global.room_transition_prep == 1)
+if (global.dead_begin == 0)
 {
-	hspd_enemy = 0
-	vspd_wind = 0
-}
-
-//Horizontal
-if (hspd != 0) && (hspd_enemy == 0) && (global.dashbegin2 == 0) && (global.dash2 == 0)
-{
-	//NEW SLOPES
-	var totalHSPD = (hspd)
-	var totalHSPD2 = ((hspd)/2)
-	
-	var subspeed = 0
-	
-	if (totalHSPD != 0) 
-	&& (totalHSPD <= 1) 
-	&& (totalHSPD >= -1)
+	//hspd_enemy, vspd_wind disabled in room transitions
+	if (global.room_transition_prep == 1)
 	{
-		if (totalHSPD > 0)
-		{
-			subspeed = 1
-		}
-		else if (totalHSPD < 0)
-		{
-			subspeed = -1
-		}
+		hspd_enemy = 0
+		vspd_wind = 0
 	}
 
-	//NEWslope objects move scipt - LEFT
-	// the +1 for y is because at the edge of a block you will not connect with the newslope as you need to go 2 across 3 down to collide with it
-	if (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_left)) 
-	or (place_meeting(x,y+2,obj_newslope_left)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+2,obj_newslope_left)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
-	or (place_meeting(x,y+2,obj_newslope_right))
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_newslope_left))
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_newslope_right))
-	or (place_meeting(x+totalHSPD+subspeed-1,y,obj_newslope_left))
-	or (place_meeting(x+totalHSPD+subspeed-1,y,obj_newslope_right))
-	or (place_meeting(x-totalHSPD-subspeed-1,y,obj_newslope_left))
-	or (place_meeting(x-totalHSPD-subspeed-1,y,obj_newslope_right))
-	or (place_meeting(x+totalHSPD+subspeed+1,y,obj_newslope_left))
-	or (place_meeting(x+totalHSPD+subspeed+1,y,obj_newslope_right))
-	or (place_meeting(x-totalHSPD-subspeed+1,y,obj_newslope_left))
-	or (place_meeting(x-totalHSPD-subspeed+1,y,obj_newslope_right))
+	//Horizontal
+	if (hspd != 0) && (hspd_enemy == 0) && (global.dashbegin2 == 0) && (global.dash2 == 0)
 	{
-		//L
-		if (totalHSPD < 0) && (subspeed == 0)
+		//NEW SLOPES
+		var totalHSPD = (hspd)
+		var totalHSPD2 = ((hspd)/2)
+	
+		var subspeed = 0
+	
+		if (totalHSPD != 0) 
+		&& (totalHSPD <= 1) 
+		&& (totalHSPD >= -1)
 		{
-			Moving_newslope_left_biggerthan1()	
-		}
-		else if (totalHSPD < 0) && (subspeed != 0)
-		{
-			Moving_newslope_left_lessthan1()	
-		}
-		
-		//R
-		if (totalHSPD > 0) && (subspeed == 0)
-		{
-			Moving_newslope_right_biggerthan1()	
-		}
-		else if (totalHSPD > 0) && (subspeed != 0)
-		{
-			Moving_newslope_right_lessthan1()	
-		}
-	}
-	else if (totalHSPD != 0)
-	&& ((place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_left)) 
-	or (place_meeting(x,y+2,obj_slope1_left)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+2,obj_slope1_left)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_right)) 
-	or (place_meeting(x,y+2,obj_slope1_right))
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_left))
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_right))
-	or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_left))
-	or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_right))
-	or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_left))
-	or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_right)))
-	{		
-		//L
-		if (totalHSPD < 0) && (subspeed != 0)
-		{
-			Moving_slow_left_lessthan1()
-		}
-		else if (totalHSPD < 0) && (subspeed == 0)
-		{
-			Moving_slow_left_biggerthan1()
-		}
-		//R
-		if (totalHSPD > 0) && (subspeed != 0)
-		{
-			Moving_slow_right_lessthan1()
-		}
-		else if (totalHSPD > 0) && (subspeed == 0)
-		{
-			Moving_slow_right_biggerthan1()
-		}
-	}
-	else
-	{
-		
-		//left slopes
-	    //going up left slope
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (!place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
-	    {
-	        if (global.facingDir = 1) && (place_meeting(x+1,y,obj_slope1_left))
-	        {
-	            y-= floor(hspd+hspd_enemy);
-	        }
-	        else if (!place_meeting(x+1,y,obj_slope1_left)) && (!place_meeting(x+1,y,obj_block))
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x +=1;
-	        }
-            
-	        global.grounded = 1;
-	        grav = 0;
-	    }
-	    //if near wall and on slope left
-	        if (place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = 1) && (!place_meeting(x+1,y,obj_block))
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x += 1;
-	            y -= 1;
-	            grav=0;
-	            global.grounded = 1;
-	        }  
-	    //going up slope to block
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = 1)
-	        {
-	            x -=1;
-	            y -=1;
-	        }
-	    //going down left slope
-	    if (position_meeting(x+5,y+19,obj_slope1_left)) && (!position_meeting(x-5,y+20,obj_block)) && (!position_meeting(x+6,y+19,obj_block))
-	        {
-	        if (global.facingDir = -1) && (!position_meeting(x-8,y+19,obj_block)) && (!place_meeting(x,y+1,obj_block))
-	            {
-	                y-= floor(hspd+hspd_enemy);
-	                grav = 0;
-	            }
-	        }
-	    //going down left slope to block
-	        if (position_meeting(x-8,y+21,obj_block)) && (global.facingDir = -1) && (place_meeting(x+2,y+2,obj_slope1_left))
-	        {
-	            if (!position_meeting(x-6,y+19,obj_block))
-	            {    
-		            x += sign(hspd+hspd_enemy);
-		            y-=sign(hspd+hspd_enemy);
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-	            //going down from block to left slope-1
-	        if (global.facingDir = -1) && (!position_meeting(x-(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
-	        {
-	            if (position_meeting(x+4,y+19,obj_block)) && (position_meeting(x+3,y+20,obj_slope1_left))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x-=3; 
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x+5,y+19,obj_block)) && (position_meeting(x+4,y+20,obj_slope1_left))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x-=2;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x+6,y+19,obj_block)) && (position_meeting(x+5,y+20,obj_slope1_left))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x-=1;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-                
-	        }
-	        //if against wall and on slope left
-	        if (place_meeting(x-1,y,obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = -1)
-	        {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x -= 1;
-		            y += 1;
-		            grav=0;
-		            global.grounded = 1;
-	        }   
-	            //going up from block to left slope
-	        if (position_meeting(x+(hspd+hspd_enemy),y+19,obj_block)) && (global.facingDir = 1) && (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x,y+1,obj_slope1_left))
-	        {
-	            if (!position_meeting(x+(hspd+hspd_enemy),y+18,obj_slope1_left))
-	            {    
-		            hspd = 0;
-					hspd_enemy = 0
-		            x += 1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-            
-			
-		//right slopes
-	    //going up right slope
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (!place_meeting(x+(hspd+hspd_enemy),y+(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
-	    {
-	        if (global.facingDir = -1) && (place_meeting(x-1,y,obj_slope1_right))
-	        {
-	            y+= floor(hspd+hspd_enemy);
-	        }
-	        else if (!place_meeting(x-1,y,obj_slope1_right)) && (!place_meeting(x-1,y,obj_block)) && (global.facingDir = -1)
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x -=1;
-	        }
-	        global.grounded = 1;
-	        grav = 0;
-	    }
-	    //going up slope to block
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = -1) && (global.dashbegin2 == 0) && (global.dash2 == 0)
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-				x -=1;
-	            y -=1;
-	        }
-	    //going down right slope
-	    if (place_meeting(x-1,y,obj_slope1_right)) && (global.facingDir = 1)
-	        {
-	        if (!position_meeting(x+8,y+21,obj_block)) && (!place_meeting(x,y+1,obj_block))
-	            {
-	                hspd = 0;
-					hspd_enemy = 0
-					if (enemy_slowdownswitch = 0)
-					{
-		                x += 3;
-		                y += 3;
-					}
-					else if (enemy_slowdownswitch > 0)
-					{
-		                x += 2;
-		                y += 2;
-					}
-	                grav = 0;
-	            }
-	        }
-	    //going down right slope to block
-            
-	        if (position_meeting(x+8,y+21,obj_block)) && (global.facingDir = 1) && (place_meeting(x,y+1,obj_slope1_right))
-	        {
-	            if (!position_meeting(x+6,y+19,obj_block))
-	            {    
-		            hspd = 0;
-					hspd_enemy = 0
-		            x += 1;
-		            y += 1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-	            //going down from block to right slope-1
-	        if (global.facingDir = 1) && (!position_meeting(x+(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
-	        {
-	            if (position_meeting(x-4,y+19,obj_block)) && (position_meeting(x-3,y+19,obj_slope1_right))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x+=3;   
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x-5,y+19,obj_block)) && (position_meeting(x-4,y+19,obj_slope1_right))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x+=2;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x-6,y+20,obj_block)) && (position_meeting(x-5,y+19,obj_slope1_right))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x+=1;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-                
-	        }
-	            //going up from block to right slope
-	        if (position_meeting(x-4,y+19,obj_block)) && (global.facingDir = -1) && (position_meeting(x-8,y+18,obj_slope1_right)) && (global.dash2 == 0)
-	        {
-	            if (!position_meeting(x-6,y+18,obj_slope1_right))
-	            {    
-		            x -= 1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-	        //if against wall and on slope right
-	        if (place_meeting(x-1,y,obj_block)) && (place_meeting(x,y+1,obj_slope1_right)) && (global.facingDir = 1)
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x += 1;
-	            y += 1;
-	            grav=0;
-	            global.grounded = 1;
-	        }
-			
-			
-			
-			//normal collision block
-		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0)
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		        }
-				hspd = 0;
-				hspd_enemy = 0
-		    }
-		    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0)
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y --;
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (place_meeting(x,y-1,obj_slope1_right))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y += sign(hspd+hspd_enemy);
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		    }
-			
-			
-			
-			//nano block
-		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block2_nano)) && (hspd+hspd_enemy != 0)
-			&& (!place_meeting(x,y,obj_block2_nano))
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
-				 && (!place_meeting(x,y,obj_block2_nano))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		        }
-				hspd = 0;
-				hspd_enemy = 0
-		    }
-		    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block2_nano)) && (hspd+hspd_enemy != 0)
-			&& (!place_meeting(x,y,obj_block2_nano))
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
-				 && (!place_meeting(x,y,obj_block2_nano))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y --;
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (place_meeting(x,y-2,obj_slope1_right))
-				 && (!place_meeting(x,y,obj_block2_nano))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y += sign(hspd+hspd_enemy);
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		    } 
-			
-			
-			//apply speeds
-			x += (hspd+hspd_enemy);	
-		}
-}
-else if (hspd_enemy != 0) && (global.dashbegin2 == 0) && (global.dash2 == 0)
-&& (state != Ledge_grab) && (state != Shoot_hang)  && (state != Ledge_jumpprep) && (state != Climb_up_ledge) && (state != Dead)
-{
-	//newslopes
-	var totalHSPD = (hspd+hspd_enemy)
-	var totalHSPD2 = ((hspd+hspd_enemy)/2)
-
-	var subspeed = 0
-	
-	if (totalHSPD != 0) 
-	&& (totalHSPD <= 1) 
-	&& (totalHSPD >= -1)
-	{
-		if (totalHSPD > 0)
-		{
-			subspeed = 1
-		}
-		else if (totalHSPD < 0)
-		{
-			subspeed = -1
-		}
-	}
-	
-	
-	
-
-	//NEWslope objects move scipt - LEFT
-	if (place_meeting(x+totalHSPD,y+totalHSPD,obj_newslope_left)) or (place_meeting(x,y+2,obj_newslope_left))
-	or (place_meeting(x+totalHSPD,y+totalHSPD,obj_newslope_right)) or (place_meeting(x,y+2,obj_newslope_right))
-	or (place_meeting(x+totalHSPD,y+totalHSPD2,obj_newslope_left))
-	or (place_meeting(x+totalHSPD,y+totalHSPD2,obj_newslope_right))
-	or (place_meeting(x+totalHSPD,y,obj_newslope_left))
-	or (place_meeting(x+totalHSPD,y,obj_newslope_right))
-	{
-		if (totalHSPD < 0)
-		{
-			Moving_newslope_left_biggerthan1()	
-		}
-		else if (totalHSPD > 0)
-		{
-			Moving_newslope_right_biggerthan1()	
-		}
-	}
-	else if (totalHSPD != 0)
-	&& ((place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_left)) 
-	or (place_meeting(x,y+2,obj_slope1_left)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+2,obj_slope1_left)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_right)) 
-	or (place_meeting(x,y+2,obj_slope1_right))
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_left))
-	or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_right))
-	or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_left))
-	or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_right))
-	or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_left))
-	or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_right)))
-	{		
-		//L
-		if (totalHSPD < 0) && (subspeed != 0)
-		{
-			Moving_slow_left_lessthan1()
-		}
-		else if (totalHSPD < 0) && (subspeed == 0)
-		{
-			Moving_slow_left_biggerthan1()
-		}
-		//R
-		if (totalHSPD > 0) && (subspeed != 0)
-		{
-			Moving_slow_right_lessthan1()
-		}
-		else if (totalHSPD > 0) && (subspeed == 0)
-		{
-			Moving_slow_right_biggerthan1()
-		}
-	}
-	else
-	{
-		
-		//left slopes
-	    //going up left slope
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (!place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
-	    {
-	        if (global.facingDir = 1) && (place_meeting(x+1,y,obj_slope1_left))
-	        {
-	            y-= floor(hspd+hspd_enemy);
-	        }
-	        else if (!place_meeting(x+1,y,obj_slope1_left)) && (!place_meeting(x+1,y,obj_block))
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x +=1;
-	        }
-            
-	        global.grounded = 1;
-	        grav = 0;
-	    }
-	    //if near wall and on slope left
-	        if (place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = 1) && (!place_meeting(x+1,y,obj_block))
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x += 1;
-	            y -= 1;
-	            grav=0;
-	            global.grounded = 1;
-	        }  
-	    //going up slope to block
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = 1)
-	        {
-	            x -=1;
-	            y -=1;
-	        }
-	    //going down left slope
-	    if (position_meeting(x+5,y+19,obj_slope1_left)) && (!position_meeting(x-5,y+20,obj_block)) && (!position_meeting(x+6,y+19,obj_block))
-	        {
-	        if (global.facingDir = -1) && (!position_meeting(x-8,y+19,obj_block)) && (!place_meeting(x,y+1,obj_block))
-	            {
-	                y-= floor(hspd+hspd_enemy);
-	                grav = 0;
-	            }
-	        }
-	    //going down left slope to block
-	        if (position_meeting(x-8,y+21,obj_block)) && (global.facingDir = -1) && (place_meeting(x+2,y+2,obj_slope1_left))
-	        {
-	            if (!position_meeting(x-6,y+19,obj_block))
-	            {    
-		            x += sign(hspd+hspd_enemy);
-		            y-=sign(hspd+hspd_enemy);
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-	            //going down from block to left slope-1
-	        if (global.facingDir = -1) && (!position_meeting(x-(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
-	        {
-	            if (position_meeting(x+4,y+19,obj_block)) && (position_meeting(x+3,y+20,obj_slope1_left))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x-=3; 
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x+5,y+19,obj_block)) && (position_meeting(x+4,y+20,obj_slope1_left))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x-=2;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x+6,y+19,obj_block)) && (position_meeting(x+5,y+20,obj_slope1_left))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x-=1;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-                
-	        }
-	        //if against wall and on slope left
-	        if (place_meeting(x-1,y,obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = -1)
-	        {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x -= 1;
-		            y += 1;
-		            grav=0;
-		            global.grounded = 1;
-	        }   
-	            //going up from block to left slope
-	        if (position_meeting(x+(hspd+hspd_enemy),y+19,obj_block)) && (global.facingDir = 1) && (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x,y+1,obj_slope1_left))
-	        {
-	            if (!position_meeting(x+(hspd+hspd_enemy),y+18,obj_slope1_left))
-	            {    
-		            hspd = 0;
-					hspd_enemy = 0
-		            x += 1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-            
-			
-		//right slopes
-	    //going up right slope
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (!place_meeting(x+(hspd+hspd_enemy),y+(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
-	    {
-	        if (global.facingDir = -1) && (place_meeting(x-1,y,obj_slope1_right))
-	        {
-	            y+= floor(hspd+hspd_enemy);
-	        }
-	        else if (!place_meeting(x-1,y,obj_slope1_right)) && (!place_meeting(x-1,y,obj_block)) && (global.facingDir = -1)
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x -=1;
-	        }
-	        global.grounded = 1;
-	        grav = 0;
-	    }
-	    //going up slope to block
-	    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = -1) && (global.dashbegin2 == 0) && (global.dash2 == 0)
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-				x -=1;
-	            y -=1;
-	        }
-	    //going down right slope
-	    if (place_meeting(x-1,y,obj_slope1_right)) && (global.facingDir = 1)
-	        {
-	        if (!position_meeting(x+8,y+21,obj_block)) && (!place_meeting(x,y+1,obj_block))
-	            {
-	                hspd = 0;
-					hspd_enemy = 0
-					if (enemy_slowdownswitch = 0)
-					{
-		                x += 3;
-		                y += 3;
-					}
-					else if (enemy_slowdownswitch > 0)
-					{
-		                x += 2;
-		                y += 2;
-					}
-	                grav = 0;
-	            }
-	        }
-	    //going down right slope to block
-            
-	        if (position_meeting(x+8,y+21,obj_block)) && (global.facingDir = 1) && (place_meeting(x,y+1,obj_slope1_right))
-	        {
-	            if (!position_meeting(x+6,y+19,obj_block))
-	            {    
-		            hspd = 0;
-					hspd_enemy = 0
-		            x += 1;
-		            y += 1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-	            //going down from block to right slope-1
-	        if (global.facingDir = 1) && (!position_meeting(x+(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
-	        {
-	            if (position_meeting(x-4,y+19,obj_block)) && (position_meeting(x-3,y+19,obj_slope1_right))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x+=3;   
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x-5,y+19,obj_block)) && (position_meeting(x-4,y+19,obj_slope1_right))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x+=2;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	            else if (position_meeting(x-6,y+20,obj_block)) && (position_meeting(x-5,y+19,obj_slope1_right))
-	            {
-		            hspd = 0;
-					hspd_enemy = 0
-		            x+=1;
-		            y+=1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-                
-	        }
-	            //going up from block to right slope
-	        if (position_meeting(x-4,y+19,obj_block)) && (global.facingDir = -1) && (position_meeting(x-8,y+18,obj_slope1_right)) && (global.dash2 == 0)
-	        {
-	            if (!position_meeting(x-6,y+18,obj_slope1_right))
-	            {    
-		            x -= 1;
-		            grav=0;
-		            global.grounded = 1;
-	            }
-	        }
-	        //if against wall and on slope right
-	        if (place_meeting(x-1,y,obj_block)) && (place_meeting(x,y+1,obj_slope1_right)) && (global.facingDir = 1)
-	        {
-	            hspd = 0;
-				hspd_enemy = 0
-	            x += 1;
-	            y += 1;
-	            grav=0;
-	            global.grounded = 1;
-	        }
-			
-			
-			
-			//normal collision block
-		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0)
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		        }
-				hspd = 0;
-				hspd_enemy = 0
-		    }
-		    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0)
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y --;
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (place_meeting(x,y-1,obj_slope1_right))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y += sign(hspd+hspd_enemy);
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		    }
-			
-			
-			
-			//nano block
-		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block2_nano)) && (hspd+hspd_enemy != 0)
-			&& (!place_meeting(x,y,obj_block2_nano))
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
-				 && (!place_meeting(x,y,obj_block2_nano))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		        }
-				hspd = 0;
-				hspd_enemy = 0
-		    }
-		    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block2_nano)) && (hspd+hspd_enemy != 0)
-			&& (!place_meeting(x,y,obj_block2_nano))
-		    {
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
-				 && (!place_meeting(x,y,obj_block2_nano))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y --;
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (place_meeting(x,y-2,obj_slope1_right))
-				 && (!place_meeting(x,y,obj_block2_nano))
-		        {
-		            x += sign(hspd+hspd_enemy);
-		            y += sign(hspd+hspd_enemy);
-		            hspd = 0;
-					hspd_enemy = 0
-		        }
-		    } 
-			
-			
-			//apply speeds
-			x += (hspd+hspd_enemy);	
-	}
-}
-
-
-
-//Vertical    
-if (vspd != 0) && (state != Dead) && (vspd_wind == 0)
-{
-    //normal collision blockif (place_meeting(x,y+vspd,obj_block))---going down
-    if (place_meeting(x,y+(vspd),obj_block)) && (round(vspd) > 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
-	&& (!place_meeting(x,y+(vspd),obj_slope1_left)) && (!place_meeting(x,y+(vspd),obj_slope1_right))
-    {
-            vspd = floor(vspd);
-            while (!place_meeting(x,y+sign(vspd),obj_block)) && (state != Jumping) && (vspd != 0)
-            {
-                y += 1;
-                if (sign(vspd) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd) = -1)
-                {
-                    against_wall_du = -1;
-                }
-
-            }
-            vspd = 0;
-    }
-    //normal collision blockif (place_meeting(x,y+vspd,obj_block))---going up
-    if (place_meeting(x,y+(vspd),obj_block)) && ((vspd) < 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
-	&& (!place_meeting(x,y+(vspd),obj_slope1_left)) && (!place_meeting(x,y+(vspd),obj_slope1_right))
-    {
-            vspd = floor(vspd);
-            while (!place_meeting(x,y+sign(vspd),obj_block)) && (state != Jumping) && (vspd != 0)
-            {
-                y += -1;
-                if (sign(vspd) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd) = -1)
-                {
-                    against_wall_du = -1;
-                }
-
-            }
-            vspd = 0;
-            grav = 0.25;
-    }
-	
-	
-    //normal collision slope1 left
-    if (place_meeting(x,y+(vspd),obj_slope1_left)) && (hspd = 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd);
-            while (!place_meeting(x,y+sign(vspd),obj_slope1_left)) && (state != Jumping) && (vspd != 0)
-            {
-                hspd = 0;
-                y += sign(vspd);
-                if (sign(vspd) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-            global.grounded = 1;
-            vspd = 0;
-    }
-    //normal collision slope1 right
-    if (place_meeting(x,y+(vspd),obj_slope1_right)) && (hspd = 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd);
-            while (!place_meeting(x,y+sign(vspd),obj_slope1_right)) && (state != Jumping) && (vspd != 0)
-            {
-                hspd = 0;
-                y += sign(vspd);
-                if (sign(vspd) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-            global.grounded = 1;
-            vspd = 0;
-    }
-	
-	
-	
-	//normal collision NEWslope left
-    if (place_meeting(x,y+(vspd),obj_newslope_left)) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd);
-			
-            while (!place_meeting(x,y+sign(vspd),obj_newslope_left)) && (state != Jumping) && (vspd != 0)
-            {
-                hspd = 0;
-                y += sign(vspd);
-                if (sign(vspd) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-			
-            global.grounded = 1;
-            vspd = 0;
-    }
-    //normal collision NEWslope right
-    if (place_meeting(x,y+(vspd),obj_newslope_right)) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd);
-			
-            while (!place_meeting(x,y+sign(vspd),obj_newslope_right)) && (state != Jumping) && (vspd != 0)
-            {
-                hspd = 0;
-                y += sign(vspd);
-                if (sign(vspd) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-			
-            global.grounded = 1;
-            vspd = 0;
-    }
-	
-	
-	y += (vspd);
-	y = floor(y);
-}
-else //Vertical-with VSPD_WIND    
-if (vspd != 0) && (state != Dead) && (vspd_wind != 0)
-{
-	//normal collision blockif (place_meeting(x,y+vspd+vspd_wind,obj_block))---going down
-    if (place_meeting(x,y+(vspd+vspd_wind),obj_block)) && (round(vspd+vspd_wind) > 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
-	&& (!place_meeting(x,y+(vspd+vspd_wind),obj_slope1_left)) && (!place_meeting(x,y+(vspd+vspd_wind),obj_slope1_right))
-    {
-            vspd = floor(vspd+vspd_wind);
-            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_block)) && (state != Jumping) && (vspd+vspd_wind != 0)
-            {
-                y += 1;
-                if (sign(vspd+vspd_wind) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd+vspd_wind) = -1)
-                {
-                    against_wall_du = -1;
-                }
-
-            }
-            vspd = 0;
-			vspd_wind = 0;
-    }
-    //normal collision blockif (place_meeting(x,y+vspd+vspd_wind,obj_block))---going up
-    if (place_meeting(x,y+(vspd+vspd_wind),obj_block)) && ((vspd+vspd_wind) < 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
-	&& (!place_meeting(x,y+(vspd+vspd_wind),obj_slope1_left)) && (!place_meeting(x,y+(vspd+vspd_wind),obj_slope1_right))
-    {
-            vspd = floor(vspd+vspd_wind);
-            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_block)) && (state != Jumping) && (vspd+vspd_wind != 0)
-            {
-                y += -1;
-                if (sign(vspd+vspd_wind) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd+vspd_wind) = -1)
-                {
-                    against_wall_du = -1;
-                }
-
-            }
-            vspd = 0;
-			vspd_wind = 0;
-            grav = 0.25;
-    }
-	
-	
-    //normal collision slope1 left
-    if (place_meeting(x,y+(vspd+vspd_wind),obj_slope1_left)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd+vspd_wind);
-            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_slope1_left)) && (state != Jumping) && (vspd+vspd_wind != 0)
-            {
-                hspd = 0;
-                y += sign(vspd+vspd_wind);
-                if (sign(vspd+vspd_wind) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd+vspd_wind) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-            global.grounded = 1;
-            vspd = 0;
-			vspd_wind = 0;
-    }
-    //normal collision slope1 right
-    if (place_meeting(x,y+(vspd+vspd_wind),obj_slope1_right)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd+vspd_wind);
-            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_slope1_right)) && (state != Jumping) && (vspd+vspd_wind != 0)
-            {
-                hspd = 0;
-                y += sign(vspd+vspd_wind);
-                if (sign(vspd+vspd_wind) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd+vspd_wind) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-            global.grounded = 1;
-            vspd = 0;
-			vspd_wind = 0;
-    }
-	
-	
-	//normal collision obj_newslope_left
-    if (place_meeting(x,y+(vspd+vspd_wind),obj_newslope_left)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd+vspd_wind);
-            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_newslope_left)) && (state != Jumping) && (vspd+vspd_wind != 0)
-            {
-                hspd = 0;
-                y += sign(vspd+vspd_wind);
-                if (sign(vspd+vspd_wind) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd+vspd_wind) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-            global.grounded = 1;
-            vspd = 0;
-			vspd_wind = 0;
-    }
-    //normal collision obj newslope right
-    if (place_meeting(x,y+(vspd+vspd_wind),obj_newslope_right)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
-    {
-            vspd = floor(vspd+vspd_wind);
-            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_newslope_right)) && (state != Jumping) && (vspd+vspd_wind != 0)
-            {
-                hspd = 0;
-                y += sign(vspd+vspd_wind);
-                if (sign(vspd+vspd_wind) = 1)
-                {
-                    against_wall_du = 1;
-                }
-                else if (sign(vspd+vspd_wind) = -1)
-                {
-                    against_wall_du = -1;
-                }
-                
-            }
-            global.grounded = 1;
-            vspd = 0;
-			vspd_wind = 0;
-    }
-	
-	
-	
-	
-	
-	
-	y += (vspd+vspd_wind);
-	y = floor(y);
-}
-
-if (hspd = 0) && (place_meeting(x,y+1,obj_slope1_left))
-{
-    vspd = 0;
-    grav = 0;
-}
-
-
-
-//if falling dioagonally onto a slope
-if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_right)))
-{
-    grav = 0;
-    speed_x = 0;
-    vspd = floor(vspd);
-    
-	while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_slope1_right)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_right)))
-    && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_slope1_right)) && (state != Dashing2_use)
-    {
-         hspd = 0;
-         grav = 0;
-         speed_x = 0;
-         y = floor(y) + sign(vspd);
-         input_horizontal = 0;
-    }
-    //fail safe in case the checks above don't work
-    while (place_meeting(x+1,y-1,obj_slope1_right)) && (state != Dashing2_use)
-    {
-        y --;
-    }
-    
-    
-    if ((place_meeting(x+1,y,obj_slope1_right)))
-    {
-         speed_x = 0;
-         grav = 0;
-         vspd = 0;
-         hspd = 0;
-    }
-}
-
-if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_left))) && (state != Dashing2_use)
-{
-    grav = 0;
-    speed_x = 0;
-    vspd = floor(vspd);
-    while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_slope1_left)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_left)))
-     && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_slope1_left)) && (state != Dashing2_use)
-    {
-         hspd = 0;
-         grav = 0;
-         speed_x = 0;
-         y = floor(y) + sign(vspd);
-         input_horizontal = 0;
-    }
-    //fail safe in case the checks above don't work
-    while (place_meeting(x-1,y-1,obj_slope1_left)) && (state != Dashing2_use)
-    {
-        y --;
-    }
-    
-    if ((place_meeting(x-1,y,obj_slope1_left)))
-    {
-         speed_x = 0;
-         grav = 0;
-         vspd = 0;
-         hspd = 0;
-    }
-}
-
-
-
-
-//if falling dioagonally onto a slope - L and R
-if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_right)))
-{
-    grav = 0;
-    speed_x = 0;
-    vspd = floor(vspd);
-    
-	while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_newslope_right)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_right)))
-    && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_newslope_right)) && (state != Dashing2_use)
-    {
-         hspd = 0;
-         grav = 0;
-         speed_x = 0;
-         y = floor(y) + sign(vspd);
-         input_horizontal = 0;
-    }
-    //fail safe in case the checks above don't work
-    while (place_meeting(x+1,y-1,obj_newslope_right)) && (state != Dashing2_use)
-    {
-        y --;
-    }
-    
-    
-    if ((place_meeting(x+1,y,obj_newslope_right)))
-    {
-         speed_x = 0;
-         grav = 0;
-         vspd = 0;
-         hspd = 0;
-    }
-}
-else if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_left))) && (state != Dashing2_use)
-{
-    grav = 0;
-    speed_x = 0;
-    vspd = floor(vspd);
-    while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_newslope_left)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_left)))
-     && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_newslope_left)) && (state != Dashing2_use)
-    {
-         hspd = 0;
-         grav = 0;
-         speed_x = 0;
-         y = floor(y) + sign(vspd);
-         input_horizontal = 0;
-    }
-    //fail safe in case the checks above don't work
-    while (place_meeting(x-1,y-1,obj_newslope_left)) && (state != Dashing2_use)
-    {
-        y --;
-    }
-    
-    if ((place_meeting(x-1,y,obj_newslope_left)))
-    {
-         speed_x = 0;
-         grav = 0;
-         vspd = 0;
-         hspd = 0;
-    }
-}
-
-
-
-
-
-
-
-
-//fail safe in case the checks above don't work-left slope
-while (place_meeting(x+1,y-1,obj_slope1_left)) && (state != Dashing2_use)
-{
-                y --;
-}
-//fail safe in case the checks above don't work-right slope
-while (place_meeting(x-1,y-1,obj_slope1_right)) && (state != Dashing2_use)
-{
-                y --;
-}
-
-//fail safe in case the checks above don't work-left new slope
-while (place_meeting(x+1,y-1,obj_newslope_left)) && (state != Dashing2_use)
-{
-                y --;
-}
-//fail safe in case the checks above don't work-right new slope
-while (place_meeting(x-1,y-1,obj_newslope_right)) && (state != Dashing2_use)
-{
-                y --;
-}
-
-
-
-//fail safe if inside collision block - top
-if (!position_meeting(x,bbox_bottom+1,obj_block))
-&& (position_meeting(x,bbox_top,obj_block))
-&& (place_meeting(x,y,obj_block))
-{
-	while (place_meeting(x,y,obj_block))
-	&& (!position_meeting(x,bbox_bottom+1,obj_block))
-	&& (position_meeting(x,bbox_top,obj_block))
-		{
-			y ++;	
-		}
-}
-	
-//fail safe if inside collision block - bottom
-if (!position_meeting(x,bbox_top-1,obj_block))
-&& (position_meeting(x,bbox_bottom,obj_block))
-&& (place_meeting(x,y,obj_block))
-{
-	while (place_meeting(x,y,obj_block))
-	&& (!position_meeting(x,bbox_top-1,obj_block))
-	&& (position_meeting(x,bbox_bottom,obj_block))
-		{
-			y --;	
-		}
-}
-
-//fail safe if inside collision block - right
-if (!position_meeting(bbox_left-1,y,obj_block))
-&& (position_meeting(bbox_right,y,obj_block))
-&& (place_meeting(x,y,obj_block))
-{
-	while (place_meeting(x,y,obj_block))
-	&& (!position_meeting(bbox_left-1,y,obj_block))
-	&& (position_meeting(bbox_right,y,obj_block))
-		{
-			x --;	
-		}
-}
-	
-//fail safe if inside collision block - left
-if (!position_meeting(bbox_right+1,y,obj_block))
-&& (position_meeting(bbox_left,y,obj_block))
-&& (place_meeting(x,y,obj_block))
-{
-	while (place_meeting(x,y,obj_block))
-	&& (!position_meeting(bbox_right+1,y,obj_block))
-	&& (position_meeting(bbox_left,y,obj_block))
-		{
-			x++;	
-		}
-}
-	
-	
-
-if (place_meeting(x,y+1,obj_convayerbelt_block_left))
-{
-	hspd_enemy = -1
-}
-else if (place_meeting(x,y+1,obj_convayerbelt_block_right))
-{
-	hspd_enemy = 1
-}
-else if (!place_meeting(x,y+1,obj_convayerbelt_block_left)) && (!place_meeting(x,y+1,obj_convayerbelt_block_right))
-&& ((place_meeting(x,y+1,obj_block)) or (place_meeting(x,y+1,obj_slope1_right)) or (place_meeting(x,y+1,obj_slope1_left)))
-&& (state != Falling) && (state != Fall_shoot) && (state != Falling_doublejump) && (state != Falling_Dashing2) && (state != Falling_Dashing2_airdash)
-{	
-	hspd_enemy = 0
-}
-
-if ((state = Crouching) or (state = Crouch_shoot)) && (hspd_enemy != 0)
-&& (!place_meeting(x,y+1,obj_block)) && (!place_meeting(x,y+1,obj_slope1_left)) && (!place_meeting(x,y+1,obj_slope1_right))
-&& (!place_meeting(x,y+1,obj_convayerbelt_block_left)) && (!place_meeting(x,y+1,obj_convayerbelt_block_right))
-	{
-		global.jumpingdm = 0
-		global.crouching = 0
-		if (sprite_index = spr_player_crouch)
+			if (totalHSPD > 0)
 			{
-				sprite_index = spr_player
-				y -= 4;
+				subspeed = 1
 			}
-		State_machine_switch_state(Falling)	
-	}
+			else if (totalHSPD < 0)
+			{
+				subspeed = -1
+			}
+		}
 
-//moving just off convayer belt
-if (place_meeting(x+2,y+1,obj_convayerbelt_block_left)) && (!place_meeting(x-2,y,obj_block)) && (!place_meeting(x-2,y,obj_slope1_left)) && (!place_meeting(x-2,y,obj_slope1_right))
- && (!place_meeting(x,y+1,obj_convayerbelt_block_left))
+		//NEWslope objects move scipt - LEFT
+		// the +1 for y is because at the edge of a block you will not connect with the newslope as you need to go 2 across 3 down to collide with it with sub pixels
+		if (!global.jumping)
+		&& ((place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_left)) 
+		or (place_meeting(x,y+2,obj_newslope_left)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+2,obj_newslope_left)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
+		or (place_meeting(x,y+2,obj_newslope_right))
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_newslope_left))
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_newslope_right))
+		or (place_meeting(x+totalHSPD+subspeed-1,y,obj_newslope_left))
+		or (place_meeting(x+totalHSPD+subspeed-1,y,obj_newslope_right))
+		or (place_meeting(x-totalHSPD-subspeed-1,y,obj_newslope_left))
+		or (place_meeting(x-totalHSPD-subspeed-1,y,obj_newslope_right))
+		or (place_meeting(x+totalHSPD+subspeed+1,y,obj_newslope_left))
+		or (place_meeting(x+totalHSPD+subspeed+1,y,obj_newslope_right))
+		or (place_meeting(x-totalHSPD-subspeed+1,y,obj_newslope_left))
+		or (place_meeting(x-totalHSPD-subspeed+1,y,obj_newslope_right)))
+		{
+			//L
+			if (totalHSPD < 0) && (subspeed == 0)
+			{
+				Moving_newslope_left_biggerthan1()	
+			}
+			else if (totalHSPD < 0) && (subspeed != 0)
+			{
+				Moving_newslope_left_lessthan1()	
+			}
+		
+			//R
+			if (totalHSPD > 0) && (subspeed == 0)
+			{
+				Moving_newslope_right_biggerthan1()	
+			}
+			else if (totalHSPD > 0) && (subspeed != 0)
+			{
+				Moving_newslope_right_lessthan1()	
+			}
+		}
+		else if (totalHSPD != 0) && (!global.jumping)
+		&& ((place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_left)) 
+		or (place_meeting(x,y+2,obj_slope1_left)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+2,obj_slope1_left)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_right)) 
+		or (place_meeting(x,y+2,obj_slope1_right))
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_left))
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_right))
+		or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_left))
+		or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_right))
+		or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_left))
+		or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_right)))
+		{		
+			//L
+			if (totalHSPD < 0) && (subspeed != 0)
+			{
+				Moving_slow_left_lessthan1()
+			}
+			else if (totalHSPD < 0) && (subspeed == 0)
+			{
+				Moving_slow_left_biggerthan1()
+			}
+			//R
+			if (totalHSPD > 0) && (subspeed != 0)
+			{
+				Moving_slow_right_lessthan1()
+			}
+			else if (totalHSPD > 0) && (subspeed == 0)
+			{
+				Moving_slow_right_biggerthan1()
+			}
+		}
+		else
+		{
+		
+			//left slopes
+		    //going up left slope
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (!place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
+		    {
+		        if (global.facingDir = 1) && (place_meeting(x+1,y,obj_slope1_left))
+		        {
+		            y-= floor(hspd+hspd_enemy);
+		        }
+		        else if (!place_meeting(x+1,y,obj_slope1_left)) && (!place_meeting(x+1,y,obj_block))
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+		            x +=1;
+		        }
+            
+		        global.grounded = 1;
+		        grav = 0;
+		    }
+		    //if near wall and on slope left
+		        if (place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = 1) && (!place_meeting(x+1,y,obj_block))
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+		            x += 1;
+		            y -= 1;
+		            grav=0;
+		            global.grounded = 1;
+		        }  
+		    //going up slope to block
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = 1)
+		        {
+		            x -=1;
+		            y -=1;
+		        }
+		    //going down left slope
+		    if (position_meeting(x+5,y+19,obj_slope1_left)) && (!position_meeting(x-5,y+20,obj_block)) && (!position_meeting(x+6,y+19,obj_block))
+		        {
+		        if (global.facingDir = -1) && (!position_meeting(x-8,y+19,obj_block)) && (!place_meeting(x,y+1,obj_block))
+		            {
+		                y-= floor(hspd+hspd_enemy);
+		                grav = 0;
+		            }
+		        }
+		    //going down left slope to block
+		        if (position_meeting(x-8,y+21,obj_block)) && (global.facingDir = -1) && (place_meeting(x+2,y+2,obj_slope1_left))
+		        {
+		            if (!position_meeting(x-6,y+19,obj_block))
+		            {    
+			            x += sign(hspd+hspd_enemy);
+			            y-=sign(hspd+hspd_enemy);
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		        }
+		            //going down from block to left slope-1
+		        if (global.facingDir = -1) && (!position_meeting(x-(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
+		        {
+		            if (position_meeting(x+4,y+19,obj_block)) && (position_meeting(x+3,y+20,obj_slope1_left))
+		            {
+			            hspd = 0;
+						hspd_enemy = 0
+			            x-=3; 
+			            y+=1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		            else if (position_meeting(x+5,y+19,obj_block)) && (position_meeting(x+4,y+20,obj_slope1_left))
+		            {
+			            hspd = 0;
+						hspd_enemy = 0
+			            x-=2;
+			            y+=1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		            else if (position_meeting(x+6,y+19,obj_block)) && (position_meeting(x+5,y+20,obj_slope1_left))
+		            {
+			            hspd = 0;
+						hspd_enemy = 0
+			            x-=1;
+			            y+=1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+                
+		        }
+		        //if against wall and on slope left
+		        if (place_meeting(x-1,y,obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = -1)
+		        {
+			            hspd = 0;
+						hspd_enemy = 0
+			            x -= 1;
+			            y += 1;
+			            grav=0;
+			            global.grounded = 1;
+		        }   
+		            //going up from block to left slope
+		        if (position_meeting(x+(hspd+hspd_enemy),y+19,obj_block)) && (global.facingDir = 1) && (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x,y+1,obj_slope1_left))
+		        {
+		            if (!position_meeting(x+(hspd+hspd_enemy),y+18,obj_slope1_left))
+		            {    
+			            hspd = 0;
+						hspd_enemy = 0
+			            x += 1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		        }
+            
+			
+			//right slopes
+		    //going up right slope
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (!place_meeting(x+(hspd+hspd_enemy),y+(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
+		    {
+		        if (global.facingDir = -1) && (place_meeting(x-1,y,obj_slope1_right))
+		        {
+		            y+= floor(hspd+hspd_enemy);
+		        }
+		        else if (!place_meeting(x-1,y,obj_slope1_right)) && (!place_meeting(x-1,y,obj_block)) && (global.facingDir = -1)
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+		            x -=1;
+		        }
+		        global.grounded = 1;
+		        grav = 0;
+		    }
+		    //going up slope to block
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = -1) && (global.dashbegin2 == 0) && (global.dash2 == 0)
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+					x -=1;
+		            y -=1;
+		        }
+		    //going down right slope
+		    if (place_meeting(x-1,y,obj_slope1_right)) && (global.facingDir = 1)
+		        {
+		        if (!position_meeting(x+8,y+21,obj_block)) && (!place_meeting(x,y+1,obj_block))
+		            {
+		                hspd = 0;
+						hspd_enemy = 0
+						if (enemy_slowdownswitch = 0)
+						{
+			                x += 3;
+			                y += 3;
+						}
+						else if (enemy_slowdownswitch > 0)
+						{
+			                x += 2;
+			                y += 2;
+						}
+		                grav = 0;
+		            }
+		        }
+		    //going down right slope to block
+            
+		        if (position_meeting(x+8,y+21,obj_block)) && (global.facingDir = 1) && (place_meeting(x,y+1,obj_slope1_right))
+		        {
+		            if (!position_meeting(x+6,y+19,obj_block))
+		            {    
+			            hspd = 0;
+						hspd_enemy = 0
+			            x += 1;
+			            y += 1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		        }
+		            //going down from block to right slope-1
+		        if (global.facingDir = 1) && (!position_meeting(x+(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
+		        {
+		            if (position_meeting(x-4,y+19,obj_block)) && (position_meeting(x-3,y+19,obj_slope1_right))
+		            {
+			            hspd = 0;
+						hspd_enemy = 0
+			            x+=3;   
+			            y+=1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		            else if (position_meeting(x-5,y+19,obj_block)) && (position_meeting(x-4,y+19,obj_slope1_right))
+		            {
+			            hspd = 0;
+						hspd_enemy = 0
+			            x+=2;
+			            y+=1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		            else if (position_meeting(x-6,y+20,obj_block)) && (position_meeting(x-5,y+19,obj_slope1_right))
+		            {
+			            hspd = 0;
+						hspd_enemy = 0
+			            x+=1;
+			            y+=1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+                
+		        }
+		            //going up from block to right slope
+		        if (position_meeting(x-4,y+19,obj_block)) && (global.facingDir = -1) && (position_meeting(x-8,y+18,obj_slope1_right)) && (global.dash2 == 0)
+		        {
+		            if (!position_meeting(x-6,y+18,obj_slope1_right))
+		            {    
+			            x -= 1;
+			            grav=0;
+			            global.grounded = 1;
+		            }
+		        }
+		        //if against wall and on slope right
+		        if (place_meeting(x-1,y,obj_block)) && (place_meeting(x,y+1,obj_slope1_right)) && (global.facingDir = 1)
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+		            x += 1;
+		            y += 1;
+		            grav=0;
+		            global.grounded = 1;
+		        }
+			
+			
+			
+				//normal collision block
+			    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0) // no slopes
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			        }
+					hspd = 0;
+					hspd_enemy = 0
+			    }
+			    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0) //slopes placemeeting with block
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y --;
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (place_meeting(x,y-1,obj_slope1_right))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y += sign(hspd+hspd_enemy);
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			    }
+			
+			
+			
+				//nano block
+			    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block2_nano)) && (hspd+hspd_enemy != 0)
+				&& (!place_meeting(x,y,obj_block2_nano))
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
+					 && (!place_meeting(x,y,obj_block2_nano))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			        }
+					hspd = 0;
+					hspd_enemy = 0
+			    }
+			    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block2_nano)) && (hspd+hspd_enemy != 0)
+				&& (!place_meeting(x,y,obj_block2_nano))
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
+					 && (!place_meeting(x,y,obj_block2_nano))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y --;
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (place_meeting(x,y-2,obj_slope1_right))
+					 && (!place_meeting(x,y,obj_block2_nano))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y += sign(hspd+hspd_enemy);
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			    } 
+			
+			
+				//apply speeds
+				x += (hspd+hspd_enemy);	
+			}
+	}
+	else if (hspd_enemy != 0) && (global.dashbegin2 == 0) && (global.dash2 == 0)
+	&& (state != Ledge_grab) && (state != Shoot_hang)  && (state != Ledge_jumpprep) && (state != Climb_up_ledge) && (state != Dead)
 	{
-		x -= 2
+		//newslopes
+		var totalHSPD = (hspd+hspd_enemy)
+		var totalHSPD2 = ((hspd+hspd_enemy)/2)
+
+		var subspeed = 0
+	
+		if (totalHSPD != 0) 
+		&& (totalHSPD <= 1) 
+		&& (totalHSPD >= -1)
+		{
+			if (totalHSPD > 0)
+			{
+				subspeed = 1
+			}
+			else if (totalHSPD < 0)
+			{
+				subspeed = -1
+			}
+		}
+	
+	
+	
+
+		//NEWslope objects move scipt - LEFT
+		if (!global.jumping)
+		&& ((place_meeting(x+totalHSPD,y+totalHSPD,obj_newslope_left)) or (place_meeting(x,y+2,obj_newslope_left))
+		or (place_meeting(x+totalHSPD,y+totalHSPD,obj_newslope_right)) or (place_meeting(x,y+2,obj_newslope_right))
+		or (place_meeting(x+totalHSPD,y+totalHSPD2,obj_newslope_left))
+		or (place_meeting(x+totalHSPD,y+totalHSPD2,obj_newslope_right))
+		or (place_meeting(x+totalHSPD,y,obj_newslope_left))
+		or (place_meeting(x+totalHSPD,y,obj_newslope_right)))
+		{
+			if (totalHSPD < 0)
+			{
+				Moving_newslope_left_biggerthan1()	
+			}
+			else if (totalHSPD > 0)
+			{
+				Moving_newslope_right_biggerthan1()	
+			}
+		}
+		else if (totalHSPD != 0) && (!global.jumping)
+		&& ((place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_left)) 
+		or (place_meeting(x,y+2,obj_slope1_left)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+2,obj_slope1_left)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_slope1_right)) 
+		or (place_meeting(x,y+2,obj_slope1_right))
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD+subspeed+1,obj_newslope_right)) 
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_left))
+		or (place_meeting(x+totalHSPD+subspeed,y+totalHSPD2+subspeed+1,obj_slope1_right))
+		or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_left))
+		or (place_meeting(x+totalHSPD+subspeed,y,obj_slope1_right))
+		or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_left))
+		or (place_meeting(x-totalHSPD-subspeed,y,obj_slope1_right)))
+		{		
+			//L
+			if (totalHSPD < 0) && (subspeed != 0)
+			{
+				Moving_slow_left_lessthan1()
+			}
+			else if (totalHSPD < 0) && (subspeed == 0)
+			{
+				Moving_slow_left_biggerthan1()
+			}
+			//R
+			if (totalHSPD > 0) && (subspeed != 0)
+			{
+				Moving_slow_right_lessthan1()
+			}
+			else if (totalHSPD > 0) && (subspeed == 0)
+			{
+				Moving_slow_right_biggerthan1()
+			}
+		}
+		else
+		{
+		
+			//left slopes
+		    //going up left slope
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (!place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
+		    {
+		        if (global.facingDir = 1) && (place_meeting(x+1,y,obj_slope1_left))
+		        {
+		            y-= floor(hspd+hspd_enemy);
+		        }
+		        else if (!place_meeting(x+1,y,obj_slope1_left)) && (!place_meeting(x+1,y,obj_block))
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+		            x +=1;
+		        }
+            
+		        global.grounded = 1;
+		        grav = 0;
+		    }
+		    //if near wall and on slope left
+		    if (place_meeting(x+(hspd+hspd_enemy),y-(hspd+hspd_enemy),obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = 1) && (!place_meeting(x+1,y,obj_block))
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+		            x += 1;
+		            y -= 1;
+		            grav=0;
+		            global.grounded = 1;
+		        }  
+		    //going up slope to block
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = 1)
+		        {
+		            x -=1;
+		            y -=1;
+		        }
+		    //going down left slope
+		    if (position_meeting(x+5,y+19,obj_slope1_left)) && (!position_meeting(x-5,y+20,obj_block)) && (!position_meeting(x+6,y+19,obj_block))
+		        {
+		        if (global.facingDir = -1) && (!position_meeting(x-8,y+19,obj_block)) && (!place_meeting(x,y+1,obj_block))
+		            {
+		                y-= floor(hspd+hspd_enemy);
+		                grav = 0;
+		            }
+		        }
+		    //going down left slope to block
+		    if (position_meeting(x-8,y+21,obj_block)) && (global.facingDir = -1) && (place_meeting(x+2,y+2,obj_slope1_left))
+		    {
+		        if (!position_meeting(x-6,y+19,obj_block))
+		        {    
+			        x += sign(hspd+hspd_enemy);
+			        y-=sign(hspd+hspd_enemy);
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		    }
+		    //going down from block to left slope-1
+		    if (global.facingDir = -1) && (!position_meeting(x-(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
+		    {
+		        if (position_meeting(x+4,y+19,obj_block)) && (position_meeting(x+3,y+20,obj_slope1_left))
+		        {
+			        hspd = 0;
+					hspd_enemy = 0
+			        x-=3; 
+			        y+=1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		        else if (position_meeting(x+5,y+19,obj_block)) && (position_meeting(x+4,y+20,obj_slope1_left))
+		        {
+			        hspd = 0;
+					hspd_enemy = 0
+			        x-=2;
+			        y+=1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		        else if (position_meeting(x+6,y+19,obj_block)) && (position_meeting(x+5,y+20,obj_slope1_left))
+		        {
+			        hspd = 0;
+					hspd_enemy = 0
+			        x-=1;
+			        y+=1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+                
+		    }
+		    //if against wall and on slope left
+		    if (place_meeting(x-1,y,obj_block)) && (position_meeting(x+5,y+19,obj_slope1_left)) && (global.facingDir = -1)
+		    {
+			        hspd = 0;
+					hspd_enemy = 0
+			        x -= 1;
+			        y += 1;
+			        grav=0;
+			        global.grounded = 1;
+		    }   
+		    //going up from block to left slope
+		    if (position_meeting(x+(hspd+hspd_enemy),y+19,obj_block)) && (global.facingDir = 1) && (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_left)) && (place_meeting(x,y+1,obj_slope1_left))
+		    {
+		        if (!position_meeting(x+(hspd+hspd_enemy),y+18,obj_slope1_left))
+		        {    
+			        hspd = 0;
+					hspd_enemy = 0
+			        x += 1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		    }
+            
+			
+			//right slopes
+		    //going up right slope
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (!place_meeting(x+(hspd+hspd_enemy),y+(hspd+hspd_enemy),obj_block)) && (!place_meeting(x+(hspd+hspd_enemy),y,obj_block))
+		    {
+		        if (global.facingDir = -1) && (place_meeting(x-1,y,obj_slope1_right))
+		        {
+		            y+= floor(hspd+hspd_enemy);
+		        }
+		        else if (!place_meeting(x-1,y,obj_slope1_right)) && (!place_meeting(x-1,y,obj_block)) && (global.facingDir = -1)
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+		            x -=1;
+		        }
+		        global.grounded = 1;
+		        grav = 0;
+		    }
+		    //going up slope to block
+		    if (place_meeting(x+(hspd+hspd_enemy),y,obj_slope1_right)) && (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.facingDir = -1) && (global.dashbegin2 == 0) && (global.dash2 == 0)
+		        {
+		            hspd = 0;
+					hspd_enemy = 0
+					x -=1;
+		            y -=1;
+		        }
+		    //going down right slope
+		    if (place_meeting(x-1,y,obj_slope1_right)) && (global.facingDir = 1)
+		        {
+		        if (!position_meeting(x+8,y+21,obj_block)) && (!place_meeting(x,y+1,obj_block))
+		            {
+		                hspd = 0;
+						hspd_enemy = 0
+						if (enemy_slowdownswitch = 0)
+						{
+			                x += 3;
+			                y += 3;
+						}
+						else if (enemy_slowdownswitch > 0)
+						{
+			                x += 2;
+			                y += 2;
+						}
+		                grav = 0;
+		            }
+		        }
+		    //going down right slope to block
+            
+		    if (position_meeting(x+8,y+21,obj_block)) && (global.facingDir = 1) && (place_meeting(x,y+1,obj_slope1_right))
+		    {
+		        if (!position_meeting(x+6,y+19,obj_block))
+		        {    
+			        hspd = 0;
+					hspd_enemy = 0
+			        x += 1;
+			        y += 1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		    }
+		        //going down from block to right slope-1
+		    if (global.facingDir = 1) && (!position_meeting(x+(sprite_width/2)+1,y+(sprite_height/2)+1,obj_block))
+		    {
+		        if (position_meeting(x-4,y+19,obj_block)) && (position_meeting(x-3,y+19,obj_slope1_right))
+		        {
+			        hspd = 0;
+					hspd_enemy = 0
+			        x+=3;   
+			        y+=1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		        else if (position_meeting(x-5,y+19,obj_block)) && (position_meeting(x-4,y+19,obj_slope1_right))
+		        {
+			        hspd = 0;
+					hspd_enemy = 0
+			        x+=2;
+			        y+=1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		        else if (position_meeting(x-6,y+20,obj_block)) && (position_meeting(x-5,y+19,obj_slope1_right))
+		        {
+			        hspd = 0;
+					hspd_enemy = 0
+			        x+=1;
+			        y+=1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+                
+		    }
+		        //going up from block to right slope
+		    if (position_meeting(x-4,y+19,obj_block)) && (global.facingDir = -1) && (position_meeting(x-8,y+18,obj_slope1_right)) && (global.dash2 == 0)
+		    {
+		        if (!position_meeting(x-6,y+18,obj_slope1_right))
+		        {    
+			        x -= 1;
+			        grav=0;
+			        global.grounded = 1;
+		        }
+		    }
+		    //if against wall and on slope right
+		    if (place_meeting(x-1,y,obj_block)) && (place_meeting(x,y+1,obj_slope1_right)) && (global.facingDir = 1)
+		    {
+		        hspd = 0;
+				hspd_enemy = 0
+		        x += 1;
+		        y += 1;
+		        grav=0;
+		        global.grounded = 1;
+		    }
+			
+			
+			
+				//normal collision block
+			    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0) //no slopes
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			        }
+					hspd = 0;
+					hspd_enemy = 0
+			    }
+			    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block)) && (global.dash2 == 0) && (hspd+hspd_enemy != 0) //slopes
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (place_meeting(x,y-1,obj_slope1_left)) && (!place_meeting(x,y-1,obj_slope1_right))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y --;
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block)) && (!place_meeting(x,y-1,obj_slope1_left)) && (place_meeting(x,y-1,obj_slope1_right))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y += sign(hspd+hspd_enemy);
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			    }
+			
+			
+			
+				//nano block
+			    if (place_meeting(x+(hspd+hspd_enemy),y,obj_block2_nano)) && (hspd+hspd_enemy != 0)
+				&& (!place_meeting(x,y,obj_block2_nano))
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
+					 && (!place_meeting(x,y,obj_block2_nano))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			        }
+					hspd = 0;
+					hspd_enemy = 0
+			    }
+			    if (place_meeting(x+(hspd+hspd_enemy),y-4,obj_block2_nano)) && (hspd+hspd_enemy != 0)
+				&& (!place_meeting(x,y,obj_block2_nano))
+			    {
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (place_meeting(x,y-2,obj_slope1_left)) && (!place_meeting(x,y-2,obj_slope1_right))
+					 && (!place_meeting(x,y,obj_block2_nano))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y --;
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			        while (!place_meeting(x+sign(hspd+hspd_enemy),y,obj_block2_nano)) && (!place_meeting(x,y-2,obj_slope1_left)) && (place_meeting(x,y-2,obj_slope1_right))
+					 && (!place_meeting(x,y,obj_block2_nano))
+			        {
+			            x += sign(hspd+hspd_enemy);
+			            y += sign(hspd+hspd_enemy);
+			            hspd = 0;
+						hspd_enemy = 0
+			        }
+			    } 
+			
+			
+				//apply speeds
+				x += (hspd+hspd_enemy);	
+		}
 	}
-else if (place_meeting(x-2,y+1,obj_convayerbelt_block_right)) && (!place_meeting(x+2,y,obj_block)) && (!place_meeting(x+2,y,obj_slope1_left)) && (!place_meeting(x+2,y,obj_slope1_right))
- && (!place_meeting(x,y+1,obj_convayerbelt_block_right))
+
+
+
+	//Vertical    
+	if (vspd != 0) && (state != Dead) && (vspd_wind == 0)
+	{		
+	    //normal collision blockif (place_meeting(x,y+vspd,obj_block))---going down
+	    if (place_meeting(x,y+floor(vspd),obj_block)) && (floor(vspd) > 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
+		&& (!place_meeting(x,y+floor(vspd),obj_slope1_left)) && (!place_meeting(x,y+floor(vspd),obj_slope1_right))
+	    {
+	            vspd = floor(vspd);
+	            while (!place_meeting(x,y+sign(vspd),obj_block)) && (state != Jumping) && (vspd != 0)
+	            {
+	                y += 1;
+	                if (sign(vspd) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+
+	            }
+	            vspd = 0;
+	    }
+	    //normal collision blockif (place_meeting(x,y+vspd,obj_block))---going up
+	    if (place_meeting(x,y+floor(vspd),obj_block)) && (floor(vspd) < 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
+		&& (!place_meeting(x,y+floor(vspd),obj_slope1_left)) && (!place_meeting(x,y+floor(vspd),obj_slope1_right))
+	    {
+	            vspd = floor(vspd);
+	            while (!place_meeting(x,y+sign(vspd),obj_block)) && (state != Jumping) && (vspd != 0)
+	            {
+	                y += -1;
+	                if (sign(vspd) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+
+	            }
+	            vspd = 0;
+	            grav = 0.25;
+	    }
+	
+	
+	    //normal collision slope1 left
+	    if (place_meeting(x,y+floor(vspd),obj_slope1_left)) && (hspd = 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd);
+	            while (!place_meeting(x,y+sign(vspd),obj_slope1_left)) && (state != Jumping) && (vspd != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd);
+	                if (sign(vspd) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+	            global.grounded = 1;
+	            vspd = 0;
+	    }
+	    //normal collision slope1 right
+	    if (place_meeting(x,y+floor(vspd),obj_slope1_right)) && (hspd = 0) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd);
+	            while (!place_meeting(x,y+sign(vspd),obj_slope1_right)) && (state != Jumping) && (vspd != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd);
+	                if (sign(vspd) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+	            global.grounded = 1;
+	            vspd = 0;
+	    }
+	
+	
+	
+		//normal collision NEWslope left
+	    if (place_meeting(x,y+floor(vspd),obj_newslope_left)) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd);
+			
+	            while (!place_meeting(x,y+sign(vspd),obj_newslope_left)) && (state != Jumping) && (vspd != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd);
+	                if (sign(vspd) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+			
+	            global.grounded = 1;
+	            vspd = 0;
+	    }
+	    //normal collision NEWslope right
+	    if (place_meeting(x,y+floor(vspd),obj_newslope_right)) && (vspd != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd);
+			
+	            while (!place_meeting(x,y+sign(vspd),obj_newslope_right)) && (state != Jumping) && (vspd != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd);
+	                if (sign(vspd) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+			
+	            global.grounded = 1;
+	            vspd = 0;
+	    }
+	
+	
+		y += floor(vspd);
+		y = floor(y);
+	}
+	else //Vertical-with VSPD_WIND    
+	if (vspd != 0) && (state != Dead) && (vspd_wind != 0)
 	{
-		x += 2
+		//normal collision blockif (place_meeting(x,y+vspd+vspd_wind,obj_block))---going down
+	    if (place_meeting(x,y+floor(vspd+vspd_wind),obj_block)) && (floor(vspd+vspd_wind) > 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
+		&& (!place_meeting(x,y+floor(vspd+vspd_wind),obj_slope1_left)) && (!place_meeting(x,y+floor(vspd+vspd_wind),obj_slope1_right))
+	    {
+	            vspd = floor(vspd+vspd_wind);
+	            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_block)) && (state != Jumping) && (vspd+vspd_wind != 0)
+	            {
+	                y += 1;
+	                if (sign(vspd+vspd_wind) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd+vspd_wind) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+
+	            }
+	            vspd = 0;
+				vspd_wind = 0;
+	    }
+	    //normal collision blockif (place_meeting(x,y+vspd+vspd_wind,obj_block))---going up
+	    if (place_meeting(x,y+floor(vspd+vspd_wind),obj_block)) && (floor(vspd+vspd_wind) < 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
+		&& (!place_meeting(x,y+floor(vspd+vspd_wind),obj_slope1_left)) && (!place_meeting(x,y+floor(vspd+vspd_wind),obj_slope1_right))
+	    {
+	            vspd = floor(vspd+vspd_wind);
+	            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_block)) && (state != Jumping) && (vspd+vspd_wind != 0)
+	            {
+	                y += -1;
+	                if (sign(vspd+vspd_wind) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd+vspd_wind) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+
+	            }
+	            vspd = 0;
+				vspd_wind = 0;
+	            grav = 0.25;
+	    }
+	
+	
+	    //normal collision slope1 left
+	    if (place_meeting(x,y+floor(vspd+vspd_wind),obj_slope1_left)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd+vspd_wind);
+	            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_slope1_left)) && (state != Jumping) && (vspd+vspd_wind != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd+vspd_wind);
+	                if (sign(vspd+vspd_wind) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd+vspd_wind) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+	            global.grounded = 1;
+	            vspd = 0;
+				vspd_wind = 0;
+	    }
+	    //normal collision slope1 right
+	    if (place_meeting(x,y+floor(vspd+vspd_wind),obj_slope1_right)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd+vspd_wind);
+	            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_slope1_right)) && (state != Jumping) && (vspd+vspd_wind != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd+vspd_wind);
+	                if (sign(vspd+vspd_wind) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd+vspd_wind) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+	            global.grounded = 1;
+	            vspd = 0;
+				vspd_wind = 0;
+	    }
+	
+	
+		//normal collision obj_newslope_left
+	    if (place_meeting(x,y+floor(vspd+vspd_wind),obj_newslope_left)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd+vspd_wind);
+	            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_newslope_left)) && (state != Jumping) && (vspd+vspd_wind != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd+vspd_wind);
+	                if (sign(vspd+vspd_wind) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd+vspd_wind) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+	            global.grounded = 1;
+	            vspd = 0;
+				vspd_wind = 0;
+	    }
+	    //normal collision obj newslope right
+	    if (place_meeting(x,y+floor(vspd+vspd_wind),obj_newslope_right)) && (hspd = 0) && (vspd+vspd_wind != 0) && (!place_meeting(x,y,obj_block2_nano))
+	    {
+	            vspd = floor(vspd+vspd_wind);
+	            while (!place_meeting(x,y+sign(vspd+vspd_wind),obj_newslope_right)) && (state != Jumping) && (vspd+vspd_wind != 0)
+	            {
+	                hspd = 0;
+	                y += sign(vspd+vspd_wind);
+	                if (sign(vspd+vspd_wind) = 1)
+	                {
+	                    against_wall_du = 1;
+	                }
+	                else if (sign(vspd+vspd_wind) = -1)
+	                {
+	                    against_wall_du = -1;
+	                }
+                
+	            }
+	            global.grounded = 1;
+	            vspd = 0;
+				vspd_wind = 0;
+	    }
+	
+	
+	
+	
+	
+	
+		y += floor(vspd+vspd_wind);
+		y = floor(y);
+	}
+
+	if (hspd = 0) && (place_meeting(x,y+1,obj_slope1_left))
+	{
+	    vspd = 0;
+	    grav = 0;
 	}
 
 
+
+	//if falling dioagonally onto a slope
+	if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_right)))
+	{
+	    grav = 0;
+	    speed_x = 0;
+	    vspd = floor(vspd);
+    
+		while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_slope1_right)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_right)))
+	    && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_slope1_right)) && (state != Dashing2_use)
+	    {
+	         hspd = 0;
+	         grav = 0;
+	         speed_x = 0;
+	         y = floor(y) + sign(vspd);
+	         input_horizontal = 0;
+	    }
+	    //fail safe in case the checks above don't work
+	    while (place_meeting(x+1,y-1,obj_slope1_right)) && (state != Dashing2_use)
+	    {
+	        y --;
+	    }
+    
+    
+	    if ((place_meeting(x+1,y,obj_slope1_right)))
+	    {
+	         speed_x = 0;
+	         grav = 0;
+	         vspd = 0;
+	         hspd = 0;
+	    }
+	}
+
+	if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_left))) && (state != Dashing2_use)
+	{
+	    grav = 0;
+	    speed_x = 0;
+	    vspd = floor(vspd);
+	    while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_slope1_left)) && ((place_meeting(x+(hspd),y+(vspd),obj_slope1_left)))
+	     && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_slope1_left)) && (state != Dashing2_use)
+	    {
+	         hspd = 0;
+	         grav = 0;
+	         speed_x = 0;
+	         y = floor(y) + sign(vspd);
+	         input_horizontal = 0;
+	    }
+	    //fail safe in case the checks above don't work
+	    while (place_meeting(x-1,y-1,obj_slope1_left)) && (state != Dashing2_use)
+	    {
+	        y --;
+	    }
+    
+	    if ((place_meeting(x-1,y,obj_slope1_left)))
+	    {
+	         speed_x = 0;
+	         grav = 0;
+	         vspd = 0;
+	         hspd = 0;
+	    }
+	}
+
+
+
+
+	//if falling dioagonally onto a slope - L and R
+	if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_right)))
+	{
+	    grav = 0;
+	    speed_x = 0;
+	    vspd = floor(vspd);
+    
+		while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_newslope_right)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_right)))
+	    && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_newslope_right)) && (state != Dashing2_use)
+	    {
+	         hspd = 0;
+	         grav = 0;
+	         speed_x = 0;
+	         y = floor(y) + sign(vspd);
+	         input_horizontal = 0;
+	    }
+	    //fail safe in case the checks above don't work
+	    while (place_meeting(x+1,y-1,obj_newslope_right)) && (state != Dashing2_use)
+	    {
+	        y --;
+	    }
+    
+    
+	    if ((place_meeting(x+1,y,obj_newslope_right)))
+	    {
+	         speed_x = 0;
+	         grav = 0;
+	         vspd = 0;
+	         hspd = 0;
+	    }
+	}
+	else if ((hspd != 0) && (vspd != 0)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_left))) && (state != Dashing2_use)
+	{
+	    grav = 0;
+	    speed_x = 0;
+	    vspd = floor(vspd);
+	    while (!place_meeting(x+sign(hspd),y+sign(vspd),obj_newslope_left)) && ((place_meeting(x+(hspd),y+(vspd),obj_newslope_left)))
+	     && (!place_meeting(x+sign(hspd),y+sign(vspd),obj_block)) && (!place_meeting(x-sign(hspd),y,obj_newslope_left)) && (state != Dashing2_use)
+	    {
+	         hspd = 0;
+	         grav = 0;
+	         speed_x = 0;
+	         y = floor(y) + sign(vspd);
+	         input_horizontal = 0;
+	    }
+	    //fail safe in case the checks above don't work
+	    while (place_meeting(x-1,y-1,obj_newslope_left)) && (state != Dashing2_use)
+	    {
+	        y --;
+	    }
+    
+	    if ((place_meeting(x-1,y,obj_newslope_left)))
+	    {
+	         speed_x = 0;
+	         grav = 0;
+	         vspd = 0;
+	         hspd = 0;
+	    }
+	}
+
+
+
+
+
+
+
+
+	//fail safe in case the checks above don't work-left slope
+	while (place_meeting(x+1,y-1,obj_slope1_left)) && (state != Dashing2_use)
+	{
+	                y --;
+	}
+	//fail safe in case the checks above don't work-right slope
+	while (place_meeting(x-1,y-1,obj_slope1_right)) && (state != Dashing2_use)
+	{
+	                y --;
+	}
+
+	//fail safe in case the checks above don't work-left new slope
+	while (place_meeting(x+1,y-1,obj_newslope_left)) && (state != Dashing2_use)
+	{
+	                y --;
+	}
+	//fail safe in case the checks above don't work-right new slope
+	while (place_meeting(x-1,y-1,obj_newslope_right)) && (state != Dashing2_use)
+	{
+	                y --;
+	}
+
+
+	
+	//fail safe if inside collision block - top
+	if (!position_meeting(x,bbox_bottom+1,obj_block))
+	&& (position_meeting(x,bbox_top,obj_block))
+	&& (place_meeting(x,y,obj_block))
+	{
+		while (place_meeting(x,y,obj_block))
+		&& (!position_meeting(x,bbox_bottom+1,obj_block))
+		&& (position_meeting(x,bbox_top,obj_block))
+			{
+				y ++;	
+			}
+	}
+	
+	//fail safe if inside collision block - bottom
+	if (!position_meeting(x,bbox_top-1,obj_block))
+	&& (position_meeting(x,bbox_bottom,obj_block))
+	&& (place_meeting(x,y,obj_block))
+	{
+		while (place_meeting(x,y,obj_block))
+		&& (!position_meeting(x,bbox_top-1,obj_block))
+		&& (position_meeting(x,bbox_bottom,obj_block))
+			{
+				y --;	
+			}
+	}
+
+	//fail safe if inside collision block - right
+	if (!position_meeting(bbox_left-1,y,obj_block))
+	&& (position_meeting(bbox_right,y,obj_block))
+	&& (place_meeting(x,y,obj_block))
+	{
+		while (place_meeting(x,y,obj_block))
+		&& (!position_meeting(bbox_left-1,y,obj_block))
+		&& (position_meeting(bbox_right,y,obj_block))
+			{
+				x --;	
+			}
+	}
+	
+	//fail safe if inside collision block - left
+	if (!position_meeting(bbox_right+1,y,obj_block))
+	&& (position_meeting(bbox_left,y,obj_block))
+	&& (place_meeting(x,y,obj_block))
+	{
+		while (place_meeting(x,y,obj_block))
+		&& (!position_meeting(bbox_right+1,y,obj_block))
+		&& (position_meeting(bbox_left,y,obj_block))
+			{
+				x++;	
+			}
+	}
+	
+	
+	
+
+	if (place_meeting(x,y+1,obj_convayerbelt_block_left))
+	{
+		hspd_enemy = -1
+	}
+	else if (place_meeting(x,y+1,obj_convayerbelt_block_right))
+	{
+		hspd_enemy = 1
+	}
+	else if (!place_meeting(x,y+1,obj_convayerbelt_block_left)) && (!place_meeting(x,y+1,obj_convayerbelt_block_right))
+	&& ((place_meeting(x,y+1,obj_block)) or (place_meeting(x,y+1,obj_slope1_right)) or (place_meeting(x,y+1,obj_slope1_left)))
+	&& (state != Falling) && (state != Fall_shoot) && (state != Falling_doublejump) && (state != Falling_Dashing2) && (state != Falling_Dashing2_airdash)
+	{	
+		hspd_enemy = 0
+	}
+
+	if ((state = Crouching) or (state = Crouch_shoot)) && (hspd_enemy != 0)
+	&& (!place_meeting(x,y+1,obj_block)) && (!place_meeting(x,y+1,obj_slope1_left)) && (!place_meeting(x,y+1,obj_slope1_right))
+	&& (!place_meeting(x,y+1,obj_convayerbelt_block_left)) && (!place_meeting(x,y+1,obj_convayerbelt_block_right))
+		{
+			global.jumpingdm = 0
+			global.crouching = 0
+			if (sprite_index = spr_player_crouch)
+				{
+					sprite_index = spr_player
+					y -= 4;
+				}
+			State_machine_switch_state(Falling)	
+		}
+
+	//moving just off convayer belt
+	if (place_meeting(x+2,y+1,obj_convayerbelt_block_left)) && (!place_meeting(x-2,y,obj_block)) && (!place_meeting(x-2,y,obj_slope1_left)) && (!place_meeting(x-2,y,obj_slope1_right))
+	 && (!place_meeting(x,y+1,obj_convayerbelt_block_left))
+		{
+			x -= 2
+		}
+	else if (place_meeting(x-2,y+1,obj_convayerbelt_block_right)) && (!place_meeting(x+2,y,obj_block)) && (!place_meeting(x+2,y,obj_slope1_left)) && (!place_meeting(x+2,y,obj_slope1_right))
+	 && (!place_meeting(x,y+1,obj_convayerbelt_block_right))
+		{
+			x += 2
+		}
+
+}
 
 
 
@@ -2136,6 +2134,154 @@ if (lefty = 1) && (global.room_transition_notnowR2 = 1)
             global.room_x = 1;
         }
 #endregion
+
+//room transitions 3
+#region
+if (righty != 1) && (lefty != 1) && (global.room_transition_3 = 1) && (global.room_transition_notnowL3 = 1)
+        {
+			script_execute(doors1_3);
+			if (instance_exists(obj_door_normal_leftAlt)) or (instance_exists(obj_door_normal_rightAlt))
+			{
+				script_execute(doors1Alt);
+			}
+			if (instance_exists(obj_door_normal_left_more)) or (instance_exists(obj_door_normal_right_more))
+			{
+				script_execute(doors1more);
+			}
+			if (instance_exists(obj_door_normal_left_3)) or (instance_exists(obj_door_normal_right_3))
+			{
+				script_execute(doors1_3);
+			}
+	        if (state = Crouching) or (state = Crouch_shoot)
+		    {
+			    y -= 5;
+			    sprite_index = spr_player;
+			    global.crouching = 0;
+		    }
+			if (global.state != Jumping) && (global.state != Jump_after_Dashing2)
+			{
+				State_machine_switch_state(global.state);
+			}
+			else if (global.state = Jumping) or (global.state = Jump_after_Dashing2)
+			{
+				State_machine_switch_state(Falling);
+			}
+			hspd = 0;
+			vspd = 0;
+			input_horizontal = 0;
+	        righty = 1;
+	        x = obj_door_normal_left_3.x-28;
+	        y = obj_door_normal_left_3.y+16;
+	        jump = 0;
+	        jump_held = 0;
+        }
+if (righty = 1) && (global.room_transition_notnowL3 = 1)
+        {
+            if (global.mapgrid_1x1 == 0)
+			{
+				with(obj_camera)
+	                {
+	                    x = obj_door_normal_left_3.x-147;
+	                    y = obj_door_normal_left_3.y+16;
+	                }
+            
+	            with(obj_scrn_roomtransition)
+	            {
+	                FadeNow = 1.0;
+	                //x = obj_room_transition_l2r1.x-227;
+	                x = obj_door_normal_left_3.x-313;
+	                y = obj_door_normal_left_3.y-74;
+	            }
+			}
+			else if (global.mapgrid_1x1 == 1)
+			{
+				with(obj_camera)
+	                {
+	                    x = obj_door_normal_left_3.x-147;
+	                    y = obj_door_normal_left_3.y+16;
+	                }
+            
+	            with(obj_scrn_roomtransition)
+	            {
+	                FadeNow = 1.0;
+	                //x = obj_room_transition_l2r1.x-227;
+	                x = obj_door_normal_left_3.x-307;
+	                y = obj_door_normal_left_3.y-74;
+	            }
+			}
+            global.room_x = 1;
+        }
+if (righty != 1) && (lefty != 1) && (global.room_transition_3 = 1) && (global.room_transition_notnowR3 = 1)
+        {
+			script_execute(doors1_3);
+			if (instance_exists(obj_door_normal_leftAlt)) or (instance_exists(obj_door_normal_rightAlt))
+			{
+				script_execute(doors1Alt);
+			}
+			if (instance_exists(obj_door_normal_left_more)) or (instance_exists(obj_door_normal_right_more))
+			{
+				script_execute(doors1more);
+			}
+			if (instance_exists(obj_door_normal_left_3)) or (instance_exists(obj_door_normal_right_3))
+			{
+				script_execute(doors1_3);
+			}
+			if (state = Crouching) or (state = Crouch_shoot)
+		    {
+			    y -= 5;
+			    sprite_index = spr_player;
+			    global.crouching = 0;
+		    }
+	        if (global.state != Jumping) && (global.state != Jump_after_Dashing2)
+			{
+				State_machine_switch_state(global.state);
+			}
+			else if (global.state = Jumping) or (global.state = Jump_after_Dashing2)
+			{
+				State_machine_switch_state(Falling);
+			}
+			hspd = 0;
+			vspd = 0;
+			input_horizontal = 0;
+	        lefty = 1;
+	        x = obj_door_normal_right_3.x+30;
+	        y = obj_door_normal_right_3.y+16;
+	        jump = 0;
+	        jump_held = 0;
+        }
+if (lefty = 1) && (global.room_transition_notnowR3 = 1)
+        {
+            if (global.mapgrid_1x1 == 0)
+			{
+				with(obj_camera)
+	                {
+	                    x = obj_door_normal_right_3.x+147;
+						y = obj_door_normal_right_3.y+16;
+	                }
+	            with(obj_scrn_roomtransition)
+	            {
+	                FadeNow = 1.0;
+	                x = obj_door_normal_right_3.x-13;
+	                y = obj_door_normal_right_3.y-74;
+	            }
+			}
+			else if (global.mapgrid_1x1 == 1)
+			{
+				with(obj_camera)
+	                {
+	                    x = obj_door_normal_right_3.x+147;
+						y = obj_door_normal_right_3.y+16;
+	                }
+	            with(obj_scrn_roomtransition)
+	            {
+	                FadeNow = 1.0;
+	                x = obj_door_normal_right_3.x-14;
+	                y = obj_door_normal_right_3.y-74;
+	            }
+			}
+            global.room_x = 1;
+        }
+#endregion
 	
 //////////////////////room transitions_more
 #region
@@ -2281,8 +2427,8 @@ if (lefty = 1) && (global.room_transition_notnowR_more = 1)
 
 
 
-if (global.room_transition_notnowL1 = 0) && (global.room_transition_notnowR1 = 0) && (global.room_transition_notnowL2 = 0) && (global.room_transition_notnowR2 = 0)
- && (global.room_transition_notnowL_more = 0) && (global.room_transition_notnowR_more = 0) && (global.room_transition_nodoors <= 0) && (global.room_transition_nodoors_2 <= 0) && (global.room_transition_nodoors_more <= 0)
+if (global.room_transition_notnowL1 = 0) && (global.room_transition_notnowR1 = 0) && (global.room_transition_notnowL2 = 0) && (global.room_transition_notnowR2 = 0) && (global.room_transition_notnowL3 = 0) && (global.room_transition_notnowR3 = 0)
+&& (global.room_transition_notnowL_more = 0) && (global.room_transition_notnowR_more = 0) && (global.room_transition_nodoors <= 0) && (global.room_transition_nodoors_2 <= 0) && (global.room_transition_nodoors_3 <= 0) && (global.room_transition_nodoors_more <= 0)
 {
 	global.room_x = 0;	
 }
@@ -2417,7 +2563,7 @@ else if (global.hydrodash == 1) && (enemy_slowdownswitch == 1)
 
 
 
-if (!global.room_transition) && (!global.room_transition1) && (!global.room_transition_more)
+if (!global.room_transition) && (!global.room_transition1) && (!global.room_transition_more) && (!global.room_transition_3)
 {
 	State_machine_execute();
 }

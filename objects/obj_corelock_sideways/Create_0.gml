@@ -3,8 +3,9 @@
 open = 1;
 switch1 = 0
 redblockerID = 0
-BossblockerID = -1
+BossblockerID = 0
 
+instCoreSwitch = instance_nearest(x,y,obj_corelock_switch)
 
 inst1 = instance_create(x,y,obj_block2);
 

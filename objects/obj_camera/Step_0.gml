@@ -10,10 +10,17 @@ or (!instance_exists(obj_player))
 }
 
 
+//check to see if any camera stoppers collided with
+inst_L = instance_place(x,y,obj_camera_stopperL)
+inst_R = instance_place(x,y,obj_camera_stopperR)
+inst_U = instance_place(x,y,obj_camera_stopperU)
+inst_D = instance_place(x,y,obj_camera_stopperD)
+
+
 
 if (yshake > 0) && (global.screen_shake = 0)
 && (global.room_transition_prep = 0) && (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0)
- && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
 && (global.climbing == 0) && (instance_exists(obj_mapchecker2)) && (instance_exists(obj_camera_stopperU)) && (instance_exists(obj_camera_stopperD))
 {
 	if ((global.mapgrid_1x1 > 0) or (global.mapgrid_yZeroMove > 0)) && (global.camera_shiftdown = 1)
@@ -31,26 +38,29 @@ if (yshake > 0) && (global.screen_shake = 0)
 	
 	yshake = lerp(yshake,-1,0.15);
 	
+	
+	//move camera back into correct position
 	distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
 	distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
-	
+		
 	if (distance_to_border3 < 0)
-			{
-				while (distance_to_border3 < 0)
-				{
-					y++;
-					distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
-				}	
-			}
+	{
+		while (distance_to_border3 < 0)
+		{
+			y++;
+			distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
+		}	
+	}
 			
 	if (distance_to_border4 > 0)
-			{
-				while (distance_to_border4 > 0)
-				{
-					y--;
-					distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
-				}	
-			}
+	{
+		while (distance_to_border4 > 0)
+		{
+			y--;
+			distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
+		}	
+	}
+	
 }
 else if (yshake <= 0)
 {
@@ -59,33 +69,34 @@ else if (yshake <= 0)
 
 if (global.screen_shake > 0)
 && (global.room_transition_prep = 0) && (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0) && (global.sector_transition = 0)
- && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
 && (global.climbing == 0) && (instance_exists(obj_camera_stopperU)) && (instance_exists(obj_camera_stopperD))
 {
 	
 	if (instance_exists(obj_camera_stopperU)) && (instance_exists(obj_camera_stopperD))
 	{
 	
+		//move camera back into correct position
 		distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
 		distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
-	
+		
 		if (distance_to_border3 < 0)
+		{
+			while (distance_to_border3 < 0)
 			{
-				while (distance_to_border3 < 0)
-				{
-					y++;
-					distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
-				}	
-			}
+				y++;
+				distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
+			}	
+		}
 			
 		if (distance_to_border4 > 0)
+		{
+			while (distance_to_border4 > 0)
 			{
-				while (distance_to_border4 > 0)
-				{
-					y--;
-					distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
-				}	
-			}
+				y--;
+				distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
+			}	
+		}
 	}
 }
 
@@ -93,11 +104,11 @@ if (global.screen_shake > 0) && (yshake2 != 0)
 {
 	if (yshake2 > 0)
 	{
-	yshake2 -= 0.25;
+		yshake2 -= 0.25;
 	}
 	else if (yshake2 < 0)
 	{
-	yshake2 += 0.25;
+		yshake2 += 0.25;
 	}	
 }
 else if (global.screen_shake <= 0)
@@ -187,8 +198,8 @@ if (instance_exists(obj_player))
 	//SAVE ROOMS ONLY-they alone have a room size like this
 	if (room_height == 180) && (room_width == 320)
 	&& (global.room_transition_prep = 0) && (global.camera_shiftdown == 0)
-	&& (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0)
-	&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0)
+	&& (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0) && (global.room_transition_3 == 0)
+	&& (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0) && (global.room_transition_nodoors_3 == 0)
 	{
 		x = 160
 		y = 90
@@ -217,6 +228,7 @@ if (instance_exists(obj_player))
 					x = obj_player.x;
 				}
 				
+				//move camera back into correct position
 				distance_to_border = obj_camera.x-obj_camera_stopperL.x-160;
 				distance_to_border2 = obj_camera.x-obj_camera_stopperR.x+159;
 				
@@ -263,8 +275,12 @@ if (instance_exists(obj_player))
 					y = obj_player.y-yspin-yshake-yshake2;
 				}
 				global.ygrid = 0
+				
+				
+				//move camera back into correct position
 				distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
 				distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
+		
 				if (distance_to_border3 < 0)
 				{
 					while (distance_to_border3 < 0)
@@ -274,6 +290,7 @@ if (instance_exists(obj_player))
 						distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
 					}	
 				}
+			
 				if (distance_to_border4 > 0)
 				{
 					while (distance_to_border4 > 0)
@@ -297,31 +314,35 @@ if (instance_exists(obj_player))
 			{
 				y = 90
 			}
-			else if !(global.climbing)
+			else if !(global.climbing) && (!global.mapgrid_yZeroMove)
 			{
 				y = obj_player.y-yspin-yshake-yshake2;
 			}
 			
 			global.ygrid = 0
+			
+			//move camera back into correct position
 			distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
 			distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
+		
 			if (distance_to_border3 < 0)
 			{
-					while (distance_to_border3 < 0)
-					{
-						y = floor(y)
-						y++;
-						distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
-					}	
+				while (distance_to_border3 < 0)
+				{
+					y = floor(y)
+					y++;
+					distance_to_border3 = obj_camera.y-obj_camera_stopperU.y-90;
+				}	
 			}
+			
 			if (distance_to_border4 > 0)
 			{
-					while (distance_to_border4 > 0)
-					{
-						y = floor(y)
-						y--;
-						distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
-					}	
+				while (distance_to_border4 > 0)
+				{
+					y = floor(y)
+					y--;
+					distance_to_border4 = obj_camera.y-obj_camera_stopperD.y+90;
+				}	
 			}
 		}
 	

@@ -1,7 +1,7 @@
 //////P
 //////L          /  //
 //////A       /_////_/
-//////Y        | \ /  D
+//////Y        | \ / | D
 //////E        |  -  |
 //////R
 State_machine_create();
@@ -16,6 +16,9 @@ tileposy_checker = 0;
 input_horizontal = 0;
 hangtimer = 0;
 hang_switch = 0;
+hangOriginalX = 0
+hangOriginalY = 0
+hangOriginalFacingDir = 0
 walljump_timer = 0;
 hspd = 0;
 hspd_enemy = 0;

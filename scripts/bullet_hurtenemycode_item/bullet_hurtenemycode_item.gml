@@ -1,37 +1,32 @@
 function bullet_hurtenemycode_item() {
-	var random_health_pickup1 = round(random_range(0,10))
-	var random_health_pickup2 = round(random_range(0,10))
+	var random_health_pickup1 = round(random_range(0,50))
+	var random_health_pickup2 = round(random_range(0,50))
+	
+	var minchance = 30
+	var maxchance = 40
 
-	if (random_health_pickup1 <= 8) && (random_health_pickup1 > 4)
+	if (random_health_pickup1 <= maxchance) && (random_health_pickup1 > minchance)
 		{
 			instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_health2);	
 		}
-	else if (random_health_pickup1 > 8)
+	else if (random_health_pickup1 > maxchance)
 		{
 			instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_health1);	
 		}
+
 	
-	if (random_health_pickup2 <= 8) && (random_health_pickup2 > 4)
-		{
-			instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_health2);	
-		}
-	else if (random_health_pickup2 > 8)
-		{
-			instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_health1);	
-		}
-	
-		var random_ability_pickup1 = round(random_range(0,10))
-		var random_ability_pickup2 = round(random_range(0,10))
-		var random_ability_pickup3 = round(random_range(0,10))
-		var random_ability_pickup4 = round(random_range(0,10))
+		var random_ability_pickup1 = round(random_range(0,50))
+		var random_ability_pickup2 = round(random_range(0,50))
+		var random_ability_pickup3 = round(random_range(0,50))
+		var random_ability_pickup4 = round(random_range(0,50))
 	
 		if (global.nanoshield_available > 0)
 		{
-			if (random_ability_pickup1 > 6) && (random_ability_pickup1 <= 8)
+			if (random_ability_pickup1 > minchance) && (random_ability_pickup1 <= maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_spread);	
 			}
-			else if (random_ability_pickup1 > 8)
+			else if (random_ability_pickup1 > maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_spread);	
 			}
@@ -39,11 +34,11 @@ function bullet_hurtenemycode_item() {
 	
 		if (global.invisibility_available > 0)
 		{
-			if (random_ability_pickup2 > 6) && (random_ability_pickup2 <= 8)
+			if (random_ability_pickup2 > minchance) && (random_ability_pickup2 <= maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_charge);	
 			}
-			else if (random_ability_pickup2 > 8)
+			else if (random_ability_pickup2 > maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_charge);	
 			}
@@ -51,11 +46,11 @@ function bullet_hurtenemycode_item() {
 	
 		if (global.nuclearblast_available > 0)
 		{
-			if (random_ability_pickup3 > 6) && (random_ability_pickup3 <= 8)
+			if (random_ability_pickup3 > minchance) && (random_ability_pickup3 <= maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_burn);	
 			}
-			else if (random_ability_pickup3 > 8)
+			else if (random_ability_pickup3 > maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_burn);	
 			}
@@ -63,11 +58,11 @@ function bullet_hurtenemycode_item() {
 	
 		if (global.shockwave_available > 0)
 		{
-			if (random_ability_pickup4 > 6) && (random_ability_pickup4 <= 8)
+			if (random_ability_pickup4 > minchance) && (random_ability_pickup4 <= maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_shock);	
 			}
-			else if (random_ability_pickup4 > 8)
+			else if (random_ability_pickup4 > maxchance)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_shock);	
 			}

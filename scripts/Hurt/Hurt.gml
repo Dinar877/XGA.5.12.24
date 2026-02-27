@@ -17,6 +17,7 @@ function Hurt() {
 	
 	input_horizontal = 0;
 	ledge_ready = 0;
+	dash_jump = 0
 
 	audio_stop_sound(snd_player_footstep)
 	audio_stop_sound(snd_player_hang)

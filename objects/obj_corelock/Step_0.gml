@@ -50,7 +50,18 @@ if (place_meeting(x,y,obj_player))
 	}
 	
 	
-	if (instance_exists(obj_corelock_switch))
+	if (instCoreSwitch > 0)
+	{
+		with(instCoreSwitch)
+		{
+			if (global.doors_redblocker[redblockerID] == false)
+			{
+				global.doors_redblocker[redblockerID] = true;
+			}
+		}
+	}
+	else if (instance_exists(obj_corelock_switch))
+	&& (instCoreSwitch <= 0)
 	{
 		with(obj_corelock_switch)
 		{
@@ -114,11 +125,24 @@ if (sprite_index = spr_corelock_opening) && (image_index >= image_number-1)
 	image_speed = 0
 	image_index = image_number-1
 	
-	with(obj_corelock_switch)
+	if (instCoreSwitch <= 0)
 	{
-		if (global.doors_redblocker[redblockerID] == false)
+		with(obj_corelock_switch)
 		{
-			global.doors_redblocker[redblockerID] = true;
+			if (global.doors_redblocker[redblockerID] == false)
+			{
+				global.doors_redblocker[redblockerID] = true;
+			}
+		}
+	}
+	else if (instCoreSwitch > 0)
+	{
+		with(instCoreSwitch)
+		{
+			if (global.doors_redblocker[redblockerID] == false)
+			{
+				global.doors_redblocker[redblockerID] = true;
+			}
 		}
 	}
 }

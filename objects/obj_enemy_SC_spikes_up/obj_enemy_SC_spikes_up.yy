@@ -10,8 +10,8 @@
   "name":"obj_enemy_SC_spikes_up",
   "overriddenProperties":[],
   "parent":{
-    "name":"red temple",
-    "path":"folders/Objects/enemies/red temple.yy",
+    "name":"system core",
+    "path":"folders/Objects/enemies/system core.yy",
   },
   "parentObjectId":{
     "name":"obj_link_enemies",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_redenemy",
-    "path":"sprites/spr_redenemy/spr_redenemy.yy",
+    "name":"spr_SC_enemy_spikes_up",
+    "path":"sprites/spr_SC_enemy_spikes_up/spr_SC_enemy_spikes_up.yy",
   },
   "spriteMaskId":null,
   "visible":true,

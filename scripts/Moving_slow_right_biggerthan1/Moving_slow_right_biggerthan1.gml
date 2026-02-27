@@ -353,6 +353,20 @@ function Moving_slow_right_biggerthan1() {
 			x += sign(moveX);
 		}
 		
+		//if character is supposed to be able to run off block edges
+		if (variable_instance_exists(self,"jump_speed"))
+		{
+			if (!position_meeting(bbox_left+sign(moveX),bbox_bottom+1,obj_block)) 
+			&& (place_meeting(x,y+1,obj_block))
+			&& (!place_meeting(x+(moveX),y,obj_block)) && (!collision_line(x,bbox_bottom,x+moveX,bbox_bottom,obj_block,false,true)) //no blocks to the side of us 
+			&& (!place_meeting(x+(moveX),y+moveX,obj_block)) && (!collision_line(x,bbox_bottom,x+moveX,bbox_bottom+moveX,obj_block,false,true)) //no blocks diagonally below us
+			&& (moveX != 0)
+			{
+				x += (moveX);
+				exit;
+			}
+		}
+		
 		//stop object at exactly 1 pixel remaining on block edge
 		if (!position_meeting(bbox_left+sign(moveX),bbox_bottom+1,obj_block)) && (position_meeting(bbox_left,bbox_bottom+1,obj_block))
 		&& (place_meeting(x,y+2,obj_block))

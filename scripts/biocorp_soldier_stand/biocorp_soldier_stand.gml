@@ -47,8 +47,9 @@ function biocorp_soldier_stand(){
 	idleanim_walktimer += random_range((1/room_speed),(1/room_speed)/4)
 
 	if (idleanim_walktimer >= 1)
-	 && (!position_meeting(inst2.x+(facing*8),inst2.y,obj_block)) && (inst2.inst_collision2 <= 0)
-	 && (inst2.inst_circle <= 0) && (enemy_hurt <= 0) && (inst2.inst_blockfree <= 0)
+	&& (!position_meeting(inst2.x+(facing*8),inst2.y,obj_block)) && (inst2.inst_collision2 <= 0)
+	&& (inst2.inst_circle <= 0) && (enemy_hurt <= 0) && (inst2.inst_blockfree <= 0)
+	&& (global.invisibility <= 0)
 	{
 		if (sprite_index = spr_biocorp_soldier_stand_left)
 		{

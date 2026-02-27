@@ -11,7 +11,10 @@ if (global.doors_redblocker[redblockerID] > 0) && (obj_corelock > -1) && (on <= 
 {
 	on = 1	
 	sprite_index = spr_switch_on
-	with(obj_corelock)
+	
+	if (instCoreLock <= 0)
+	{
+		with(obj_corelock)
 		{
 			sprite_index = spr_corelock_opening
 			image_speed = 0
@@ -22,7 +25,29 @@ if (global.doors_redblocker[redblockerID] > 0) && (obj_corelock > -1) && (on <= 
 			instance_deactivate_object(inst3)	
 			instance_deactivate_object(inst4)	
 			instance_deactivate_object(inst5)
+			instance_deactivate_object(inst6)	
+			instance_deactivate_object(inst7)	
+			instance_deactivate_object(inst8)
 		}
+	}
+	else if (instCoreLock > 0)
+	{
+		with(instCoreLock)
+		{
+			sprite_index = spr_corelock_opening
+			image_speed = 0
+			image_index = image_number-1
+			
+			instance_deactivate_object(inst1)	
+			instance_deactivate_object(inst2)	
+			instance_deactivate_object(inst3)	
+			instance_deactivate_object(inst4)	
+			instance_deactivate_object(inst5)
+			instance_deactivate_object(inst6)	
+			instance_deactivate_object(inst7)	
+			instance_deactivate_object(inst8)
+		}
+	}
 }
 
 if (instance_place(id.x,id.y,obj_bullet))
@@ -32,10 +57,21 @@ if (instance_place(id.x,id.y,obj_bullet))
 		on = 1
 		sprite_index = spr_switch_on
 		FadeNow = 1.0
-		with(obj_corelock)
+		if (instCoreLock <= 0)
 		{
-			sprite_index = spr_corelock_opening
-			image_index = 0
+			with(obj_corelock)
+			{
+				sprite_index = spr_corelock_opening
+				image_index = 0
+			}
+		}
+		else if (instCoreLock > 0)
+		{
+			with(instCoreLock)
+			{
+				sprite_index = spr_corelock_opening
+				image_index = 0
+			}
 		}
 	}
 	bullet_hurtenemycode_noeffect()

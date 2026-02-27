@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Sfx_Player_Footstep",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Old",
+    "path":"folders/Scripts/Old.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

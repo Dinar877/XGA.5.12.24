@@ -8,12 +8,12 @@
 function doors_touchingplayer_left()
 {
 	if ((place_meeting(id.bbox_right,y,obj_player)) && (open == 1) && (global.corrupted == 0) 
-	&& ((global.room_transition_nodoors = 0) && (global.room_transition_nodoors_2 = 0) && (global.room_transition_nodoors_more = 0)))
+	&& ((global.room_transition_nodoors = 0) && (global.room_transition_nodoors_2 = 0) && (global.room_transition_nodoors_3 = 0) && (global.room_transition_nodoors_more = 0)))
 	or ((place_meeting(x+12,y,obj_player)) && (open == 1) && (global.corrupted > 0)
-	&& ((global.room_transition_nodoors = 0) && (global.room_transition_nodoors_2 = 0) && (global.room_transition_nodoors_more = 0)))
+	&& ((global.room_transition_nodoors = 0) && (global.room_transition_nodoors_2 = 0) && (global.room_transition_nodoors_3 = 0) && (global.room_transition_nodoors_more = 0)))
 	&& (!instance_exists(obj_scrn_roomtransition))
 	{           
-	        if (touch == 0) && (global.room_transition = 0) && (global.room_transition1 = 0) && (global.room_transition_more = 0)
+	        if (touch == 0) && (global.room_transition = 0) && (global.room_transition1 = 0) && (global.room_transition_more = 0) && (global.room_transition_3 = 0)
 			{
 				touch = 1
 				stopper1 = 0
@@ -32,7 +32,8 @@ function doors_touchingplayer_left()
 	        {
 	            with(obj_block2_door)
 	            {
-	                if (transition = 1) && (global.room_transition_prep = 0) && (global.room_transition = 0) && (global.room_transition1 = 0) && (global.room_transition_more = 0)
+	                if (transition = 1) && (global.room_transition_prep = 0) 
+					&& (global.room_transition = 0) && (global.room_transition1 = 0) && (global.room_transition_more = 0) && (global.room_transition_3 = 0)
 	                {
 	                    with(obj_player)
 	                    {

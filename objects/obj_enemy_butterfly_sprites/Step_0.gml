@@ -27,8 +27,14 @@ else if (idleswitch2)
 	idleY -= 0.05;	
 }
 
-x = inst2.x;
-y = inst2.y+idleY;
+if (inst2 > -1)
+{
+	if (instance_exists(inst2))
+	{
+		x = inst2.x;
+		y = inst2.y+idleY;
+	}
+}
 
 //getting hurt by shit
 var inst4 = (instance_nearest(x,y,obj_bullet))

@@ -56,5 +56,5 @@ Gamepad_getname()
 tex = 0
 tex2 = 0
 text1 = " DASH ENGINE"
-text2 = " PRESS " + string(dash) + " TO QUICKLY LAUNCH YOURSELF WHILE JUMPING.";
+text2 = " PRESS " + string(dash) + " TO QUICKLY LAUNCH YOURSELF WHILE JUMPING. YOU CAN ONLY DASH ONCE IN THE AIR BEFORE LANDING.";
 

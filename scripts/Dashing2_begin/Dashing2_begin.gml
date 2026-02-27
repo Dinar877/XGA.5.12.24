@@ -229,6 +229,50 @@ function Dashing2_begin() {
 			State_machine_switch_state(Move);
 		}
 	}	
+	
+	if (!place_meeting(x,y+2,obj_block))
+	&& (!place_meeting(x,y+2,obj_slope1_left)) && (!place_meeting(x,y+2,obj_slope1_right))
+	&& (!place_meeting(x,y+2,obj_newslope_left)) && (!place_meeting(x,y+2,obj_newslope_right))
+	{
+		sprite_index = spr_player_jump;
+		global.jumping = 1;
+	    global.jumpingdm = 1;
+		global.dash2 = 0;
+		global.dashbegin = 0;
+		global.turning_dash2 = 0;
+		global.lockdown_facingDir = 0;
+		
+		if (global.suit_shock = 1)
+		{
+			global.screwjump = 1	
+		}
+		
+		if (instance_exists(obj_player_dasheffect))
+		{
+			with(obj_player_dasheffect)
+			{
+				instance_destroy()
+			}
+		}
+	
+		if (instance_exists(obj_player_dashspark))
+		{
+			with(obj_player_dashspark)
+			{
+				instance_destroy()	
+			}
+		}
+		
+		timer_dashing_hspd = 0;
+		
+		with(object_player2_0_sprites)
+		{
+			started_dash2 = 0;
+		    adder = 0;
+		}
+		
+		State_machine_switch_state(Falling_Dashing2)
+	}
 
 
 }

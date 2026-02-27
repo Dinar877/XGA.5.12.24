@@ -10,4 +10,5 @@ timerdown = 0;
 fade_color = shader_get_uniform(shd_flash_fade_white, "fade_color");
 NewColor = shader_get_uniform(shd_flash_fade_white, "NewColor");
 
+custom_timelimit = 0
 inst = instance_create_depth(id.x,id.y,id.depth+1,obj_timelock_line)

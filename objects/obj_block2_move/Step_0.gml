@@ -11,10 +11,13 @@ or (!instance_exists(obj_player))
 //is touching player?
 playerOntop = (place_meeting(x,y-1,obj_player));
 playerSides = (place_meeting(x-1,y,obj_player)) or (place_meeting(x+1,y,obj_player));
+playerSideL = (place_meeting(x-1,y,obj_player));
+playerSideR = (place_meeting(x+1,y,obj_player));
 playerBelow = (place_meeting(x,y+1,obj_player));
 
 //determine if player about to get crushed
-if (switchX == 0) or (switchY == 0)
+if ((switchX == 0) or (switchY == 0))
+&& (global.dead_begin == 0) && (global.dead == 0)
 {
 	if (direction1 == 1)
 	{
@@ -28,9 +31,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x+other.hspd,y+other.vspd,obj_block)) 
 					or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_right))
 					or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x-other.hspd,y-other.vspd,obj_block)) 
+					or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_right))
+					or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x+other.hspd,y+other.vspd,obj_block2_move)) 
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2_move))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -42,12 +50,17 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player)
 				{
-					if ((place_meeting(x+other.hspd,y-other.vspd,obj_block)) 
-					or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_right))
-					or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_right)))
+					if ((place_meeting(x+other.hspd,y+other.vspd,obj_block)) 
+					or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_right))
+					or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x-other.hspd,y-other.vspd,obj_block)) 
+					or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_right))
+					or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x+other.hspd,y-other.vspd,obj_block2_move)) 
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2_move)) && (place_meeting(x-other.hspd,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2)) && (place_meeting(x-other.hspd,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -59,12 +72,14 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player)
 				{
-					if ((place_meeting(x+other.hspd,y,obj_block)) 
+					if (other.playerSides)
+					&& ((place_meeting(x+other.hspd,y,obj_block)) 
 					or (place_meeting(x+other.hspd,y,obj_slope1_left)) or (place_meeting(x+other.hspd,y,obj_slope1_right))
 					or (place_meeting(x+other.hspd,y,obj_newslope_left)) or (place_meeting(x+other.hspd,y,obj_newslope_right)))
-					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x+other.hspd,y,obj_block2_move)) 
+						or ((place_meeting(x+other.hspd,y,obj_block2_move))  && (place_meeting(x-other.hspd,y,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y,obj_block2))  && (place_meeting(x-other.hspd,y,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -82,9 +97,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x-other.hspd,y+other.vspd,obj_block)) 
 					or (place_meeting(x-other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y+other.vspd,obj_slope1_right))
 					or (place_meeting(x-other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x+other.hspd,y-other.vspd,obj_block)) 
+					or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_right))
+					or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x-other.hspd,y+other.vspd,obj_block2_move))
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2_move))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -96,12 +116,17 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player)
 				{
-					if ((place_meeting(x-other.hspd,y-other.vspd,obj_block)) 
+					if ((place_meeting(x+other.hspd,y+other.vspd,obj_block)) 
+					or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_right))
+					or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x-other.hspd,y-other.vspd,obj_block)) 
 					or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_right))
 					or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x-other.hspd,y-other.vspd,obj_block2_move)) 
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2_move))  && (place_meeting(x-other.hspd,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2))  && (place_meeting(x-other.hspd,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -116,9 +141,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x-other.hspd,y,obj_block)) 
 					or (place_meeting(x-other.hspd,y,obj_slope1_left)) or (place_meeting(x-other.hspd,y,obj_slope1_right))
 					or (place_meeting(x-other.hspd,y,obj_newslope_left)) or (place_meeting(x-other.hspd,y,obj_newslope_right)))
+					&& ((place_meeting(x+other.hspd,y,obj_block)) 
+					or (place_meeting(x+other.hspd,y,obj_slope1_left)) or (place_meeting(x+other.hspd,y,obj_slope1_right))
+					or (place_meeting(x+other.hspd,y,obj_newslope_left)) or (place_meeting(x+other.hspd,y,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x-other.hspd,y,obj_block2_move)) 
+						or ((place_meeting(x+other.hspd,y,obj_block2_move))  && (place_meeting(x-other.hspd,y,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y,obj_block2))  && (place_meeting(x-other.hspd,y,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -133,12 +163,17 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player) 
 				{
-					if ((place_meeting(x,y+other.vspd,obj_block)) 
+					if ((place_meeting(x,y-other.vspd,obj_block)) 
+					or (place_meeting(x,y-other.vspd,obj_slope1_left)) or (place_meeting(x,y-other.vspd,obj_slope1_right))
+					or (place_meeting(x,y-other.vspd,obj_newslope_left)) or (place_meeting(x,y-other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x,y+other.vspd,obj_block)) 
 					or (place_meeting(x,y+other.vspd,obj_slope1_left)) or (place_meeting(x,y+other.vspd,obj_slope1_right))
 					or (place_meeting(x,y+other.vspd,obj_newslope_left)) or (place_meeting(x,y+other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x,y+other.vspd,obj_block2_move))
+						or ((place_meeting(x,y+other.vspd,obj_block2_move))  && (place_meeting(x,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x,y+other.vspd,obj_block2))  && (place_meeting(x,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -153,9 +188,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x,y-other.vspd,obj_block)) 
 					or (place_meeting(x,y-other.vspd,obj_slope1_left)) or (place_meeting(x,y-other.vspd,obj_slope1_right))
 					or (place_meeting(x,y-other.vspd,obj_newslope_left)) or (place_meeting(x,y-other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x,y+other.vspd,obj_block)) 
+					or (place_meeting(x,y+other.vspd,obj_slope1_left)) or (place_meeting(x,y+other.vspd,obj_slope1_right))
+					or (place_meeting(x,y+other.vspd,obj_newslope_left)) or (place_meeting(x,y+other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x,y-other.vspd,obj_block2_move))
+						or ((place_meeting(x,y+other.vspd,obj_block2_move))  && (place_meeting(x,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x,y+other.vspd,obj_block2))  && (place_meeting(x,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -194,9 +234,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x+other.hspd,y+other.vspd,obj_block)) 
 					or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_right))
 					or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x-other.hspd,y-other.vspd,obj_block)) 
+					or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_right))
+					or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x+other.hspd,y+other.vspd,obj_block2_move))
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2_move))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -208,12 +253,17 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player)
 				{
-					if ((place_meeting(x+other.hspd,y-other.vspd,obj_block)) 
+					if ((place_meeting(x-other.hspd,y+other.vspd,obj_block)) 
+					or (place_meeting(x-other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y+other.vspd,obj_slope1_right))
+					or (place_meeting(x-other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x+other.hspd,y-other.vspd,obj_block)) 
 					or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_right))
 					or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x+other.hspd,y-other.vspd,obj_block2_move))
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2_move))  && (place_meeting(x-other.hspd,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2))  && (place_meeting(x-other.hspd,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -228,9 +278,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x+other.hspd,y,obj_block)) 
 					or (place_meeting(x+other.hspd,y,obj_slope1_left)) or (place_meeting(x+other.hspd,y,obj_slope1_right))
 					or (place_meeting(x+other.hspd,y,obj_newslope_left)) or (place_meeting(x+other.hspd,y,obj_newslope_right)))
+					&& ((place_meeting(x-other.hspd,y,obj_block)) 
+					or (place_meeting(x-other.hspd,y,obj_slope1_left)) or (place_meeting(x-other.hspd,y,obj_slope1_right))
+					or (place_meeting(x-other.hspd,y,obj_newslope_left)) or (place_meeting(x-other.hspd,y,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x+other.hspd,y,obj_block2_move))
+						or ((place_meeting(x+other.hspd,y,obj_block2_move))  && (place_meeting(x-other.hspd,y,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y,obj_block2))  && (place_meeting(x-other.hspd,y,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -248,9 +303,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x-other.hspd,y+other.vspd,obj_block)) 
 					or (place_meeting(x-other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y+other.vspd,obj_slope1_right))
 					or (place_meeting(x-other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x+other.hspd,y-other.vspd,obj_block)) 
+					or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_slope1_right))
+					or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x-other.hspd,y+other.vspd,obj_block2_move))
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2_move))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y+other.vspd,obj_block2))  && (place_meeting(x-other.hspd,y+other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -262,12 +322,17 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player)
 				{
-					if ((place_meeting(x-other.hspd,y-other.vspd,obj_block)) 
+					if ((place_meeting(x+other.hspd,y+other.vspd,obj_block)) 
+					or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_slope1_right))
+					or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_left)) or (place_meeting(x+other.hspd,y+other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x-other.hspd,y-other.vspd,obj_block)) 
 					or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_slope1_right))
 					or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_left)) or (place_meeting(x-other.hspd,y-other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x-other.hspd,y-other.vspd,obj_block2_move))
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2_move))  && (place_meeting(x-other.hspd,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y-other.vspd,obj_block2))  && (place_meeting(x-other.hspd,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -279,12 +344,17 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player)
 				{
-					if ((place_meeting(x-other.hspd,y,obj_block)) 
+					if ((place_meeting(x+other.hspd,y,obj_block)) 
+					or (place_meeting(x+other.hspd,y,obj_slope1_left)) or (place_meeting(x+other.hspd,y,obj_slope1_right))
+					or (place_meeting(x+other.hspd,y,obj_newslope_left)) or (place_meeting(x+other.hspd,y,obj_newslope_right)))
+					&& ((place_meeting(x-other.hspd,y,obj_block)) 
 					or (place_meeting(x-other.hspd,y,obj_slope1_left)) or (place_meeting(x-other.hspd,y,obj_slope1_right))
 					or (place_meeting(x-other.hspd,y,obj_newslope_left)) or (place_meeting(x-other.hspd,y,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x+other.hspd,y,obj_block2_move))
+						or ((place_meeting(x+other.hspd,y,obj_block2_move)) && (place_meeting(x-other.hspd,y,obj_block2_move)))
+						or ((place_meeting(x+other.hspd,y,obj_block2)) && (place_meeting(x-other.hspd,y,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -299,12 +369,17 @@ if (switchX == 0) or (switchY == 0)
 			{
 				with(obj_player) 
 				{
-					if ((place_meeting(x,y+other.vspd,obj_block)) 
+					if ((place_meeting(x,y-other.vspd,obj_block)) 
+					or (place_meeting(x,y-other.vspd,obj_slope1_left)) or (place_meeting(x,y-other.vspd,obj_slope1_right))
+					or (place_meeting(x,y-other.vspd,obj_newslope_left)) or (place_meeting(x,y-other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x,y+other.vspd,obj_block)) 
 					or (place_meeting(x,y+other.vspd,obj_slope1_left)) or (place_meeting(x,y+other.vspd,obj_slope1_right))
 					or (place_meeting(x,y+other.vspd,obj_newslope_left)) or (place_meeting(x,y+other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x,y+other.vspd,obj_block2_move))
+						or ((place_meeting(x,y+other.vspd,obj_block2_move))  && (place_meeting(x,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x,y+other.vspd,obj_block2))  && (place_meeting(x,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -319,9 +394,14 @@ if (switchX == 0) or (switchY == 0)
 					if ((place_meeting(x,y-other.vspd,obj_block)) 
 					or (place_meeting(x,y-other.vspd,obj_slope1_left)) or (place_meeting(x,y-other.vspd,obj_slope1_right))
 					or (place_meeting(x,y-other.vspd,obj_newslope_left)) or (place_meeting(x,y-other.vspd,obj_newslope_right)))
+					&& ((place_meeting(x,y+other.vspd,obj_block)) 
+					or (place_meeting(x,y+other.vspd,obj_slope1_left)) or (place_meeting(x,y+other.vspd,obj_slope1_right))
+					or (place_meeting(x,y+other.vspd,obj_newslope_left)) or (place_meeting(x,y+other.vspd,obj_newslope_right)))
 					&& ((other.playerOntop) or (other.playerSides) or (other.playerBelow))
 					{
 						if (!place_meeting(x,y-other.vspd,obj_block2_move))
+						or ((place_meeting(x,y+other.vspd,obj_block2_move))  && (place_meeting(x,y-other.vspd,obj_block2_move)))
+						or ((place_meeting(x,y+other.vspd,obj_block2))  && (place_meeting(x,y-other.vspd,obj_block2)))
 						{
 							other.playerDontMove = true; //don't move if player about to get crushed
 						}
@@ -352,10 +432,10 @@ if (switchX == 0) or (switchY == 0)
 
 //go towards target
 if (direction1 = 1)
-&& (playerDontMove == false)
 {
+	
 	//X
-	if (hspd != 0)
+	if ((hspd != 0) or (x = startX))
 	&& (switchX == 0)
 	{
 		//we're too far left from finishX
@@ -366,9 +446,25 @@ if (direction1 = 1)
 			&& (!place_meeting(x+hspd,y,obj_slope1_left)) && (!place_meeting(x+hspd,y,obj_slope1_right))
 			&& (!place_meeting(x+hspd,y,obj_newslope_left)) && (!place_meeting(x+hspd,y,obj_newslope_right))
 			{
-				x += (hspd);
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideR) && (place_meeting(x+hspd,y,obj_player)))
+				or ((playerSideL) && (place_meeting(x-hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX += hspd;
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x+other.hspd,y,obj_block))
+						{
+							other.counterX += other.hspd	
+						}
+					}
+				}
 				
-				counterX += (hspd);
+				x += (hspd);
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than hspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -384,9 +480,25 @@ if (direction1 = 1)
 				&& (!place_meeting(x+sign(hspd),y,obj_slope1_left)) && (!place_meeting(x+sign(hspd),y,obj_slope1_right))
 				&& (!place_meeting(x+sign(hspd),y,obj_newslope_left)) && (!place_meeting(x+sign(hspd),y,obj_newslope_right))
 				{
-					x += 1;
+					//only move player if either to the side, on top or grabbed onto a ledge
+					if ((playerSideR) && (place_meeting(x+hspd,y,obj_player)))
+					or ((playerSideL) && (place_meeting(x-hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterX++
+					}
+					else if (playerOntop)
+					{
+						with(obj_player)
+						{
+							if (!place_meeting(x+1,y,obj_block))
+							{
+								other.counterX++
+							}
+						}
+					}
 					
-					counterX++;
+					x += 1;	
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -403,9 +515,25 @@ if (direction1 = 1)
 		{
 			while (floor(x) + (hspd) >= finishX) && (floor(x) < finishX)
 			{
-				x += 1;	
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideR) && (place_meeting(x+hspd,y,obj_player)))
+				or ((playerSideL) && (place_meeting(x-hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX++
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x+1,y,obj_block))
+						{
+							other.counterX++
+						}
+					}
+				}
 				
-				counterX++;
+				x += 1;	
 			}
 		}
 		else if (floor(x) == finishX)
@@ -422,9 +550,25 @@ if (direction1 = 1)
 			&& (!place_meeting(x-hspd,y,obj_slope1_left)) && (!place_meeting(x-hspd,y,obj_slope1_right))
 			&& (!place_meeting(x-hspd,y,obj_newslope_left)) && (!place_meeting(x-hspd,y,obj_newslope_right))
 			{
-				x -= (hspd);
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideL) && (place_meeting(x-hspd,y,obj_player)))
+				or ((playerSideR) && (place_meeting(x+hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX -= hspd;
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x-other.hspd,y,obj_block))
+						{
+							other.counterX -= other.hspd	
+						}
+					}
+				}
 				
-				counterX -= (hspd);
+				x -= (hspd);
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than hspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -440,9 +584,26 @@ if (direction1 = 1)
 				&& (!place_meeting(x-sign(hspd),y,obj_slope1_left)) && (!place_meeting(x-sign(hspd),y,obj_slope1_right))
 				&& (!place_meeting(x-sign(hspd),y,obj_newslope_left)) && (!place_meeting(x-sign(hspd),y,obj_newslope_right))
 				{
-					x -= 1;
+					//only move player if either to the side, on top or grabbed onto a ledge
+					if (playerOntop) 
+					or ((playerSideL) && (place_meeting(x-hspd,y,obj_player)))
+					or ((playerSideR) && (place_meeting(x+hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterX--
+					}
+					else if (playerOntop)
+					{
+						with(obj_player)
+						{
+							if (!place_meeting(x-1,y,obj_block))
+							{
+								other.counterX--
+							}
+						}
+					}
 					
-					counterX--;
+					x -= 1;	
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -459,9 +620,25 @@ if (direction1 = 1)
 		{
 			while (floor(x) - (hspd) <= finishX) && (floor(x) > finishX)
 			{
-				x -= 1;	
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideL) && (place_meeting(x-hspd,y,obj_player)))
+				or ((playerSideR) && (place_meeting(x+hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX--
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x-1,y,obj_block))
+						{
+							other.counterX--
+						}
+					}
+				}
 				
-				counterX--;
+				x -= 1;	
 			}
 		}
 		else if (floor(x) == finishX)
@@ -473,7 +650,7 @@ if (direction1 = 1)
 	
 	
 	//Y
-	if (vspd != 0)
+	if ((vspd != 0) or (y = startY))
 	&& (switchY == 0)
 	{
 		//too far above of finishY
@@ -486,7 +663,12 @@ if (direction1 = 1)
 			{
 				y += (vspd);
 				
-				counterY += (vspd);
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY += (vspd);
+				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than vspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -504,7 +686,12 @@ if (direction1 = 1)
 				{
 					y += 1;
 					
-					counterY++;
+					//only move player if either to the side, below, on top or grabbed onto a ledge
+					if (playerOntop) or (playerSides) or (playerBelow)
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterY++
+					}
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -523,7 +710,12 @@ if (direction1 = 1)
 			{
 				y += 1;	
 				
-				counterY++;
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY++
+				}
 			}
 		}
 		else if (floor(y) == finishY)
@@ -543,7 +735,12 @@ if (direction1 = 1)
 			{
 				y -= (vspd);
 				
-				counterY -= (vspd);
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY -= vspd
+				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than vspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -561,7 +758,12 @@ if (direction1 = 1)
 				{
 					y -= 1;
 					
-					counterY--;
+					//only move player if either to the side, below, on top or grabbed onto a ledge
+					if (playerOntop) or (playerSides) or (playerBelow)
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterY--
+					}
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -579,7 +781,13 @@ if (direction1 = 1)
 			while (floor(y) - (vspd) <= finishY) && (floor(y) > finishY)
 			{
 				y -= 1;	
-				counterY--;
+				
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY--
+				}
 			}
 		}
 		else if (floor(y) == finishY)
@@ -594,10 +802,9 @@ if (direction1 = 1)
 
 //travel back to starting position
 if (direction1 = -1)
-&& (playerDontMove == false)
 {
 	//X
-	if (hspd != 0)
+	if ((hspd != 0) or (x = startX))
 	&& (switchX == 0)
 	{
 		//we're too far left from startX
@@ -608,9 +815,25 @@ if (direction1 = -1)
 			&& (!place_meeting(x+hspd,y,obj_slope1_left)) && (!place_meeting(x+hspd,y,obj_slope1_right))
 			&& (!place_meeting(x+hspd,y,obj_newslope_left)) && (!place_meeting(x+hspd,y,obj_newslope_right))
 			{
-				x += (hspd);
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideR) && (place_meeting(x+hspd,y,obj_player)))
+				or ((playerSideL) && (place_meeting(x-hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX += hspd
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x+other.hspd,y,obj_block))
+						{
+							other.counterX += other.hspd	
+						}
+					}
+				}
 				
-				counterX += (hspd);
+				x += (hspd);
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than hspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -626,9 +849,25 @@ if (direction1 = -1)
 				&& (!place_meeting(x+sign(hspd),y,obj_slope1_left)) && (!place_meeting(x+sign(hspd),y,obj_slope1_right))
 				&& (!place_meeting(x+sign(hspd),y,obj_newslope_left)) && (!place_meeting(x+sign(hspd),y,obj_newslope_right))
 				{
-					x += 1;
+					//only move player if either to the side, on top or grabbed onto a ledge
+					if ((playerSideR) && (place_meeting(x+hspd,y,obj_player)))
+					or ((playerSideL) && (place_meeting(x-hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterX++
+					}
+					else if (playerOntop)
+					{
+						with(obj_player)
+						{
+							if (!place_meeting(x+1,y,obj_block))
+							{
+								other.counterX++
+							}
+						}
+					}
 					
-					counterX++;
+					x += (hspd);
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -645,9 +884,25 @@ if (direction1 = -1)
 		{
 			while (floor(x) + (hspd) >= startX) && (floor(x) < startX)
 			{
-				x += 1;	
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideR) && (place_meeting(x+hspd,y,obj_player)))
+				or ((playerSideL) && (place_meeting(x-hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX++
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x+1,y,obj_block))
+						{
+							other.counterX++
+						}
+					}
+				}
 				
-				counterX++;
+				x += (hspd);
 			}
 		}
 		else if (floor(x) == startX)
@@ -664,9 +919,25 @@ if (direction1 = -1)
 			&& (!place_meeting(x-hspd,y,obj_slope1_left)) && (!place_meeting(x-hspd,y,obj_slope1_right))
 			&& (!place_meeting(x-hspd,y,obj_newslope_left)) && (!place_meeting(x-hspd,y,obj_newslope_right))
 			{
-				x -= (hspd);
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideL) && (place_meeting(x-hspd,y,obj_player)))
+				or ((playerSideR) && (place_meeting(x+hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX -= hspd
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x-other.hspd,y,obj_block))
+						{
+							other.counterX -= other.hspd	
+						}
+					}
+				}
 				
-				counterX -= (hspd);
+				x -= (hspd);
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than hspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -682,9 +953,25 @@ if (direction1 = -1)
 				&& (!place_meeting(x-sign(hspd),y,obj_slope1_left)) && (!place_meeting(x-sign(hspd),y,obj_slope1_right))
 				&& (!place_meeting(x-sign(hspd),y,obj_newslope_left)) && (!place_meeting(x-sign(hspd),y,obj_newslope_right))
 				{
-					x -= 1;
+					//only move player if either to the side, on top or grabbed onto a ledge
+					if ((playerSideL) && (place_meeting(x-hspd,y,obj_player)))
+					or ((playerSideR) && (place_meeting(x+hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterX--
+					}
+					else if (playerOntop)
+					{
+						with(obj_player)
+						{
+							if (!place_meeting(x-1,y,obj_block))
+							{
+								other.counterX--	
+							}
+						}
+					}
 					
-					counterX--;
+					x -= 1;
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -701,9 +988,25 @@ if (direction1 = -1)
 		{
 			while (floor(x) - (hspd) <= startX) && (floor(x) > startX)
 			{
-				x -= 1;	
+				//only move player if either to the side, on top or grabbed onto a ledge
+				if ((playerSideL) && (place_meeting(x-hspd,y,obj_player)))
+				or ((playerSideR) && (place_meeting(x+hspd,y,obj_player)) && ((global.hang) or (global.climbing)))
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterX--
+				}
+				else if (playerOntop)
+				{
+					with(obj_player)
+					{
+						if (!place_meeting(x-1,y,obj_block))
+						{
+							other.counterX--	
+						}
+					}
+				}
 				
-				counterX--;
+				x -= 1;
 			}
 		}
 		else if (floor(x) == startX)
@@ -715,7 +1018,7 @@ if (direction1 = -1)
 	
 	
 	//Y
-	if (vspd != 0)
+	if ((vspd != 0) or (y = startY))
 	&& (switchY == 0)
 	{
 		//too far above of startY
@@ -728,7 +1031,12 @@ if (direction1 = -1)
 			{
 				y += (vspd);
 				
-				counterY += (vspd);
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY += vspd
+				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than vspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -746,7 +1054,12 @@ if (direction1 = -1)
 				{
 					y += 1;
 					
-					counterY++;
+					//only move player if either to the side, below, on top or grabbed onto a ledge
+					if (playerOntop) or (playerSides) or (playerBelow)
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterY++
+					}
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -765,7 +1078,12 @@ if (direction1 = -1)
 			{
 				y += 1;	
 				
-				counterY++;
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY++
+				}
 			}
 		}
 		else if (floor(y) == startY)
@@ -785,7 +1103,12 @@ if (direction1 = -1)
 			{
 				y -= (vspd);
 				
-				counterY -= (vspd);
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY -= vspd
+				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //less than vspd pixels away from block
 			&& (!place_meeting(x,y,obj_slope1_left)) && (!place_meeting(x,y,obj_slope1_right))
@@ -803,7 +1126,12 @@ if (direction1 = -1)
 				{
 					y -= 1;
 					
-					counterY--;
+					//only move player if either to the side, below, on top or grabbed onto a ledge
+					if (playerOntop) or (playerSides) or (playerBelow)
+					or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+					{
+						counterY--
+					}
 				}
 			}
 			else if (!place_meeting(x,y,obj_block)) //exactly next to block
@@ -821,7 +1149,13 @@ if (direction1 = -1)
 			while (floor(y) - (vspd) <= startY) && (floor(y) > startY)
 			{
 				y -= 1;	
-				counterY--;
+				
+				//only move player if either to the side, below, on top or grabbed onto a ledge
+				if (playerOntop) or (playerSides) or (playerBelow)
+				or ((global.hang = 1) && ((place_meeting(x+hspd,y,obj_player)) or (place_meeting(x-hspd,y,obj_player))))
+				{
+					counterY--
+				}
 			}
 		}
 		else if (floor(y) == startY)
@@ -833,7 +1167,23 @@ if (direction1 = -1)
 }
 
 
-
+//Crush Player
+if (playerDontMove == true)
+{
+	with(obj_player)
+	{
+		if (place_meeting(x,y,obj_block2_move))
+		{
+			state = Dead
+			global.dead_begin = 1
+			global.health1 = 0
+			
+			other.playerDontMove = false
+			
+			exit
+		}
+	}
+}
 
 
 //turn around
@@ -855,59 +1205,63 @@ if (switchX = 1) && (switchY = 1)
 }
 
 
-
-//move player if on top
-if (playerOntop)
+//move player along
+if (global.dead_begin == 0) && (global.dead == 0)
 {
-	with(obj_player)
+	//move player if on top
+	if (playerOntop)
 	{
-		obj_player.x += other.counterX;
-		obj_player.y += other.counterY;
-			
-		object_player2_0_sprites.x += other.counterX;
-		object_player2_0_sprites.y += other.counterY;
-	}
-}
-
-if (playerBelow)
-{
-	with(obj_player)
-	{
-		//obj_player.x += other.counterX;
-		obj_player.y += other.counterY;
-			
-		//object_player2_0_sprites.x += other.counterX;
-		object_player2_0_sprites.y += other.counterY;
-	}
-}
-
-if (playerSides)
-{
-	with(obj_player)
-	{
-		if (global.hang == 0) && (global.climbing == 0) && (global.hangAiming == 0) && (global.shoot == 0)
-		{
-			obj_player.x += other.counterX;
-			//obj_player.y += other.counterY;
-			
-			object_player2_0_sprites.x += other.counterX;
-			//object_player2_0_sprites.y += other.counterY;
-		}
-		else
+		with(obj_player)
 		{
 			obj_player.x += other.counterX;
 			obj_player.y += other.counterY;
 			
 			object_player2_0_sprites.x += other.counterX;
 			object_player2_0_sprites.y += other.counterY;
+		}
+	}
+
+	//below
+	if (playerBelow)
+	{
+		with(obj_player)
+		{
+			//obj_player.x += other.counterX;
+			obj_player.y += other.counterY;
 			
-			obj_camera.x += other.counterX;
-			obj_camera.y += other.counterY;
+			//object_player2_0_sprites.x += other.counterX;
+			object_player2_0_sprites.y += other.counterY;
+		}
+	}
+
+	if (playerSides)
+	{
+		with(obj_player)
+		{
+			if (global.hang == 0) && (global.climbing == 0) && (global.hangAiming == 0) && (global.shoot == 0) //normal
+			{
+				obj_player.x += other.counterX;
+				//obj_player.y += other.counterY;
+			
+				object_player2_0_sprites.x += other.counterX;
+				//object_player2_0_sprites.y += other.counterY;
+			}
+			else //hanging
+			{
+				obj_player.x += other.counterX;
+				obj_player.y += other.counterY;
+			
+				object_player2_0_sprites.x += other.counterX;
+				object_player2_0_sprites.y += other.counterY;
+			
+				obj_camera.x += other.counterX;
+				obj_camera.y += other.counterY;
+			}
 		}
 	}
 }
 
-if (!playerOntop) && (!playerBelow) && (!playerSides)
+if (!playerOntop) && (!playerBelow) && (!playerSides) && (!playerSideL) && (!playerSideR)
 {
 	with(obj_player)
 	{

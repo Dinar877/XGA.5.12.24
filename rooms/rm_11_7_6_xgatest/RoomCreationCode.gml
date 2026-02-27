@@ -4,7 +4,7 @@ global.doorpath1 = rm_elevator_tutorial_2
 global.doorpath2 = rm_elevator_tutorial_1
 //global.doorpath2 = rm_mothership_gorilla
 
-global.doorpath3 = rm_tutorial_NEWsave_L_xga
+global.doorpath7 = rm_tutorial_NEWsave_L_xga
 //global.doorpath3 = rm_S3_22_24_xgatest
 
 global.doorpath4 = rm_13_9_4

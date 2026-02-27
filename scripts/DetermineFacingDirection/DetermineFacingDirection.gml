@@ -7,7 +7,7 @@ function DetermineFacingDirection(){
 	&& ((object_index == obj_enemy_slime_hitbox)
 	or (object_index == obj_enemy_wormy_hitbox))
 	{
-		if (facing > 0) //turn around
+		if (facing > 0) //WALLS - turn around R2L
 		&& (place_meeting(x+(sign(argument0)*1),y,obj_block))
 		&& (!place_meeting(x+(sign(argument0)*1),y,obj_slope1_left))
 		&& (!place_meeting(x+(sign(argument0)*1),y,obj_slope1_right))
@@ -17,12 +17,34 @@ function DetermineFacingDirection(){
 			hspd = -argument0
 			facing = -1;
 		}
-		else if (facing < 0) //turn around
+		else if (facing < 0) //WALLS - turn around L2R
 		&& (place_meeting(x+(sign(argument0)*1),y,obj_block))
 		&& (!place_meeting(x+(sign(argument0)*1),y,obj_slope1_left))
 		&& (!place_meeting(x+(sign(argument0)*1),y,obj_slope1_right))
 		&& (!place_meeting(x+(sign(argument0)*1),y,obj_newslope_left))
 		&& (!place_meeting(x+(sign(argument0)*1),y,obj_newslope_right))
+		{
+			hspd = argument0
+			facing = 1;
+		}
+		else if (facing > 0) //EMPTY - turn around R2L
+		&& (place_meeting(x,y+1,obj_block))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_block))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_slope1_left))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_slope1_right))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_newslope_left))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_newslope_right))
+		{
+			hspd = -argument0
+			facing = -1;
+		}
+		else if (facing < 0) //EMPTY - turn around L2R
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_block))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_block))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_slope1_left))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_slope1_right))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_newslope_left))
+		&& (!place_meeting(x+(sign(argument0)*1),y+2,obj_newslope_right))
 		{
 			hspd = argument0
 			facing = 1;

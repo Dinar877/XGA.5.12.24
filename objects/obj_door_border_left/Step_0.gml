@@ -7,8 +7,9 @@ if (global.pierce_killswitch)
 	exit;	
 }
 
-if (place_meeting(x,y,obj_player)) && (started == 0)  && (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0) && (global.room_transition_nodoors == 0)
-&& (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0) 
+if (place_meeting(x,y,obj_player)) && (started == 0)  
+&& (global.room_transition_nodoors_2 == 0) && (global.room_transition_nodoors_more == 0) && (global.room_transition_nodoors == 0) && (global.room_transition_nodoors_3 == 0)
+&& (global.room_transition == 0) && (global.room_transition1 == 0) && (global.room_transition_more == 0) && (global.room_transition_3 == 0) 
 {
 	started = 1;
 	global.room_transition_nodoors = 1

@@ -34,5 +34,14 @@ if (on == true) && (instance_exists(obj_timelock_lock))
 	instance_create_depth(obj_player.x, obj_player.y-20, depth-1, obj_timelock_clock);
 	instance_create_depth(obj_player.x, obj_player.y-20, obj_timelock_clock.depth-1, obj_timelock_clockhand);
 	
+	//if we have set a custom time for this clock switch
+	if (custom_timelimit > 0)
+	{
+		with(obj_timelock_clockhand)
+		{
+			timeLimit = other.custom_timelimit	
+		}
+	}
+	
 	audio_play_sound(snd_ticking,1000,false,global.sfx_volume);
 }

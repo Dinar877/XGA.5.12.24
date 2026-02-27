@@ -11,6 +11,8 @@ inst6 = instance_create(x+12,y+8,obj_block2);
 inst7 = instance_create(x+12,y+11,obj_block2);
 inst8 = instance_create(x+12,y+107,obj_block2);
 
+instCoreSwitch = instance_nearest(x,y,obj_corelock_switch)
+
 redblockerID = 0
 
 //inst_blockswitch = instance_create(obj_corelock_switch.x,obj_corelock_switch.y,obj_block2);

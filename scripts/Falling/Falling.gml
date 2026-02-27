@@ -23,7 +23,7 @@ function Falling() {
 			if ((image_index >= 7) && (image_index < 8)) or ((image_index >= 0) && (image_index < 1))
 			{
 				audio_stop_sound(snd_player_spinjump_shorter);
-				audio_play_sound(snd_player_spinjump_shorter,1,false,global.sfx_volume);
+				audio_play_sound(snd_player_spinjump_shorter,1000,false,global.sfx_volume);
 				sound_spin = 0;
 			}
 		
@@ -320,6 +320,18 @@ function Falling() {
 	{
 	    vspd += grav;
 	}
+	
+	
+	//testing move collision blocks bug
+	/*
+	if (vspd < 0)
+	{
+		if (place_meeting(x+11,y+(vspd*2),obj_block)) or (place_meeting(x-11,y+(vspd*2),obj_block))
+		{
+			show_debug_message("nearby")	
+		}
+	}
+	*/
 
 
 

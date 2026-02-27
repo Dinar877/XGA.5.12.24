@@ -1,4 +1,9 @@
 function Crouching() {
+	
+	//sfx
+	audio_stop_sound(snd_player_spinjump);
+	audio_stop_sound(snd_player_spinjump_shorter);
+	
 	sprite_index = spr_player_crouch;
 	global.crouching = 1;
 
@@ -54,11 +59,12 @@ function Crouching() {
 			{
 				yspin -= 4;
 			}
-		if (hspd = 0)
+		if (input_horizontal = 0)
 	    {
 	        sprite_index = spr_player;
-			y-=4;
+			y -= 4
 	        global.jumping = 1;
+			audio_play_sound(snd_player_normaljump,1000,false,global.sfx_volume);
 	    }
 	    else if (hspd != 0)
 	    {

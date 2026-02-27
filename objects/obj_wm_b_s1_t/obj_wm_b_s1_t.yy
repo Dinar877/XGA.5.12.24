@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wm_b_s2_t",
-    "path":"sprites/spr_wm_b_s2_t/spr_wm_b_s2_t.yy",
+    "name":"spr_wm_b_s1_t",
+    "path":"sprites/spr_wm_b_s1_t/spr_wm_b_s1_t.yy",
   },
   "spriteMaskId":{
     "name":"spr_wm_b_s1_t",

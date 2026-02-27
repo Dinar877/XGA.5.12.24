@@ -3,6 +3,8 @@ am_ledge = 1;
 
 playerOntop = (place_meeting(x,y-1,obj_player));
 playerSides = (place_meeting(x-1,y,obj_player)) or (place_meeting(x+1,y,obj_player));
+playerSideL = (place_meeting(x-1,y,obj_player));
+PlayerSideR = (place_meeting(x+1,y,obj_player));
 playerBelow = (place_meeting(x,y+1,obj_player));
 playerDontMove = 0;
 

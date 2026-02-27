@@ -194,8 +194,8 @@
   ],
   "name":"rm_endgame_voltsuit",
   "parent":{
-    "name":"Vaults",
-    "path":"folders/Rooms/Vaults.yy",
+    "name":"start area",
+    "path":"folders/Rooms/Vaults/start area.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

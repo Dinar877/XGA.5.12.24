@@ -3,14 +3,14 @@ global.mapgrid_xZeroMove = 1
 global.mapgrid_yZeroMove = 1
 
 global.mapgrid_startroomx = 0
-global.mapgrid_startroomy = 0
+global.mapgrid_startroomy = 9
 global.mapgrid_totalCheckers = 1
 
 global.wm_found[WMdiscovered.v] = true;
 
-global.sector_active = 5
+global.sector_active = 6
 
-global.doorpath2 = 1
+global.doorpath2 = rm_V_1_9_2
 
 if (global.cutsceneID[Cutscenes.voltEngineGet] == false)
 {

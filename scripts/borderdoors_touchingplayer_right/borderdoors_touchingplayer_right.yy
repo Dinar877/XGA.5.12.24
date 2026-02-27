@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"borderdoors_touchingplayer_right",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"borderdoors_touchingplayer_right",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

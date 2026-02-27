@@ -480,6 +480,58 @@ if (gotsprite = 0) && (discovered = 1)
 				}
 			}
 			#endregion
+			
+			//empty space - with tiny corners x2 - no doors
+			#region
+			//x2 tiny corners - down
+			if (place_meeting(x+1,y,obj_mapchecker2)) 
+			&& (place_meeting(x-1,y,obj_mapchecker2)) && (place_meeting(x+1,y,obj_mapchecker2)) && (place_meeting(x,y+1,obj_mapchecker2)) && (place_meeting(x,y-1,obj_mapchecker2))
+			&& (!place_meeting(x,y,obj_link_leftdoor))
+			&& (!position_meeting(x+sprite_width,y+sprite_height,obj_mapchecker2)) && (!position_meeting(x-sprite_width,y+sprite_height,obj_mapchecker2))
+			&& (position_meeting(x+sprite_width,y-sprite_height,obj_mapchecker2)) && (position_meeting(x-sprite_width,y-sprite_height,obj_mapchecker2))
+			{
+				with(other)
+				{
+					sprite_index = maptile_3rdgroup_9;
+				}
+			}
+			//x2 tiny corners - up
+			if (place_meeting(x+1,y,obj_mapchecker2)) 
+			&& (place_meeting(x-1,y,obj_mapchecker2)) && (place_meeting(x+1,y,obj_mapchecker2)) && (place_meeting(x,y+1,obj_mapchecker2)) && (place_meeting(x,y-1,obj_mapchecker2))
+			&& (!place_meeting(x,y,obj_link_leftdoor))
+			&& (position_meeting(x+sprite_width,y+sprite_height,obj_mapchecker2)) && (position_meeting(x-sprite_width,y+sprite_height,obj_mapchecker2))
+			&& (!position_meeting(x+sprite_width,y-sprite_height,obj_mapchecker2)) && (!position_meeting(x-sprite_width,y-sprite_height,obj_mapchecker2))
+			{
+				with(other)
+				{
+					sprite_index = maptile_3rdgroup_7;
+				}
+			}
+			//x2 tiny corners - left
+			if (place_meeting(x+1,y,obj_mapchecker2)) 
+			&& (place_meeting(x-1,y,obj_mapchecker2)) && (place_meeting(x+1,y,obj_mapchecker2)) && (place_meeting(x,y+1,obj_mapchecker2)) && (place_meeting(x,y-1,obj_mapchecker2))
+			&& (!place_meeting(x,y,obj_link_rightdoor))
+			&& (!position_meeting(x+sprite_width,y+sprite_height,obj_mapchecker2)) && (position_meeting(x-sprite_width,y+sprite_height,obj_mapchecker2))
+			&& (!position_meeting(x+sprite_width,y-sprite_height,obj_mapchecker2)) && (position_meeting(x-sprite_width,y-sprite_height,obj_mapchecker2))
+			{
+				with(other)
+				{
+					sprite_index = maptile_3rdgroup_10;
+				}
+			}
+			//x2 tiny corners - right
+			if (!place_meeting(x+1,y,obj_mapchecker2)) 
+			&& (place_meeting(x-1,y,obj_mapchecker2)) && (place_meeting(x+1,y,obj_mapchecker2)) && (place_meeting(x,y+1,obj_mapchecker2)) && (place_meeting(x,y-1,obj_mapchecker2))
+			&& (!place_meeting(x,y,obj_link_leftdoor))
+			&& (position_meeting(x+sprite_width,y+sprite_height,obj_mapchecker2)) && (!position_meeting(x-sprite_width,y+sprite_height,obj_mapchecker2))
+			&& (position_meeting(x+sprite_width,y-sprite_height,obj_mapchecker2)) && (!position_meeting(x-sprite_width,y-sprite_height,obj_mapchecker2))
+			{
+				with(other)
+				{
+					sprite_index = maptile_3rdgroup_8;
+				}
+			}
+			#endregion
 		
 			//corners with tiny corners-no doors
 			#region

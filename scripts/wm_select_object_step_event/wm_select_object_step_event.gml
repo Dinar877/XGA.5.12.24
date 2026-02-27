@@ -485,7 +485,7 @@ function wm_select_object_step_event(){
 				
 				with(obj_maptile_tile)
 				{
-					if (tileposx = 0) && (tileposy = 0) && (sectortile = 6)
+					if (tileposx = 1) && (tileposy = 10) && (sectortile = 6)
 					{
 						x = __view_get( e__VW.XView, 0 ) + (160+(tileposx*10)-(global.mapgrid_playerx*10));
 						y = __view_get( e__VW.YView, 0 ) + (90+(tileposy*10)-(global.mapgrid_playery*10));

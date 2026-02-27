@@ -39,3 +39,5 @@ else if (place_meeting(id.x+16,id.y,obj_chargeplug_cable)) && (!place_meeting(id
 
 active = 0
 redblockerID = 0
+plugIDLeft = instance_nearest(x,y,obj_chargeplug_left) 
+plugIDRight = instance_nearest(x,y,obj_chargeplug_right)

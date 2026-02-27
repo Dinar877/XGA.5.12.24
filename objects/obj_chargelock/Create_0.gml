@@ -11,6 +11,8 @@ inst6 = instance_create(x+12,y+8,obj_block2_blocker);
 inst7 = instance_create(x+12,y+11,obj_block2_blocker);
 inst8 = instance_create(x+12,y+107,obj_block2_blocker);
 
+plugIDLeft = instance_nearest(x,y,obj_chargeplug_left) 
+plugIDRight = instance_nearest(x,y,obj_chargeplug_right)
 redblockerID = 0
 active = 0
 

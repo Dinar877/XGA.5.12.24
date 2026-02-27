@@ -50,14 +50,16 @@ else if (linked1 == true) && (activated == false)
 		obj_player.y = otherPortalID.y;
 		object_player2_0_sprites.x = otherPortalID.x;
 		object_player2_0_sprites.y = otherPortalID.y;
-		obj_camera.x = otherPortalID.x;
-		obj_camera.y = otherPortalID.y;
+		
+		Teleport_Camera(otherPortalID.x,otherPortalID.y)
 		
 		activated = true;
 		otherPortalID.activated = true;
 		
 		audio_stop_sound(snd_portal_use);
 		audio_play_sound(snd_portal_use,1000,false,global.sfx_volume);
+		
+		instance_create_layer(obj_camera.x,obj_camera.y,layer_get_id("Inst_healthui"),obj_portal_scrneffect)
 	}
 }
 

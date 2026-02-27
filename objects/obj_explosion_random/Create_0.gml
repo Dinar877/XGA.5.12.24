@@ -25,13 +25,13 @@ image_angle = round(random_range(image_angle = 20,image_angle = -20));
 
 
 
-if (!place_meeting(x,y,obj_corelock))
+if (!place_meeting(x,y,obj_corelock)) && (!place_meeting(x,y,obj_corelock_sideways))
 {
 	inst1 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
 	inst2 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
 	inst3 = instance_create(x,y,obj_explosion_normalhit_chunk_afterexplosion)
 }
-else if (place_meeting(x,y,obj_corelock))
+else if (place_meeting(x,y,obj_corelock)) or (place_meeting(x,y,obj_corelock_sideways))
 {
 	inst1 = instance_create(x,y,obj_explosion_debris_corelock)
 	inst2 = instance_create(x,y,obj_explosion_debris_corelock)

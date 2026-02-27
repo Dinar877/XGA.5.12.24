@@ -102,9 +102,11 @@ global.ability_speed = ((1/60)*2);
 global.room_transition = 0;
 global.room_transition1 = 0;
 global.room_transition_more = 0;
+global.room_transition_3 = 0;
 global.room_transition_nodoors = 0
 global.room_transition_nodoors_2 = 0
 global.room_transition_nodoors_more = 0
+global.room_transition_nodoors_3 = 0
 global.sector_transition = 0;
 global.room_transition_prep = 0;
 
@@ -117,9 +119,12 @@ global.room_transition_notnowL2 = 0;
 global.room_transition_notnowR2 = 0;
 global.room_transition_notnowL_more = 0;
 global.room_transition_notnowR_more = 0;
+global.room_transition_notnowL3 = 0;
+global.room_transition_notnowR3 = 0;
 
 global.room_x = 0;
 global.room_y = 0;
+
 
 global.stopper_2ndscrnshot = 0;
 
@@ -129,6 +134,8 @@ global.doorpath3 = 3;
 global.doorpath4 = 4;
 global.doorpath5 = 3;
 global.doorpath6 = 4;
+global.doorpath7 = 5;
+global.doorpath8 = 6;
 
 global.doorpathUP = 0;
 global.doorpathDOWN = 0;
@@ -277,7 +284,7 @@ global.frozen = 0;
 global.superheated = 0
 
 
-global.testing_shader_distortion = 1
+global.testing_shader_distortion = 0
 
 
 
@@ -516,5 +523,5 @@ window_set_cursor(cr_none);
 //go to next room
 //room_goto(rm_epilepsy_warning);
 //room_goto(rm_controller_recommended);
-room_goto(rm_load)
-//room_goto(rm_load_anyroom);
+//room_goto(rm_load)
+room_goto(rm_load_anyroom);
