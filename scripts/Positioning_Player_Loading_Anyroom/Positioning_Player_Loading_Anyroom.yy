@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Positioning_Player_Loading_Anyroom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Positioning_Player_Loading_Anyroom",
+  "parent":{
+    "name":"Saving&Loading",
+    "path":"folders/Scripts/Saving&Loading.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

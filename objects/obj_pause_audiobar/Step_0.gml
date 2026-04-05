@@ -46,7 +46,7 @@ if (selected > 0)
 			
 			if (audio_is_playing(global.sector_music))
 			{
-				audio_sound_gain(global.sector_music,global.music_volume,0)
+				audio_sound_gain(global.sector_music, global.music_volume,0)
 			}
 			
 			audio_play_sound(snd_button_confirm,1000,false,global.sfx_volume)

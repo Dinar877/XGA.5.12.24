@@ -80,9 +80,16 @@ if (instance_exists(obj_text_spawning_S2_1))
 	spawnerID = obj_text_spawning_S2_1
 }
 
+//BH
 if (instance_exists(obj_text_spawning_BH))
 {
 	spawnerID = obj_text_spawning_BH;	
+}
+
+//SCC
+if (instance_exists(obj_text_spawning_SCC))
+{
+	spawnerID = obj_text_spawning_SCC
 }
 
 //gamepad variable stuff

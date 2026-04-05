@@ -83,18 +83,7 @@ function scrn_roomtransition_nodoors() {
 	
 	    FadeNow = 0.0;
 	    instance_deactivate_all(obj_scrn_roomtransition);
-	
-		instance_activate_object(obj_camera);
-		instance_activate_object(object_player2_0_sprites);
-		instance_activate_object(obj_door_border_left);
-	    instance_activate_object(obj_door_border_right);
-	
-	    instance_activate_object(obj_link_healthUI);
-		instance_activate_object(obj_maptile_tile);
-		instance_activate_object(obj_deathscreennuke_maptile);
-		instance_activate_object(obj_link_map);
-	    instance_activate_object(obj_camera_stopperL);
-	    instance_activate_object(obj_camera_stopperR);
+		scrn_roomtransitions_whitelisted_objects();
 	
 	    deact = 1;
 	}
@@ -335,8 +324,29 @@ function scrn_roomtransition_nodoors() {
 				}
 				with(obj_camera)
 				{
-					x = obj_player.x+144
-					y = obj_door_border_right.y+global.door_height
+					if (global.mapgrid_xZeroMove = 0)
+					{
+						x = obj_player.x+144
+					}
+					else if (global.mapgrid_xZeroMove = 1)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							x = obj_mapchecker2.x+160
+						}
+					}
+					
+					if (global.mapgrid_yZeroMove == 0)
+					{
+						y = obj_door_border_right.y+global.door_height
+					}
+					else if (global.mapgrid_yZeroMove = 1)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							y = obj_mapchecker2.y+90
+						}
+					}
 				}
 		
 				var boby = obj_camera.y-obj_door_border_right.y
@@ -380,8 +390,29 @@ function scrn_roomtransition_nodoors() {
 				}
 				with(obj_camera)
 				{
-					x = obj_player.x-135
-					y = obj_door_border_left.y+global.door_height
+					if (global.mapgrid_xZeroMove = 0)
+					{
+						x = obj_player.x-135
+					}
+					else if (global.mapgrid_xZeroMove = 1)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							x = obj_mapchecker2.x+160
+						}
+					}
+					
+					if (global.mapgrid_yZeroMove == 0)
+					{
+						y = obj_door_border_left.y+global.door_height
+					}
+					else if (global.mapgrid_yZeroMove = 1)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							y = obj_mapchecker2.y+90
+						}
+					}
 				}
 		
 				var boby = obj_camera.y-obj_door_border_left.y
@@ -417,7 +448,14 @@ function scrn_roomtransition_nodoors() {
 				else if (instance_exists(obj_camera_stopperU)) && (instance_exists(obj_camera_stopperD)) && (instance_exists(obj_camera_stopperL)) && (instance_exists(obj_camera_stopperR))
 				{
 					//X
-					if !(global.climbing)
+					if (global.mapgrid_xZeroMove = 1)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							x = obj_mapchecker2.x+160
+						}
+					}
+					else if !(global.climbing)
 					{
 						x = obj_player.x
 					}
@@ -444,6 +482,13 @@ function scrn_roomtransition_nodoors() {
 					if (room_height == 180) && (room_width == 320)
 					{
 						y = 90
+					}
+					else if (global.mapgrid_yZeroMove = 1)
+					{
+						if (instance_exists(obj_mapchecker2))
+						{
+							y = obj_mapchecker2.y+90
+						}
 					}
 					else if !(global.climbing)
 					{

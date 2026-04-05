@@ -35,7 +35,7 @@ if (obj_player.state = Sword_jump) && (instance_place(x,y,obj_link_enemies)) //n
 	{
 		if (variable_instance_exists(obj_link_enemies,"hp")) && (variable_instance_exists(obj_link_enemies,"enemy_hurt"))
 		{
-			hp -= 0.1
+			hp -= 5
 			enemy_hurt = 0.9
 		}
 	}
@@ -47,7 +47,7 @@ else if (obj_player.state = Sword_jump) && (instance_place(x,y,obj_link_enemies_
 	{
 		if (variable_instance_exists(obj_link_enemies_robots,"hp")) && (variable_instance_exists(obj_link_enemies_robots,"enemy_hurt"))
 		{
-			hp -= 0.1
+			hp -= 5
 			enemy_hurt = 0.9
 		}	
 	}

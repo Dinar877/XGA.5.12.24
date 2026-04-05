@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scrn_roomtransition",
   "parent":{
-    "name":"Scrn",
-    "path":"folders/Scripts/Scrn.yy",
+    "name":"normal doors",
+    "path":"folders/Scripts/Scrn/normal doors.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

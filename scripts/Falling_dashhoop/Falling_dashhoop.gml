@@ -129,7 +129,7 @@ function Falling_dashhoop() {
 
 	if ((!place_meeting(x+round(hspd),y+(vspd),obj_slope1_left)) && (!place_meeting(x+round(hspd),y+round(vspd),obj_slope1_right)) && (!place_meeting(x+round(hspd),y+round(vspd),obj_block))) or  (vspd >= 0)
 	{
-	    grav = 0.25;
+	    grav = 0;
 	}
 	else if ((place_meeting(x+round(hspd),y+(vspd),obj_slope1_left)) or (place_meeting(x+round(hspd),y+round(vspd),obj_slope1_right)) or (place_meeting(x+round(hspd),y+round(vspd),obj_block))) && (vspd != 0)
 	{
@@ -184,13 +184,22 @@ function Falling_dashhoop() {
 
 	//Checking ledges
 	Check_if_ledge();
+	
+	//Check all around us for collisions and exit if true
+	if (Check_Surrounding_Collisions() == true)
+	{
+		timer = 0
+		global.lockdown_facingDir = 0;
+		State_machine_switch_state(Falling_Dashing2);
+		exit;
+	}
 
 
 	if (timer > 0)
 	{
-		timer -= (1/60)*3;	
+		timer -= (1/60)/5;	
 	}
-	else 
+	else if (timer <= 0) 
 	{
 		global.lockdown_facingDir = 0;
 		State_machine_switch_state(Falling_Dashing2);

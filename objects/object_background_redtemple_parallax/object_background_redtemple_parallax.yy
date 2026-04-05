@@ -8,8 +8,8 @@
   "name":"object_background_redtemple_parallax",
   "overriddenProperties":[],
   "parent":{
-    "name":"Main sector",
-    "path":"folders/Objects/background_objects/Main sector.yy",
+    "name":"Hidden Temple",
+    "path":"folders/Objects/background_objects/Hidden Temple.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -134,18 +134,18 @@ if (instance_exists(obj_player))
 				image_alpha = 0;
 			}
 			
-			global.charging = false
-			global.charge_ready = false
-			global.nanoshield = false
-			global.invisibility = false
-			global.nuclearblast = false
-			global.shockwave = false
+			global.charging = 0
+			global.charge_ready = 0
+			global.nanoshield = 0
+			global.invisibility = 0
+			global.nuclearblast = 0
+			global.shockwave = 0
 		
-			global.dash2 = false
-			global.dash2_spark = false
-			global.dashbegin2 = false
+			global.dash2 = 0
+			global.dash2_spark = 0
+			global.dashbegin2 = 0
 		
-			global.pause_player = true
+			global.pause_player = 1
 			
 			if (global.facingDir > 0)
 			{
@@ -162,7 +162,7 @@ if (instance_exists(obj_player))
 				}
 			}
 		
-			global.upgrade_process_data = true;
+			global.upgrade_process_data = 1;
 		}
 	}
 	else if (shocksuitcutsceneswitch == true)
@@ -212,18 +212,18 @@ if (instance_exists(obj_player))
 			}
 			
 			
-			global.charging = false
-			global.charge_ready = false
-			global.nanoshield = false
-			global.invisibility = false
-			global.nuclearblast = false
-			global.shockwave = false
+			global.charging = 0
+			global.charge_ready = 0
+			global.nanoshield = 0
+			global.invisibility = 0
+			global.nuclearblast = 0
+			global.shockwave = 0
 		
-			global.dash2 = false
-			global.dash2_spark = false
-			global.dashbegin2 = false
+			global.dash2 = 0
+			global.dash2_spark = 0
+			global.dashbegin2 = 0
 		
-			global.pause_player = true
+			global.pause_player = 1
 			
 			if (global.facingDir > 0)
 			{
@@ -240,10 +240,10 @@ if (instance_exists(obj_player))
 				}
 			}
 		
-			global.upgrade_process_data = true;
-			global.cutscene = true;
-			global.cutscene_presuit = true;
-			global.cutscene_suit = false;
+			global.upgrade_process_data = 1;
+			global.cutscene = 1;
+			global.cutscene_presuit = 1;
+			global.cutscene_suit = 0;
 			
 			id.depth = layer_get_depth(layer_get_id("Inst_doors"))
 			
@@ -258,10 +258,10 @@ if (instance_exists(obj_player))
 	
 	
 	//shocksuit cutscene
-	if (shocksuitcutsceneswitch == true)
-	&& (global.cutscene = true)
+	if (shocksuitcutsceneswitch == 1)
+	&& (global.cutscene = 1)
 	{
-		if (move1switch == false)
+		if (move1switch == 0)
 		{
 			//fly up
 			if (round(x) != move1X) && (round(y) != move1Y)
@@ -271,13 +271,13 @@ if (instance_exists(obj_player))
 			}
 			else 
 			{	
-				move1switch = true;
+				move1switch = 1;
 				
 				//sfx
 				audio_play_sound(snd_player_spinjump_shorter,1000,false,global.sfx_volume)
 			}
 		}
-		else if (move1switch == true) && (move2switch == false)
+		else if (move1switch == 1) && (move2switch == 0)
 		{
 			var plx = floor(obj_player.x)
 			var ply = floor(obj_player.y)
@@ -293,7 +293,7 @@ if (instance_exists(obj_player))
 			else if (floor(x) >= plx-1) && (floor(x) <= plx+1)
 			&& (floor(y) >= ply-1) && (floor(y) <= ply+1)
 			{
-				move2switch = true;
+				move2switch = 1;
 				
 				instance_create_depth(x,y,id.depth,obj_item_shocksuit);
 				

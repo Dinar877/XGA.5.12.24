@@ -1,12 +1,7 @@
  /// @description Insert description here
 // You can write your code in this editor
-if (global.pause_transition = 1)// or (global.pause_exit = 1)
-or (global.pause_map = 1)
-or (global.upgrade_process = 1)
-or (!instance_exists(obj_player))
-{
-	exit;	
-}
+
+
 
 //audio
 if (!audio_is_playing(emitter_player))
@@ -19,7 +14,14 @@ audio_sound_gain(emitter_player,(40/dist) * global.sfx_volume,0)
 
 
 
-image_angle += 10;
+
+
+//checks various global variables to see if collision should be happening now
+if (objects_step_check() == true)
+{
+	exit	
+}
+
 
 if (linked1 == false)
 {
@@ -77,3 +79,6 @@ if (activated == true)
 		}
 	}
 }
+
+
+image_angle += 10;

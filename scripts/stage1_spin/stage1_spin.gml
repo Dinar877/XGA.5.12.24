@@ -17,7 +17,7 @@ function stage1_spin() {
 		sprite_index = spr_stage1_roll_active_right
 	}
 
-	drillnow += (1/room_speed)/2
+	drillnow += (1/60)
 
 	if (sprite_index = spr_stage1_roll_active_left) && (drillnow < 1)
 	{

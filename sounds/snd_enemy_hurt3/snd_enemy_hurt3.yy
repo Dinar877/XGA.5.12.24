@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_enemy_hurt3",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.8245125,
+  "exportDir":"",
+  "name":"snd_enemy_hurt3",
+  "parent":{
+    "name":"Ciri's New Sound Effects",
+    "path":"folders/Music+SFX/SFX/Ciri's New Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_enemy_hurt3.mp3",
+  "volume":1.0,
+}

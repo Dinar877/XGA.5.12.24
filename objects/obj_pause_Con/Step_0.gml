@@ -15,62 +15,62 @@ if (gamepad_is_connected(correct_slot))
 {
 	if (global.pause_map)
 	{
-		if (global.xleft < 150)
+		if (global.xleft < distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowleft)	
 		}
 
-		if (global.xleft > -150)
+		if (global.xleft > -distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowright)	
 		}
 
-		if (global.yup < 150)
+		if (global.yup < distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowup)
 		}
 
-		if (global.yup > -150)
+		if (global.yup > -distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowdown)	
 		}
 
-		if (global.xleft < 150) && (left_key)
+		if (global.xleft < distanceLimit) && (left_key)
 		{
 		global.xleft += 1
 		instance_activate_object(obj_pausescrn_arrowleft)	
 		}
-		else if (global.xleft > -150) && (right_key)
+		else if (global.xleft > -distanceLimit) && (right_key)
 		{
 		global.xleft -= 1
 		instance_activate_object(obj_pausescrn_arrowright)	
 		}
 
-		if (global.yup > -150) && (down_key)
+		if (global.yup > -distanceLimit) && (down_key)
 		{
 		global.yup -= 1
 		instance_activate_object(obj_pausescrn_arrowup)
 		}
-		else if (global.yup < 150) && (up_key)
+		else if (global.yup < distanceLimit) && (up_key)
 		{
 		global.yup += 1
 		instance_activate_object(obj_pausescrn_arrowdown)	
 		}
 
-		if (global.xleft >= 150)
+		if (global.xleft >= distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowleft)	
 		}
-		else if (global.xleft <= -150)
+		else if (global.xleft <= -distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowright)	
 		}
 
-		if (global.yup >= 150)
+		if (global.yup >= distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowup)	
 		}
-		else if (global.yup <= -150)
+		else if (global.yup <= -distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowdown)	
 		}
@@ -130,62 +130,62 @@ else if (!gamepad_is_connected(correct_slot))
 {
 	if (global.pause_map)
 	{
-		if (global.xleft < 150)
+		if (global.xleft < distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowleft)	
 		}
 
-		if (global.xleft > -150)
+		if (global.xleft > -distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowright)	
 		}
 
-		if (global.yup < 150)
+		if (global.yup < distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowup)
 		}
 
-		if (global.yup > -150)
+		if (global.yup > -distanceLimit)
 		{
 		instance_activate_object(obj_pausescrn_arrowdown)	
 		}
 
-		if (global.xleft < 150) && (keyboard_check(vk_left))
+		if (global.xleft < distanceLimit) && (keyboard_check(vk_left))
 		{
 		global.xleft += 1
 		instance_activate_object(obj_pausescrn_arrowleft)	
 		}
-		else if (global.xleft > -150) && (keyboard_check(vk_right))
+		else if (global.xleft > -distanceLimit) && (keyboard_check(vk_right))
 		{
 		global.xleft -= 1
 		instance_activate_object(obj_pausescrn_arrowright)	
 		}
 
-		if (global.yup > -150) && (keyboard_check(vk_down))
+		if (global.yup > -distanceLimit) && (keyboard_check(vk_down))
 		{
 		global.yup -= 1
 		instance_activate_object(obj_pausescrn_arrowup)
 		}
-		else if (global.yup < 150) && (keyboard_check(vk_up))
+		else if (global.yup < distanceLimit) && (keyboard_check(vk_up))
 		{
 		global.yup += 1
 		instance_activate_object(obj_pausescrn_arrowdown)	
 		}
 
-		if (global.xleft >= 150)
+		if (global.xleft >= distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowleft)	
 		}
-		else if (global.xleft <= -150)
+		else if (global.xleft <= -distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowright)	
 		}
 
-		if (global.yup >= 150)
+		if (global.yup >= distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowup)	
 		}
-		else if (global.yup <= -150)
+		else if (global.yup <= -distanceLimit)
 		{
 			instance_deactivate_object(obj_pausescrn_arrowdown)	
 		}

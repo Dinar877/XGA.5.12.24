@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.42625,
+  "duration":0.4262585,
   "exportDir":"",
   "name":"snd_saber1",
   "parent":{

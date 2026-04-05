@@ -163,6 +163,7 @@
     {"$GMTileAnimation":"","%Name":"MS_Nslope_R12","frames":[2110,2116,2466,2472,2822,2828,3178,3184,2110,2110,2110,2110,2110,2110,2110,2110,],"name":"MS_Nslope_R12","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"MS_Nslope_R21","frames":[2200,2206,2556,2562,2912,2918,3268,3274,2200,2200,2200,2200,2200,2200,2200,2200,],"name":"MS_Nslope_R21","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"MS_Nslope_R22","frames":[2199,2205,2555,2561,2911,2917,3267,3273,2199,2199,2199,2199,2199,2199,2199,2199,],"name":"MS_Nslope_R22","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"MS_block","frames":[2207,2296,2385,2474,2563,2652,2741,2830,2207,2207,2207,2207,2207,2207,2207,2207,],"name":"MS_block","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"S4_newslope_UL_L","frames":[3352,3354,3356,3358,],"name":"S4_newslope_UL_L","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"S4_newslope_DL_L","frames":[3441,3443,3445,3447,],"name":"S4_newslope_DL_L","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"S4_newslope_UR_L","frames":[3353,3355,3357,3359,],"name":"S4_newslope_UR_L","resourceType":"GMTileAnimation","resourceVersion":"2.0",},

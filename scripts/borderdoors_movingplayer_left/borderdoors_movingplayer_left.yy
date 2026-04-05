@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"borderdoors_movingplayer_left",
   "parent":{
-    "name":"Scrn",
-    "path":"folders/Scripts/Scrn.yy",
+    "name":"door borders",
+    "path":"folders/Scripts/Scrn/door borders.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

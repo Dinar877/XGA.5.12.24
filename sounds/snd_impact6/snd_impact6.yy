@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_impact6",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.46208617,
+  "exportDir":"",
+  "name":"snd_impact6",
+  "parent":{
+    "name":"Ciri's New Sound Effects",
+    "path":"folders/Music+SFX/SFX/Ciri's New Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_impact6.mp3",
+  "volume":1.0,
+}

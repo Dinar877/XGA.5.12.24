@@ -23,6 +23,8 @@ dash = 0
 shoot = 0
 shoot_pressed = 0
 
+distanceLimit = 300
+
 Select = 0;
 
 script_execute(scr_gamepad_test);

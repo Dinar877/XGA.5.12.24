@@ -17,7 +17,7 @@ global.darkeater_grid = -1;
 global.darkeater_pathadd = -1;
 global.darkeater_pathgeneral = -1;
 global.pierce_killswitch = 0;
-global.midgame = 0;
+
 
 //xga coords
 global.darkeater_x = 0
@@ -192,6 +192,10 @@ global.money = 0;
 global.pause_elevator = 0;
 global.dead_begin = 0
 global.dash2_jump = 0
+
+global.midgame = 0;
+
+global.sc_timelimit = 600 + round(random_range(60,300))
 
 //modes
 global.mode_casual = 0;

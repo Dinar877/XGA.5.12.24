@@ -39,7 +39,7 @@ if (selected > 0)
 	//ENGINES
 	if (suit_dash > 0)
 	{
-		new_input_description = " ALLOWS DASHING IN THE AIR IN ANY DIRECTION. ONE DASH PER JUMP. RESETS UPON LANDING.";
+		new_input_description = " ALLOWS DASHING IN THE AIR IN ANY DIRECTION.\n ONE DASH PER JUMP. RESETS UPON LANDING.";
 		draw_text_color(descrptX,descrptY,new_input_description,c_white,c_white,c_white,c_white,image_alpha)	
 	}
 	

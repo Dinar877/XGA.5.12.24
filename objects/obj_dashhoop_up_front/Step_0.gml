@@ -1,51 +1,44 @@
    /// @description Insert description here
 // You can write your code in this editor
-if (global.pause_transition = 1)// or (global.pause_exit = 1)
-or (global.pause_map = 1)
-or (global.upgrade_process = 1)
-or (!instance_exists(obj_player))
-or (!instance_exists(inst))
-{
-	exit;	
-}
+
 
 //correct angle
-if (ringDirection == 0)
+if (ringDirection == 0) //up
 {
 	image_angle = 0;	
 	inst.image_angle = 0;	
 }
-else if (ringDirection == 1)
+else if (ringDirection == 1) //down
 {
 	image_angle = 180;	
 	inst.image_angle = 180;	
 }
-else if (ringDirection == 2)
+else if (ringDirection == 2) //left
 {
 	image_angle = 270;	
 	inst.image_angle = 270;	
 }
-else if (ringDirection == 3)
+else if (ringDirection == 3) //right
 {
 	image_angle = 90;	
 	inst.image_angle = 90;	
 }
-else if (ringDirection == 4)
+else if (ringDirection == 4) //up right
 {
 	image_angle = 45;	
 	inst.image_angle = 45;	
 }
-else if (ringDirection == 5)
+else if (ringDirection == 5) //up left
 {
 	image_angle = 315;	
 	inst.image_angle = 315;	
 }
-else if (ringDirection == 6)
+else if (ringDirection == 6) //down right
 {
 	image_angle = 135;	
 	inst.image_angle = 135;	
 }
-else if (ringDirection == 7)
+else if (ringDirection == 7) //down left
 {
 	image_angle = 225;	
 	inst.image_angle = 225;	
@@ -70,6 +63,15 @@ else if (actTimer <= 0)
 	activated = 0;
 }
 
+
+
+//checks various global variables to see if collision should be happening now
+if (objects_step_check() == true)
+{
+	exit	
+}
+
+
 //if player collision
 if (place_meeting(x,y,obj_player)) 
 {
@@ -89,6 +91,8 @@ if (place_meeting(x,y,obj_player))
 		{
 			global.dash2_spark = 1
 		}
+		
+		sprite_index = spr_player_jump
 	
 		hspd_original = 0
 		input_horizontal = 0;

@@ -31,8 +31,9 @@ if (on == true) && (instance_exists(obj_timelock_lock))
 		instance_destroy();
 	}
 	
-	instance_create_depth(obj_player.x, obj_player.y-20, depth-1, obj_timelock_clock);
-	instance_create_depth(obj_player.x, obj_player.y-20, obj_timelock_clock.depth-1, obj_timelock_clockhand);
+	instance_create_depth(obj_player.x, obj_player.y-40, depth-1, obj_timelock_clock);
+	instance_create_depth(obj_player.x, obj_player.y-40, obj_timelock_clock.depth-1, obj_timelock_clockhand);
+	instance_create_depth(id.x,id.y,id.depth+1,obj_timelock_resetline)
 	
 	//if we have set a custom time for this clock switch
 	if (custom_timelimit > 0)

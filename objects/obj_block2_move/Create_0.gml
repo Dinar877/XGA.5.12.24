@@ -23,3 +23,5 @@ switchX = 0;
 switchY = 0;
 counterX = 0;
 counterY = 0;
+
+allFinished = 0

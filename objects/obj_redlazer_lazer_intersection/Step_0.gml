@@ -1,16 +1,16 @@
  /// @description Insert description here
 // You can write your code in this editor
-if (global.pause_transition = 1)// or (global.pause_exit = 1)
-or (global.pause_map = 1)
-or (global.upgrade_process = 1)
-or (!instance_exists(obj_player))
-{
-	exit;	
-}
+
+
 
 //audio
 Audio_Emitter_Loop(snd_portal_nearby,20,100,1,true,100,0.7)
 
+//checks various global variables to see if collision should be happening now
+if (objects_step_check() == true)
+{
+	exit	
+}
 
 
 if (instance_exists(obj_redlazer_spawnhere))
@@ -29,5 +29,21 @@ if (instance_exists(obj_redlazer_spawnhere))
 		audio_sound_pitch(sndlzr,0.6)
 		
 		instance_create_layer(obj_camera.x,obj_camera.y,layer_get_id("Inst_healthui"),obj_redlazer_scrneffect)
+	}
+}
+
+if (instance_exists(obj_redlazer_lazer_LR))
+{
+	with(obj_redlazer_lazer_LR)
+	{
+		other.depth = depth - 1	
+	}
+}
+
+if (instance_exists(obj_redlazer_lazer_UD))
+{
+	with(obj_redlazer_lazer_UD)
+	{
+		other.depth = depth - 1	
 	}
 }

@@ -1,11 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.pause_transition = 1)// or (global.pause_exit = 1)
-or (global.pause_map = 1)
-or (global.upgrade_process = 1)
-or (!instance_exists(obj_player))
+
+if (objects_step_check() == true)
 {
-	exit;	
+	exit	
 }
 
 //is touching player?
@@ -1185,9 +1183,26 @@ if (playerDontMove == true)
 	}
 }
 
+//activate switch if every single move block has finished moving
+if (allFinished = 0)
+&& (switchX = 1) && (switchY = 1)
+{
+	allFinished = 1
+	
+	with(obj_block2_move)
+	{
+		if (switchX != 1) or (switchY != 1)
+		{
+			with(obj_block2_move)
+			{
+				allFinished = 0	
+			}
+		}
+	}
+}
 
-//turn around
-if (switchX = 1) && (switchY = 1)
+//turn around once this and every other move block has finished moving
+if (switchX = 1) && (switchY = 1) && (allFinished = 1)
 {
 	if (timer1 < 1) //pause before turn
 	{
@@ -1195,12 +1210,23 @@ if (switchX = 1) && (switchY = 1)
 	}
 	else if (timer1 >= 1) //turn
 	{
+		/*
 		direction1 = -direction1;
 		switchX = 0;
 		switchY = 0;
 		timer1 = 0;
 		//hspd = -hspd;
 		//vspd = -vspd;
+		*/
+		
+		with(obj_block2_move)
+		{
+			allFinished = 0
+			direction1 = -direction1;
+			switchX = 0;
+			switchY = 0;
+			timer1 = 0;
+		}
 	}
 }
 

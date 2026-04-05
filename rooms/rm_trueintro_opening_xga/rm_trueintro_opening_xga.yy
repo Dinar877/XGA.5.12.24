@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rm_trueintro_opening_xga",
-  "creationCodeFile":"RoomCreationCode.gml",
+  "creationCodeFile":"rooms/rm_trueintro_opening_xga/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,

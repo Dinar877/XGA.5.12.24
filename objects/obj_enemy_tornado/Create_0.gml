@@ -2,7 +2,7 @@
 // You can write your code in this editor
 decider = round(random_range(0,2))
 
-image_alpha = 0.7
+image_alpha = 0.9
 
 if (global.corrupted <= 0)
 {

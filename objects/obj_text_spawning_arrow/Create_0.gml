@@ -116,6 +116,19 @@ if (instance_exists(obj_text_spawning_BH))
 	spawnerID = obj_text_spawning_BH;
 }
 
+//SCC
+if (instance_exists(obj_text_spawning_SCC))
+{
+	spawnerID = obj_text_spawning_SCC
+}
+
+//SC
+if (instance_exists(obj_text_spawning_SC))
+{
+	spawnerID = obj_text_spawning_SC
+}
+
+
 
 if (instance_exists(obj_item_link)) && (instance_exists(obj_texty_generic_upgrade))
 {

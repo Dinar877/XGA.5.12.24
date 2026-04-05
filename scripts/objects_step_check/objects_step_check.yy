@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"objects_step_check",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"objects_step_check",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

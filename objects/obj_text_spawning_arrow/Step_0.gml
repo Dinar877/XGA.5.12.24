@@ -65,9 +65,7 @@ if (jump_pressed) && (instance_exists(spawnerID)) && (textyID > -1)
 						}
 					}
 				}
-				
-				//for BH dialog
-				if (instance_exists(obj_scrnDark_navigational2_test1))
+				else if (instance_exists(obj_scrnDark_navigational2_test1)) //for BH dialog
 				&& ((room == rm_11_7_6) or (room == rm_11_7_6_xgatest))
 				{
 					with(obj_scrnDark_navigational2_test1)
@@ -119,6 +117,94 @@ if (jump_pressed) && (instance_exists(spawnerID)) && (textyID > -1)
 						else if (obj_bh.newTextAvailable = 5)
 						{
 							global.cutsceneID[Cutscenes.blackholetalk3] = 1;	
+						}
+					}
+				}
+				else if (instance_exists(obj_scrnDark_navigational2_test1)) //SCC
+				&& (room = rm_V_SCC_mainroom)
+				{
+					with(obj_scrnDark_navigational2_test1)
+					{
+						sprite_index = spr_bg_navigational2_rev
+						image_speed = 1	
+						
+						global.navigation = 0;
+						global.navigation_effect = 0;
+						global.pause_player = 0;
+						global.upgrade_process_data = 0
+						instance_activate_object(obj_link_healthUI)
+						instance_activate_object(obj_link_map)	
+		
+						with(obj_player)
+						{
+							jump = 0
+							jump_pressed = 0
+						}
+					}
+				
+					if (instance_exists(obj_scrnDark_navigational))
+					{
+						with(obj_scrnDark_navigational)
+						{
+							instance_destroy()	
+						}
+					}
+				
+					if (instance_exists(obj_texty_heading))
+					{
+						with(obj_texty_heading)
+						{
+							instance_destroy()	
+						}
+					}
+					
+					//SCC
+					if (instance_exists(obj_scc))
+					{
+						obj_scc.active = true	
+					}
+					if (instance_exists(obj_scc_globe))
+					{
+						obj_scc_globe.active = true	
+					}
+					audio_stop_sound(snd_scc_area)
+					audio_play_sound(snd_scc_poweringup,1000,false,global.sfx_volume)
+					
+				}
+				else if (instance_exists(obj_scrnDark_navigational2_test1)) //ANY OTHER NON-NAVIGATION TALK 
+				{
+					with(obj_scrnDark_navigational2_test1)
+					{
+						sprite_index = spr_bg_navigational2_rev
+						image_speed = 1	
+						
+						global.navigation = 0;
+						global.navigation_effect = 0;
+						global.pause_player = 0;
+						global.upgrade_process_data = 0
+						instance_activate_object(obj_link_healthUI)
+						instance_activate_object(obj_link_map)	
+		
+						with(obj_player)
+						{
+							jump = 0
+							jump_pressed = 0
+						}
+					}
+				
+					if (instance_exists(obj_scrnDark_navigational))
+					{
+						with(obj_scrnDark_navigational)
+						{
+							instance_destroy()	
+						}
+					}
+				
+					if (instance_exists(obj_texty_heading))
+					{
+						with(obj_texty_heading)
+						{
+							instance_destroy()	
 						}
 					}
 				}

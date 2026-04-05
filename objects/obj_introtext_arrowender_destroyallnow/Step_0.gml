@@ -65,6 +65,18 @@ if (instance_number(textyID) < 1)
 			}
 		}
 		
+		//SCC
+		if (instance_exists(obj_scc))
+		{
+			obj_scc.active = true	
+			if (instance_exists(obj_scc_globe))
+			{
+				obj_scc_globe.active = true	
+			}
+			audio_stop_sound(snd_scc_area)
+			audio_play_sound(snd_scc_poweringup,1000,false,global.sfx_volume)
+		}
+		
 		
 	
 	

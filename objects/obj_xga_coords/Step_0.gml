@@ -404,6 +404,7 @@ if ((abs(difference_y) == 0) or (global.darkeater_active = 1) or (footstep_total
 		}
 	}
 	else if (spawn_xga_at_door == 0) && (global.darkeater_active == 0) //spawn xga midway into the room instead of at the door
+	&& (instance_exists(obj_mapchecker2)) && (instance_exists(obj_maptile_drawer2))
 	{
 		//analyze room
 		roomHowBigTotal = instance_number(obj_mapchecker2) //total map squares in room

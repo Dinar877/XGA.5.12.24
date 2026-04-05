@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_computer_beep4",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.028095238,
+  "exportDir":"",
+  "name":"snd_computer_beep4",
+  "parent":{
+    "name":"Ciri's New Sound Effects",
+    "path":"folders/Music+SFX/SFX/Ciri's New Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_computer_beep4.mp3",
+  "volume":1.0,
+}

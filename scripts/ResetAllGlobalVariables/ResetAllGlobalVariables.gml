@@ -8,6 +8,7 @@ function ResetAllGlobalVariables(){
 	global.darkeater_pathgeneral = -1;
 	global.pierce_killswitch = 0;
 	global.midgame = 0;
+	global.sc_timelimit = 600 + round(random_range(60,300))
 
 	//xga coords
 	global.darkeater_x = 0
@@ -188,6 +189,7 @@ function ResetAllGlobalVariables(){
 	global.mode_recommended = 0;
 	global.mode_test = 0
 	global.loading_startgame = 0;
+	global.loading_random_room = 0;
 	global.saving = 0;
 	global.fast_travel = 0;
 	global.teleport = 0

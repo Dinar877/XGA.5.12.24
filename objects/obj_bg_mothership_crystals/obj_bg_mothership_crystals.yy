@@ -8,8 +8,8 @@
   "name":"obj_bg_mothership_crystals",
   "overriddenProperties":[],
   "parent":{
-    "name":"System Core",
-    "path":"folders/Objects/background_objects/Mother Ship/System Core.yy",
+    "name":"Command Center",
+    "path":"folders/Objects/background_objects/Mother Ship/Command Center.yy",
   },
   "parentObjectId":null,
   "persistent":false,

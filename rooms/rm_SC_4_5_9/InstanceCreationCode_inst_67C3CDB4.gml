@@ -1,0 +1,1 @@
+ringDirection = 7

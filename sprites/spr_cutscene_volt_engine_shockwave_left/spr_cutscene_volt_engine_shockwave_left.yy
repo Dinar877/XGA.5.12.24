@@ -256,8 +256,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"new endgame",
-    "path":"folders/Sprites/cutscenes/new endgame.yy",
+    "name":"Volt suit",
+    "path":"folders/Sprites/cutscenes/new endgame/Volt suit.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

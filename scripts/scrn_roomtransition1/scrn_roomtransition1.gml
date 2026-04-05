@@ -64,14 +64,7 @@ function scrn_roomtransition1() {
 	
 	
 	    instance_deactivate_all(obj_scrn_roomtransition);
-	    instance_activate_object(obj_link_healthUI);
-		instance_activate_object(obj_maptile_tile);
-		instance_activate_object(obj_maptile_tile_differentsector);
-		instance_activate_object(obj_deathscreennuke_maptile);
-		instance_activate_object(obj_link_map);
-		instance_activate_object(obj_link_audio);
-	    instance_activate_object(obj_room_transition_l2r2);
-	    instance_activate_object(obj_room_transition_r2l2);
+	    scrn_roomtransitions_whitelisted_objects();
     
 		if (doorleft)
 		{
@@ -81,10 +74,6 @@ function scrn_roomtransition1() {
 		{
 			instance_activate_object(obj_door_normal_rightAlt)	
 		}
-	
-	    instance_activate_object(obj_camera_stopperL);
-	    instance_activate_object(obj_camera_stopperR);
-		instance_activate_object(obj_camera);
 	    deact = 1;
 	}
 

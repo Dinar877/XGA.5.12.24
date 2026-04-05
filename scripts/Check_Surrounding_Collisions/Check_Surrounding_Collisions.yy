@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Check_Surrounding_Collisions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Check_Surrounding_Collisions",
+  "parent":{
+    "name":"Movement_collision",
+    "path":"folders/Scripts/Movement_collision.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

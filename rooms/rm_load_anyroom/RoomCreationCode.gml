@@ -160,7 +160,7 @@ global.roomgoto1 = rm_load_anyroom;
 
 //SPECIFIC PLAYER PROGRESS
 
-global.ability_select = 1;
+global.ability_select = 0;
 global.nanoshield = 1;
 
 global.nanoshield_available = 1;
@@ -240,4 +240,7 @@ obj_player.x = 470
 obj_player.y = 270
 obj_camera.x = obj_player.x
 obj_camera.y = obj_player.y
-room_goto(rm_V_11_1_9)
+//room_goto(rm_SC_exit)
+//room_goto(rm_SC_entrance)
+room_goto(rm_elevator_tutorial_2)
+global.loading_random_room = 1;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrn_roomtransitions_whitelisted_objects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrn_roomtransitions_whitelisted_objects",
+  "parent":{
+    "name":"Scrn",
+    "path":"folders/Scripts/Scrn.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

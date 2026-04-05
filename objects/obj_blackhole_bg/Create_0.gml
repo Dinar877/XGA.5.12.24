@@ -42,7 +42,7 @@ emitter_pitch = 1;
 emitter_vol = 0;
 emitterSin = 0
 
-Music_loop(ost_startscrn,97.784, 168.898)
+
 
 stopsnd = 0;
 surface11 = -1

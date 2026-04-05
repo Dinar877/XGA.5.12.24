@@ -5,8 +5,31 @@ function Teleport_Camera(){
 	&& (instance_exists(obj_camera_stopperL)) && (instance_exists(obj_camera_stopperR))
 	&& (instance_exists(obj_camera_stopperD)) && (instance_exists(obj_camera_stopperU))
 	{
-		obj_camera.x = argument0;
-		obj_camera.y = argument1;
+		//X
+		if (global.mapgrid_xZeroMove == 0)
+		{
+			obj_camera.x = argument0;
+		}
+		else if (global.mapgrid_xZeroMove == 1)
+		{
+			if (instance_exists(obj_mapchecker2))
+			{
+				obj_camera.x = obj_mapchecker2.x+160
+			}
+		}
+		
+		//Y
+		if (global.mapgrid_yZeroMove == 0)
+		{
+			obj_camera.y = argument1;
+		}
+		else if (global.mapgrid_yZeroMove == 1)
+		{
+			if (instance_exists(obj_mapchecker2))
+			{
+				obj_camera.y = obj_mapchecker2.y+90	
+			}
+		}
 		
 		
 		//border shiit

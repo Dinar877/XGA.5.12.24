@@ -26,7 +26,11 @@ function EnumsInitialise(){
 		ceoTalk2 = 92,
 		xga3scream = 93,
 		xga3entrance = 94,
-		credits = 95
+		scc_active = 95,
+		ssc_scrndarkCutscene = 6,
+		sc_key_aquired = 7,
+		sc_scrndark_cutscene = 9,
+		credits = 99
 	}
 
 	enum bossblockers

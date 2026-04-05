@@ -19,14 +19,24 @@ function bullet_hurtenemycode_item() {
 		var random_ability_pickup2 = round(random_range(0,50))
 		var random_ability_pickup3 = round(random_range(0,50))
 		var random_ability_pickup4 = round(random_range(0,50))
+		
+		var minchance_pickup1 = 40
+		var minchance_pickup2 = 40
+		var minchance_pickup3 = 40
+		var minchance_pickup4 = 40
+		
+		var maxchance_pickup1 = 49
+		var maxchance_pickup2 = 49
+		var maxchance_pickup3 = 49
+		var maxchance_pickup4 = 49
 	
 		if (global.nanoshield_available > 0)
 		{
-			if (random_ability_pickup1 > minchance) && (random_ability_pickup1 <= maxchance)
+			if (random_ability_pickup1 > minchance_pickup1) && (random_ability_pickup1 <= maxchance_pickup1)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_spread);	
 			}
-			else if (random_ability_pickup1 > maxchance)
+			else if (random_ability_pickup1 > maxchance_pickup1)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_spread);	
 			}
@@ -34,11 +44,11 @@ function bullet_hurtenemycode_item() {
 	
 		if (global.invisibility_available > 0)
 		{
-			if (random_ability_pickup2 > minchance) && (random_ability_pickup2 <= maxchance)
+			if (random_ability_pickup2 > minchance_pickup2) && (random_ability_pickup2 <= maxchance_pickup2)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_charge);	
 			}
-			else if (random_ability_pickup2 > maxchance)
+			else if (random_ability_pickup2 > maxchance_pickup2)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_charge);	
 			}
@@ -46,11 +56,11 @@ function bullet_hurtenemycode_item() {
 	
 		if (global.nuclearblast_available > 0)
 		{
-			if (random_ability_pickup3 > minchance) && (random_ability_pickup3 <= maxchance)
+			if (random_ability_pickup3 > minchance_pickup3) && (random_ability_pickup3 <= maxchance_pickup3)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_burn);	
 			}
-			else if (random_ability_pickup3 > maxchance)
+			else if (random_ability_pickup3 > maxchance_pickup3)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_burn);	
 			}
@@ -58,11 +68,11 @@ function bullet_hurtenemycode_item() {
 	
 		if (global.shockwave_available > 0)
 		{
-			if (random_ability_pickup4 > minchance) && (random_ability_pickup4 <= maxchance)
+			if (random_ability_pickup4 > minchance_pickup4) && (random_ability_pickup4 <= maxchance_pickup4)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo1_shock);	
 			}
-			else if (random_ability_pickup4 > maxchance)
+			else if (random_ability_pickup4 > maxchance_pickup4)
 			{
 				instance_create_layer(random_range(x-2, x+2), random_range(y-2, y+2),layer_get_id("Inst_level_0"), obj_pickup_ammo2_shock);	
 			}
