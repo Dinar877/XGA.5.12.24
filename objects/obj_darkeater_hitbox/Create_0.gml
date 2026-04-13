@@ -8,6 +8,8 @@ teleport_timer = 0
 pierce_killswitch = 0
 pierce_killswitch_timer = 10;
 
+
+
 //starting xga state
 if (global.darkeater_active == 1)
 {
@@ -99,6 +101,7 @@ if (path_exists(global.darkeater_pathadd) > 0)
 global.darkeater_grid = mp_grid_create(0,0,hcellsmax,vcellsmax,cell_width,cell_height)
 global.darkeater_pathadd = path_add()
 doorID = 0
+doorID2 = -1;
 doorID_start = 0
 
 //collision
@@ -157,6 +160,10 @@ else if (instance_exists(obj_door_normal_left_more)) && (place_meeting(x+13,y,ob
 	{
 		doorID_start = obj_door_normal_left_more
 	}
+else if (instance_exists(obj_door_normal_left_3)) && (place_meeting(x+13,y,obj_door_normal_left_3))
+	{
+		doorID_start = obj_door_normal_left_3
+	}
 else if (instance_exists(obj_door_normal_right)) && (place_meeting(x-13,y,obj_door_normal_right))
 	{
 		doorID_start = obj_door_normal_right
@@ -168,6 +175,10 @@ else if (instance_exists(obj_door_normal_rightAlt)) && (place_meeting(x-13,y,obj
 else if (instance_exists(obj_door_normal_right_more)) && (place_meeting(x-13,y,obj_door_normal_right_more))
 	{
 		doorID_start = obj_door_normal_right_more
+	}
+else if (instance_exists(obj_door_normal_right_3)) && (place_meeting(x-13,y,obj_door_normal_right_3))
+	{
+		doorID_start = obj_door_normal_right_3
 	}
 else if (instance_exists(obj_door_border_left)) && (place_meeting(x,y,obj_door_border_left)) //////////////////////////////////////////////////////////////////////////DOORLESS
 	{
@@ -181,6 +192,10 @@ else if (instance_exists(obj_door_border_left_more)) && (place_meeting(x,y,obj_d
 	{
 		doorID_start = obj_door_border_left_more
 	}
+else if (instance_exists(obj_door_border_left_3)) && (place_meeting(x,y,obj_door_border_left_3))
+	{
+		doorID_start = obj_door_border_left_3
+	}
 else if (instance_exists(obj_door_border_right)) && (place_meeting(x,y,obj_door_border_right))
 	{
 		doorID_start = obj_door_border_right
@@ -193,11 +208,15 @@ else if (instance_exists(obj_door_border_right_more)) && (place_meeting(x,y,obj_
 	{
 		doorID_start = obj_door_border_right_more
 	}
+else if (instance_exists(obj_door_border_right_3)) && (place_meeting(x,y,obj_door_border_right_3))
+	{
+		doorID_start = obj_door_border_right_3
+	}
 	
 	
 	
 //xga sprites
-instance_create_depth(id.x,id.y,depth-1,obj_darkeater_sprites)	
+instance_create_depth(id.x,id.y-15,depth-1,obj_darkeater_sprites)	
 
 
 //A* pathfinding
@@ -252,6 +271,11 @@ else if (global.darkeater_active = 0)
 		doorID = obj_door_normal_left_more
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_left_more.x,obj_door_normal_left_more.y+door_height,true)
 	}
+	else if (instance_exists(obj_door_normal_left_3)) && (!place_meeting(x+10,y,obj_door_normal_left_3))
+	{
+		doorID = obj_door_normal_left_3
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_left_3.x,obj_door_normal_left_3.y+door_height,true)
+	}
 	else if (instance_exists(obj_door_normal_right)) && (!place_meeting(x-10,y,obj_door_normal_right))
 	{
 		doorID = obj_door_normal_right
@@ -266,6 +290,11 @@ else if (global.darkeater_active = 0)
 	{
 		doorID = obj_door_normal_right_more
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_right_more.x,obj_door_normal_right_more.y+door_height,true)
+	}
+	else if (instance_exists(obj_door_normal_right_3)) && (!place_meeting(x-10,y,obj_door_normal_right_3))
+	{
+		doorID = obj_door_normal_right_3
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_right_3.x,obj_door_normal_right_3.y+door_height,true)
 	}
 	else if (instance_exists(obj_door_border_left)) && (!place_meeting(x,y,obj_door_border_left))///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////DOORLESS
 	{
@@ -282,6 +311,11 @@ else if (global.darkeater_active = 0)
 		doorID = obj_door_border_left_more
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_left_more.x,obj_door_border_left_more.y+doorborder_height,true)
 	}
+	else if (instance_exists(obj_door_border_left_3)) && (!place_meeting(x,y,obj_door_border_left_3))
+	{
+		doorID = obj_door_border_left_3
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_left_3.x,obj_door_border_left_3.y+doorborder_height,true)
+	}
 	else if (instance_exists(obj_door_border_right)) && (!place_meeting(x,y,obj_door_border_right))
 	{
 		doorID = obj_door_border_right
@@ -296,6 +330,11 @@ else if (global.darkeater_active = 0)
 	{
 		doorID = obj_door_border_right_more
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_right_more.x,obj_door_border_right_more.y+doorborder_height,true)
+	}
+	else if (instance_exists(obj_door_border_right_3)) && (!place_meeting(x,y,obj_door_border_right_3))
+	{
+		doorID = obj_door_border_right_3
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_right_3.x,obj_door_border_right_3.y+doorborder_height,true)
 	}
 	
 	//If a path is impossible, don't spawn
@@ -627,6 +666,12 @@ L1 = 0
 R1 = 0
 L2 = 0
 R2 = 0
+
+
+//note that we have spawned in the last room assuming the player exited the room before xga left the room
+global.darkeater_saved_state_xga_has_spawned = 1
+global.darkeater_saved_state = [obj_darkeater_hitbox.x, obj_darkeater_hitbox.y, obj_darkeater_hitbox.facing, obj_darkeater_hitbox.doorID, obj_darkeater_hitbox.doorID_start, obj_darkeater_hitbox.state1, obj_darkeater_sprites.sprite_index, obj_darkeater_sprites.image_index, room]
+
 
 
 //AUDIO STUFF

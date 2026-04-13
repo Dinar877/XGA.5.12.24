@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+layer = layer_get_id(layer_get_name("Inst_doors"))
+
+
 player_dir = -1
 player_dist = -1
 player_dir_notfree = 0;

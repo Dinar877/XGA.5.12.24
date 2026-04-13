@@ -20,10 +20,16 @@ global.pierce_killswitch = 0;
 
 
 //xga coords
-global.darkeater_x = 0
-global.darkeater_y = 0
+global.darkeater_saved_state = [0,0,0,0,0,0,0,0,0] // x, y, facing, doorID, doorID_start, state, sprite index, image index, room
+global.darkeater_saved_state_xga_has_spawned = 0
+global.darkeater_saved_state_room_counter = 0
+global.darkeater_saved_state_room_nextdoor_id = 0
 global.darkeater_active = 0
+global.darkeater_current_room = 0
 global.darkeater_roomN = 0
+global.darkeater_room_transition_penalty = round(random_range(4,6))
+global.darkeater_room_transition_penalty_timelimit = (2*60)
+global.darkeater_room_transition_penalty_spawn_xga = 0
 global.darkeater_death_limit = 0;
 global.darkeater_death_time_limit = (4*60*60);
 global.darkeater_death_pre_time_limit = (1*60*60);

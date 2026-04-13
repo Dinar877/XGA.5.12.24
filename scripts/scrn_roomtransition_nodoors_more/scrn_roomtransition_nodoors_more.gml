@@ -30,6 +30,7 @@ function scrn_roomtransition_nodoors_more() {
 		global.room_y = 1;
 		global.stopper_2ndscrnshot = 0;
 		global.room_transition_prep = 0;
+		global.darkeater_current_room = room
 	}
 
 	//make sure player is in correct position

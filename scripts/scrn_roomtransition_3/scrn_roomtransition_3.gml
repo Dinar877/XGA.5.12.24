@@ -15,6 +15,7 @@ function scrn_roomtransition_3() {
 	    sprite_index = scrn;
 		global.room_y = 1;
 		global.stopper_2ndscrnshot = 0;
+		global.darkeater_current_room = room
 		exit
 	}
 
@@ -272,6 +273,8 @@ function scrn_roomtransition_3() {
 	
 	    image_alpha = 1;
 	    global.stopper_2ndscrnshot = 1;
+		
+		
 	}
 
 	if (global.room_transition_3 = 1) && (global.room_y = 1) && (global.stopper_2ndscrnshot = 1) && (FadeNow > 0)

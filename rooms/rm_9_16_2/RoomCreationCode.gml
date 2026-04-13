@@ -1,6 +1,7 @@
 global.mapgrid_1x1 = 1
 global.mapgrid_xZeroMove = 1
 
+global.doorpath1 = rm_HT_main_entrance
 global.doorpath3 = rm_tutorial_NEWsave_LR
 
 if (global.bossblockers[bossblockers.darkeaterStage1] <= 0)
@@ -14,3 +15,5 @@ if (global.bossblockers[bossblockers.darkeaterStage1] <= 0)
 global.mapgrid_startroomx = 10;
 global.mapgrid_startroomy = 17;
 global.mapgrid_totalCheckers = 4; 
+
+global.sector_active = 0

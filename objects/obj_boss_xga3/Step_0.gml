@@ -53,7 +53,7 @@ var inst4 = (instance_nearest(x,y,obj_bullet))
 
 if (hp > 0)
 {
-	enemy_hurt_player_code(5)
+	enemy_hurt_player_code(3)
 }
 
 if (place_meeting(x,y,obj_jumpsparkattack))

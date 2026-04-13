@@ -182,6 +182,10 @@ else if (global.darkeater_active = 0) && (doorID > 0)
 	{
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_left_more.x,obj_door_normal_left_more.y+door_height,true)
 	}
+	else if (instance_exists(obj_door_normal_left_3)) && (doorID = obj_door_normal_left_3)
+	{
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_left_3.x,obj_door_normal_left_3.y+door_height,true)
+	}
 	else if (instance_exists(obj_door_normal_right)) && (doorID = obj_door_normal_right)
 	{
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_right.x,obj_door_normal_right.y+door_height,true)
@@ -193,6 +197,10 @@ else if (global.darkeater_active = 0) && (doorID > 0)
 	else if (instance_exists(obj_door_normal_right_more)) && (doorID = obj_door_normal_right_more)
 	{
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_right_more.x,obj_door_normal_right_more.y+door_height,true)
+	}
+	else if (instance_exists(obj_door_normal_right_3)) && (doorID = obj_door_normal_right_3)
+	{
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_normal_right_3.x,obj_door_normal_right_3.y+door_height,true)
 	}
 	else if (instance_exists(obj_door_border_left)) && (doorID = obj_door_border_left)///////////////////////////////////////////////////////////////////////////////////////////////////DOORLESS
 	{
@@ -206,6 +214,10 @@ else if (global.darkeater_active = 0) && (doorID > 0)
 	{
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_left_more.x,obj_door_border_left_more.y+doorborder_height,true)
 	}
+	else if (instance_exists(obj_door_border_left_3)) && (doorID = obj_door_border_left_3)
+	{
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_left_3.x,obj_door_border_left_3.y+doorborder_height,true)
+	}
 	else if (instance_exists(obj_door_border_right)) && (doorID = obj_door_border_right)
 	{
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_right.x,obj_door_border_right.y+doorborder_height,true)
@@ -218,255 +230,757 @@ else if (global.darkeater_active = 0) && (doorID > 0)
 	{
 		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_right_more.x,obj_door_border_right_more.y+doorborder_height,true)
 	}
+	else if (instance_exists(obj_door_border_right_3)) && (doorID = obj_door_border_right_3)
+	{
+		global.darkeater_pathgeneral = mp_grid_path(global.darkeater_grid,global.darkeater_pathadd,x,y,obj_door_border_right_3.x,obj_door_border_right_3.y+doorborder_height,true)
+	}
 	
 	
 	//destroy xga instance
-	if (doorID_start > 0)
+	if (doorID_start > 0) //don't go into same door as spawned from - if xga naturally wanders off into another door during patrol
 	{
 		if (!place_meeting(x,y,doorID_start))
 		{
 			if (instance_exists(obj_door_normal_left)) && (place_meeting(x-6,y,obj_door_normal_left))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+				doorID2 = instance_place(x-6, y, obj_door_normal_left)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_leftAlt)) && (place_meeting(x-6,y,obj_door_normal_leftAlt))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x-6, y, obj_door_normal_leftAlt)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_left_more)) && (place_meeting(x-6,y,obj_door_normal_left_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x-6, y, obj_door_normal_left_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}
+			else if (instance_exists(obj_door_normal_left_3)) && (place_meeting(x-6,y,obj_door_normal_left_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x-6, y, obj_door_normal_left_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_right)) && (place_meeting(x+6,y,obj_door_normal_right))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x+6, y, obj_door_normal_right)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_rightAlt)) && (place_meeting(x+6,y,obj_door_normal_rightAlt))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x+6, y, obj_door_normal_rightAlt)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_right_more)) && (place_meeting(x+6,y,obj_door_normal_right_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+
+				doorID2 = instance_place(x+6, y, obj_door_normal_right_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}
+			else if (instance_exists(obj_door_normal_right_3)) && (place_meeting(x+6,y,obj_door_normal_right_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x+6, y, obj_door_normal_right_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_left)) && (place_meeting(x,y,obj_door_border_left))//////////////////////////////////////////////////////////////////////////DOORLESS
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+				doorID2 = instance_place(x, y, obj_door_border_left)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+					
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_left_2)) && (place_meeting(x,y,obj_door_border_left_2))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_left_2)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_left_more)) && (place_meeting(x,y,obj_door_border_left_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_left_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}
+			else if (instance_exists(obj_door_border_left_3)) && (place_meeting(x,y,obj_door_border_left_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_left_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_right)) && (place_meeting(x,y,obj_door_border_right))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_right)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_right_2)) && (place_meeting(x,y,obj_door_border_right_2))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+				doorID2 = instance_place(x, y, obj_door_border_right_2)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_right_more)) && (place_meeting(x,y,obj_door_border_right_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_right_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}
+			else if (instance_exists(obj_door_border_right_3)) && (place_meeting(x,y,obj_door_border_right_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_right_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}
 		}
 	}
-	else if (doorID_start <= 0)
+	else if (doorID_start <= 0) //(if not spawned from a door) can go into any door and despawn - if xga naturally wanders off into another door during patrol
 	{
-		if (instance_exists(obj_door_normal_left)) && (place_meeting(x-6,y,obj_door_normal_left))
+			if (instance_exists(obj_door_normal_left)) && (place_meeting(x-6,y,obj_door_normal_left))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x-6, y, obj_door_normal_left)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_leftAlt)) && (place_meeting(x-6,y,obj_door_normal_leftAlt))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+				doorID2 = instance_place(x-6, y, obj_door_normal_leftAlt)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_left_more)) && (place_meeting(x-6,y,obj_door_normal_left_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x-6, y, obj_door_normal_left_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}
+			else if (instance_exists(obj_door_normal_left_3)) && (place_meeting(x-6,y,obj_door_normal_left_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+				doorID2 = instance_place(x-6, y, obj_door_normal_left_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_right)) && (place_meeting(x+6,y,obj_door_normal_right))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x+6, y, obj_door_normal_right)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_rightAlt)) && (place_meeting(x+6,y,obj_door_normal_rightAlt))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x+6, y, obj_door_normal_rightAlt)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_normal_right_more)) && (place_meeting(x+6,y,obj_door_normal_right_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+				doorID2 = instance_place(x+6, y, obj_door_normal_right_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}
+			else if (instance_exists(obj_door_normal_right_3)) && (place_meeting(x+6,y,obj_door_normal_right_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+
+				doorID2 = instance_place(x+6, y, obj_door_normal_right_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = true
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_left)) && (place_meeting(x,y,obj_door_border_left))//////////////////////////////////////////////////////////////////////////DOORLESS
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_left)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_left_2)) && (place_meeting(x,y,obj_door_border_left_2))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_left_2)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_left_more)) && (place_meeting(x,y,obj_door_border_left_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_left_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}
+			else if (instance_exists(obj_door_border_left_3)) && (place_meeting(x,y,obj_door_border_left_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_left_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_right)) && (place_meeting(x,y,obj_door_border_right))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_right)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_right_2)) && (place_meeting(x,y,obj_door_border_right_2))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_right_2)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
 				exit
 			}
 			else if (instance_exists(obj_door_border_right_more)) && (place_meeting(x,y,obj_door_border_right_more))
 			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_right_more)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
 				instance_destroy()
 				audio_stop_sound(snd_xga_heartbeat)
 				with(obj_darkeater_sprites)
 				{
 					instance_destroy()	
 				}
+				
+				exit
+			}	
+			else if (instance_exists(obj_door_border_right_3)) && (place_meeting(x,y,obj_door_border_right_3))
+			{
+				global.darkeater_saved_state_xga_has_spawned = 0
+				global.darkeater_saved_state_room_counter = 0
+				global.darkeater_saved_state_room_nextdoor_id = 0
+				
+				doorID2 = instance_place(x, y, obj_door_border_right_3)	
+				
+				with(obj_xga_coords)
+				{
+					door_xga_spawned_at_before = other.doorID2
+					door_xga_spawned_at_normal_check = false
+				}
+				
+				instance_destroy()
+				audio_stop_sound(snd_xga_heartbeat)
+				with(obj_darkeater_sprites)
+				{
+					instance_destroy()	
+				}
+				
 				exit
 			}	
 	}

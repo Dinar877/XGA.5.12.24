@@ -8,10 +8,17 @@ footstep_volume = 0
 footstep_total = round(random_range(0,4))
 footstep_alternator = 0;
 footstep_timer = 0;
+footstep_limiter = 0
 cancel_footsteps = 0;
 
 doortype = 0
 doortype1 = 0
+
+door_xga_spawned_at_before = -1
+door_xga_spawned_at_normal_check = false
+door_xga_spawned_at_previous_facing = 1
+
+spawn_xga_from_saved_state = 0
 
 timer_xga = 0
 
@@ -22,7 +29,7 @@ if (instance_number(obj_mapchecker2) > 1) //so we don't spawn xga in 1x1 rooms a
 }
 else spawn_xga_at_door = 1;
 
-spawn_xga_at_door = 0
+//spawn_xga_at_door = 0
 
 
 //snd random choose
@@ -56,5 +63,8 @@ xgaStopSpawning = 0;
 
 //makes sure music reset does not happen every room, just once xga has already been spawned and either it or you exit
 xgaMusicSwitch = 0;
+
+//xgaEnterSafeZones 
+xgaEnterSafeZones = round(random_range(0,100))
 
 testbobby = 0

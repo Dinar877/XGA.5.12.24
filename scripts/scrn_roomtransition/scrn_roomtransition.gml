@@ -15,6 +15,7 @@ function scrn_roomtransition() {
 	    sprite_index = scrn;
 		global.room_y = 1;
 		global.stopper_2ndscrnshot = 0;
+		global.darkeater_current_room = room
 		exit
 	}
 

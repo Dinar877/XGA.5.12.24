@@ -73,7 +73,7 @@ var inst4 = (instance_nearest(x,y,obj_bullet))
 
 if (hp > 0)
 {
-	enemy_hurt_player_code(2)
+	enemy_hurt_player_code(1)
 }
 
 

@@ -84,7 +84,7 @@ if (sprite_index = spr_kingstalker_wakeup) && (image_index >= image_number-1)
 
 if (hp > 0)
 {
-	enemy_hurt_player_code(3)
+	enemy_hurt_player_code(1)
 }
 
 

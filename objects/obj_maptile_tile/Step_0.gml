@@ -1097,6 +1097,9 @@ if (gotsprite = 0) && (discovered = 1)
 							}
 						}
 					 }
+					 
+					 
+					
 
 				}
 				else if (instDoorL.hidden = true) && (instDoorR.hidden = true) //BOTH DOORS ARE HIDDEN
@@ -2724,6 +2727,42 @@ if (gotsprite = 0) && (discovered = 1)
 								sprite_index = spr_maptile_sector2to3
 							}
 					}
+					
+					
+					
+					//Hidden temple entrances
+					if (global.sector_active = 5)
+					{
+						if (!place_meeting(x+1,y,obj_mapchecker2)) && (!place_meeting(x-1,y,obj_mapchecker2)) && (!place_meeting(x,y+1,obj_mapchecker2)) && (!place_meeting(x,y-1,obj_mapchecker2))
+						&& (place_meeting(x,y,obj_elevator_top1_right))
+						{
+							if (obj_elevator_top1_right.inst_elevator = obj_elevator_sector1)
+							{
+								with(other)
+								{
+									sprite_index = spr_maptile_ht_2_s1;
+								}
+							}
+							else if (obj_elevator_top1_right.inst_elevator = obj_elevator_sector2)
+							{
+								with(other)
+								{
+									sprite_index = spr_maptile_ht_2_s2;
+								}
+							}
+						}
+						else if (!place_meeting(x+1,y,obj_mapchecker2)) && (place_meeting(x-1,y,obj_mapchecker2)) && (!place_meeting(x,y+1,obj_mapchecker2)) && (!place_meeting(x,y-1,obj_mapchecker2))
+						&& (place_meeting(x,y,obj_elevator_top1_right))
+						{
+							if (obj_elevator_top1_right.inst_elevator = obj_elevator_sectortutorial)
+							{
+								with(other)
+								{
+									sprite_index = spr_maptile_ht_2_mainsector;
+								}
+							}
+						}
+					}
 					 
 				}
 				else if (instDoorL.hidden = true)
@@ -3567,6 +3606,42 @@ if (gotsprite = 0) && (discovered = 1)
 							}
 						}
 					 }
+					 
+					 
+					 
+					 //Hidden temple entrances
+					if (global.sector_active = 5)
+					{
+						if (!place_meeting(x+1,y,obj_mapchecker2)) && (!place_meeting(x-1,y,obj_mapchecker2)) && (!place_meeting(x,y+1,obj_mapchecker2)) && (!place_meeting(x,y-1,obj_mapchecker2))
+						&& (place_meeting(x,y,obj_elevator_top1_right))
+						{
+							if (obj_elevator_top1_right.inst_elevator = obj_elevator_sector1)
+							{
+								with(other)
+								{
+									sprite_index = spr_maptile_ht_2_s1;
+								}
+							}
+							else if (obj_elevator_top1_right.inst_elevator = obj_elevator_sector2)
+							{
+								with(other)
+								{
+									sprite_index = spr_maptile_ht_2_s2;
+								}
+							}
+						}
+						else if (!place_meeting(x+1,y,obj_mapchecker2)) && (place_meeting(x-1,y,obj_mapchecker2)) && (!place_meeting(x,y+1,obj_mapchecker2)) && (!place_meeting(x,y-1,obj_mapchecker2))
+						&& (place_meeting(x,y,obj_elevator_top1_right))
+						{
+							if (obj_elevator_top1_right.inst_elevator = obj_elevator_sectortutorial)
+							{
+								with(other)
+								{
+									sprite_index = spr_maptile_ht_2_mainsector;
+								}
+							}
+						}
+					}
 					 
 					 
 					 

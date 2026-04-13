@@ -205,9 +205,9 @@ global.wm_found[WMdiscovered.bridge_sc_ms] = true
 
 
 //test cutscenes
-global.corrupted = 0
-global.midgame = 0
-global.sector_active = 0
+global.corrupted = 1
+global.midgame = 1
+global.sector_active = 1
 
 global.cutscene = 0
 global.cutscene_presuit = 0
@@ -242,5 +242,5 @@ obj_camera.x = obj_player.x
 obj_camera.y = obj_player.y
 //room_goto(rm_SC_exit)
 //room_goto(rm_SC_entrance)
-room_goto(rm_elevator_tutorial_2)
+room_goto(rm_Sec2test1_2_21)
 global.loading_random_room = 1;

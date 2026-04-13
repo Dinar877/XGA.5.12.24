@@ -31,6 +31,10 @@ if (global.corrupted > 0)
 	{
 		instance_create_layer(obj_door_border_left_more.x-3,obj_door_border_left_more.y,layer_get_id("Inst_level_0"),obj_xga_coords);
 	}
+	else if (instance_exists(obj_door_border_left_3)) && (global.room_transition_notnowL3 == 1)
+	{
+		instance_create_layer(obj_door_border_left_3.x-3,obj_door_border_left_3.y,layer_get_id("Inst_level_0"),obj_xga_coords);
+	}
 	else if (instance_exists(obj_door_border_right)) && (global.room_transition_notnowR1 == 1)
 	{
 		instance_create_layer(obj_door_border_right.x+3,obj_door_border_right.y,layer_get_id("Inst_level_0"),obj_xga_coords);
@@ -42,6 +46,10 @@ if (global.corrupted > 0)
 	else if (instance_exists(obj_door_border_right_more)) && (global.room_transition_notnowR_more == 1)
 	{
 		instance_create_layer(obj_door_border_right_more.x+3,obj_door_border_right_more.y,layer_get_id("Inst_level_0"),obj_xga_coords);
+	}
+	else if (instance_exists(obj_door_border_right_3)) && (global.room_transition_notnowR3 == 1)
+	{
+		instance_create_layer(obj_door_border_right_3.x+3,obj_door_border_right_3.y,layer_get_id("Inst_level_0"),obj_xga_coords);
 	}
 	else if (instance_exists(obj_door_normal_left)) && (global.room_transition_notnowL1 == 1)/////////////////////////////////////////////////////////////////////////////////////////////normal doors
 	{
@@ -55,6 +63,10 @@ if (global.corrupted > 0)
 	{
 		instance_create_layer(obj_door_normal_left_more.x-10,obj_door_normal_left_more.y,layer_get_id("Inst_level_0"),obj_xga_coords);
 	}
+	else if (instance_exists(obj_door_normal_left_3)) && (global.room_transition_notnowL3 == 1)
+	{
+		instance_create_layer(obj_door_normal_left_3.x-10,obj_door_normal_left_3.y,layer_get_id("Inst_level_0"),obj_xga_coords);
+	}
 	else if (instance_exists(obj_door_normal_right)) && (global.room_transition_notnowR1 == 1)
 	{
 		instance_create_layer(obj_door_normal_right.x+10,obj_door_normal_right.y,layer_get_id("Inst_level_0"),obj_xga_coords);
@@ -66,6 +78,10 @@ if (global.corrupted > 0)
 	else if (instance_exists(obj_door_normal_right_more)) && (global.room_transition_notnowR_more == 1)
 	{
 		instance_create_layer(obj_door_normal_right_more.x+10,obj_door_normal_right_more.y,layer_get_id("Inst_level_0"),obj_xga_coords);
+	}
+	else if (instance_exists(obj_door_normal_right_3)) && (global.room_transition_notnowR3 == 1)
+	{
+		instance_create_layer(obj_door_normal_right_3.x+10,obj_door_normal_right_3.y,layer_get_id("Inst_level_0"),obj_xga_coords);
 	}
 	
 	

@@ -37,7 +37,7 @@ var inst4 = (instance_nearest(x,y,obj_bullet))
 
 if (hp > 0)
 {
-	enemy_hurt_player_code(2)
+	enemy_hurt_player_code(1)
 }
 
 if (place_meeting(x,y,obj_player)) && ((object_player2_0_sprites.sprite_index = spr_screwjump_left1) or (object_player2_0_sprites.sprite_index = spr_screwjump_right1) or (instance_exists(obj_player_dashspark))) && (hp > 0)

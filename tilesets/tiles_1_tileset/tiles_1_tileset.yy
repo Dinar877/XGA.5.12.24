@@ -1,7 +1,9 @@
 {
   "$GMTileSet":"v1",
   "%Name":"tiles_1_tileset",
-  "autoTileSets":[],
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"redtemple","closed_edge":false,"name":"redtemple","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[185,723,722,450,634,715,180,534,633,267,984,535,625,623,624,1078,],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":51,
     "SerialiseWidth":51,
