@@ -7,6 +7,8 @@ distance_to_borderD = 0;
 
 climbspeed = 0;
 reduceclimbspeed = 0;
+reduceclimbspeed2 = 0;
+
 
 dontmove = 0
 

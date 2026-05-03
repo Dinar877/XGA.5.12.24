@@ -1,4 +1,4 @@
- //var inst_maptile2 = instance_exists(obj_maptile_tile);
+//var inst_maptile2 = instance_exists(obj_maptile_tile);
   
 tileposx_checker = floor((id.x/320)+(global.mapgrid_startroomx));
 tileposy_checker = floor((id.y/180)+(global.mapgrid_startroomy));

@@ -25,6 +25,8 @@ function Climb_up_ledge() {
 	ledge_ready = 0;
 	double_jump = 0
 	
+	
+	
 
 	//if using 320x180 camera
 	if (instance_exists(obj_camera))
@@ -32,8 +34,6 @@ function Climb_up_ledge() {
 		with(obj_camera)
 		{
 				climbspeed = 30
-				
-				
 
 				
 				//move x
@@ -56,9 +56,9 @@ function Climb_up_ledge() {
 					 
 						if (reduceclimbspeed != 0)
 						{
-							x += (((18-reduceclimbspeed)*global.facingDir)/climbspeed);
+							x += (((16-reduceclimbspeed)*global.facingDir)/climbspeed);
 						}
-						else x += ((18*global.facingDir)/climbspeed);
+						else x += ((16*global.facingDir)/climbspeed);
 					}
 				
 					//UPDATED border shiit for when camera has JUST NOW moved too far
@@ -97,11 +97,39 @@ function Climb_up_ledge() {
 					//border shieeeet 2
 					distance_to_border3 = (obj_camera.y-obj_camera_stopperU.y-90);
 					distance_to_border4 = (obj_camera.y-obj_camera_stopperD.y+90);
-				
-					//move camera- Y
-					if (distance_to_border3 > 0) && (distance_to_border4 < 0)
+					
+					//if player is below camera origin
+					/*
+					if (((distance_to_border3 > 0) && (distance_to_border4 < 0))
+					or (distance_to_border4 == 0) && (obj_camera.y < obj_player.y))
 					{
-						y -= (37/climbspeed);
+						//set new, lower climb speed if player isn't past camera center but will be once climbing animation finishes
+						if (distance_to_border4 == 0) && (obj_camera.y < obj_player.y)
+						{
+							reduceclimbspeed2 = (obj_camera.y-obj_player.y);
+						}
+					 
+						if (reduceclimbspeed2 != 0)
+						{
+							y -= ((37+reduceclimbspeed2)/climbspeed);
+						}
+						else y -= (37/climbspeed);
+					}
+					*/
+					
+					if ((distance_to_border3 > 0) && (distance_to_border4 < 0))
+					or (distance_to_border4 == 0)
+					{
+						if (distance_to_border4 == 0)
+						{
+							reduceclimbspeed2 = obj_player.y-obj_camera.y;
+						}
+						
+						if (reduceclimbspeed2 > 0)
+						{
+							y -= ((37-reduceclimbspeed2)/climbspeed);	
+						}
+						else y -= (37/climbspeed);	
 					}
 				
 					//UPDATED border shiit for when camera has JUST NOW moved too far
@@ -140,7 +168,7 @@ function Climb_up_ledge() {
 	{
 		with(obj_darkness_effect)
 		{
-			xloc +=	(((18*global.facingDir)/25));
+			xloc +=	(((16*global.facingDir)/25));
 			yloc -= (30/25);
 		}
 	}
@@ -149,7 +177,7 @@ function Climb_up_ledge() {
 	{
 		with(obj_darkness_effect_stationnotactive)
 		{
-			xloc +=	(((18*global.facingDir)/25));
+			xloc +=	(((16*global.facingDir)/25));
 			yloc -= (30/25);
 		}
 	}
@@ -158,7 +186,7 @@ function Climb_up_ledge() {
 	{
 		with(obj_darkness_effect_deep)
 		{
-			xloc +=	(((18*global.facingDir)/25));
+			xloc +=	(((16*global.facingDir)/25));
 			yloc -= (30/25);
 		}
 	}
@@ -202,7 +230,7 @@ function Climb_up_ledge() {
 	    global.lockdown_facingDir = 0;
 	    global.turningLedge = 0;
 	    global.animation_start = 0;
-	    x += (global.facingDir*18);
+	    x += (global.facingDir*16);
 	    y -= 37;
 	    gamepad4_wait = 0;
 	    gamepad0_wait = 0;
@@ -225,6 +253,7 @@ function Climb_up_ledge() {
 			xcounter = 0;
 			climbspeed = 0;
 			reduceclimbspeed = 0;
+			reduceclimbspeed2 = 0;
 		}
 		
 		audio_stop_sound(snd_robot_move_2)
@@ -267,7 +296,7 @@ function Climb_up_ledge() {
 	    global.lockdown_facingDir = 0;
 	    global.turningLedge = 0;
 	    global.animation_start = 0;
-	    x += (global.facingDir*18);
+	    x += (global.facingDir*16);
 	    y -= 30;
 	    gamepad4_wait = 0;
 	    gamepad0_wait = 0;
@@ -289,6 +318,7 @@ function Climb_up_ledge() {
 			xcounter = 0;
 			climbspeed = 0;
 			reduceclimbspeed = 0;
+			reduceclimbspeed2 = 0;
 		}
 		
 		audio_stop_sound(snd_robot_move_2)

@@ -160,6 +160,8 @@ else if (delay >= 1) && (counter > 1) && (instance_exists(global.tex[n]))
 	//at top
 	if (up_key_pressed) && (n = 0) && (n < counter-1)
 	{
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
+		
 		n = counter-1;
 		counter_scroll = 0
 		goy = global.tex[n];
@@ -180,6 +182,8 @@ else if (delay >= 1) && (counter > 1) && (instance_exists(global.tex[n]))
 	}
 	else if (down_key_pressed) && (n = 0) && (n < counter-1)
 	{
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
+		
 		global.tex[n].selected = 0;
 		n++;
 		counter_scroll++
@@ -204,6 +208,8 @@ else if (delay >= 1) && (counter > 1) && (instance_exists(global.tex[n]))
 	//at bottom
 	if (down_key_pressed) && (n == counter-1)
 	{
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
+		
 		global.tex[n].selected = 0;
 		n = 0;
 		counter_scroll = 0
@@ -224,6 +230,8 @@ else if (delay >= 1) && (counter > 1) && (instance_exists(global.tex[n]))
 	}
 	else if (up_key_pressed) && (n == counter-1)
 	{
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
+		
 		global.tex[n].selected = 0;
 		n--;
 		counter_scroll--
@@ -246,6 +254,8 @@ else if (delay >= 1) && (counter > 1) && (instance_exists(global.tex[n]))
 	//midway screen switch
 	if (up_key_pressed) && (n < counter-1) && (n != 0)
 	{
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
+		
 		global.tex[n].selected = 0;
 		n--
 		counter_scroll = 0
@@ -267,6 +277,8 @@ else if (delay >= 1) && (counter > 1) && (instance_exists(global.tex[n]))
 	}
 	else if (down_key_pressed) && (n < counter-1) && (n != 0)
 	{
+		audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
+		
 		global.tex[n].selected = 0;
 		n++
 		counter_scroll = 0

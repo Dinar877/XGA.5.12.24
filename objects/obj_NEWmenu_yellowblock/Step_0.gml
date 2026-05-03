@@ -43,6 +43,8 @@ else if (killall > 0)
 //menu going back
 if (shoot_pressed) && (selected > 0) && (image_alpha >= 1)
 	{
+		audio_play_sound(snd_menu_back,1000,false,global.sfx_volume)
+		
 		killall = 1
 		with(obj_NEWmenu_yellowblock)
 		{

@@ -20,6 +20,7 @@ function EnumsInitialise(){
 		bugspiderDrill = 28,
 		midgameScientist = 50,
 		trueintro3TriggerPoint = 88,
+		biocorp_arrives = 19,
 		xga2scream = 89,
 		xga2entrance = 90,
 		ceoTalk1 = 91,

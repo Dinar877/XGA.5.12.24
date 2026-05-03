@@ -13,12 +13,16 @@ if (menu_index_item+menu_move > -1) && (menu_index_item+menu_move < instance_num
 && (menu_move != 0) && (!gamepad_is_connected(correct_slot))
 {
 	menu_index_item += menu_move
+	
+	audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
 }
 else if (menu_index_item+menu_move > -1) && (menu_index_item+menu_move < instance_number(obj_NEWmenu_yellowblock))
 && (menu_move != 0) && (gamepad_is_connected(correct_slot)) && (gamepad4_wait >= 1)
 {
 	menu_index_item += menu_move
 	gamepad4_wait = 0
+	
+	audio_play_sound(snd_menu_move,1000,false,global.sfx_volume)
 }
 
 

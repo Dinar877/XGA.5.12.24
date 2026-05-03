@@ -64,8 +64,8 @@ if (!instance_exists(obj_ability_nanoshield))
 }
 
 global.invisibility_available = 1;
-global.invisibility_limit = 100;
-global.invisibility_ammo = 100;
+global.invisibility_limit = 999;
+global.invisibility_ammo = 999;
 global.invisibility_state = 1;
 global.upgradecollected[upgrades.invisibility] = 1;
 if (!instance_exists(obj_ability_invisibility))
@@ -205,9 +205,9 @@ global.wm_found[WMdiscovered.bridge_sc_ms] = true
 
 
 //test cutscenes
-global.corrupted = 1
-global.midgame = 1
-global.sector_active = 1
+global.corrupted = 0
+global.midgame = 0
+global.sector_active = 0
 
 global.cutscene = 0
 global.cutscene_presuit = 0
@@ -242,5 +242,5 @@ obj_camera.x = obj_player.x
 obj_camera.y = obj_player.y
 //room_goto(rm_SC_exit)
 //room_goto(rm_SC_entrance)
-room_goto(rm_Sec2test1_2_21)
+room_goto(rm_11_7_6_xgatest)
 global.loading_random_room = 1;

@@ -56,7 +56,7 @@ if (gamepad_is_connected(correct_slot))
 
 
 	//if player pressed a button to enter change controls mode
-	if (selected > 0) && (delay >= 1)  && (jump_pressed) && (waiting	<= 0) 
+	if (selected > 0) && (delay >= 1)  && (jump_pressed) && (waiting <= 0) 
 	&& (do_reset <= 0) && (do_exit == 0) && (waiting2 = 0) && (global.pause_logbook = 0) //if not 'reset controls' pressed
 	{
 		waiting = 1

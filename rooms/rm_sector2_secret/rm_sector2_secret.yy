@@ -187,8 +187,8 @@
   ],
   "name":"rm_sector2_secret",
   "parent":{
-    "name":"flower boss area",
-    "path":"folders/Rooms/Sector2/flower boss area.yy",
+    "name":"old",
+    "path":"folders/Rooms/Sector2/old.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

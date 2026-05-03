@@ -1,4 +1,4 @@
-global.doorpath1 = 1
+global.doorpath1 = rm_HT_S1_entrance
 global.doorpath2 = rm_ice_NEWsave_L;
 
 global.mapgrid_yZeroMove = 1

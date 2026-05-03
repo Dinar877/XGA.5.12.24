@@ -193,6 +193,7 @@ if (doortype = 0) && (doortype1 = 0)
 
 //able to spawn xga from the door you just entered if you wait long enough and you saw it
 if (!instance_exists(obj_darkeater_hitbox))
+&& (!instance_exists(obj_harmful_electricity_emitter_L)) && (!instance_exists(obj_harmful_electricity_emitter_u))
 && ((global.doorpath1 = global.darkeater_saved_state[8]) or (global.doorpath2 = global.darkeater_saved_state[8])
 or (global.doorpath3 = global.darkeater_saved_state[8]) or (global.doorpath4 = global.darkeater_saved_state[8])
 or (global.doorpath5 = global.darkeater_saved_state[8]) or (global.doorpath6 = global.darkeater_saved_state[8])

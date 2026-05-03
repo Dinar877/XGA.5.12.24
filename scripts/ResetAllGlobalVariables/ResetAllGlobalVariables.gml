@@ -11,7 +11,7 @@ function ResetAllGlobalVariables(){
 	global.sc_timelimit = 600 + round(random_range(60,300))
 
 	//xga coords
-	global.darkeater_saved_state = [0,0,0,0,0,0,0] // x, y, doorID, doorID_start, state, sprite index, image index
+	global.darkeater_saved_state = [0,0,0,0,0,0,0,0,0] // x, y, facing, doorID, doorID_start, state, sprite index, image index, room
 	global.darkeater_x = 0
 	global.darkeater_y = 0
 	global.darkeater_active = 0

@@ -10,8 +10,8 @@
   "name":"obj_NEWmenu_blueblock",
   "overriddenProperties":[],
   "parent":{
-    "name":"NEWmenu_intro",
-    "path":"folders/Objects/intro/NEWmenu_intro.yy",
+    "name":"menu",
+    "path":"folders/Objects/intro/NEWmenu_intro/menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
